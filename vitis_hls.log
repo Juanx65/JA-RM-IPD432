@@ -1,0 +1,57 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'juan_' on host 'juankahp' (Windows NT_amd64 version 6.2) on Sun Mar 13 22:48:04 -0300 2022
+INFO: [HLS 200-10] In directory 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432'
+Sourcing Tcl script 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: open_project EucHLS 
+INFO: [HLS 200-10] Opening project 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS'.
+INFO: [HLS 200-1510] Running: set_top eucDistHW 
+INFO: [HLS 200-1510] Running: add_files src/specs.h 
+INFO: [HLS 200-10] Adding design file 'src/specs.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/EucHW.h 
+INFO: [HLS 200-10] Adding design file 'src/EucHW.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/EucHW.cpp 
+INFO: [HLS 200-10] Adding design file 'src/EucHW.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7a12ti-csg325-1L'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=sysgen
+INFO: [HLS 200-1464] Running solution command: config_export -ip_xdc_file=C:/Users/juan_/Documents/FPGA/constraints/Nexys-4-DDR-Master.xdc
+INFO: [HLS 200-1464] Running solution command: config_export -ip_xdc_ooc_file=C:/Users/juan_/Documents/FPGA/constraints/Nexys-4-DDR-Master.xdc
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/juan_/Documents/FPGA/IPs/eucDistHW.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7a12ti-csg325-1L 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format sysgen -ip_xdc_file C:/Users/juan_/Documents/FPGA/constraints/Nexys-4-DDR-Master.xdc -ip_xdc_ooc_file C:/Users/juan_/Documents/FPGA/constraints/Nexys-4-DDR-Master.xdc -output C:/Users/juan_/Documents/FPGA/IPs/eucDistHW.zip -rtl verilog 
+INFO: [HLS 200-1510] Running: set_directive_top -name eucDistHW eucDistHW 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/eucDistHW.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ERROR: '2203132248' is an invalid argument. Please specify an integer value.
+    while executing
+"rdi::set_property core_revision 2203132248 {component component_1}"
+    invoked from within
+"set_property core_revision $Revision $core"
+    (file "run_ippack.tcl" line 1166)
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 13 22:48:11 2022...
+ERROR: [IMPL 213-28] Failed to generate IP.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 5.826 seconds; current allocated memory: 122.285 MB.
+command 'ap_source' returned error code
+    while executing
+"source C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/export.tcl"
+    invoked from within
+"hls::main C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/export.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"

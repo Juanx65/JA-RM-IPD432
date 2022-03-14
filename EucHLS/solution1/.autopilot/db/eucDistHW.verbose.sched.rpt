@@ -1,0 +1,412 @@
+
+
+================================================================
+== Vitis HLS Report for 'eucDistHW'
+================================================================
+* Date:           Sun Mar 13 22:26:13 2022
+
+* Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:33 MDT 2021)
+* Project:        EucHLS
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a12ti-csg325-1L
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.207 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       16|       16|  0.160 us|  0.160 us|   17|   17|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 17
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.70>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%A_13_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_13" [src/EucHW.cpp:14]   --->   Operation 18 'read' 'A_13_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%B_13_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_13" [src/EucHW.cpp:14]   --->   Operation 19 'read' 'B_13_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (2.70ns)   --->   "%sub_ln14_13 = sub i32 %A_13_read, i32 %B_13_read" [src/EucHW.cpp:14]   --->   Operation 20 'sub' 'sub_ln14_13' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%A_14_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_14" [src/EucHW.cpp:14]   --->   Operation 21 'read' 'A_14_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%B_14_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_14" [src/EucHW.cpp:14]   --->   Operation 22 'read' 'B_14_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (2.70ns)   --->   "%sub_ln14_14 = sub i32 %A_14_read, i32 %B_14_read" [src/EucHW.cpp:14]   --->   Operation 23 'sub' 'sub_ln14_14' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%A_15_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_15" [src/EucHW.cpp:14]   --->   Operation 24 'read' 'A_15_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%B_15_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_15" [src/EucHW.cpp:14]   --->   Operation 25 'read' 'B_15_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (2.70ns)   --->   "%sub_ln14_15 = sub i32 %A_15_read, i32 %B_15_read" [src/EucHW.cpp:14]   --->   Operation 26 'sub' 'sub_ln14_15' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.86>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%A_11_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_11" [src/EucHW.cpp:14]   --->   Operation 27 'read' 'A_11_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%B_11_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_11" [src/EucHW.cpp:14]   --->   Operation 28 'read' 'B_11_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (2.70ns)   --->   "%sub_ln14_11 = sub i32 %A_11_read, i32 %B_11_read" [src/EucHW.cpp:14]   --->   Operation 29 'sub' 'sub_ln14_11' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%A_12_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_12" [src/EucHW.cpp:14]   --->   Operation 30 'read' 'A_12_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%B_12_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_12" [src/EucHW.cpp:14]   --->   Operation 31 'read' 'B_12_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (2.70ns)   --->   "%sub_ln14_12 = sub i32 %A_12_read, i32 %B_12_read" [src/EucHW.cpp:14]   --->   Operation 32 'sub' 'sub_ln14_12' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [2/2] (6.86ns)   --->   "%mul_ln14_13 = mul i32 %sub_ln14_13, i32 %sub_ln14_13" [src/EucHW.cpp:14]   --->   Operation 33 'mul' 'mul_ln14_13' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [2/2] (6.86ns)   --->   "%mul_ln14_14 = mul i32 %sub_ln14_14, i32 %sub_ln14_14" [src/EucHW.cpp:14]   --->   Operation 34 'mul' 'mul_ln14_14' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [2/2] (6.86ns)   --->   "%mul_ln14_15 = mul i32 %sub_ln14_15, i32 %sub_ln14_15" [src/EucHW.cpp:14]   --->   Operation 35 'mul' 'mul_ln14_15' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.86>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%A_0_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_0" [src/EucHW.cpp:14]   --->   Operation 36 'read' 'A_0_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%B_0_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_0" [src/EucHW.cpp:14]   --->   Operation 37 'read' 'B_0_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (2.70ns)   --->   "%sub_ln14 = sub i32 %A_0_read, i32 %B_0_read" [src/EucHW.cpp:14]   --->   Operation 38 'sub' 'sub_ln14' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%A_1_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_1" [src/EucHW.cpp:14]   --->   Operation 39 'read' 'A_1_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%B_1_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_1" [src/EucHW.cpp:14]   --->   Operation 40 'read' 'B_1_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (2.70ns)   --->   "%sub_ln14_1 = sub i32 %A_1_read, i32 %B_1_read" [src/EucHW.cpp:14]   --->   Operation 41 'sub' 'sub_ln14_1' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%A_2_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_2" [src/EucHW.cpp:14]   --->   Operation 42 'read' 'A_2_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%B_2_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_2" [src/EucHW.cpp:14]   --->   Operation 43 'read' 'B_2_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (2.70ns)   --->   "%sub_ln14_2 = sub i32 %A_2_read, i32 %B_2_read" [src/EucHW.cpp:14]   --->   Operation 44 'sub' 'sub_ln14_2' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%A_3_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_3" [src/EucHW.cpp:14]   --->   Operation 45 'read' 'A_3_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%B_3_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_3" [src/EucHW.cpp:14]   --->   Operation 46 'read' 'B_3_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (2.70ns)   --->   "%sub_ln14_3 = sub i32 %A_3_read, i32 %B_3_read" [src/EucHW.cpp:14]   --->   Operation 47 'sub' 'sub_ln14_3' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%A_4_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_4" [src/EucHW.cpp:14]   --->   Operation 48 'read' 'A_4_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%B_4_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_4" [src/EucHW.cpp:14]   --->   Operation 49 'read' 'B_4_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (2.70ns)   --->   "%sub_ln14_4 = sub i32 %A_4_read, i32 %B_4_read" [src/EucHW.cpp:14]   --->   Operation 50 'sub' 'sub_ln14_4' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%A_5_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_5" [src/EucHW.cpp:14]   --->   Operation 51 'read' 'A_5_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%B_5_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_5" [src/EucHW.cpp:14]   --->   Operation 52 'read' 'B_5_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (2.70ns)   --->   "%sub_ln14_5 = sub i32 %A_5_read, i32 %B_5_read" [src/EucHW.cpp:14]   --->   Operation 53 'sub' 'sub_ln14_5' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%A_6_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_6" [src/EucHW.cpp:14]   --->   Operation 54 'read' 'A_6_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%B_6_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_6" [src/EucHW.cpp:14]   --->   Operation 55 'read' 'B_6_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (2.70ns)   --->   "%sub_ln14_6 = sub i32 %A_6_read, i32 %B_6_read" [src/EucHW.cpp:14]   --->   Operation 56 'sub' 'sub_ln14_6' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%A_7_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_7" [src/EucHW.cpp:14]   --->   Operation 57 'read' 'A_7_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%B_7_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_7" [src/EucHW.cpp:14]   --->   Operation 58 'read' 'B_7_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (2.70ns)   --->   "%sub_ln14_7 = sub i32 %A_7_read, i32 %B_7_read" [src/EucHW.cpp:14]   --->   Operation 59 'sub' 'sub_ln14_7' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%A_8_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_8" [src/EucHW.cpp:14]   --->   Operation 60 'read' 'A_8_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%B_8_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_8" [src/EucHW.cpp:14]   --->   Operation 61 'read' 'B_8_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (2.70ns)   --->   "%sub_ln14_8 = sub i32 %A_8_read, i32 %B_8_read" [src/EucHW.cpp:14]   --->   Operation 62 'sub' 'sub_ln14_8' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%A_9_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_9" [src/EucHW.cpp:14]   --->   Operation 63 'read' 'A_9_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%B_9_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_9" [src/EucHW.cpp:14]   --->   Operation 64 'read' 'B_9_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (2.70ns)   --->   "%sub_ln14_9 = sub i32 %A_9_read, i32 %B_9_read" [src/EucHW.cpp:14]   --->   Operation 65 'sub' 'sub_ln14_9' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%A_10_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A_10" [src/EucHW.cpp:14]   --->   Operation 66 'read' 'A_10_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%B_10_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %B_10" [src/EucHW.cpp:14]   --->   Operation 67 'read' 'B_10_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (2.70ns)   --->   "%sub_ln14_10 = sub i32 %A_10_read, i32 %B_10_read" [src/EucHW.cpp:14]   --->   Operation 68 'sub' 'sub_ln14_10' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [2/2] (6.86ns)   --->   "%mul_ln14_11 = mul i32 %sub_ln14_11, i32 %sub_ln14_11" [src/EucHW.cpp:14]   --->   Operation 69 'mul' 'mul_ln14_11' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [2/2] (6.86ns)   --->   "%mul_ln14_12 = mul i32 %sub_ln14_12, i32 %sub_ln14_12" [src/EucHW.cpp:14]   --->   Operation 70 'mul' 'mul_ln14_12' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 71 [1/2] (6.86ns)   --->   "%mul_ln14_13 = mul i32 %sub_ln14_13, i32 %sub_ln14_13" [src/EucHW.cpp:14]   --->   Operation 71 'mul' 'mul_ln14_13' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 72 [1/2] (6.86ns)   --->   "%mul_ln14_14 = mul i32 %sub_ln14_14, i32 %sub_ln14_14" [src/EucHW.cpp:14]   --->   Operation 72 'mul' 'mul_ln14_14' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 73 [1/2] (6.86ns)   --->   "%mul_ln14_15 = mul i32 %sub_ln14_15, i32 %sub_ln14_15" [src/EucHW.cpp:14]   --->   Operation 73 'mul' 'mul_ln14_15' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.86>
+ST_4 : Operation 74 [2/2] (6.86ns)   --->   "%mul_ln14 = mul i32 %sub_ln14, i32 %sub_ln14" [src/EucHW.cpp:14]   --->   Operation 74 'mul' 'mul_ln14' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 75 [2/2] (6.86ns)   --->   "%mul_ln14_1 = mul i32 %sub_ln14_1, i32 %sub_ln14_1" [src/EucHW.cpp:14]   --->   Operation 75 'mul' 'mul_ln14_1' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 76 [2/2] (6.86ns)   --->   "%mul_ln14_2 = mul i32 %sub_ln14_2, i32 %sub_ln14_2" [src/EucHW.cpp:14]   --->   Operation 76 'mul' 'mul_ln14_2' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 77 [2/2] (6.86ns)   --->   "%mul_ln14_3 = mul i32 %sub_ln14_3, i32 %sub_ln14_3" [src/EucHW.cpp:14]   --->   Operation 77 'mul' 'mul_ln14_3' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 78 [2/2] (6.86ns)   --->   "%mul_ln14_4 = mul i32 %sub_ln14_4, i32 %sub_ln14_4" [src/EucHW.cpp:14]   --->   Operation 78 'mul' 'mul_ln14_4' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 79 [2/2] (6.86ns)   --->   "%mul_ln14_5 = mul i32 %sub_ln14_5, i32 %sub_ln14_5" [src/EucHW.cpp:14]   --->   Operation 79 'mul' 'mul_ln14_5' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 80 [2/2] (6.86ns)   --->   "%mul_ln14_6 = mul i32 %sub_ln14_6, i32 %sub_ln14_6" [src/EucHW.cpp:14]   --->   Operation 80 'mul' 'mul_ln14_6' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 81 [2/2] (6.86ns)   --->   "%mul_ln14_7 = mul i32 %sub_ln14_7, i32 %sub_ln14_7" [src/EucHW.cpp:14]   --->   Operation 81 'mul' 'mul_ln14_7' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 82 [2/2] (6.86ns)   --->   "%mul_ln14_8 = mul i32 %sub_ln14_8, i32 %sub_ln14_8" [src/EucHW.cpp:14]   --->   Operation 82 'mul' 'mul_ln14_8' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 83 [2/2] (6.86ns)   --->   "%mul_ln14_9 = mul i32 %sub_ln14_9, i32 %sub_ln14_9" [src/EucHW.cpp:14]   --->   Operation 83 'mul' 'mul_ln14_9' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 84 [2/2] (6.86ns)   --->   "%mul_ln14_10 = mul i32 %sub_ln14_10, i32 %sub_ln14_10" [src/EucHW.cpp:14]   --->   Operation 84 'mul' 'mul_ln14_10' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 85 [1/2] (6.86ns)   --->   "%mul_ln14_11 = mul i32 %sub_ln14_11, i32 %sub_ln14_11" [src/EucHW.cpp:14]   --->   Operation 85 'mul' 'mul_ln14_11' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 86 [1/2] (6.86ns)   --->   "%mul_ln14_12 = mul i32 %sub_ln14_12, i32 %sub_ln14_12" [src/EucHW.cpp:14]   --->   Operation 86 'mul' 'mul_ln14_12' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 87 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln14_11 = add i32 %mul_ln14_14, i32 %mul_ln14_15" [src/EucHW.cpp:14]   --->   Operation 87 'add' 'add_ln14_11' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 88 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%add_ln14_12 = add i32 %add_ln14_11, i32 %mul_ln14_13" [src/EucHW.cpp:14]   --->   Operation 88 'add' 'add_ln14_12' <Predicate = true> <Delay = 4.50> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 6.86>
+ST_5 : Operation 89 [1/2] (6.86ns)   --->   "%mul_ln14 = mul i32 %sub_ln14, i32 %sub_ln14" [src/EucHW.cpp:14]   --->   Operation 89 'mul' 'mul_ln14' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 90 [1/2] (6.86ns)   --->   "%mul_ln14_1 = mul i32 %sub_ln14_1, i32 %sub_ln14_1" [src/EucHW.cpp:14]   --->   Operation 90 'mul' 'mul_ln14_1' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 91 [1/2] (6.86ns)   --->   "%mul_ln14_2 = mul i32 %sub_ln14_2, i32 %sub_ln14_2" [src/EucHW.cpp:14]   --->   Operation 91 'mul' 'mul_ln14_2' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 92 [1/2] (6.86ns)   --->   "%mul_ln14_3 = mul i32 %sub_ln14_3, i32 %sub_ln14_3" [src/EucHW.cpp:14]   --->   Operation 92 'mul' 'mul_ln14_3' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 93 [1/2] (6.86ns)   --->   "%mul_ln14_4 = mul i32 %sub_ln14_4, i32 %sub_ln14_4" [src/EucHW.cpp:14]   --->   Operation 93 'mul' 'mul_ln14_4' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 94 [1/2] (6.86ns)   --->   "%mul_ln14_5 = mul i32 %sub_ln14_5, i32 %sub_ln14_5" [src/EucHW.cpp:14]   --->   Operation 94 'mul' 'mul_ln14_5' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 95 [1/2] (6.86ns)   --->   "%mul_ln14_6 = mul i32 %sub_ln14_6, i32 %sub_ln14_6" [src/EucHW.cpp:14]   --->   Operation 95 'mul' 'mul_ln14_6' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 96 [1/2] (6.86ns)   --->   "%mul_ln14_7 = mul i32 %sub_ln14_7, i32 %sub_ln14_7" [src/EucHW.cpp:14]   --->   Operation 96 'mul' 'mul_ln14_7' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 97 [1/2] (6.86ns)   --->   "%mul_ln14_8 = mul i32 %sub_ln14_8, i32 %sub_ln14_8" [src/EucHW.cpp:14]   --->   Operation 97 'mul' 'mul_ln14_8' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 98 [1/2] (6.86ns)   --->   "%mul_ln14_9 = mul i32 %sub_ln14_9, i32 %sub_ln14_9" [src/EucHW.cpp:14]   --->   Operation 98 'mul' 'mul_ln14_9' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 99 [1/2] (6.86ns)   --->   "%mul_ln14_10 = mul i32 %sub_ln14_10, i32 %sub_ln14_10" [src/EucHW.cpp:14]   --->   Operation 99 'mul' 'mul_ln14_10' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 100 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln14_10 = add i32 %mul_ln14_11, i32 %mul_ln14_12" [src/EucHW.cpp:14]   --->   Operation 100 'add' 'add_ln14_10' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 101 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%add_ln14_13 = add i32 %add_ln14_12, i32 %add_ln14_10" [src/EucHW.cpp:14]   --->   Operation 101 'add' 'add_ln14_13' <Predicate = true> <Delay = 4.50> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 7.20>
+ST_6 : Operation 102 [1/1] (0.00ns)   --->   "%C_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %C" [src/EucHW.cpp:14]   --->   Operation 102 'read' 'C_read' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 103 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln14 = add i32 %C_read, i32 %mul_ln14" [src/EucHW.cpp:14]   --->   Operation 103 'add' 'add_ln14' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 104 [1/1] (2.70ns)   --->   "%add_ln14_1 = add i32 %mul_ln14_1, i32 %mul_ln14_2" [src/EucHW.cpp:14]   --->   Operation 104 'add' 'add_ln14_1' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 105 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%add_ln14_2 = add i32 %add_ln14_1, i32 %add_ln14" [src/EucHW.cpp:14]   --->   Operation 105 'add' 'add_ln14_2' <Predicate = true> <Delay = 4.50> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 106 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln14_3 = add i32 %mul_ln14_3, i32 %mul_ln14_4" [src/EucHW.cpp:14]   --->   Operation 106 'add' 'add_ln14_3' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 107 [1/1] (2.70ns)   --->   "%add_ln14_4 = add i32 %mul_ln14_5, i32 %mul_ln14_6" [src/EucHW.cpp:14]   --->   Operation 107 'add' 'add_ln14_4' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 108 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%add_ln14_5 = add i32 %add_ln14_4, i32 %add_ln14_3" [src/EucHW.cpp:14]   --->   Operation 108 'add' 'add_ln14_5' <Predicate = true> <Delay = 4.50> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 109 [1/1] (2.70ns)   --->   "%add_ln14_7 = add i32 %mul_ln14_7, i32 %mul_ln14_8" [src/EucHW.cpp:14]   --->   Operation 109 'add' 'add_ln14_7' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 110 [1/1] (2.70ns)   --->   "%add_ln14_8 = add i32 %mul_ln14_9, i32 %mul_ln14_10" [src/EucHW.cpp:14]   --->   Operation 110 'add' 'add_ln14_8' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 111 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln14_9 = add i32 %add_ln14_8, i32 %add_ln14_7" [src/EucHW.cpp:14]   --->   Operation 111 'add' 'add_ln14_9' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 112 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%add_ln14_14 = add i32 %add_ln14_13, i32 %add_ln14_9" [src/EucHW.cpp:14]   --->   Operation 112 'add' 'add_ln14_14' <Predicate = true> <Delay = 4.50> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 7 <SV = 6> <Delay = 4.50>
+ST_7 : Operation 113 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln14_6 = add i32 %add_ln14_5, i32 %add_ln14_2" [src/EucHW.cpp:14]   --->   Operation 113 'add' 'add_ln14_6' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 114 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%xf_V = add i32 %add_ln14_14, i32 %add_ln14_6" [src/EucHW.cpp:14]   --->   Operation 114 'add' 'xf_V' <Predicate = true> <Delay = 4.50> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 7> <Delay = 7.07>
+ST_8 : Operation 115 [10/10] (7.07ns)   --->   "%p_Val2_s = call i16 @sqrt_fixed<32, 32>, i32 %xf_V" [r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381]   --->   Operation 115 'call' 'p_Val2_s' <Predicate = true> <Delay = 7.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 7.07>
+ST_9 : Operation 116 [9/10] (7.07ns)   --->   "%p_Val2_s = call i16 @sqrt_fixed<32, 32>, i32 %xf_V" [r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381]   --->   Operation 116 'call' 'p_Val2_s' <Predicate = true> <Delay = 7.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 7.07>
+ST_10 : Operation 117 [8/10] (7.07ns)   --->   "%p_Val2_s = call i16 @sqrt_fixed<32, 32>, i32 %xf_V" [r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381]   --->   Operation 117 'call' 'p_Val2_s' <Predicate = true> <Delay = 7.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 7.07>
+ST_11 : Operation 118 [7/10] (7.07ns)   --->   "%p_Val2_s = call i16 @sqrt_fixed<32, 32>, i32 %xf_V" [r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381]   --->   Operation 118 'call' 'p_Val2_s' <Predicate = true> <Delay = 7.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 7.07>
+ST_12 : Operation 119 [6/10] (7.07ns)   --->   "%p_Val2_s = call i16 @sqrt_fixed<32, 32>, i32 %xf_V" [r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381]   --->   Operation 119 'call' 'p_Val2_s' <Predicate = true> <Delay = 7.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 7.07>
+ST_13 : Operation 120 [5/10] (7.07ns)   --->   "%p_Val2_s = call i16 @sqrt_fixed<32, 32>, i32 %xf_V" [r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381]   --->   Operation 120 'call' 'p_Val2_s' <Predicate = true> <Delay = 7.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 7.07>
+ST_14 : Operation 121 [4/10] (7.07ns)   --->   "%p_Val2_s = call i16 @sqrt_fixed<32, 32>, i32 %xf_V" [r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381]   --->   Operation 121 'call' 'p_Val2_s' <Predicate = true> <Delay = 7.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 7.07>
+ST_15 : Operation 122 [3/10] (7.07ns)   --->   "%p_Val2_s = call i16 @sqrt_fixed<32, 32>, i32 %xf_V" [r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381]   --->   Operation 122 'call' 'p_Val2_s' <Predicate = true> <Delay = 7.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 7.07>
+ST_16 : Operation 123 [2/10] (7.07ns)   --->   "%p_Val2_s = call i16 @sqrt_fixed<32, 32>, i32 %xf_V" [r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381]   --->   Operation 123 'call' 'p_Val2_s' <Predicate = true> <Delay = 7.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 5.10>
+ST_17 : Operation 124 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1"   --->   Operation 124 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 125 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_0"   --->   Operation 125 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 126 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 126 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 127 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_1"   --->   Operation 127 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 128 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_1, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 128 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 129 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_2"   --->   Operation 129 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 130 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_2, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 130 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 131 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_3"   --->   Operation 131 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 132 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_3, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 132 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 133 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_4"   --->   Operation 133 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 134 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_4, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 134 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 135 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_5"   --->   Operation 135 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 136 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_5, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 136 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 137 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_6"   --->   Operation 137 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 138 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_6, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 138 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 139 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_7"   --->   Operation 139 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 140 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_7, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 140 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 141 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_8"   --->   Operation 141 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 142 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_8, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 142 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 143 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_9"   --->   Operation 143 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 144 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_9, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 144 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 145 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_10"   --->   Operation 145 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 146 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_10, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 146 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 147 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_11"   --->   Operation 147 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 148 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_11, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 148 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 149 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_12"   --->   Operation 149 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 150 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_12, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 150 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 151 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_13"   --->   Operation 151 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 152 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_13, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 152 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 153 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_14"   --->   Operation 153 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 154 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_14, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 154 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 155 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A_15"   --->   Operation 155 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 156 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A_15, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 156 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 157 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_0"   --->   Operation 157 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 158 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 158 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 159 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_1"   --->   Operation 159 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 160 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_1, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 160 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 161 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_2"   --->   Operation 161 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 162 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_2, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 162 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 163 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_3"   --->   Operation 163 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 164 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_3, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 164 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 165 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_4"   --->   Operation 165 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 166 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_4, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 166 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 167 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_5"   --->   Operation 167 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 168 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_5, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 168 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 169 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_6"   --->   Operation 169 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 170 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_6, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 170 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 171 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_7"   --->   Operation 171 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 172 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_7, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 172 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 173 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_8"   --->   Operation 173 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 174 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_8, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 174 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 175 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_9"   --->   Operation 175 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 176 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_9, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 176 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 177 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_10"   --->   Operation 177 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 178 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_10, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 178 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 179 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_11"   --->   Operation 179 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 180 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_11, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 180 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 181 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_12"   --->   Operation 181 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 182 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_12, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 182 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 183 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_13"   --->   Operation 183 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 184 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_13, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 184 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 185 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_14"   --->   Operation 185 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 186 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_14, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 186 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 187 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B_15"   --->   Operation 187 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 188 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B_15, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 188 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 189 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %C, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 189 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 190 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %C"   --->   Operation 190 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 191 [1/10] (5.10ns)   --->   "%p_Val2_s = call i16 @sqrt_fixed<32, 32>, i32 %xf_V" [r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381]   --->   Operation 191 'call' 'p_Val2_s' <Predicate = true> <Delay = 5.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 192 [1/1] (0.00ns)   --->   "%zext_ln840 = zext i16 %p_Val2_s"   --->   Operation 192 'zext' 'zext_ln840' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 193 [1/1] (0.00ns)   --->   "%write_ln16 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %C, i32 %zext_ln840" [src/EucHW.cpp:16]   --->   Operation 193 'write' 'write_ln16' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 194 [1/1] (0.00ns)   --->   "%ret_ln17 = ret" [src/EucHW.cpp:17]   --->   Operation 194 'ret' 'ret_ln17' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 2.7ns
+The critical path consists of the following:
+	wire read operation ('A_13_read', src/EucHW.cpp:14) on port 'A_13' (src/EucHW.cpp:14) [154]  (0 ns)
+	'sub' operation ('sub_ln14_13', src/EucHW.cpp:14) [156]  (2.7 ns)
+
+ <State 2>: 6.86ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln14_13', src/EucHW.cpp:14) [157]  (6.86 ns)
+
+ <State 3>: 6.86ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln14_11', src/EucHW.cpp:14) [149]  (6.86 ns)
+
+ <State 4>: 6.86ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln14', src/EucHW.cpp:14) [105]  (6.86 ns)
+
+ <State 5>: 6.86ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln14', src/EucHW.cpp:14) [105]  (6.86 ns)
+
+ <State 6>: 7.21ns
+The critical path consists of the following:
+	'add' operation ('add_ln14_1', src/EucHW.cpp:14) [167]  (2.7 ns)
+	'add' operation ('add_ln14_2', src/EucHW.cpp:14) [168]  (4.5 ns)
+
+ <State 7>: 4.5ns
+The critical path consists of the following:
+	'add' operation ('add_ln14_6', src/EucHW.cpp:14) [172]  (0 ns)
+	'add' operation ('x', src/EucHW.cpp:14) [181]  (4.5 ns)
+
+ <State 8>: 7.08ns
+The critical path consists of the following:
+	'call' operation ('__Val2__', r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381) to 'sqrt_fixed<32, 32>' [182]  (7.08 ns)
+
+ <State 9>: 7.08ns
+The critical path consists of the following:
+	'call' operation ('__Val2__', r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381) to 'sqrt_fixed<32, 32>' [182]  (7.08 ns)
+
+ <State 10>: 7.08ns
+The critical path consists of the following:
+	'call' operation ('__Val2__', r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381) to 'sqrt_fixed<32, 32>' [182]  (7.08 ns)
+
+ <State 11>: 7.08ns
+The critical path consists of the following:
+	'call' operation ('__Val2__', r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381) to 'sqrt_fixed<32, 32>' [182]  (7.08 ns)
+
+ <State 12>: 7.08ns
+The critical path consists of the following:
+	'call' operation ('__Val2__', r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381) to 'sqrt_fixed<32, 32>' [182]  (7.08 ns)
+
+ <State 13>: 7.08ns
+The critical path consists of the following:
+	'call' operation ('__Val2__', r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381) to 'sqrt_fixed<32, 32>' [182]  (7.08 ns)
+
+ <State 14>: 7.08ns
+The critical path consists of the following:
+	'call' operation ('__Val2__', r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381) to 'sqrt_fixed<32, 32>' [182]  (7.08 ns)
+
+ <State 15>: 7.08ns
+The critical path consists of the following:
+	'call' operation ('__Val2__', r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381) to 'sqrt_fixed<32, 32>' [182]  (7.08 ns)
+
+ <State 16>: 7.08ns
+The critical path consists of the following:
+	'call' operation ('__Val2__', r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381) to 'sqrt_fixed<32, 32>' [182]  (7.08 ns)
+
+ <State 17>: 5.1ns
+The critical path consists of the following:
+	'call' operation ('__Val2__', r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:381) to 'sqrt_fixed<32, 32>' [182]  (5.1 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

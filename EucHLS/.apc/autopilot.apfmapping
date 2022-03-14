@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="EucHW.cpp" path="C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\src\EucHW.cpp"/>
-    <originFiles name="EucHW.h" path="C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\src\EucHW.h"/>
     <originFiles name="specs.h" path="C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\src\specs.h"/>
+    <originFiles name="EucHW.h" path="C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\src\EucHW.h"/>
+    <originFiles name="EucHW.cpp" path="C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\src\EucHW.cpp"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

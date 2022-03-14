@@ -3,6 +3,6 @@
 
 typedef int T;
 
-#define LENGTH	1024
+#define LENGTH	16
 
 #endif
