@@ -4,6 +4,6 @@
 #include "specs.h"
 #include <math.h>
 #include <hls_math.h>
-void eucDistHW (T A[LENGTH], T B[LENGTH], T C[1]);
+void eucHW (T A[LENGTH], T B[LENGTH], Tout C[1]);
 
 #endif

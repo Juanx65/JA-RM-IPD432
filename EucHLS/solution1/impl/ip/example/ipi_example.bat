@@ -5,4 +5,4 @@
 
 @echo off
 
-C:/Xilinx/Vivado/2021.1/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xc7a12ti-csg325-1L ../xilinx_com_hls_eucDistHW_1_0.zip
+C:/Xilinx/Vivado/2021.1/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xc7a12ti-csg325-1L ../xilinx_com_hls_eucHW_1_0.zip

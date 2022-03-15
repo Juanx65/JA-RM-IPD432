@@ -2,26 +2,26 @@
       "name": "",
       "directive": [
         {
-          "functionName": "eucDistHW",
+          "functionName": "eucHW",
           "label": "",
           "functionLabel": "",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "eucDistHW"
+                "value": "eucHW"
               }]
           }
         },
         {
-          "functionName": "eucDistHW",
+          "functionName": "eucHW",
           "label": "",
           "functionLabel": "",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "eucDistHW"
+                "value": "eucHW"
               }]
           }
         }

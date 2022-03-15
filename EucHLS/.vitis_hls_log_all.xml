@@ -6,14 +6,8 @@
       <simLog/>
       <mgLog/>
       <packageLog>
-        <logs message="ERROR: [IMPL 213-28] Failed to generate IP." projectName="EucHLS" solutionName="solution1" date="2022-03-13T22:48:11.279-0300"/>
-        <logs message="ERROR: '2203132248' is an invalid argument. Please specify an integer value.&#xD;&#xD;&#xA;    while executing&#xD;&#xD;&#xA;&quot;rdi::set_property core_revision 2203132248 {component component_1}&quot;&#xD;&#xD;&#xA;    invoked from within&#xD;&#xD;&#xA;&quot;set_property core_revision $Revision $core&quot;&#xD;&#xD;&#xA;    (file &quot;run_ippack.tcl&quot; line 1166)&#xD;" projectName="EucHLS" solutionName="solution1" date="2022-03-13T22:48:11.260-0300"/>
-        <logs message="ERROR: [IMPL 213-28] Failed to generate IP." projectName="EucHLS" solutionName="solution1" date="2022-03-13T22:46:36.987-0300"/>
-        <logs message="ERROR: '2203132246' is an invalid argument. Please specify an integer value.&#xD;&#xD;&#xA;    while executing&#xD;&#xD;&#xA;&quot;rdi::set_property core_revision 2203132246 {component component_1}&quot;&#xD;&#xD;&#xA;    invoked from within&#xD;&#xD;&#xA;&quot;set_property core_revision $Revision $core&quot;&#xD;&#xD;&#xA;    (file &quot;run_ippack.tcl&quot; line 1166)&#xD;" projectName="EucHLS" solutionName="solution1" date="2022-03-13T22:46:36.934-0300"/>
-        <logs message="ERROR: [IMPL 213-28] Failed to generate IP." projectName="EucHLS" solutionName="solution1" date="2022-03-13T22:43:54.567-0300"/>
-        <logs message="ERROR: '2203132243' is an invalid argument. Please specify an integer value.&#xD;&#xD;&#xA;    while executing&#xD;&#xD;&#xA;&quot;rdi::set_property core_revision 2203132243 {component component_1}&quot;&#xD;&#xD;&#xA;    invoked from within&#xD;&#xD;&#xA;&quot;set_property core_revision $Revision $core&quot;&#xD;&#xD;&#xA;    (file &quot;run_ippack.tcl&quot; line 1166)&#xD;" projectName="EucHLS" solutionName="solution1" date="2022-03-13T22:43:54.535-0300"/>
-        <logs message="ERROR: [IMPL 213-28] Failed to generate IP." projectName="EucHLS" solutionName="solution1" date="2022-03-13T22:43:02.567-0300"/>
-        <logs message="ERROR: '2203132242' is an invalid argument. Please specify an integer value.&#xD;&#xD;&#xA;    while executing&#xD;&#xD;&#xA;&quot;rdi::set_property core_revision 2203132242 {component component_1}&quot;&#xD;&#xD;&#xA;    invoked from within&#xD;&#xD;&#xA;&quot;set_property core_revision $Revision $core&quot;&#xD;&#xD;&#xA;    (file &quot;run_ippack.tcl&quot; line 1166)&#xD;" projectName="EucHLS" solutionName="solution1" date="2022-03-13T22:43:02.549-0300"/>
+        <logs message="ERROR: [IMPL 213-28] Failed to generate IP." projectName="EucHLS" solutionName="solution1" date="2022-03-14T23:28:07.282-0300"/>
+        <logs message="ERROR: '2203142328' is an invalid argument. Please specify an integer value.&#xD;&#xD;&#xA;    while executing&#xD;&#xD;&#xA;&quot;rdi::set_property core_revision 2203142328 {component component_1}&quot;&#xD;&#xD;&#xA;    invoked from within&#xD;&#xD;&#xA;&quot;set_property core_revision $Revision $core&quot;&#xD;&#xD;&#xA;    (file &quot;run_ippack.tcl&quot; line 796)&#xD;" projectName="EucHLS" solutionName="solution1" date="2022-03-14T23:28:07.264-0300"/>
       </packageLog>
       <csimLog/>
     </logs>
@@ -21,9 +15,10 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed&lt;32, 32>' to 'sqrt_fixed_32_32_s'." projectName="EucHLS" solutionName="solution1" date="2022-03-13T22:26:12.964-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16" projectName="EucHLS" solutionName="solution1" date="2022-03-13T22:26:00.733-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-949] non-portable path to file '&quot;EucHW.h&quot;'; specified path differs in case from file name on disk: src/EucHW.cpp:1:10" projectName="EucHLS" solutionName="solution1" date="2022-03-13T22:26:00.661-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 214-292] Unsupported reshape pragma/directive on variable 'A'. The port size might be shrunk or fail cosim as the bit-width after reshape (8192) is larger than 4096" projectName="EucHLS" solutionName="solution1" date="2022-03-15T02:19:18.930-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 214-292] Unsupported reshape pragma/directive on variable 'B'. The port size might be shrunk or fail cosim as the bit-width after reshape (8192) is larger than 4096" projectName="EucHLS" solutionName="solution1" date="2022-03-15T02:19:18.919-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16" projectName="EucHLS" solutionName="solution1" date="2022-03-15T02:19:14.774-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 207-949] non-portable path to file '&quot;EucHW.h&quot;'; specified path differs in case from file name on disk: src/EucHW.cpp:1:10" projectName="EucHLS" solutionName="solution1" date="2022-03-15T02:19:14.752-0300" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

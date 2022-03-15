@@ -159,7 +159,8 @@ extern "C" {
 
 
 
-typedef int T;
+typedef char T;
+typedef int Tout;
 # 5 "src/eucHW.h" 2
 # 1 "C:/Xilinx/Vitis_HLS/2021.1/tps/mingw/6.2.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\6.2.0\\include\\c++\\math.h" 1 3
 # 36 "C:/Xilinx/Vitis_HLS/2021.1/tps/mingw/6.2.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\6.2.0\\include\\c++\\math.h" 3
@@ -26344,25 +26345,35 @@ namespace hls {
 
 };
 # 7 "src/eucHW.h" 2
-__attribute__((sdx_kernel("eucDistHW", 0))) void eucDistHW (T A[16], T B[16], T C[1]);
+__attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C[1]);
 # 2 "src/EucHW.cpp" 2
 
-__attribute__((sdx_kernel("eucDistHW", 0))) void eucDistHW (T A[16], T B[16],T C[1])
-{_ssdm_SpecArrayDimSize(A, 16);_ssdm_SpecArrayDimSize(B, 16);_ssdm_SpecArrayDimSize(C, 1);
-#pragma HLS TOP name=eucDistHW
+__attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C[1])
+{_ssdm_SpecArrayDimSize(A, 1024);_ssdm_SpecArrayDimSize(B, 1024);_ssdm_SpecArrayDimSize(C, 1);
+#pragma HLS TOP name=eucHW
 # 4 "src/EucHW.cpp"
 
+#pragma HLS ARRAY_RESHAPE variable=A complete dim=1
+#pragma HLS ARRAY_RESHAPE variable=B complete dim=1
 
-#pragma HLS array_partition variable=A complete dim=1
-#pragma HLS array_partition variable=B complete dim=1
-#pragma HLS array_partition variable=C complete dim=1
 
- loopManDist:for (int i = 0; i < 16; i++)
+
+
+
+
+
+ Tout result = 0;
+
+ loopManDist:for (int i = 0; i < 1024; i++)
  {
-#pragma HLS UNROLL
 
- C[0] = C[0] + (A[i]-B[i])*(A[i]-B[i]);
+#pragma HLS UNROLL factor=2
+#pragma HLS PIPELINE
+
+ result += (A[i]-B[i])*(A[i]-B[i]);
  }
- C[0] = hls::sqrt(C[0]);
+
+ C[0] = result;
+
  return;
 }

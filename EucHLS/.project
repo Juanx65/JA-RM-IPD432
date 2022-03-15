@@ -57,6 +57,21 @@
 			<location>C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/specs.h</location>
 		</link>
 		<link>
+			<name>testbench/EucSW.cpp</name>
+			<type>1</type>
+			<location>C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucSW.cpp</location>
+		</link>
+		<link>
+			<name>testbench/EucSW.h</name>
+			<type>1</type>
+			<location>C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucSW.h</location>
+		</link>
+		<link>
+			<name>testbench/EucTB.cpp</name>
+			<type>1</type>
+			<location>C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp</location>
+		</link>
+		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
 			<location>C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/solution1.directive</location>

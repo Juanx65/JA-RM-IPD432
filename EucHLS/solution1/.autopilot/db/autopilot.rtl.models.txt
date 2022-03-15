@@ -1,3 +1,5 @@
-eucDistHW_mul_32s_32s_32_2_1
-sqrt_fixed_32_32_s
-eucDistHW
+eucHW_sub_8192ns_8192ns_8192_2_1
+eucHW_mul_9s_9s_18_1_1
+eucHW_mac_muladd_9s_9s_18s_18_4_1
+eucHW_flow_control_loop_pipe
+eucHW

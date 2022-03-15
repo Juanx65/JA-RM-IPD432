@@ -1,8 +1,9 @@
 #ifndef SPECS_H
 #define SPECS_H
 
-typedef int T;
+typedef char T;
+typedef int Tout;
 
-#define LENGTH	16
+#define LENGTH	1024
 
 #endif
