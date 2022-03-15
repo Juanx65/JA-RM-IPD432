@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Dec 30 20:09:09 2021
+# Process ID: 13564
+# Current directory: C:/Users/juan_/Documents/FPGA/IPD432/T3_PRO_OP_PIPE
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8392 C:\Users\juan_\Documents\FPGA\IPD432\T3_PRO_OP_PIPE\T3_PRO_OP_PIPE.xpr
+# Log file: C:/Users/juan_/Documents/FPGA/IPD432/T3_PRO_OP_PIPE/vivado.log
+# Journal file: C:/Users/juan_/Documents/FPGA/IPD432/T3_PRO_OP_PIPE\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/juan_/Documents/FPGA/IPD432/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/juan_/Documents/FPGA/IPD432/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:08 . Memory (MB): peak = 1448.953 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 30 20:10:42 2021...

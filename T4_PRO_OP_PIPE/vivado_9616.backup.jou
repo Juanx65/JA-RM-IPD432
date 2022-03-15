@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Mar 14 11:42:49 2022
+# Process ID: 9616
+# Current directory: C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2124 C:\Users\ricar\Desktop\super_digitales\Repo\T3_PRO_OP_PIPE\T3_PRO_OP_PIPE.xpr
+# Log file: C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/vivado.log
+# Journal file: C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.xpr
+update_compile_order -fileset sources_1
+open_run retiming_op -name retiming_op
