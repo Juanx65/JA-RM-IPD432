@@ -1,0 +1,273 @@
+xilinx rtfpga
+INFO: [Synth 8-5544] ROM "data11" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data21" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data11" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data21" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-3936] Found unconnected internal register 'SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[11].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '4' to '3' bits. [c:/Users/juan_/Documents/FPGA/IP/eucHW_0_15/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[9].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '8' to '7' bits. [c:/Users/juan_/Documents/FPGA/IP/eucHW_0_15/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[7].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '12' to '11' bits. [c:/Users/juan_/Documents/FPGA/IP/eucHW_0_15/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[5].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '15' bits. [c:/Users/juan_/Documents/FPGA/IP/eucHW_0_15/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '20' to '19' bits. [c:/Users/juan_/Documents/FPGA/IP/eucHW_0_15/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[1].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '24' to '23' bits. [c:/Users/juan_/Documents/FPGA/IP/eucHW_0_15/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/Q_MANT_LP_DEL/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '26' to '23' bits. [c:/Users/juan_/Documents/FPGA/IP/eucHW_0_15/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'FIX_TO_FLT_OP.SPD.OP/NORM_SHIFT/MUX_LOOP[1].DEL_SHIFT/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '32' to '26' bits. [c:/Users/juan_/Documents/FPGA/IP/eucHW_0_15/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2]' and it is trimmed from '9' to '8' bits. [c:/Users/juan_/Documents/FPGA/IP/eucHW_0_15/hdl/xbip_pipe_v3_0_vh_rfs.vhd:373]
+INFO: [Synth 8-3936] Found unconnected internal register 'ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '9' to '8' bits. [c:/Users/juan_/Documents/FPGA/IP/eucHW_0_15/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SHIFT_TABLE[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "data11" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data21" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data11" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data21" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-7129] Port aresetn in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_a_tuser[0] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_a_tlast in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tuser[0] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tlast in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tvalid in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[31] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[30] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[29] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[28] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[27] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[26] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[25] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[24] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[23] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[22] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[21] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[20] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[19] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[18] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[17] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[16] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[15] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[14] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[13] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[12] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[11] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[10] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[9] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[8] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[7] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[6] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[5] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[4] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[3] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[2] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[1] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[0] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tuser[0] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tlast in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tvalid in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[7] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[6] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[5] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[4] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[3] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[2] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[1] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tdata[0] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tuser[0] in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_operation_tlast in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_result_tready in module floating_point_v7_1_12_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module eucHW_fadd_32ns_32ns_32_7_full_dsp_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_a_tuser[0] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_a_tlast in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tvalid in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[31] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[30] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[29] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[28] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[27] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[26] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[25] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[24] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[23] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[22] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[21] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[20] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[19] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[18] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[17] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[16] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[15] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[14] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[13] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[12] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[11] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[10] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[9] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[8] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[7] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[6] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[5] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[4] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[3] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[2] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[1] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tdata[0] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tuser[0] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_b_tlast in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tvalid in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[31] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[30] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[29] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[28] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[27] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[26] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[25] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_c_tdata[24] in module floating_point_v7_1_12_viv__parameterized1 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mul_ln18_1_reg_496_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mul_ln18_reg_481_reg[1] )
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[30]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[29]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[29]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[28]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[28]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[27]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[26]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[26]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[25]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[25]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[24]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[24]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[23]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[23]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[22]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[21]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[21]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[20]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[20]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[19]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[18]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[18]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[17]'
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[17]' (FDE) to 'sitofp_32s_32_6_no_dsp_1_U2/din0_buf1_reg[31]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (sitofp_32s_32_6_no_dsp_1_U2/ce_r_reg)
+INFO: [Synth 8-3886] merging instance 'fadd_32ns_32ns_32_7_full_dsp_1_U1/eucHW_fadd_32ns_32ns_32_7_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'fadd_32ns_32ns_32_7_full_dsp_1_U1/eucHW_fadd_32ns_32ns_32_7_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (fadd_32ns_32ns_32_7_full_dsp_1_U1/ce_r_reg)
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[1].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[5].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[5].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[7].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[1].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[7].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[9].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[5].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fsqrt_32ns_32ns_32_16_no_dsp_1_U3/\eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst /i_synth/\SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3] )
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[9].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[11].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[5].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[7].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[5].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[5].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[11].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[13].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[7].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[9].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[7].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[7].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[9].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[11].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[9].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[10]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[9].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[11].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[12]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[11].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[11].MA_DEL.MANT_DEL/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[13].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[13].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[14]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[13].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[15].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[16]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[15].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[15]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[17].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[18]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[17].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[19].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[20]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[19].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[19]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[21].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[22]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[21].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[21]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[23].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[24]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[23].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[23]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[64] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[66] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[67] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[68] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[69] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[70] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[71] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[80] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[81] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[82] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[83] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[84] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[85] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[86] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[87] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[96] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[97] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[98] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[99] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[100] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[101] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[102] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[103] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[112] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[113] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[114] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[115] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[116] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[117] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[118] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[119] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[128] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[129] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[130] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[131] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[132] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[133] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[134] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[135] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[144] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[145] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[146] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[147] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[148] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[149] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[150] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[151] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[160] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[161] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[162] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[163] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[164] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[165] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[166] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[167] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[176] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[177] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[178] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[179] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[180] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[181] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\shl_ln18_3_reg_459_reg[182] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[7].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[9].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[9]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[11].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[11]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[13].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[13]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[15].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[15]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[17].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[17]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[19].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[19]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[21].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[21]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[23].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[23]' (FDE) to 'fsqrt_32ns_32ns_32_16_no_dsp_1_U3/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.MANT_SQRT/RT[3].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_12_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_12_viv.
+INFO: [Synth 8-3886] merging instance 'sitofp_32s_32_6_no_dsp_1_U2/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/OP/RESULT_REG.NORMAL.exp_op_reg[6]' (FDRE) to 'sitofp_32s_32_6_no_dsp_1_U2/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/OP/RESULT_REG.NORMAL.exp_op_reg[5]'

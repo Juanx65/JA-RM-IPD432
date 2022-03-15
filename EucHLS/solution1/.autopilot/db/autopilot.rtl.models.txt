@@ -1,4 +1,6 @@
+eucHW_fadd_32ns_32ns_32_7_full_dsp_1
+eucHW_sitofp_32s_32_6_no_dsp_1
+eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1
+eucHW_sub_8192ns_8192ns_8192_2_1
 eucHW_mul_9s_9s_18_1_1
-eucHW_mac_muladd_9s_9s_18s_18_4_1
-sqrt_fixed_32_32_s
 eucHW

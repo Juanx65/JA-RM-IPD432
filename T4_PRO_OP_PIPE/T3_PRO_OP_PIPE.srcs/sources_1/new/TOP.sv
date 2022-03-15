@@ -10,7 +10,7 @@
 
 module TOP 
 #(parameter 
-    BR_SIZE = 8,
+    BR_SIZE = 1024,
     CLK_FREQUENCY = 100000000,
 	BAUD_RATE = 115200,
 	NBITS = 8

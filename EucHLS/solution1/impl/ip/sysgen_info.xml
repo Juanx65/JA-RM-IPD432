@@ -3,18 +3,18 @@
   <CTypeInfo>
       <RtlPort>
         <name>A</name>
-        <type>Signed</type>
+        <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>B</name>
-        <type>Signed</type>
+        <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>C</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
+        <type>Floating-point</type>
+        <fractionWidth>24</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>C_ap_vld</name>
@@ -28,7 +28,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>13</latency>
-    <II>14</II>
+    <latency>7196</latency>
+    <II>7197</II>
   </modelParameters>
 </AdditionalInfo>

@@ -1,0 +1,14 @@
+verilog xil_defaultlib  \
+"../../../ipstatic/hdl/verilog/eucHW_fadd_32ns_32ns_32_7_full_dsp_1.v" \
+"../../../ipstatic/hdl/verilog/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1.v" \
+"../../../ipstatic/hdl/verilog/eucHW_mul_9s_9s_18_1_1.v" \
+"../../../ipstatic/hdl/verilog/eucHW_sitofp_32s_32_6_no_dsp_1.v" \
+"../../../ipstatic/hdl/verilog/eucHW.v" \
+"../../../ipstatic/hdl/ip/eucHW_fadd_32ns_32ns_32_7_full_dsp_1_ip.v" \
+"../../../ipstatic/hdl/ip/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip.v" \
+"../../../ipstatic/hdl/ip/eucHW_sitofp_32s_32_6_no_dsp_1_ip.v" \
+"../../../../../../IP/eucHW_0_14/sim/eucHW_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -70,7 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "retiming_op" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
+set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
@@ -85,7 +85,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {C:/Users/juan_/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_repo_paths c:/Users/juan_/Documents/FPGA/IPs/eucDistHW_unroll8_int [current_project]
+set_property ip_repo_paths c:/Users/juan_/Documents/FPGA/IPs/eucDistHW_pipe [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -111,8 +111,8 @@ read_verilog -library xil_defaultlib {
   C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/uart_tx.v
   C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/unsigned_to_bcd.v
 }
-read_ip -quiet c:/Users/juan_/Documents/FPGA/IP/eucHW_0_7/eucHW_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/juan_/Documents/FPGA/IP/eucHW_0_7/constraints/eucHW_ooc.xdc]
+read_ip -quiet c:/Users/juan_/Documents/FPGA/IP/eucHW_0_15/eucHW_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/juan_/Documents/FPGA/IP/eucHW_0_15/constraints/eucHW_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -132,7 +132,7 @@ set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top TOP -part xc7a100tcsg324-1 -directive AreaOptimized_high -control_set_opt_threshold 1
+synth_design -top TOP -part xc7a100tcsg324-1 -retiming
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

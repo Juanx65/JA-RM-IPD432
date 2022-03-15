@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: xilinx.com:hls:eucHW:1.0
-// IP Revision: 2112418345
+// IP Revision: 2112418519
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -62,8 +62,8 @@ eucHW_0 your_instance_name (
   .ap_done(ap_done),    // output wire ap_done
   .ap_idle(ap_idle),    // output wire ap_idle
   .ap_ready(ap_ready),  // output wire ap_ready
-  .A(A),                // input wire [63 : 0] A
-  .B(B),                // input wire [63 : 0] B
+  .A(A),                // input wire [8191 : 0] A
+  .B(B),                // input wire [8191 : 0] B
   .C(C)                // output wire [31 : 0] C
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------

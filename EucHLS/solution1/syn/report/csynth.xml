@@ -15,25 +15,34 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>7.007</EstimatedClockPeriod>
+            <EstimatedClockPeriod>6.342</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>13</Best-caseLatency>
-            <Average-caseLatency>13</Average-caseLatency>
-            <Worst-caseLatency>13</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.130 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.130 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.130 us</Worst-caseRealTimeLatency>
-            <Interval-min>14</Interval-min>
-            <Interval-max>14</Interval-max>
+            <Best-caseLatency>7196</Best-caseLatency>
+            <Average-caseLatency>7196</Average-caseLatency>
+            <Worst-caseLatency>7196</Worst-caseLatency>
+            <Best-caseRealTimeLatency>71.960 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>71.960 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>71.960 us</Worst-caseRealTimeLatency>
+            <Interval-min>7197</Interval-min>
+            <Interval-max>7197</Interval-max>
         </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <loopManDist>
+                <TripCount>512</TripCount>
+                <Latency>7179</Latency>
+                <AbsoluteTimeLatency>71790</AbsoluteTimeLatency>
+                <PipelineII>14</PipelineII>
+                <PipelineDepth>26</PipelineDepth>
+            </loopManDist>
+        </SummaryOfLoopLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <DSP>4</DSP>
-            <FF>699</FF>
-            <LUT>1840</LUT>
+            <DSP>2</DSP>
+            <FF>50849</FF>
+            <LUT>36766</LUT>
             <BRAM_18K>0</BRAM_18K>
             <URAM>0</URAM>
         </Resources>
@@ -120,7 +129,7 @@
             <IOProtocol>ap_none</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>8192</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -132,7 +141,7 @@
             <IOProtocol>ap_none</IOProtocol>
             <IOConfig/>
             <Dir>in</Dir>
-            <Bits>64</Bits>
+            <Bits>8192</Bits>
             <Attribute>data</Attribute>
             <CType>int</CType>
         </RtlPorts>
@@ -164,89 +173,54 @@
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="2">
             <ModuleName>eucHW</ModuleName>
-            <InstancesList>
-                <Instance>
-                    <InstName>grp_sqrt_fixed_32_32_s_fu_77</InstName>
-                    <ModuleName>sqrt_fixed_32_32_s</ModuleName>
-                    <IsCompInst>true</IsCompInst>
-                    <ID>77</ID>
-                </Instance>
-            </InstancesList>
-            <BindInstances>sub_ln19_fu_98_p2 mac_muladd_9s_9s_18s_18_4_1_U6 sub_ln19_1_fu_136_p2 mul_9s_9s_18_1_1_U2 sub_ln19_2_fu_170_p2 mul_9s_9s_18_1_1_U3 sub_ln19_3_fu_204_p2 mac_muladd_9s_9s_18s_18_4_1_U7 sub_ln19_4_fu_242_p2 mul_9s_9s_18_1_1_U4 sub_ln19_5_fu_276_p2 mac_muladd_9s_9s_18s_18_4_1_U8 sub_ln19_6_fu_314_p2 mul_9s_9s_18_1_1_U5 sub_ln19_7_fu_348_p2 mac_muladd_9s_9s_18s_18_4_1_U9 mac_muladd_9s_9s_18s_18_4_1_U6 mac_muladd_9s_9s_18s_18_4_1_U7 add_ln19_2_fu_400_p2 mac_muladd_9s_9s_18s_18_4_1_U8 mac_muladd_9s_9s_18s_18_4_1_U9 add_ln19_5_fu_416_p2 result_2_fu_426_p2</BindInstances>
+            <BindInstances>add_ln18_fu_174_p2 sub_8192ns_8192ns_8192_2_1_U4 sub_ln18_1_fu_314_p2 mul_9s_9s_18_1_1_U6 fadd_32ns_32ns_32_7_full_dsp_1_U1 add_ln18_1_fu_233_p2 sub_8192ns_8192ns_8192_2_1_U5 sub_ln18_3_fu_363_p2 mul_9s_9s_18_1_1_U7 fadd_32ns_32ns_32_7_full_dsp_1_U1 add_ln14_fu_196_p2 fsqrt_32ns_32ns_32_16_no_dsp_1_U3</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>sqrt_fixed_32_32_s</Name>
-            <PerformanceEstimates>
-                <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>10.00</TargetClockPeriod>
-                    <ClockUncertainty>2.70</ClockUncertainty>
-                    <TargetInitiationInterval>4294967295</TargetInitiationInterval>
-                    <EstimatedClockPeriod>7.007</EstimatedClockPeriod>
-                </SummaryOfTimingAnalysis>
-                <SummaryOfOverallLatency>
-                    <Best-caseLatency>8</Best-caseLatency>
-                    <Average-caseLatency>8</Average-caseLatency>
-                    <Worst-caseLatency>8</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>80.000 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>80.000 ns</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>80.000 ns</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
-                    <PipelineDepth>9</PipelineDepth>
-                    <PipelineType>yes</PipelineType>
-                </SummaryOfOverallLatency>
-            </PerformanceEstimates>
-            <AreaEstimates>
-                <Resources>
-                    <FF>629</FF>
-                    <AVAIL_FF>16000</AVAIL_FF>
-                    <UTIL_FF>3</UTIL_FF>
-                    <LUT>1368</LUT>
-                    <AVAIL_LUT>8000</AVAIL_LUT>
-                    <UTIL_LUT>17</UTIL_LUT>
-                    <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>40</AVAIL_BRAM>
-                    <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>40</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
-                    <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
-                    <UTIL_URAM>0</UTIL_URAM>
-                </Resources>
-            </AreaEstimates>
-        </Module>
-        <Module>
             <Name>eucHW</Name>
+            <Loops>
+                <loopManDist/>
+            </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.007</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>6.342</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>13</Best-caseLatency>
-                    <Average-caseLatency>13</Average-caseLatency>
-                    <Worst-caseLatency>13</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.130 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.130 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.130 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>14</PipelineInitiationInterval>
+                    <Best-caseLatency>7196</Best-caseLatency>
+                    <Average-caseLatency>7196</Average-caseLatency>
+                    <Worst-caseLatency>7196</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>71.960 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>71.960 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>71.960 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>7197</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <loopManDist>
+                        <Name>loopManDist</Name>
+                        <TripCount>512</TripCount>
+                        <Latency>7179</Latency>
+                        <AbsoluteTimeLatency>71.790 us</AbsoluteTimeLatency>
+                        <PipelineII>14</PipelineII>
+                        <PipelineDepth>26</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                    </loopManDist>
+                </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <DSP>4</DSP>
+                    <DSP>2</DSP>
                     <AVAIL_DSP>40</AVAIL_DSP>
-                    <UTIL_DSP>10</UTIL_DSP>
-                    <FF>699</FF>
+                    <UTIL_DSP>5</UTIL_DSP>
+                    <FF>50849</FF>
                     <AVAIL_FF>16000</AVAIL_FF>
-                    <UTIL_FF>4</UTIL_FF>
-                    <LUT>1840</LUT>
+                    <UTIL_FF>317</UTIL_FF>
+                    <LUT>36766</LUT>
                     <AVAIL_LUT>8000</AVAIL_LUT>
-                    <UTIL_LUT>23</UTIL_LUT>
+                    <UTIL_LUT>459</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>40</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
@@ -256,48 +230,37 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln19_fu_98_p2" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="sub_ln19"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U6" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="result"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln19_1_fu_136_p2" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="sub_ln19_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U2" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="mul_ln19"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln19_2_fu_170_p2" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="sub_ln19_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U3" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="mul_ln19_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln19_3_fu_204_p2" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="sub_ln19_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U7" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="mul_ln19_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln19_4_fu_242_p2" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="sub_ln19_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U4" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="mul_ln19_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln19_5_fu_276_p2" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="sub_ln19_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U8" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="mul_ln19_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln19_6_fu_314_p2" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="sub_ln19_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U5" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="mul_ln19_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln19_7_fu_348_p2" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="sub_ln19_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U9" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="mul_ln19_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U6" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="add_ln19"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U7" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="add_ln19_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln19_2_fu_400_p2" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="add_ln19_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U8" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="add_ln19_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U9" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="add_ln19_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln19_5_fu_416_p2" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="add_ln19_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="result_2_fu_426_p2" SOURCE="src/EucHW.cpp:19" URAM="0" VARIABLE="result_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_fu_174_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="add_ln18"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="sub" PRAGMA="" RTLNAME="sub_8192ns_8192ns_8192_2_1_U4" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="sub_ln18"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln18_1_fu_314_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="sub_ln18_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loopManDist" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U6" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="mul_ln18"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="loopManDist" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U1" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="result_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_1_fu_233_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="add_ln18_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="sub" PRAGMA="" RTLNAME="sub_8192ns_8192ns_8192_2_1_U5" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="sub_ln18_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln18_3_fu_363_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="sub_ln18_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loopManDist" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U7" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="mul_ln18_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="loopManDist" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U1" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="result_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="add" PRAGMA="" RTLNAME="add_ln14_fu_196_p2" SOURCE="src/EucHW.cpp:14" URAM="0" VARIABLE="add_ln14"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="15" LOOP="" OPTYPE="fsqrt" PRAGMA="" RTLNAME="fsqrt_32ns_32ns_32_16_no_dsp_1_U3" SOURCE="r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:8" URAM="0" VARIABLE="tmp"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
     <UserConfigCommands>
-        <config_export output="C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_unroll8_float.zip"/>
+        <config_export output="C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_pipe.zip"/>
     </UserConfigCommands>
     <Args>
-        <Arg ArgName="A" index="0" direction="in" srcType="char*" srcSize="8">
+        <Arg ArgName="A" index="0" direction="in" srcType="unsigned char*" srcSize="8">
             <hwRefs>
                 <hwRef type="port" interface="A" name="A" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="B" index="1" direction="in" srcType="char*" srcSize="8">
+        <Arg ArgName="B" index="1" direction="in" srcType="unsigned char*" srcSize="8">
             <hwRefs>
                 <hwRef type="port" interface="B" name="B" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="C" index="2" direction="out" srcType="int*" srcSize="32">
+        <Arg ArgName="C" index="2" direction="out" srcType="float*" srcSize="32">
             <hwRefs>
                 <hwRef type="port" interface="C" name="C" usage="data" direction="out"/>
                 <hwRef type="port" interface="C_ap_vld" name="C_ap_vld" usage="control" direction="out"/>
@@ -341,7 +304,7 @@
                 <port>ap_start</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="A" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+        <Interface InterfaceName="A" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8192">
             <portMaps>
                 <portMap portMapName="A">DATA</portMap>
             </portMaps>
@@ -352,7 +315,7 @@
                 <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="A"/>
             </constraints>
         </Interface>
-        <Interface InterfaceName="B" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+        <Interface InterfaceName="B" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8192">
             <portMaps>
                 <portMap portMapName="B">DATA</portMap>
             </portMaps>
@@ -386,8 +349,8 @@
             <item name="REGISTER">
                 <table isCollapsed="0">
                     <keys size="3">Interface, Mode, Bitwidth</keys>
-                    <column name="A">ap_none, 64</column>
-                    <column name="B">ap_none, 64</column>
+                    <column name="A">ap_none, 8192</column>
+                    <column name="B">ap_none, 8192</column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
@@ -405,9 +368,9 @@
             <item name="Top Function Arguments">
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="A">in, char*</column>
-                    <column name="B">in, char*</column>
-                    <column name="C">out, int*</column>
+                    <column name="A">in, unsigned char*</column>
+                    <column name="B">in, unsigned char*</column>
+                    <column name="C">out, float*</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">

@@ -32,6 +32,7 @@ class AESL_RUNTIME_BC {
     fstream file_token;
     string mName;
 };
+struct __cosim_s400__ { char data[1024]; };
 extern "C" void eucHW(volatile void *, volatile void *, int*);
 extern "C" void apatb_eucHW_hw(volatile void * __xlx_apatb_param_A, volatile void * __xlx_apatb_param_B, volatile void * __xlx_apatb_param_C) {
   // Collect __xlx_C__tmp_vec

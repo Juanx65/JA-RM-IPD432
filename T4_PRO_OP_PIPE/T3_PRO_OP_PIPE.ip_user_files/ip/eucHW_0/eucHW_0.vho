@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:eucHW:1.0
--- IP Revision: 2112418345
+-- IP Revision: 2112418519
 
 -- The following code must appear in the VHDL architecture header.
 
@@ -61,8 +61,8 @@ COMPONENT eucHW_0
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    A : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
-    B : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+    A : IN STD_LOGIC_VECTOR(8191 DOWNTO 0);
+    B : IN STD_LOGIC_VECTOR(8191 DOWNTO 0);
     C : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END COMPONENT;

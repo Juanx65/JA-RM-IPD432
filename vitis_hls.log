@@ -1,6 +1,6 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'juan_' on host 'juankahp' (Windows NT_amd64 version 6.2) on Tue Mar 15 14:25:29 -0300 2022
+INFO: [HLS 200-10] For user 'juan_' on host 'juankahp' (Windows NT_amd64 version 6.2) on Tue Mar 15 17:19:27 -0300 2022
 INFO: [HLS 200-10] In directory 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432'
 Sourcing Tcl script 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/export.tcl'
 INFO: [HLS 200-1510] Running: open_project EucHLS 
@@ -25,13 +25,13 @@ INFO: [HLS 200-1611] Setting target device to 'xc7a12ti-csg325-1L'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
 INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
-INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_unroll8_float.zip
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_pipe.zip
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 INFO: [HLS 200-1510] Running: set_part xc7a12ti-csg325-1L 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_unroll8_float.zip -rtl verilog 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_pipe.zip -rtl verilog 
 INFO: [HLS 200-1510] Running: set_directive_top -name eucHW eucHW 
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_unroll8_int.zip 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_pipe.zip 
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 
 ****** Vivado v2021.1 (64-bit)
@@ -43,6 +43,18 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 15 14:25:36 2022...
-INFO: [HLS 200-802] Generated output file C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_unroll8_int.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 6.325 seconds; current allocated memory: 121.702 MB.
+WARNING: [IP_Flow 19-4832] The IP name 'eucHW_fadd_32ns_32ns_32_7_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'eucHW_fadd_32ns_32ns_32_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'eucHW_fadd_32ns_32ns_32_7_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'eucHW_sitofp_32s_32_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'eucHW_sitofp_32s_32_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'eucHW_sitofp_32s_32_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 15 17:19:42 2022...
+INFO: [HLS 200-802] Generated output file C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_pipe.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 14.769 seconds; current allocated memory: 121.707 MB.
