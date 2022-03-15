@@ -68,7 +68,7 @@
     "FlowTarget": "vivado",
     "ConfigTcl": [
       "config_export -format=ip_catalog",
-      "config_export -output=C:\/Users\/juan_\/Documents\/FPGA\/IPs\/eucDistHW.zip",
+      "config_export -output=C:\/Users\/juan_\/Documents\/FPGA\/IPs\/eucDistHW_factor2.zip",
       "config_export -rtl=verilog"
     ],
     "DirectiveTcl": ["set_directive_top eucHW -name eucHW"],
@@ -81,8 +81,8 @@
     "ClockPeriod": "10",
     "Uncertainty": "2.7",
     "IsCombinational": "0",
-    "II": "520",
-    "Latency": "519"
+    "II": "529",
+    "Latency": "528"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
@@ -134,6 +134,7 @@
       "impl\/vhdl\/eucHW_ama_submuladd_16ns_16ns_16ns_16_4_1.vhd",
       "impl\/vhdl\/eucHW_flow_control_loop_pipe.vhd",
       "impl\/vhdl\/eucHW_mac_muladd_9s_9s_18s_18_4_1.vhd",
+      "impl\/vhdl\/eucHW_mac_muladd_9s_9s_18s_32_4_1.vhd",
       "impl\/vhdl\/eucHW_mul_9s_9s_18_1_1.vhd",
       "impl\/vhdl\/eucHW_mul_32s_32s_32_2_1.vhd",
       "impl\/vhdl\/eucHW_mul_mul_16s_16s_16_4_1.vhd",
@@ -189,6 +190,7 @@
       "impl\/verilog\/eucHW_ama_submuladd_16ns_16ns_16ns_16_4_1.v",
       "impl\/verilog\/eucHW_flow_control_loop_pipe.v",
       "impl\/verilog\/eucHW_mac_muladd_9s_9s_18s_18_4_1.v",
+      "impl\/verilog\/eucHW_mac_muladd_9s_9s_18s_32_4_1.v",
       "impl\/verilog\/eucHW_mul_9s_9s_18_1_1.v",
       "impl\/verilog\/eucHW_mul_32s_32s_32_2_1.v",
       "impl\/verilog\/eucHW_mul_mul_16s_16s_16_4_1.v",
@@ -336,27 +338,75 @@
     }
   },
   "ModuleInfo": {
-    "Hierarchy": {"ModuleName": "eucHW"},
-    "Info": {"eucHW": {
+    "Hierarchy": {
+      "ModuleName": "eucHW",
+      "Instances": [{
+          "ModuleName": "sqrt_fixed_32_32_s",
+          "InstanceName": "grp_sqrt_fixed_32_32_s_fu_99"
+        }]
+    },
+    "Info": {
+      "sqrt_fixed_32_32_s": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "eucHW": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
-      }},
-    "Metrics": {"eucHW": {
+      }
+    },
+    "Metrics": {
+      "sqrt_fixed_32_32_s": {
         "Latency": {
-          "LatencyBest": "519",
-          "LatencyAvg": "519",
-          "LatencyWorst": "519",
-          "PipelineII": "520",
+          "LatencyBest": "8",
+          "LatencyAvg": "8",
+          "LatencyWorst": "8",
+          "PipelineII": "1",
+          "PipelineDepth": "9",
+          "PipelineType": "yes"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.007"
+        },
+        "Area": {
+          "FF": "643",
+          "AVAIL_FF": "16000",
+          "UTIL_FF": "4",
+          "LUT": "1368",
+          "AVAIL_LUT": "8000",
+          "UTIL_LUT": "17",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "40",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "40",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "eucHW": {
+        "Latency": {
+          "LatencyBest": "528",
+          "LatencyAvg": "528",
+          "LatencyWorst": "528",
+          "PipelineII": "529",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "7.003"
+          "Estimate": "7.007"
         },
         "Loops": [{
             "Name": "loopManDist",
@@ -369,12 +419,12 @@
           "DSP": "1",
           "AVAIL_DSP": "40",
           "UTIL_DSP": "2",
-          "FF": "42485",
+          "FF": "26557",
           "AVAIL_FF": "16000",
-          "UTIL_FF": "265",
-          "LUT": "36468",
+          "UTIL_FF": "165",
+          "LUT": "37773",
           "AVAIL_LUT": "8000",
-          "UTIL_LUT": "455",
+          "UTIL_LUT": "472",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "40",
           "UTIL_BRAM": "0",
@@ -382,12 +432,13 @@
           "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
         }
-      }}
+      }
+    }
   },
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-03-14 23:28:01 -0300",
+    "Time": "2021-03-14 23:42:28 -0400",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.1"
   }

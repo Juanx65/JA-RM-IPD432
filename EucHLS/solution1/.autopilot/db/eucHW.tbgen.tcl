@@ -53,7 +53,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "519", "EstimateLatencyMax" : "519",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "528", "EstimateLatencyMax" : "528",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -65,26 +65,42 @@ set RtlHierarchyInfo {[
 			{"Name" : "B", "Type" : "None", "Direction" : "I"},
 			{"Name" : "C", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "loopManDist", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter6", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter6", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sub_8192ns_8192ns_8192_2_1_U1", "Parent" : "0"},
+			{"Name" : "loopManDist", "PipelineType" : "pipeline",
+				"LoopDec" : {"FSMBitwidth" : "12", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter6", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "PreState" : ["ap_ST_fsm_state1"], "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter6", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "PostState" : ["ap_ST_fsm_state9"]}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_sqrt_fixed_32_32_s_fu_99", "Parent" : "0",
+		"CDFG" : "sqrt_fixed_32_32_s",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0", "real_start" : "0",
+		"Pipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "8", "EstimateLatencyMin" : "8", "EstimateLatencyMax" : "8",
+		"Combinational" : "0",
+		"Datapath" : "1",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "x", "Type" : "None", "Direction" : "I"}]},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sub_8192ns_8192ns_8192_2_1_U2", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_9s_9s_18_1_1_U3", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_9s_9s_18s_18_4_1_U4", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_U", "Parent" : "0"}]}
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sub_8192ns_8192ns_8192_2_1_U3", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_9s_9s_18_1_1_U4", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_9s_9s_18s_18_4_1_U5", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	eucHW {
 		A {Type I LastRead 0 FirstWrite -1}
 		B {Type I LastRead 0 FirstWrite -1}
-		C {Type O LastRead -1 FirstWrite 5}}}
+		C {Type O LastRead -1 FirstWrite 11}}
+	sqrt_fixed_32_32_s {
+		x {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "519", "Max" : "519"}
-	, {"Name" : "Interval", "Min" : "520", "Max" : "520"}
+	{"Name" : "Latency", "Min" : "528", "Max" : "528"}
+	, {"Name" : "Interval", "Min" : "529", "Max" : "529"}
 ]}
 
 set PipelineEnableSignalInfo {[

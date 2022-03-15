@@ -41,7 +41,7 @@ ret:                                              ; preds = %for.loop, %entry
 }
 
 ; Function Attrs: argmemonly noinline
-define internal void @onebyonecpy_hls.p0a1024i8.3.4(i8192* noalias align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="0", [1024 x i8]* noalias readonly "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1") #2 {
+define internal void @onebyonecpy_hls.p0a1024i8.15.16(i8192* noalias align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="0", [1024 x i8]* noalias readonly "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1") #2 {
 entry:
   %2 = icmp eq i8192* %0, null
   %3 = icmp eq [1024 x i8]* %1, null
@@ -87,14 +87,14 @@ ret:                                              ; preds = %ret.loopexit, %entr
 ; Function Attrs: argmemonly noinline
 define internal void @copy_in([1024 x i8]* readonly "orig.arg.no"="0", i8192* noalias align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1", [1024 x i8]* readonly "orig.arg.no"="2", i8192* noalias align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="3", [1 x i32]* readonly "orig.arg.no"="4", [1 x i32]* noalias align 512 "orig.arg.no"="5") #3 {
 entry:
-  call void @onebyonecpy_hls.p0a1024i8.3.4(i8192* align 512 %1, [1024 x i8]* %0)
-  call void @onebyonecpy_hls.p0a1024i8.3.4(i8192* align 512 %3, [1024 x i8]* %2)
+  call void @onebyonecpy_hls.p0a1024i8.15.16(i8192* align 512 %1, [1024 x i8]* %0)
+  call void @onebyonecpy_hls.p0a1024i8.15.16(i8192* align 512 %3, [1024 x i8]* %2)
   call fastcc void @onebyonecpy_hls.p0a1i32([1 x i32]* align 512 %5, [1 x i32]* %4)
   ret void
 }
 
 ; Function Attrs: argmemonly noinline
-define internal void @onebyonecpy_hls.p0a1024i8.9.10([1024 x i8]* noalias "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="0", i8192* noalias readonly align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1") #2 {
+define internal void @onebyonecpy_hls.p0a1024i8.21.22([1024 x i8]* noalias "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="0", i8192* noalias readonly align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1") #2 {
 entry:
   %2 = icmp eq [1024 x i8]* %0, null
   %3 = icmp eq i8192* %1, null
@@ -133,8 +133,8 @@ ret:                                              ; preds = %for.loop, %entry
 ; Function Attrs: argmemonly noinline
 define internal void @copy_out([1024 x i8]* "orig.arg.no"="0", i8192* noalias readonly align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1", [1024 x i8]* "orig.arg.no"="2", i8192* noalias readonly align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="3", [1 x i32]* "orig.arg.no"="4", [1 x i32]* noalias readonly align 512 "orig.arg.no"="5") #4 {
 entry:
-  call void @onebyonecpy_hls.p0a1024i8.9.10([1024 x i8]* %0, i8192* align 512 %1)
-  call void @onebyonecpy_hls.p0a1024i8.9.10([1024 x i8]* %2, i8192* align 512 %3)
+  call void @onebyonecpy_hls.p0a1024i8.21.22([1024 x i8]* %0, i8192* align 512 %1)
+  call void @onebyonecpy_hls.p0a1024i8.21.22([1024 x i8]* %2, i8192* align 512 %3)
   call fastcc void @onebyonecpy_hls.p0a1i32([1 x i32]* %4, [1 x i32]* align 512 %5)
   ret void
 }

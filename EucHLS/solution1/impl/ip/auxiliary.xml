@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="eucHW" xd:componentRef="eucHW" xd:initiationInterval="529" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="*(A)" xd:originalName="A" xd:direction="in" xd:interfaceRef="A" xd:busTypeRef="register" xd:dataWidth="8192"/>
+  <xd:arg xd:name="*(B)" xd:originalName="B" xd:direction="in" xd:interfaceRef="B" xd:busTypeRef="register" xd:dataWidth="8192"/>
+  <xd:arg xd:name="*(C)" xd:originalName="C" xd:direction="out" xd:interfaceRef="C" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="528" xd:worst-case="528" xd:average-case="528"/>
+  <xd:resourceEstimates xd:LUT="37773" xd:FF="26557" xd:BRAM="0" xd:DSP="1"/>
+</xd:acceleratorMap>

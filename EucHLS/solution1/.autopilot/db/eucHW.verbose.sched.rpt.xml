@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'eucHW'" level="0">
-<item name = "Date">Tue Mar 15 02:19:19 2022
+<item name = "Date">Tue Mar 15 00:38:30 2022
 </item>
 <item name = "Version">2021.1 (Build 3247384 on Thu Jun 10 19:36:33 MDT 2021)</item>
 <item name = "Project">EucHLS</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.003 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.007 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">519, 519, 5.190 us, 5.190 us, 520, 520, no</column>
+<column name="">528, 528, 5.280 us, 5.280 us, 529, 529, no</column>
 </table>
 </item>
 <item name = "Detail">

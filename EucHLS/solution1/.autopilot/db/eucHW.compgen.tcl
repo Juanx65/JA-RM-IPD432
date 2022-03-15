@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 1
+set id 2
 set name eucHW_sub_8192ns_8192ns_8192_2_1
 set corename simcore_sub
 set op sub
@@ -57,7 +57,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set id 4
+set id 5
 set name eucHW_mac_muladd_9s_9s_18s_18_4_1
 set corename simcore_mac
 set op mac
@@ -127,7 +127,7 @@ set axilite_register_dict [dict create]
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 8 \
+    id 9 \
     name A \
     type other \
     dir I \
@@ -142,7 +142,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 9 \
+    id 10 \
     name B \
     type other \
     dir I \
@@ -157,7 +157,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 10 \
+    id 11 \
     name C \
     type other \
     dir O \
@@ -230,27 +230,6 @@ if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_end
     cg_default_interface_gen_bundle_end
     AESL_LIB_XILADAPTER::native_axis_end
-}
-
-
-# flow_control definition:
-set InstName eucHW_flow_control_loop_pipe_U
-set CompName eucHW_flow_control_loop_pipe
-set name flow_control_loop_pipe
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control] == "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control { \
-    name ${name} \
-    prefix eucHW_ \
-}"
-} else {
-puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control, check your platform lib"
-}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $CompName BINDTYPE interface TYPE internal_upc_flow_control INSTNAME $InstName
 }
 
 

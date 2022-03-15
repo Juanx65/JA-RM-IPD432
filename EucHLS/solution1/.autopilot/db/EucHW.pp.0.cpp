@@ -26373,7 +26373,7 @@ __attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C
  result += (A[i]-B[i])*(A[i]-B[i]);
  }
 
- C[0] = result;
+ C[0] = hls::sqrt(result);
 
  return;
 }

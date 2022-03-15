@@ -22,7 +22,7 @@ void eucHW (T A[LENGTH], T B[LENGTH], Tout C[1])
 		result += (A[i]-B[i])*(A[i]-B[i]);
 	}
 
-	C[0] = result;
+	C[0] = hls::sqrt(result);
 
 	return;
 }
