@@ -17,10 +17,10 @@ module eucHW_sqrt_fixed_32_32_s (
 
 input   ap_clk;
 input   ap_rst;
-input  [26:0] x;
+input  [19:0] x;
 output  [15:0] ap_return;
 
-reg  signed [26:0] x_read_reg_1477;
+reg  signed [19:0] x_read_reg_1477;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
 wire    ap_block_state3_pp0_stage0_iter2;
@@ -31,13 +31,13 @@ wire    ap_block_state7_pp0_stage0_iter6;
 wire    ap_block_state8_pp0_stage0_iter7;
 wire    ap_block_state9_pp0_stage0_iter8;
 wire    ap_block_pp0_stage0_11001;
-reg  signed [26:0] x_read_reg_1477_pp0_iter1_reg;
-reg  signed [26:0] x_read_reg_1477_pp0_iter2_reg;
-reg  signed [26:0] x_read_reg_1477_pp0_iter3_reg;
-reg  signed [26:0] x_read_reg_1477_pp0_iter4_reg;
-reg  signed [26:0] x_read_reg_1477_pp0_iter5_reg;
-reg  signed [26:0] x_read_reg_1477_pp0_iter6_reg;
-reg  signed [26:0] x_read_reg_1477_pp0_iter7_reg;
+reg  signed [19:0] x_read_reg_1477_pp0_iter1_reg;
+reg  signed [19:0] x_read_reg_1477_pp0_iter2_reg;
+reg  signed [19:0] x_read_reg_1477_pp0_iter3_reg;
+reg  signed [19:0] x_read_reg_1477_pp0_iter4_reg;
+reg  signed [19:0] x_read_reg_1477_pp0_iter5_reg;
+reg  signed [19:0] x_read_reg_1477_pp0_iter6_reg;
+reg  signed [19:0] x_read_reg_1477_pp0_iter7_reg;
 wire   [34:0] x_l_I_V_32_fu_338_p3;
 reg   [34:0] x_l_I_V_32_reg_1482;
 wire   [15:0] res_I_V_33_fu_346_p3;
@@ -103,10 +103,10 @@ wire   [0:0] icmp_ln443_14_fu_1387_p2;
 reg   [0:0] icmp_ln443_14_reg_1659;
 wire   [17:0] sub_ln212_14_fu_1393_p2;
 reg   [17:0] sub_ln212_14_reg_1665;
-wire  signed [26:0] sext_ln666_fu_220_p0;
+wire  signed [19:0] sext_ln666_fu_220_p0;
 wire    ap_block_pp0_stage0;
 wire  signed [31:0] sext_ln666_fu_220_p1;
-wire  signed [26:0] tmp_fu_228_p1;
+wire  signed [19:0] tmp_fu_228_p1;
 wire   [0:0] tmp_fu_228_p3;
 wire   [34:0] zext_ln666_fu_224_p1;
 wire   [2:0] select_ln212_fu_236_p3;
@@ -235,7 +235,7 @@ wire   [0:0] p_Result_48_fu_1449_p2;
 wire   [15:0] res_I_V_30_fu_1455_p2;
 wire   [0:0] p_Result_s_fu_1399_p3;
 wire   [15:0] res_I_V_47_fu_1461_p3;
-reg   [26:0] x_int_reg;
+reg   [19:0] x_int_reg;
 wire    ap_ce_reg;
 
 always @ (posedge ap_clk) begin
@@ -464,7 +464,7 @@ assign p_Result_95_fu_1416_p4 = {res_I_V_45_reg_1653[16-1:1], |(1'd1)};
 
 assign p_Result_s_58_fu_272_p4 = {{res_I_V_32_fu_264_p3[15:14]}};
 
-assign p_Result_s_fu_1399_p3 = x_read_reg_1477_pp0_iter7_reg[32'd26];
+assign p_Result_s_fu_1399_p3 = x_read_reg_1477_pp0_iter7_reg[32'd19];
 
 assign res_I_V_30_fu_1455_p2 = (res_I_V_46_fu_1431_p3 + 16'd1);
 
@@ -568,7 +568,7 @@ assign tmp_9_fu_910_p3 = {{p_Result_25_fu_900_p4}, {1'd1}};
 
 assign tmp_fu_228_p1 = x_int_reg;
 
-assign tmp_fu_228_p3 = tmp_fu_228_p1[32'd26];
+assign tmp_fu_228_p3 = tmp_fu_228_p1[32'd19];
 
 assign tmp_s_fu_992_p3 = {{p_Result_28_fu_982_p4}, {1'd1}};
 

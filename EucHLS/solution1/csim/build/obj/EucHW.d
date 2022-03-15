@@ -1,4 +1,4 @@
-obj/EucHW.o: ../../../../src/EucHW.cpp ../../../../src/EucHW.h \
+obj/EucHW.o: ../../../../src/EucHW.cpp ../../../../src/eucHW.h \
  ../../../../src/specs.h C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h \
  C:/Xilinx/Vitis_HLS/2021.1/include/hls_half.h \
  C:/Xilinx/Vitis_HLS/2021.1/include/hls_half_fpo.h \

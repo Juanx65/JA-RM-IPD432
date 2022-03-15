@@ -65,9 +65,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="3" bw="27" op_0_bw="27" op_1_bw="27">
+<Node id="2" bw="20" op_0_bw="20" op_1_bw="20">
 <![CDATA[
-_ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit_ifconv:1 %x_read = read i27 @_ssdm_op_Read.ap_auto.i27, i27 %x
+_ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit_ifconv:0 %x_read = read i20 @_ssdm_op_Read.ap_auto.i20, i20 %x
 
 ]]></Node>
 <StgValue><ssdm name="x_read"/></StgValue>
@@ -80,9 +80,9 @@ _ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="5" bw="32" op_0_bw="27">
+<Node id="5" bw="32" op_0_bw="20">
 <![CDATA[
-_ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit_ifconv:3 %sext_ln666 = sext i27 %x_read
+_ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit_ifconv:3 %sext_ln666 = sext i20 %x_read
 
 ]]></Node>
 <StgValue><ssdm name="sext_ln666"/></StgValue>
@@ -110,9 +110,9 @@ _ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="7" bw="1" op_0_bw="1" op_1_bw="27" op_2_bw="32">
+<Node id="7" bw="1" op_0_bw="1" op_1_bw="20" op_2_bw="32">
 <![CDATA[
-_ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit_ifconv:5 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i27.i32, i27 %x_read, i32 26
+_ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit_ifconv:5 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i20.i32, i20 %x_read, i32 19
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -2397,9 +2397,9 @@ _ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="2" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
+<Node id="3" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-_ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit_ifconv:0 %specpipeline_ln42 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0
+_ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit_ifconv:1 %specpipeline_ln42 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln42"/></StgValue>
@@ -2412,9 +2412,9 @@ _ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="4" bw="1" op_0_bw="1" op_1_bw="27" op_2_bw="32">
+<Node id="4" bw="1" op_0_bw="1" op_1_bw="20" op_2_bw="32">
 <![CDATA[
-_ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit_ifconv:2 %p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i27.i32, i27 %x_read, i32 26
+_ZN9ap_ufixedILi31ELi31EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2ILi32ELi32ELb1ELS0_5ELS1_3ELi0EEERK13ap_fixed_baseIXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit_ifconv:2 %p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i20.i32, i20 %x_read, i32 19
 
 ]]></Node>
 <StgValue><ssdm name="p_Result_s"/></StgValue>

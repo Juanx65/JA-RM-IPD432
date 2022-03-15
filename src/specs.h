@@ -4,6 +4,6 @@
 typedef char T;
 typedef int Tout;
 
-#define LENGTH	1024
+#define LENGTH	8
 
 #endif

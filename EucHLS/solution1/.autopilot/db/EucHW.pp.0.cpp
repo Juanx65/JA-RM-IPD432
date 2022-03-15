@@ -26345,11 +26345,11 @@ namespace hls {
 
 };
 # 7 "src/eucHW.h" 2
-__attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C[1]);
+__attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[8], T B[8], Tout C[1]);
 # 2 "src/EucHW.cpp" 2
 
-__attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C[1])
-{_ssdm_SpecArrayDimSize(A, 1024);_ssdm_SpecArrayDimSize(B, 1024);_ssdm_SpecArrayDimSize(C, 1);
+__attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[8], T B[8], Tout C[1])
+{_ssdm_SpecArrayDimSize(A, 8);_ssdm_SpecArrayDimSize(B, 8);_ssdm_SpecArrayDimSize(C, 1);
 #pragma HLS TOP name=eucHW
 # 4 "src/EucHW.cpp"
 
@@ -26363,17 +26363,13 @@ __attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C
 
 
  Tout result = 0;
-
- loopManDist:for (int i = 0; i < 1024; i++)
+ loopManDist:for (int i = 0; i < 8; i++)
  {
-
-#pragma HLS UNROLL factor=2
-#pragma HLS PIPELINE
+#pragma HLS UNROLL
 
  result += (A[i]-B[i])*(A[i]-B[i]);
  }
 
  C[0] = hls::sqrt(result);
-
  return;
 }

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'sqrt_fixed_32_32_s'
 ================================================================
-* Date:           Tue Mar 15 00:38:30 2022
+* Date:           Tue Mar 15 14:24:46 2022
 
 * Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:33 MDT 2021)
 * Project:        EucHLS
@@ -87,10 +87,10 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 5.88>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%x_read = read i27 @_ssdm_op_Read.ap_auto.i27, i27 %x"   --->   Operation 10 'read' 'x_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%sext_ln666 = sext i27 %x_read"   --->   Operation 11 'sext' 'sext_ln666' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%x_read = read i20 @_ssdm_op_Read.ap_auto.i20, i20 %x"   --->   Operation 10 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%sext_ln666 = sext i20 %x_read"   --->   Operation 11 'sext' 'sext_ln666' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln666 = zext i32 %sext_ln666"   --->   Operation 12 'zext' 'zext_ln666' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i27.i32, i27 %x_read, i32 26"   --->   Operation 13 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i20.i32, i20 %x_read, i32 19"   --->   Operation 13 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns) (grouped into LUT with out node x_l_I_V_31)   --->   "%select_ln212 = select i1 %tmp, i3 2, i3 7"   --->   Operation 14 'select' 'select_ln212' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_1 : Operation 15 [1/1] (0.00ns) (grouped into LUT with out node x_l_I_V_31)   --->   "%p_Result_50 = partset i35 @llvm.part.set.i35.i3, i35 %zext_ln666, i3 %select_ln212, i32 30, i32 32"   --->   Operation 15 'partset' 'p_Result_50' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (0.98ns) (out node of the LUT)   --->   "%x_l_I_V_31 = select i1 %tmp, i35 %p_Result_50, i35 %zext_ln666"   --->   Operation 16 'select' 'x_l_I_V_31' <Predicate = true> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
@@ -257,7 +257,7 @@ ST_8 : Operation 162 [1/1] (2.21ns)   --->   "%sub_ln212_14 = sub i18 %p_Result_
 
 State 9 <SV = 8> <Delay = 5.10>
 ST_9 : Operation 163 [1/1] (0.00ns)   --->   "%specpipeline_ln42 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/include\hls_sqrt_apfixed.h:42]   --->   Operation 163 'specpipeline' 'specpipeline_ln42' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 164 [1/1] (0.00ns) (grouped into LUT with out node select_ln53)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i27.i32, i27 %x_read, i32 26"   --->   Operation 164 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 164 [1/1] (0.00ns) (grouped into LUT with out node select_ln53)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i20.i32, i20 %x_read, i32 19"   --->   Operation 164 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 165 [1/1] (0.00ns) (grouped into LUT with out node p_Result_48)   --->   "%p_Result_94 = partset i35 @llvm.part.set.i35.i18, i35 %x_l_I_V_44, i18 %sub_ln212_14, i32 0, i32 17"   --->   Operation 165 'partset' 'p_Result_94' <Predicate = (!icmp_ln443_14)> <Delay = 0.00>
 ST_9 : Operation 166 [1/1] (0.00ns)   --->   "%p_Result_95 = bitset i16 @_ssdm_op_BitSet.i16.i16.i32.i1, i16 %res_I_V_45, i32 0, i1 1"   --->   Operation 166 'bitset' 'p_Result_95' <Predicate = (!icmp_ln443_14)> <Delay = 0.00>
 ST_9 : Operation 167 [1/1] (0.00ns) (grouped into LUT with out node p_Result_48)   --->   "%x_l_I_V_45 = select i1 %icmp_ln443_14, i35 %x_l_I_V_44, i35 %p_Result_94"   --->   Operation 167 'select' 'x_l_I_V_45' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
@@ -278,7 +278,7 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
 
  <State 1>: 5.89ns
 The critical path consists of the following:
-	wire read operation ('x_read') on port 'x' [3]  (0 ns)
+	wire read operation ('x_read') on port 'x' [2]  (0 ns)
 	'select' operation ('res_I.V') [11]  (1.29 ns)
 	'icmp' operation ('icmp_ln443') [16]  (1.44 ns)
 	'select' operation ('res_I.V') [21]  (1.29 ns)

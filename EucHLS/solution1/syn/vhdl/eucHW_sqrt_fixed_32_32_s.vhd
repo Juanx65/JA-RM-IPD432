@@ -13,7 +13,7 @@ entity eucHW_sqrt_fixed_32_32_s is
 port (
     ap_clk : IN STD_LOGIC;
     ap_rst : IN STD_LOGIC;
-    x : IN STD_LOGIC_VECTOR (26 downto 0);
+    x : IN STD_LOGIC_VECTOR (19 downto 0);
     ap_return : OUT STD_LOGIC_VECTOR (15 downto 0) );
 end;
 
@@ -21,7 +21,7 @@ end;
 architecture behav of eucHW_sqrt_fixed_32_32_s is 
     constant ap_const_boolean_1 : BOOLEAN := true;
     constant ap_const_boolean_0 : BOOLEAN := false;
-    constant ap_const_lv32_1A : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011010";
+    constant ap_const_lv32_13 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010011";
     constant ap_const_lv3_2 : STD_LOGIC_VECTOR (2 downto 0) := "010";
     constant ap_const_lv3_7 : STD_LOGIC_VECTOR (2 downto 0) := "111";
     constant ap_const_lv32_1E : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011110";
@@ -34,6 +34,7 @@ architecture behav of eucHW_sqrt_fixed_32_32_s is
     constant ap_const_lv32_1C : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011100";
     constant ap_const_lv32_1F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011111";
     constant ap_const_lv32_D : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001101";
+    constant ap_const_lv32_1A : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011010";
     constant ap_const_lv32_C : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001100";
     constant ap_const_lv32_18 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011000";
     constant ap_const_lv32_1D : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011101";
@@ -55,7 +56,6 @@ architecture behav of eucHW_sqrt_fixed_32_32_s is
     constant ap_const_lv32_15 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010101";
     constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
-    constant ap_const_lv32_13 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010011";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_lv32_11 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010001";
@@ -65,7 +65,7 @@ architecture behav of eucHW_sqrt_fixed_32_32_s is
     constant ap_const_logic_0 : STD_LOGIC := '0';
 
 attribute shreg_extract : string;
-    signal x_read_reg_1477 : STD_LOGIC_VECTOR (26 downto 0);
+    signal x_read_reg_1477 : STD_LOGIC_VECTOR (19 downto 0);
     signal ap_block_state1_pp0_stage0_iter0 : BOOLEAN;
     signal ap_block_state2_pp0_stage0_iter1 : BOOLEAN;
     signal ap_block_state3_pp0_stage0_iter2 : BOOLEAN;
@@ -76,13 +76,13 @@ attribute shreg_extract : string;
     signal ap_block_state8_pp0_stage0_iter7 : BOOLEAN;
     signal ap_block_state9_pp0_stage0_iter8 : BOOLEAN;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
-    signal x_read_reg_1477_pp0_iter1_reg : STD_LOGIC_VECTOR (26 downto 0);
-    signal x_read_reg_1477_pp0_iter2_reg : STD_LOGIC_VECTOR (26 downto 0);
-    signal x_read_reg_1477_pp0_iter3_reg : STD_LOGIC_VECTOR (26 downto 0);
-    signal x_read_reg_1477_pp0_iter4_reg : STD_LOGIC_VECTOR (26 downto 0);
-    signal x_read_reg_1477_pp0_iter5_reg : STD_LOGIC_VECTOR (26 downto 0);
-    signal x_read_reg_1477_pp0_iter6_reg : STD_LOGIC_VECTOR (26 downto 0);
-    signal x_read_reg_1477_pp0_iter7_reg : STD_LOGIC_VECTOR (26 downto 0);
+    signal x_read_reg_1477_pp0_iter1_reg : STD_LOGIC_VECTOR (19 downto 0);
+    signal x_read_reg_1477_pp0_iter2_reg : STD_LOGIC_VECTOR (19 downto 0);
+    signal x_read_reg_1477_pp0_iter3_reg : STD_LOGIC_VECTOR (19 downto 0);
+    signal x_read_reg_1477_pp0_iter4_reg : STD_LOGIC_VECTOR (19 downto 0);
+    signal x_read_reg_1477_pp0_iter5_reg : STD_LOGIC_VECTOR (19 downto 0);
+    signal x_read_reg_1477_pp0_iter6_reg : STD_LOGIC_VECTOR (19 downto 0);
+    signal x_read_reg_1477_pp0_iter7_reg : STD_LOGIC_VECTOR (19 downto 0);
     signal x_l_I_V_32_fu_338_p3 : STD_LOGIC_VECTOR (34 downto 0);
     signal x_l_I_V_32_reg_1482 : STD_LOGIC_VECTOR (34 downto 0);
     signal res_I_V_33_fu_346_p3 : STD_LOGIC_VECTOR (15 downto 0);
@@ -148,10 +148,10 @@ attribute shreg_extract : string;
     signal icmp_ln443_14_reg_1659 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln212_14_fu_1393_p2 : STD_LOGIC_VECTOR (17 downto 0);
     signal sub_ln212_14_reg_1665 : STD_LOGIC_VECTOR (17 downto 0);
-    signal sext_ln666_fu_220_p0 : STD_LOGIC_VECTOR (26 downto 0);
+    signal sext_ln666_fu_220_p0 : STD_LOGIC_VECTOR (19 downto 0);
     signal ap_block_pp0_stage0 : BOOLEAN;
     signal sext_ln666_fu_220_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_fu_228_p1 : STD_LOGIC_VECTOR (26 downto 0);
+    signal tmp_fu_228_p1 : STD_LOGIC_VECTOR (19 downto 0);
     signal tmp_fu_228_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal zext_ln666_fu_224_p1 : STD_LOGIC_VECTOR (34 downto 0);
     signal select_ln212_fu_236_p3 : STD_LOGIC_VECTOR (2 downto 0);
@@ -280,7 +280,7 @@ attribute shreg_extract : string;
     signal res_I_V_30_fu_1455_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal p_Result_s_fu_1399_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal res_I_V_47_fu_1461_p3 : STD_LOGIC_VECTOR (15 downto 0);
-    signal x_int_reg : STD_LOGIC_VECTOR (26 downto 0);
+    signal x_int_reg : STD_LOGIC_VECTOR (19 downto 0);
     signal ap_ce_reg : STD_LOGIC;
 
 
@@ -523,7 +523,7 @@ begin
     end process;
 
     p_Result_s_58_fu_272_p4 <= res_I_V_32_fu_264_p3(15 downto 14);
-    p_Result_s_fu_1399_p3 <= x_read_reg_1477_pp0_iter7_reg(26 downto 26);
+    p_Result_s_fu_1399_p3 <= x_read_reg_1477_pp0_iter7_reg(19 downto 19);
     res_I_V_30_fu_1455_p2 <= std_logic_vector(unsigned(res_I_V_46_fu_1431_p3) + unsigned(ap_const_lv16_1));
     res_I_V_32_fu_264_p3 <= 
         ap_const_lv16_8000 when (tmp_fu_228_p3(0) = '1') else 
@@ -612,7 +612,7 @@ begin
     tmp_8_fu_835_p3 <= (p_Result_22_fu_825_p4 & ap_const_lv1_1);
     tmp_9_fu_910_p3 <= (p_Result_25_fu_900_p4 & ap_const_lv1_1);
     tmp_fu_228_p1 <= x_int_reg;
-    tmp_fu_228_p3 <= tmp_fu_228_p1(26 downto 26);
+    tmp_fu_228_p3 <= tmp_fu_228_p1(19 downto 19);
     tmp_s_fu_992_p3 <= (p_Result_28_fu_982_p4 & ap_const_lv1_1);
     x_l_I_V_31_fu_256_p3 <= 
         p_Result_50_fu_244_p5 when (tmp_fu_228_p3(0) = '1') else 

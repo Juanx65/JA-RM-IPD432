@@ -18,7 +18,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../src/EucTB.cpp ../../../../src/EucSW.cpp ../../../../src/EucHW.cpp
+HLS_SOURCES = ../../../../src/EucSW.cpp ../../../../src/EucTB.cpp ../../../../src/EucHW.cpp
 
 override TARGET := csim.exe
 
@@ -72,17 +72,17 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/EucTB.o: ../../../../src/EucTB.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../src/EucTB.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/EucTB.d
-
 $(ObjDir)/EucSW.o: ../../../../src/EucSW.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../src/EucSW.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/EucSW.d
+
+$(ObjDir)/EucTB.o: ../../../../src/EucTB.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../src/EucTB.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/EucTB.d
 
 $(ObjDir)/EucHW.o: ../../../../src/EucHW.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../src/EucHW.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

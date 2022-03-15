@@ -10,7 +10,7 @@
 
 module TOP 
 #(parameter 
-    BR_SIZE = 1024,
+    BR_SIZE = 8,
     CLK_FREQUENCY = 100000000,
 	BAUD_RATE = 115200,
 	NBITS = 8
@@ -132,16 +132,15 @@ module TOP
     endgenerate
     
     // instancia IP
-    
-    
-    eucHW_1 your_instance_name (
-    .C_ap_vld(),  // output wire C_ap_vld
+   
+    eucHW_0 your_instance_name (
+    .C_ap_vld(flag_ready32),  // output wire C_ap_vld
     .ap_clk(CLK100MHZ),      // input wire ap_clk
     .ap_rst(~CPU_RESETN),      // input wire ap_rst
     .ap_start(flag_process),  // input wire ap_start
     .ap_done(),    // output wire ap_done
     .ap_idle(),    // output wire ap_idle
-    .ap_ready(flag_ready32),  // output wire ap_ready
+    .ap_ready(),  // output wire ap_ready
     .A(Awrapped),                // input wire [127 : 0] A
     .B(Bwrapped),                // input wire [127 : 0] B
     .C(data32)                // output wire [31 : 0] C

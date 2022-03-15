@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'sqrt_fixed_32_32_s'" level="0">
-<item name = "Date">Tue Mar 15 00:38:31 2022
+<item name = "Date">Tue Mar 15 14:24:48 2022
 </item>
 <item name = "Version">2021.1 (Build 3247384 on Thu Jun 10 19:36:33 MDT 2021)</item>
 <item name = "Project">EucHLS</item>
@@ -52,9 +52,9 @@
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, -, -</column>
-<column name="Register">-, -, 643, 32, -</column>
+<column name="Register">-, -, 629, 32, -</column>
 <specialColumn name="Available">40, 40, 16000, 8000, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, 4, 17, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 3, 17, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -177,7 +177,7 @@
 <column name="sub_ln212_5_reg_1546">9, 0, 9, 0</column>
 <column name="sub_ln212_7_reg_1569">11, 0, 11, 0</column>
 <column name="sub_ln212_9_reg_1592">13, 0, 13, 0</column>
-<column name="x_int_reg">27, 0, 27, 0</column>
+<column name="x_int_reg">20, 0, 20, 0</column>
 <column name="x_l_I_V_32_reg_1482">35, 0, 35, 0</column>
 <column name="x_l_I_V_34_reg_1505">35, 0, 35, 0</column>
 <column name="x_l_I_V_36_reg_1528">35, 0, 35, 0</column>
@@ -186,8 +186,8 @@
 <column name="x_l_I_V_41_reg_1597">35, 0, 35, 0</column>
 <column name="x_l_I_V_42_reg_1620">35, 0, 35, 0</column>
 <column name="x_l_I_V_44_reg_1647">35, 0, 35, 0</column>
-<column name="x_read_reg_1477">27, 0, 27, 0</column>
-<column name="x_read_reg_1477">64, 32, 27, 0</column>
+<column name="x_read_reg_1477">20, 0, 20, 0</column>
+<column name="x_read_reg_1477">64, 32, 20, 0</column>
 </table>
 </item>
 </section>
@@ -200,7 +200,7 @@
 <column name="ap_clk">in, 1, ap_ctrl_hs, sqrt_fixed&lt;32, 32&gt;, return value</column>
 <column name="ap_rst">in, 1, ap_ctrl_hs, sqrt_fixed&lt;32, 32&gt;, return value</column>
 <column name="ap_return">out, 16, ap_ctrl_hs, sqrt_fixed&lt;32, 32&gt;, return value</column>
-<column name="x">in, 27, ap_none, x, scalar</column>
+<column name="x">in, 20, ap_none, x, scalar</column>
 </table>
 </item>
 </section>

@@ -152,7 +152,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>55ca07d3</spirit:value>
+            <spirit:value>5fd7e5ea</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -168,7 +168,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3404f73b</spirit:value>
+            <spirit:value>d56919f3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -184,7 +184,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>47cbc37e</spirit:value>
+            <spirit:value>a9eef190</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -200,7 +200,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6c8be33b</spirit:value>
+            <spirit:value>71eda370</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -352,7 +352,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">8191</spirit:left>
+            <spirit:left spirit:format="long">63</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -369,7 +369,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">8191</spirit:left>
+            <spirit:left spirit:format="long">63</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -421,10 +421,6 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/eucHW_sub_8192ns_8192ns_8192_2_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/eucHW.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -443,11 +439,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/eucHW_sqrt_fixed_32_32_s.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/eucHW_sub_8192ns_8192ns_8192_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -477,13 +468,9 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/eucHW_sub_8192ns_8192ns_8192_2_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/eucHW.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_1a72ad9d</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_185622b4</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -500,11 +487,6 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/eucHW_sqrt_fixed_32_32_s.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/eucHW_sub_8192ns_8192ns_8192_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -566,7 +548,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">528</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">13</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -583,8 +565,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Euchw</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2103142342</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-03-15T03:42:34Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2112418345</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-03-15T17:25:36Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -593,9 +575,9 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="26f5e4a1"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b41bc3eb"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="9980f52c"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="6635c42e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8835e539"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="113da40c"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="7bfadfe9"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

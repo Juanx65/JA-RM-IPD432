@@ -7,10 +7,10 @@
 
 using namespace std;
 
-void genRandArray(T min, T max, int size, T *array);
-int compare(T* gold, T* result, int size, T th);
+void genRandArray(int min, int max, int size, T *array);
+int compare(Tout* gold, Tout* result, int size, double th);
 
-#define LENGTH      16
+#define LENGTH      1024
 
 int main (){
 	int errors = 0;
@@ -19,10 +19,10 @@ int main (){
 	T A[LENGTH], B[LENGTH];
 	Tout C_HW[1], C_SW[1];
 
-	T diff;
-	T th = 0.000001;
-	T min = 0;
-	T max = 254;
+	double diff;
+	double th = 0.000001;
+	int min = 0;
+	int max = 254;
 	cout << "Euc Dist calculation: "<< endl;
 	for (int i=0; i<tests; i++){
 		genRandArray(min, max, LENGTH, A);
@@ -42,13 +42,13 @@ int main (){
 }
 
 
-void genRandArray(T min, T max, int size, T *array){
+void genRandArray(int min, int max, int size, T *array){
     for(int i=0; i<size; i++){
         array[i] = rand()%255; // min + static_cast <T> (rand()) / ( static_cast <T> (RAND_MAX/(max-min)));
     }
 }
 
-int compare(T* gold, T* result, int size, T th){
+int compare(Tout* gold, Tout* result, int size, double th){
         int errors = 0;
         double dif = 0;
         for (int i=0; i<size; i++){

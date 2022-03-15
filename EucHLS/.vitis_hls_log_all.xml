@@ -12,11 +12,9 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed&lt;32, 32>' to 'sqrt_fixed_32_32_s'." projectName="EucHLS" solutionName="solution1" date="2022-03-15T00:38:29.948-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 214-292] Unsupported reshape pragma/directive on variable 'A'. The port size might be shrunk or fail cosim as the bit-width after reshape (8192) is larger than 4096" projectName="EucHLS" solutionName="solution1" date="2022-03-15T00:38:27.361-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 214-292] Unsupported reshape pragma/directive on variable 'B'. The port size might be shrunk or fail cosim as the bit-width after reshape (8192) is larger than 4096" projectName="EucHLS" solutionName="solution1" date="2022-03-15T00:38:27.346-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16" projectName="EucHLS" solutionName="solution1" date="2022-03-15T00:38:16.366-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-949] non-portable path to file '&quot;EucHW.h&quot;'; specified path differs in case from file name on disk: src/EucHW.cpp:1:10" projectName="EucHLS" solutionName="solution1" date="2022-03-15T00:38:16.327-0300" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed&lt;32, 32>' to 'sqrt_fixed_32_32_s'." projectName="EucHLS" solutionName="solution1" date="2022-03-15T14:24:46.323-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16" projectName="EucHLS" solutionName="solution1" date="2022-03-15T14:24:33.847-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 207-949] non-portable path to file '&quot;EucHW.h&quot;'; specified path differs in case from file name on disk: src/EucHW.cpp:1:10" projectName="EucHLS" solutionName="solution1" date="2022-03-15T14:24:33.824-0300" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

@@ -1,63 +1,12 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 2
-set name eucHW_sub_8192ns_8192ns_8192_2_1
-set corename simcore_sub
-set op sub
-set stage_num 2
-set clk_width 1
-set clk_signed 0
-set reset_width 1
-set reset_signed 0
-set in0_width 8192
-set in0_signed 0
-set in1_width 8192
-set in1_signed 0
-set ce_width 1
-set ce_signed 0
-set out_width 8192
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {sub} IMPL {fabric} LATENCY 1 ALLOW_PRAGMA 1
-}
-
-
-set op sub
-set corename Adder
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub] == "::AESL_LIB_VIRTEX::xil_gen_pipeaddsub"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_pipeaddsub { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${stage_num} \
-    clk_width ${clk_width} \
-    clk_signed ${clk_signed} \
-    reset_width ${reset_width} \
-    reset_signed ${reset_signed} \
-    in0_width ${in0_width} \
-    in0_signed ${in0_signed} \
-    in1_width ${in1_width} \
-    in1_signed ${in1_signed} \
-    ce_width ${ce_width} \
-    ce_signed ${ce_signed} \
-    out_width ${out_width} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipeaddsub, check your platform lib"
-}
-}
-
-
 set name eucHW_mul_9s_9s_18_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
-set id 5
+set id 6
 set name eucHW_mac_muladd_9s_9s_18s_18_4_1
 set corename simcore_mac
 set op mac
@@ -127,7 +76,7 @@ set axilite_register_dict [dict create]
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 9 \
+    id 12 \
     name A \
     type other \
     dir I \
@@ -135,14 +84,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_A \
     op interface \
-    ports { A { I 8192 vector } } \
+    ports { A { I 64 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 10 \
+    id 13 \
     name B \
     type other \
     dir I \
@@ -150,14 +99,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_B \
     op interface \
-    ports { B { I 8192 vector } } \
+    ports { B { I 64 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 11 \
+    id 14 \
     name C \
     type other \
     dir O \

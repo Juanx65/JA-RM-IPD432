@@ -68,7 +68,7 @@
     "FlowTarget": "vivado",
     "ConfigTcl": [
       "config_export -format=ip_catalog",
-      "config_export -output=C:\/Users\/juan_\/Documents\/FPGA\/IPs\/eucDistHW_factor2.zip",
+      "config_export -output=C:\/Users\/juan_\/Documents\/FPGA\/IPs\/eucDistHW_unroll8_int.zip",
       "config_export -rtl=verilog"
     ],
     "DirectiveTcl": ["set_directive_top eucHW -name eucHW"],
@@ -81,8 +81,8 @@
     "ClockPeriod": "10",
     "Uncertainty": "2.7",
     "IsCombinational": "0",
-    "II": "529",
-    "Latency": "528"
+    "II": "14",
+    "Latency": "13"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
@@ -132,12 +132,17 @@
       "impl\/vhdl\/eucDistHW_pow.vhd",
       "impl\/vhdl\/eucDistHW_sqrt_fixed_32_32_s.vhd",
       "impl\/vhdl\/eucHW_ama_submuladd_16ns_16ns_16ns_16_4_1.vhd",
+      "impl\/vhdl\/eucHW_fadd_32ns_32ns_32_7_full_dsp_1.vhd",
       "impl\/vhdl\/eucHW_flow_control_loop_pipe.vhd",
+      "impl\/vhdl\/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1.vhd",
       "impl\/vhdl\/eucHW_mac_muladd_9s_9s_18s_18_4_1.vhd",
       "impl\/vhdl\/eucHW_mac_muladd_9s_9s_18s_32_4_1.vhd",
+      "impl\/vhdl\/eucHW_mac_muladd_9s_9s_21s_21_4_1.vhd",
+      "impl\/vhdl\/eucHW_mac_muladd_9s_9s_27s_27_4_1.vhd",
       "impl\/vhdl\/eucHW_mul_9s_9s_18_1_1.vhd",
       "impl\/vhdl\/eucHW_mul_32s_32s_32_2_1.vhd",
       "impl\/vhdl\/eucHW_mul_mul_16s_16s_16_4_1.vhd",
+      "impl\/vhdl\/eucHW_sitofp_32s_32_6_no_dsp_1.vhd",
       "impl\/vhdl\/eucHW_sqrt_fixed_17_17_s.vhd",
       "impl\/vhdl\/eucHW_sqrt_fixed_32_32_s.vhd",
       "impl\/vhdl\/eucHW_sub_8192ns_8192ns_8192_2_1.vhd",
@@ -188,18 +193,28 @@
       "impl\/verilog\/eucDistHW_pow.v",
       "impl\/verilog\/eucDistHW_sqrt_fixed_32_32_s.v",
       "impl\/verilog\/eucHW_ama_submuladd_16ns_16ns_16ns_16_4_1.v",
+      "impl\/verilog\/eucHW_fadd_32ns_32ns_32_7_full_dsp_1.v",
       "impl\/verilog\/eucHW_flow_control_loop_pipe.v",
+      "impl\/verilog\/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1.v",
       "impl\/verilog\/eucHW_mac_muladd_9s_9s_18s_18_4_1.v",
       "impl\/verilog\/eucHW_mac_muladd_9s_9s_18s_32_4_1.v",
+      "impl\/verilog\/eucHW_mac_muladd_9s_9s_21s_21_4_1.v",
+      "impl\/verilog\/eucHW_mac_muladd_9s_9s_27s_27_4_1.v",
       "impl\/verilog\/eucHW_mul_9s_9s_18_1_1.v",
       "impl\/verilog\/eucHW_mul_32s_32s_32_2_1.v",
       "impl\/verilog\/eucHW_mul_mul_16s_16s_16_4_1.v",
+      "impl\/verilog\/eucHW_sitofp_32s_32_6_no_dsp_1.v",
       "impl\/verilog\/eucHW_sqrt_fixed_17_17_s.v",
       "impl\/verilog\/eucHW_sqrt_fixed_32_32_s.v",
       "impl\/verilog\/eucHW_sub_8192ns_8192ns_8192_2_1.v",
       "impl\/verilog\/eucHW.v"
     ],
     "IpMisc": ["impl\/misc\/logo.png"],
+    "Subcore": [
+      "impl\/misc\/eucHW_fadd_32ns_32ns_32_7_full_dsp_1_ip.tcl",
+      "impl\/misc\/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip.tcl",
+      "impl\/misc\/eucHW_sitofp_32s_32_6_no_dsp_1_ip.tcl"
+    ],
     "CsynthXml": "syn\/report\/csynth.xml",
     "DebugDir": ".debug",
     "KernelXml": ".autopilot\/db\/kernel.internal.xml",
@@ -213,7 +228,23 @@
   "SubcoreInfo": {
     "HasXpmMemory": false,
     "HasClockedDsp": false,
-    "Ip": []
+    "Ip": [
+      {
+        "Name": "eucHW_fadd_32ns_32ns_32_7_full_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Add CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 5 CONFIG.c_mult_usage Full_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name eucHW_fadd_32ns_32ns_32_7_full_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "Name": "eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 14 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Square_Root CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "Name": "eucHW_sitofp_32s_32_6_no_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Custom CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 32 CONFIG.c_a_fraction_width 0 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 4 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name eucHW_sitofp_32s_32_6_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Fixed_to_Float CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      }
+    ]
   },
   "Interfaces": {
     "ap_clk": {
@@ -254,7 +285,7 @@
       "busTypeName": "data",
       "protocol": "ap_none",
       "mode": "slave",
-      "dataWidth": "8192",
+      "dataWidth": "64",
       "portMap": {"A": "DATA"},
       "ports": ["A"],
       "constraints": [{
@@ -269,7 +300,7 @@
       "busTypeName": "data",
       "protocol": "ap_none",
       "mode": "slave",
-      "dataWidth": "8192",
+      "dataWidth": "64",
       "portMap": {"B": "DATA"},
       "ports": ["B"],
       "constraints": [{
@@ -322,11 +353,11 @@
     },
     "A": {
       "dir": "in",
-      "width": "8192"
+      "width": "64"
     },
     "B": {
       "dir": "in",
-      "width": "8192"
+      "width": "64"
     },
     "C": {
       "dir": "out",
@@ -342,7 +373,7 @@
       "ModuleName": "eucHW",
       "Instances": [{
           "ModuleName": "sqrt_fixed_32_32_s",
-          "InstanceName": "grp_sqrt_fixed_32_32_s_fu_99"
+          "InstanceName": "grp_sqrt_fixed_32_32_s_fu_77"
         }]
     },
     "Info": {
@@ -377,9 +408,9 @@
           "Estimate": "7.007"
         },
         "Area": {
-          "FF": "643",
+          "FF": "629",
           "AVAIL_FF": "16000",
-          "UTIL_FF": "4",
+          "UTIL_FF": "3",
           "LUT": "1368",
           "AVAIL_LUT": "8000",
           "UTIL_LUT": "17",
@@ -396,10 +427,10 @@
       },
       "eucHW": {
         "Latency": {
-          "LatencyBest": "528",
-          "LatencyAvg": "528",
-          "LatencyWorst": "528",
-          "PipelineII": "529",
+          "LatencyBest": "13",
+          "LatencyAvg": "13",
+          "LatencyWorst": "13",
+          "PipelineII": "14",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
@@ -408,23 +439,16 @@
           "Uncertainty": "2.70",
           "Estimate": "7.007"
         },
-        "Loops": [{
-            "Name": "loopManDist",
-            "TripCount": "512",
-            "Latency": "517",
-            "PipelineII": "1",
-            "PipelineDepth": "7"
-          }],
         "Area": {
-          "DSP": "1",
+          "DSP": "4",
           "AVAIL_DSP": "40",
-          "UTIL_DSP": "2",
-          "FF": "26557",
+          "UTIL_DSP": "10",
+          "FF": "699",
           "AVAIL_FF": "16000",
-          "UTIL_FF": "165",
-          "LUT": "37773",
+          "UTIL_FF": "4",
+          "LUT": "1840",
           "AVAIL_LUT": "8000",
-          "UTIL_LUT": "472",
+          "UTIL_LUT": "23",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "40",
           "UTIL_BRAM": "0",
@@ -438,7 +462,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2021-03-14 23:42:28 -0400",
+    "Time": "2022-03-15 14:25:30 -0300",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.1"
   }

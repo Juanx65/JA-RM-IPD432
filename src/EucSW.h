@@ -3,7 +3,6 @@
 
 #include "specs.h"
 #include <math.h>
-#include <hls_math.h>
 
 void eucSW (T A[LENGTH], T B[LENGTH], Tout C[1]);
 
