@@ -10,7 +10,7 @@ using namespace std;
 void genRandArray(int min, int max, int size, T *array);
 int compare(Tout* gold, Tout* result, int size, double th);
 
-#define LENGTH      1024
+//#define LENGTH      1024
 
 int main (){
 	int errors = 0;
@@ -29,7 +29,7 @@ int main (){
 		genRandArray(min, max, LENGTH, B);
 
 		eucSW (A, B, C_SW);
-		eucHW (A, B, C_HW);
+		eucHW_RC (A, B, C_HW);
 
 		errors += compare(C_SW, C_HW, 1, th);
 		cout << "C_SW: " << C_SW[0] << ", C_HW: " << C_HW[0] << endl;

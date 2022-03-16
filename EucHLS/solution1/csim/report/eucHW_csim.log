@@ -1,107 +1,86 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-make: 'csim.exe' is up to date.
-Euc Dist calculation: 
-C_SW: 3207.58, C_HW: 3207.58
-C_SW: 3413.01, C_HW: 3413.01
-C_SW: 3383.43, C_HW: 3383.43
-C_SW: 3435.07, C_HW: 3435.07
-C_SW: 3283, C_HW: 3283
-C_SW: 3347.42, C_HW: 3347.42
-C_SW: 3286.56, C_HW: 3286.56
-C_SW: 3305.86, C_HW: 3305.86
-C_SW: 3474.78, C_HW: 3474.78
-C_SW: 3300.79, C_HW: 3300.79
-C_SW: 3269.33, C_HW: 3269.33
-C_SW: 3478.39, C_HW: 3478.39
-C_SW: 3339.28, C_HW: 3339.28
-C_SW: 3384.83, C_HW: 3384.83
-C_SW: 3385.55, C_HW: 3385.55
-C_SW: 3314.05, C_HW: 3314.05
-C_SW: 3374.29, C_HW: 3374.29
-C_SW: 3338.99, C_HW: 3338.99
-C_SW: 3398.65, C_HW: 3398.65
-C_SW: 3286.28, C_HW: 3286.28
-C_SW: 3431.2, C_HW: 3431.2
-C_SW: 3389.4, C_HW: 3389.4
-C_SW: 3328.84, C_HW: 3328.84
-C_SW: 3288.39, C_HW: 3288.39
-C_SW: 3314.9, C_HW: 3314.9
-C_SW: 3322.9, C_HW: 3322.9
-C_SW: 3348.04, C_HW: 3348.04
-C_SW: 3373.68, C_HW: 3373.68
-C_SW: 3337.77, C_HW: 3337.77
-C_SW: 3464.13, C_HW: 3464.13
-C_SW: 3340.44, C_HW: 3340.44
-C_SW: 3396.24, C_HW: 3396.24
-C_SW: 3294.19, C_HW: 3294.19
-C_SW: 3299.42, C_HW: 3299.42
-C_SW: 3362.64, C_HW: 3362.64
-C_SW: 3286.17, C_HW: 3286.17
-C_SW: 3369.91, C_HW: 3369.91
-C_SW: 3393.18, C_HW: 3393.18
-C_SW: 3426.12, C_HW: 3426.12
-C_SW: 3435.02, C_HW: 3435.02
-C_SW: 3475.26, C_HW: 3475.26
-C_SW: 3359.68, C_HW: 3359.68
-C_SW: 3395.27, C_HW: 3395.27
-C_SW: 3428.64, C_HW: 3428.64
-C_SW: 3439.39, C_HW: 3439.39
-C_SW: 3319.35, C_HW: 3319.35
-C_SW: 3394.11, C_HW: 3394.11
-C_SW: 3456.22, C_HW: 3456.22
-C_SW: 3252.81, C_HW: 3252.81
-C_SW: 3432.92, C_HW: 3432.92
-C_SW: 3344.7, C_HW: 3344.7
-C_SW: 3249.59, C_HW: 3249.59
-C_SW: 3252.58, C_HW: 3252.58
-C_SW: 3412.34, C_HW: 3412.34
-C_SW: 3309.05, C_HW: 3309.05
-C_SW: 3320.8, C_HW: 3320.8
-C_SW: 3318.8, C_HW: 3318.8
-C_SW: 3417.64, C_HW: 3417.64
-C_SW: 3254.34, C_HW: 3254.34
-C_SW: 3378.71, C_HW: 3378.71
-C_SW: 3313.49, C_HW: 3313.49
-C_SW: 3248.66, C_HW: 3248.66
-C_SW: 3430.97, C_HW: 3430.97
-C_SW: 3373.7, C_HW: 3373.7
-C_SW: 3302.22, C_HW: 3302.22
-C_SW: 3377.63, C_HW: 3377.63
-C_SW: 3312.5, C_HW: 3312.5
-C_SW: 3399.88, C_HW: 3399.88
-C_SW: 3336.11, C_HW: 3336.11
-C_SW: 3349.36, C_HW: 3349.36
-C_SW: 3391.12, C_HW: 3391.12
-C_SW: 3381.97, C_HW: 3381.97
-C_SW: 3274.98, C_HW: 3274.98
-C_SW: 3390.21, C_HW: 3390.21
-C_SW: 3346.19, C_HW: 3346.19
-C_SW: 3439.86, C_HW: 3439.86
-C_SW: 3338.72, C_HW: 3338.72
-C_SW: 3288.65, C_HW: 3288.65
-C_SW: 3380.91, C_HW: 3380.91
-C_SW: 3346.51, C_HW: 3346.51
-C_SW: 3267.36, C_HW: 3267.36
-C_SW: 3427.08, C_HW: 3427.08
-C_SW: 3378.05, C_HW: 3378.05
-C_SW: 3331.16, C_HW: 3331.16
-C_SW: 3477.77, C_HW: 3477.77
-C_SW: 3263.28, C_HW: 3263.28
-C_SW: 3303.26, C_HW: 3303.26
-C_SW: 3371.57, C_HW: 3371.57
-C_SW: 3246.03, C_HW: 3246.03
-C_SW: 3416.58, C_HW: 3416.58
-C_SW: 3370.48, C_HW: 3370.48
-C_SW: 3324.58, C_HW: 3324.58
-C_SW: 3294.03, C_HW: 3294.03
-C_SW: 3431.97, C_HW: 3431.97
-C_SW: 3426.03, C_HW: 3426.03
-C_SW: 3428.52, C_HW: 3428.52
-C_SW: 3366.29, C_HW: 3366.29
-C_SW: 3355.11, C_HW: 3355.11
-C_SW: 3336.69, C_HW: 3336.69
-C_SW: 3253.6, C_HW: 3253.6
-Number of errors: 0
-INFO: [SIM 1] CSim done with 0 errors.
+   Compiling ../../../../src/EucTB.cpp in debug mode
+   Compiling ../../../../src/EucSW.cpp in debug mode
+   Compiling ../../../../src/EucHW_RC.cpp in debug mode
+csim.mk:88: recipe for target 'obj/EucHW_RC.o' failed
+In file included from ../../../../src/EucTB.cpp:4:0:
+../../../../src/specs.h:4:2: warning: #import is a deprecated GCC extension [-Wdeprecated]
+ #import <cstdint>
+  ^~~~~~
+In file included from C:/Xilinx/Vitis_HLS/2021.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_fpo.h:189,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h:41,
+                 from ../../../../src/eucHW.h:6,
+                 from ../../../../src/EucTB.cpp:5:
+C:/Xilinx/Vitis_HLS/2021.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2021.1/include/hls_fpo.h:189:0,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h:41,
+                 from ../../../../src/eucHW.h:6,
+                 from ../../../../src/EucTB.cpp:5:
+C:/Xilinx/Vitis_HLS/2021.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+../../../../src/EucTB.cpp:13:0: warning: "LENGTH" redefined
+ #define LENGTH      1024
+ 
+In file included from ../../../../src/EucTB.cpp:4:0:
+../../../../src/specs.h:9:0: note: this is the location of the previous definition
+ #define LENGTH 8
+ 
+In file included from C:/Xilinx/Vitis_HLS/2021.1/include/hls_hotbm_apfixed.h:45:0,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h:1065,
+                 from ../../../../src/eucHW.h:6,
+                 from ../../../../src/EucTB.cpp:5:
+C:/Xilinx/Vitis_HLS/2021.1/include/utils/x_hls_utils.h:243:40: warning: 'hls_preserve' attribute directive ignored [-Wattributes]
+ __attribute__((hls_preserve)) T reg(T d)
+                                        ^
+In file included from ../../../../src/eucSW.h:4:0,
+                 from ../../../../src/EucSW.cpp:1:
+../../../../src/specs.h:4:2: warning: #import is a deprecated GCC extension [-Wdeprecated]
+ #import <cstdint>
+  ^~~~~~
+In file included from ../../../../src/eucHW.h:4:0,
+                 from ../../../../src/EucHW_RC.cpp:1:
+../../../../src/specs.h:4:2: warning: #import is a deprecated GCC extension [-Wdeprecated]
+ #import <cstdint>
+  ^~~~~~
+In file included from C:/Xilinx/Vitis_HLS/2021.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_fpo.h:189,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h:41,
+                 from ../../../../src/eucHW.h:6,
+                 from ../../../../src/EucHW_RC.cpp:1:
+C:/Xilinx/Vitis_HLS/2021.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2021.1/include/hls_fpo.h:189:0,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h:41,
+                 from ../../../../src/eucHW.h:6,
+                 from ../../../../src/EucHW_RC.cpp:1:
+C:/Xilinx/Vitis_HLS/2021.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2021.1/include/hls_hotbm_apfixed.h:45:0,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h:1065,
+                 from ../../../../src/eucHW.h:6,
+                 from ../../../../src/EucHW_RC.cpp:1:
+C:/Xilinx/Vitis_HLS/2021.1/include/utils/x_hls_utils.h:243:40: warning: 'hls_preserve' attribute directive ignored [-Wattributes]
+ __attribute__((hls_preserve)) T reg(T d)
+                                        ^
+../../../../src/EucHW_RC.cpp: In function 'void eucHW(T*, T*, Tout*)':
+../../../../src/EucHW_RC.cpp:17:42: error: 'adder' was not declared in this scope
+  C[0]=  hls::sqrt(adder(out_array, LENGTH));
+                                          ^
+make: *** [obj/EucHW_RC.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
 INFO: [SIM 3] *************** CSIM finish ***************

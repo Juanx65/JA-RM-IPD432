@@ -27538,8 +27538,11 @@ using std::trunc;
 
 
 
-# 4 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/specs.h"
-typedef int T;
+
+
+# 6 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/specs.h"
+typedef uint8_t T;
+typedef int Tout;
 # 5 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp" 2
 # 1 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucHW.h" 1
 
@@ -71260,7 +71263,9 @@ namespace hls {
 
 };
 # 7 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucHW.h" 2
-void eucHW (T A[16], T B[16], T C[1]);
+void eucHW_RC (T A[1024], T B[1024], Tout C[1]);
+
+Tout adder( Tout array[1024] );
 # 6 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp" 2
 # 1 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucSW.h" 1
 
@@ -71270,14 +71275,13 @@ void eucHW (T A[16], T B[16], T C[1]);
 # 1 "C:/Xilinx/Vitis_HLS/2021.1/tps/win64/msys64/mingw64/include/c++/6.2.0/math.h" 1 3
 # 6 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucSW.h" 2
 
-
-void eucSW (T A[16], T B[16], T C[1]);
+void eucSW (T A[1024], T B[1024], Tout C[1]);
 # 7 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp" 2
 
 using namespace std;
 
-void genRandArray(T min, T max, int size, T *array);
-int compare(T* gold, T* result, int size, T th);
+void genRandArray(int min, int max, int size, T *array);
+int compare(Tout* gold, Tout* result, int size, double th);
 
 
 
@@ -71285,32 +71289,32 @@ int compare(T* gold, T* result, int size, T th);
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_eucHW_sw(int *, int *, int *);
+void apatb_eucHW_RC_sw(unsigned char *, unsigned char *, int *);
 # 15 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp"
 int main (){
  int errors = 0;
  int tests = 100;
 
- T A[16], B[16];
- T C_HW[1], C_SW[1];
+ T A[1024], B[1024];
+ Tout C_HW[1], C_SW[1];
 
- T diff;
- T th = 0.000001;
- T min = 0;
- T max = 254;
+ double diff;
+ double th = 0.000001;
+ int min = 0;
+ int max = 254;
  cout << "Euc Dist calculation: "<< endl;
  for (int i=0; i<tests; i++){
-  genRandArray(min, max, 16, A);
-  genRandArray(min, max, 16, B);
+  genRandArray(min, max, 1024, A);
+  genRandArray(min, max, 1024, B);
 
   eucSW (A, B, C_SW);
   
 #ifndef HLS_FASTSIM
-#define eucHW apatb_eucHW_sw
+#define eucHW_RC apatb_eucHW_RC_sw
 #endif
 # 32 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp"
-eucHW (A, B, C_HW);
-#undef eucHW
+eucHW_RC (A, B, C_HW);
+#undef eucHW_RC
 # 32 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp"
 
 
@@ -71328,13 +71332,13 @@ eucHW (A, B, C_HW);
 
 
 
-void genRandArray(T min, T max, int size, T *array){
+void genRandArray(int min, int max, int size, T *array){
     for(int i=0; i<size; i++){
         array[i] = rand()%255;
     }
 }
 
-int compare(T* gold, T* result, int size, T th){
+int compare(Tout* gold, Tout* result, int size, double th){
         int errors = 0;
         double dif = 0;
         for (int i=0; i<size; i++){

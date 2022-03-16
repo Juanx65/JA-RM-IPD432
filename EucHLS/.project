@@ -42,14 +42,14 @@
 			<location>C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/.tcls</location>
 		</link>
 		<link>
-			<name>source/EucHW.cpp</name>
-			<type>1</type>
-			<location>C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucHW.cpp</location>
-		</link>
-		<link>
 			<name>source/EucHW.h</name>
 			<type>1</type>
 			<location>C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucHW.h</location>
+		</link>
+		<link>
+			<name>source/EucHW_RC.cpp</name>
+			<type>1</type>
+			<location>C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucHW_RC.cpp</location>
 		</link>
 		<link>
 			<name>source/specs.h</name>

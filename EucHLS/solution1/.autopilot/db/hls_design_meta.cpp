@@ -11,4 +11,4 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("C", 32, hls_out, 2, "ap_vld", "out_data", 1),
 	Port_Property("C_ap_vld", 1, hls_out, 2, "ap_vld", "out_vld", 1),
 };
-const char* HLS_Design_Meta::dut_name = "eucHW";
+const char* HLS_Design_Meta::dut_name = "eucHW_RC";

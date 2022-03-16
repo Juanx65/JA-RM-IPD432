@@ -7,7 +7,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module TOP 
 #(parameter 
     BR_SIZE = 1024,
@@ -133,7 +132,7 @@ module TOP
     
     // instancia IP
    
-    eucHW_0 your_instance_name (
+    eucHW_0 PROCC (
     .C_ap_vld(flag_ready32),  // output wire C_ap_vld
     .ap_clk(CLK100MHZ),      // input wire ap_clk
     .ap_rst(~CPU_RESETN),      // input wire ap_rst
@@ -145,7 +144,14 @@ module TOP
     .B(Bwrapped),                // input wire [127 : 0] B
     .C(data32)                // output wire [31 : 0] C
 );
-    
+/*
+ila_0 ILA (
+	.clk(clk), // input wire clk
+
+	.probe0(flag_process), // input wire [0:0]  probe0  
+	.probe1(flag_ready32) // input wire [0:0]  probe1
+);
+*/
     
     DISP_MOD DISPLAY
     (

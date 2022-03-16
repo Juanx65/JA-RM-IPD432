@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'sqrt_fixed_32_32_s'
 ================================================================
-* Date:           Tue Mar 15 23:02:13 2022
+* Date:           Wed Mar 16 18:06:20 2022
 
 * Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:33 MDT 2021)
 * Project:        EucHLS
@@ -278,7 +278,7 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
 
  <State 1>: 5.89ns
 The critical path consists of the following:
-	wire read operation ('x_read') on port 'x' [3]  (0 ns)
+	wire read operation ('x_read') on port 'x' [2]  (0 ns)
 	'select' operation ('res_I.V') [11]  (1.29 ns)
 	'icmp' operation ('icmp_ln443') [16]  (1.44 ns)
 	'select' operation ('res_I.V') [21]  (1.29 ns)

@@ -1,5 +1,4 @@
-eucHW_sub_8192ns_8192ns_8192_2_1
-eucHW_mul_9s_9s_18_1_1
-eucHW_mac_muladd_9s_9s_18s_18_4_1
+eucHW_RC_mul_9s_9s_18_1_1
+eucHW_RC_mac_muladd_9s_9s_18s_18_4_1
 sqrt_fixed_32_32_s
-eucHW
+eucHW_RC

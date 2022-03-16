@@ -199,8 +199,8 @@
       <Option Id="Assert">1</Option>
       <Option Id="FlattenHierarchy">1</Option>
       <Option Id="ControlSetOptThreshold">1</Option>
-      <Option Id="CascadeDsp">1</Option>
       <Option Id="Directive">1</Option>
+      <Option Id="CascadeDsp">1</Option>
     </Step>
   </Strategy>
 </GenRun>
