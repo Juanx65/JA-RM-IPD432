@@ -297,8 +297,8 @@ rt::set_parameter DefIncludePreRoutes {true}
 rt::set_parameter DefMatchEscapedComponent {false}
 rt::set_parameter DefTreatPlacedUnknownComponentAsBlockage {true}
 rt::set_parameter DefTreatUnknownComponentAsBlockage {true}
-rt::set_parameter SdcFileName {}
-rt::set_parameter SdcLineNum {}
+rt::set_parameter SdcFileName {C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc}
+rt::set_parameter SdcLineNum {10}
 rt::set_parameter WriteDefGCellGrids {1}
 rt::set_parameter WriteDefGenomeExpansionFactor {3.000000}
 rt::set_parameter WriteDefGenomeRegions {0}
@@ -829,7 +829,7 @@ rt::set_parameter allowWidthMismatchInRamPipeline {true}
 rt::set_parameter areaStrategy {0}
 rt::set_parameter areaTieThresholdInWireMap {20}
 rt::set_parameter asymCascadeHeight {4}
-rt::set_parameter asyncLoadPart {false}
+rt::set_parameter asyncLoadPart {true}
 rt::set_parameter autoSleepPipeLineAllowed {true}
 rt::set_parameter autoSrlExtract {true}
 rt::set_parameter balanceSelectOrder {false}
@@ -860,7 +860,7 @@ rt::set_parameter checkPullLastSrlRegister {true}
 rt::set_parameter checkRemovableInstInSimplify {true}
 rt::set_parameter checkSignMismatchInCounter {true}
 rt::set_parameter cleanUpNetlistSpeedupFirstCall {true}
-rt::set_parameter cleanupAfterRegenerate {false}
+rt::set_parameter cleanupAfterRegenerate {true}
 rt::set_parameter cleanupDanglingModules {true}
 rt::set_parameter cleanupEquivalentRegRemovalByPrepRam {true}
 rt::set_parameter cleanupInReinfer {false}
@@ -2086,9 +2086,9 @@ rt::set_parameter fastSdcSteps {2}
 rt::set_parameter findTimerName {false}
 rt::set_parameter sdcCurrentInstance {true}
 # Group: optimize
-rt::set_parameter abcOptScript {resyn2;fpga -K %d; sweep;}
+rt::set_parameter abcOptScript {strash; balance;fpga -K %d; sweep;}
 rt::set_parameter abcOptScriptCollapse {resyn2;dch -f;resyn2}
-rt::set_parameter abcOptScriptGates {resyn2;map;}
+rt::set_parameter abcOptScriptGates {strash; balance -d;resyn2;map}
 rt::set_parameter abcOptScriptGatesArea {strash;dch -f;amap}
 rt::set_parameter acceptInternalGMoves {false}
 rt::set_parameter allowHillClimb {false}
@@ -3160,7 +3160,7 @@ rt::set_parameter ignoreFsmPowerOn {false}
 rt::set_parameter ignoreLogicalOnlyCellsForSynthesis {false}
 rt::set_parameter ignorePropagateSettingsInElaborate {false}
 rt::set_parameter ignoreSetResetInConstantRegisters {false}
-rt::set_parameter inParallelGenomes {false}
+rt::set_parameter inParallelGenomes {true}
 rt::set_parameter inProcessGenomesSequentially {false}
 rt::set_parameter includeLogicConeThreshold {9}
 rt::set_parameter includeUnmergedPaths {true}
@@ -3398,8 +3398,8 @@ rt::set_parameter parallelDFGOptPass1 {false}
 rt::set_parameter parallelDebug {false}
 rt::set_parameter parallelGenomeList {}
 rt::set_parameter parallelStuckFFsRemoval {495}
-rt::set_parameter parallelTimingMode {false}
-rt::set_parameter parallelTimingModeRound {0}
+rt::set_parameter parallelTimingMode {true}
+rt::set_parameter parallelTimingModeRound {1}
 rt::set_parameter partSeries {7}
 rt::set_parameter partitionBitArrayAccess {false}
 rt::set_parameter partitionSBlockModule {true}
@@ -3769,7 +3769,7 @@ rt::set_parameter propagateNetlistConstantsForTiming {false}
 rt::set_parameter pushClocksToInputsToo {false}
 rt::set_parameter pushConstraintsInsideForSDCFile {false}
 rt::set_parameter repeaterAllowInverter {true}
-rt::set_parameter reportLoop {true}
+rt::set_parameter reportLoop {false}
 rt::set_parameter reportStyle {soce}
 rt::set_parameter resetCellDelay {false}
 rt::set_parameter resistance_units_for_reports {ohm}
@@ -3881,8 +3881,3 @@ set rt::new_mux_part {false}
 set rt::doXdc {1}
 set rt::afterMapTimingCallRunTimeFix {false}
 set rt::timingOptRunTimeFix {false}
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
-set_msg_config  -id {IP_Flow 19-2162}  -severity {WARNING}  -new_severity {INFO} 
-set rt::tclVerbose false
-set rt::tclQuiet false

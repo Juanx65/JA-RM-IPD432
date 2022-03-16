@@ -7887,3 +7887,25 @@ Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:41 ; elapsed = 
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:05:01 ; elapsed = 00:05:10 . Memory (MB): peak = 1659.270 ; gain = 529.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `BRAM`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `BRAM' done
+
+
+INFO: [Synth 8-5816] Retiming module `eucHW_0_GT2`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `eucHW_0_GT2' done
+
+
+An unrecoverable error has occurred, synthesis cancelled.
+TclStackFree: incorrect freePtr. Call out of sequence?
