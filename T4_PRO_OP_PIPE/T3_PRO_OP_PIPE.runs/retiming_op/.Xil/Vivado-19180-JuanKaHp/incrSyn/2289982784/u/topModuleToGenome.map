@@ -1,7 +1,0 @@
-TOP: TOP__GC0, eucHW_0, BRAM, 
-eucHW_0: eucHW, 
-eucHW: eucHW__GCB4, eucHW__GCB3, eucHW__GCB2, eucHW__GCB1, eucHW__GCB0, eucHW_sub_8192ns_8192ns_8192_2_1, 
-eucHW_sub_8192ns_8192ns_8192_2_1: eucHW_sub_8192ns_8192ns_8192_2_1_Adder_0, 
-eucHW_sub_8192ns_8192ns_8192_2_1_Adder_0: eucHW_sub_8192ns_8192ns_8192_2_1_Adder_0__GC0, eucHW_sub_8192ns_8192ns_8192_2_1_Adder_0_comb_adder, 
-eucHW_sub_8192ns_8192ns_8192_2_1_Adder_0_comb_adder: eucHW_sub_8192ns_8192ns_8192_2_1_Adder_0_comb_adder, 
-BRAM: BRAM, 

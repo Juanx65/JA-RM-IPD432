@@ -44,7 +44,7 @@
     "C": {
       "index": "2",
       "direction": "out",
-      "srcType": "float*",
+      "srcType": "int*",
       "srcSize": "32",
       "hwRefs": [
         {
@@ -68,10 +68,13 @@
     "FlowTarget": "vivado",
     "ConfigTcl": [
       "config_export -format=ip_catalog",
-      "config_export -output=C:\/Users\/juan_\/Documents\/FPGA\/IPs\/eucDistHW_pipe.zip",
+      "config_export -output=C:\/Users\/juan_\/Documents\/FPGA\/IPs\/eucDistHW_pip4_int.zip",
       "config_export -rtl=verilog"
     ],
-    "DirectiveTcl": ["set_directive_top eucHW -name eucHW"],
+    "DirectiveTcl": [
+      "set_directive_top eucHW -name eucHW",
+      "set_directive_top eucHW -name eucHW"
+    ],
     "ProfileOption": "0",
     "ProfileType": "none",
     "KernelName": "eucHW"
@@ -81,8 +84,8 @@
     "ClockPeriod": "10",
     "Uncertainty": "2.7",
     "IsCombinational": "0",
-    "II": "7197",
-    "Latency": "7196"
+    "II": "529",
+    "Latency": "528"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
@@ -139,6 +142,7 @@
       "impl\/vhdl\/eucHW_mac_muladd_9s_9s_18s_32_4_1.vhd",
       "impl\/vhdl\/eucHW_mac_muladd_9s_9s_21s_21_4_1.vhd",
       "impl\/vhdl\/eucHW_mac_muladd_9s_9s_27s_27_4_1.vhd",
+      "impl\/vhdl\/eucHW_mac_muladd_9s_9s_32s_32_4_1.vhd",
       "impl\/vhdl\/eucHW_mac_muladd_17s_17s_32s_32_4_1.vhd",
       "impl\/vhdl\/eucHW_mul_9s_9s_18_1_1.vhd",
       "impl\/vhdl\/eucHW_mul_32s_32s_32_2_1.vhd",
@@ -202,6 +206,7 @@
       "impl\/verilog\/eucHW_mac_muladd_9s_9s_18s_32_4_1.v",
       "impl\/verilog\/eucHW_mac_muladd_9s_9s_21s_21_4_1.v",
       "impl\/verilog\/eucHW_mac_muladd_9s_9s_27s_27_4_1.v",
+      "impl\/verilog\/eucHW_mac_muladd_9s_9s_32s_32_4_1.v",
       "impl\/verilog\/eucHW_mac_muladd_17s_17s_32s_32_4_1.v",
       "impl\/verilog\/eucHW_mul_9s_9s_18_1_1.v",
       "impl\/verilog\/eucHW_mul_32s_32s_32_2_1.v",
@@ -373,45 +378,93 @@
     }
   },
   "ModuleInfo": {
-    "Hierarchy": {"ModuleName": "eucHW"},
-    "Info": {"eucHW": {
+    "Hierarchy": {
+      "ModuleName": "eucHW",
+      "Instances": [{
+          "ModuleName": "sqrt_fixed_32_32_s",
+          "InstanceName": "grp_sqrt_fixed_32_32_s_fu_99"
+        }]
+    },
+    "Info": {
+      "sqrt_fixed_32_32_s": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "eucHW": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
-      }},
-    "Metrics": {"eucHW": {
+      }
+    },
+    "Metrics": {
+      "sqrt_fixed_32_32_s": {
         "Latency": {
-          "LatencyBest": "7196",
-          "LatencyAvg": "7196",
-          "LatencyWorst": "7196",
-          "PipelineII": "7197",
+          "LatencyBest": "8",
+          "LatencyAvg": "8",
+          "LatencyWorst": "8",
+          "PipelineII": "1",
+          "PipelineDepth": "9",
+          "PipelineType": "yes"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.007"
+        },
+        "Area": {
+          "FF": "643",
+          "AVAIL_FF": "16000",
+          "UTIL_FF": "4",
+          "LUT": "1368",
+          "AVAIL_LUT": "8000",
+          "UTIL_LUT": "17",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "40",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "40",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "eucHW": {
+        "Latency": {
+          "LatencyBest": "528",
+          "LatencyAvg": "528",
+          "LatencyWorst": "528",
+          "PipelineII": "529",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "6.342"
+          "Estimate": "7.007"
         },
         "Loops": [{
             "Name": "loopManDist",
             "TripCount": "512",
-            "Latency": "7179",
-            "PipelineII": "14",
-            "PipelineDepth": "26"
+            "Latency": "517",
+            "PipelineII": "1",
+            "PipelineDepth": "7"
           }],
         "Area": {
-          "DSP": "2",
+          "DSP": "1",
           "AVAIL_DSP": "40",
-          "UTIL_DSP": "5",
-          "FF": "50849",
+          "UTIL_DSP": "2",
+          "FF": "26557",
           "AVAIL_FF": "16000",
-          "UTIL_FF": "317",
-          "LUT": "36766",
+          "UTIL_FF": "165",
+          "LUT": "37773",
           "AVAIL_LUT": "8000",
-          "UTIL_LUT": "459",
+          "UTIL_LUT": "472",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "40",
           "UTIL_BRAM": "0",
@@ -419,12 +472,13 @@
           "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
         }
-      }}
+      }
+    }
   },
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-03-15 17:19:28 -0300",
+    "Time": "2022-03-15 23:02:18 -0300",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.1"
   }

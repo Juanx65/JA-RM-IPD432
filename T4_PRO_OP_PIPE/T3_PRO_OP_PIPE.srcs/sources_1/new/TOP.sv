@@ -56,7 +56,7 @@ module TOP
     BRAM #( .WIDTH(BR_SIZE), .NBITS(NBITS),.SIZE(BR_WIDTH)) BRAMA (.clk(CLK100MHZ), .addr(addra), .write(enaA), .din(Data), .out(A));
     BRAM #( .WIDTH(BR_SIZE), .NBITS(NBITS),.SIZE(BR_WIDTH)) BRAMB (.clk(CLK100MHZ), .addr(addra), .write(enaB), .din(Data), .out(B));
     
-
+    
     logic [2:0] operation;
     logic flag_process;
     

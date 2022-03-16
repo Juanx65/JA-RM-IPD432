@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'eucHW'" level="0">
-<item name = "Date">Tue Mar 15 17:19:10 2022
+<item name = "Date">Tue Mar 15 23:02:14 2022
 </item>
 <item name = "Version">2021.1 (Build 3247384 on Thu Jun 10 19:36:33 MDT 2021)</item>
 <item name = "Project">EucHLS</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.342 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.007 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,18 +24,19 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">7196, 7196, 71.960 us, 71.960 us, 7197, 7197, no</column>
+<column name="">528, 528, 5.280 us, 5.280 us, 529, 529, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_sqrt_fixed_32_32_s_fu_99">sqrt_fixed_32_32_s, 8, 8, 80.000 ns, 80.000 ns, 1, 1, yes</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loopManDist">7179, 7179, 26, 14, 1, 512, yes</column>
+<column name="- loopManDist">517, 517, 7, 1, 1, 512, yes</column>
 </table>
 </item>
 </section>

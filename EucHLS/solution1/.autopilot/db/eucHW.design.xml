@@ -3,10 +3,105 @@
 <RTLDesignHierarchy>
 <TopModule>
 <ModuleName>eucHW</ModuleName>
+<InstancesList>
+<Instance>
+<InstName>grp_sqrt_fixed_32_32_s_fu_99</InstName>
+<ModuleName>sqrt_fixed_32_32_s</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>99</ID>
+</Instance>
+</InstancesList>
 </TopModule>
 </RTLDesignHierarchy>
 
 <ModuleInformation>
+<Module>
+<Name>sqrt_fixed_32_32_s</Name>
+<PerformanceEstimates>
+<SummaryOfTimingAnalysis>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
+<TargetInitiationInterval>4294967295</TargetInitiationInterval>
+<EstimatedClockPeriod>7.007</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<Best-caseLatency>8</Best-caseLatency>
+<Average-caseLatency>8</Average-caseLatency>
+<Worst-caseLatency>8</Worst-caseLatency>
+<Best-caseRealTimeLatency>80.000 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>80.000 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>80.000 ns</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>1</PipelineInitiationInterval>
+<PipelineDepth>9</PipelineDepth>
+<PipelineType>yes</PipelineType>
+</SummaryOfOverallLatency>
+</PerformanceEstimates>
+<AreaEstimates>
+<Resources>
+<FF>643</FF>
+<AVAIL_FF>16000</AVAIL_FF>
+<UTIL_FF>4</UTIL_FF>
+<LUT>1368</LUT>
+<AVAIL_LUT>8000</AVAIL_LUT>
+<UTIL_LUT>17</UTIL_LUT>
+<BRAM_18K>0</BRAM_18K>
+<AVAIL_BRAM>40</AVAIL_BRAM>
+<UTIL_BRAM>0</UTIL_BRAM>
+<DSP>0</DSP>
+<AVAIL_DSP>40</AVAIL_DSP>
+<UTIL_DSP>0</UTIL_DSP>
+<URAM>0</URAM>
+<AVAIL_URAM>0</AVAIL_URAM>
+<UTIL_URAM>0</UTIL_URAM>
+</Resources>
+</AreaEstimates>
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>sqrt_fixed&lt;32, 32&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst</name>
+<Object>sqrt_fixed&lt;32, 32&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return</name>
+<Object>sqrt_fixed&lt;32, 32&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>16</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>x</name>
+<Object>x</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>27</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+</InterfaceSummary>
+</Module>
 <Module>
 <Name>eucHW</Name>
 <Loops>
@@ -16,41 +111,41 @@
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>6.342</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.007</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>7196</Best-caseLatency>
-<Average-caseLatency>7196</Average-caseLatency>
-<Worst-caseLatency>7196</Worst-caseLatency>
-<Best-caseRealTimeLatency>71.960 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>71.960 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>71.960 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>7197</PipelineInitiationInterval>
+<Best-caseLatency>528</Best-caseLatency>
+<Average-caseLatency>528</Average-caseLatency>
+<Worst-caseLatency>528</Worst-caseLatency>
+<Best-caseRealTimeLatency>5.280 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>5.280 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>5.280 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>529</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <loopManDist>
 <Name>loopManDist</Name>
 <TripCount>512</TripCount>
-<Latency>7179</Latency>
-<AbsoluteTimeLatency>71.790 us</AbsoluteTimeLatency>
-<PipelineII>14</PipelineII>
-<PipelineDepth>26</PipelineDepth>
+<Latency>517</Latency>
+<AbsoluteTimeLatency>5.170 us</AbsoluteTimeLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>7</PipelineDepth>
 <PipelineType>yes</PipelineType>
 </loopManDist>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<DSP>2</DSP>
+<DSP>1</DSP>
 <AVAIL_DSP>40</AVAIL_DSP>
-<UTIL_DSP>5</UTIL_DSP>
-<FF>50849</FF>
+<UTIL_DSP>2</UTIL_DSP>
+<FF>26557</FF>
 <AVAIL_FF>16000</AVAIL_FF>
-<UTIL_FF>317</UTIL_FF>
-<LUT>36766</LUT>
+<UTIL_FF>165</UTIL_FF>
+<LUT>37773</LUT>
 <AVAIL_LUT>8000</AVAIL_LUT>
-<UTIL_LUT>459</UTIL_LUT>
+<UTIL_LUT>472</UTIL_LUT>
 <BRAM_18K>0</BRAM_18K>
 <AVAIL_BRAM>40</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>

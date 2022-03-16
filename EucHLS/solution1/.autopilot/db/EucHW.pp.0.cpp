@@ -463,7 +463,7 @@ namespace std
 # 5 "src/specs.h" 2
 
 typedef uint8_t T;
-typedef float Tout;
+typedef int Tout;
 # 5 "src/eucHW.h" 2
 # 1 "C:/Xilinx/Vitis_HLS/2021.1/tps/mingw/6.2.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\6.2.0\\include\\c++\\math.h" 1 3
 # 36 "C:/Xilinx/Vitis_HLS/2021.1/tps/mingw/6.2.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\6.2.0\\include\\c++\\math.h" 3

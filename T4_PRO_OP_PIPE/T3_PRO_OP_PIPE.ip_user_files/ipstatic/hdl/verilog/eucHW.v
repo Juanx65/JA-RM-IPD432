@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="eucHW_eucHW,hls_ip_2021_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a12ti-csg325-1L,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.342000,HLS_SYN_LAT=7196,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=50849,HLS_SYN_LUT=36766,HLS_VERSION=2021_1}" *)
+(* CORE_GENERATION_INFO="eucHW_eucHW,hls_ip_2021_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7a12ti-csg325-1L,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.006625,HLS_SYN_LAT=528,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=26557,HLS_SYN_LUT=37773,HLS_VERSION=2021_1}" *)
 
 module eucHW (
         ap_clk,
@@ -22,37 +22,18 @@ module eucHW (
         C_ap_vld
 );
 
-parameter    ap_ST_fsm_state1 = 31'd1;
-parameter    ap_ST_fsm_pp0_stage0 = 31'd2;
-parameter    ap_ST_fsm_pp0_stage1 = 31'd4;
-parameter    ap_ST_fsm_pp0_stage2 = 31'd8;
-parameter    ap_ST_fsm_pp0_stage3 = 31'd16;
-parameter    ap_ST_fsm_pp0_stage4 = 31'd32;
-parameter    ap_ST_fsm_pp0_stage5 = 31'd64;
-parameter    ap_ST_fsm_pp0_stage6 = 31'd128;
-parameter    ap_ST_fsm_pp0_stage7 = 31'd256;
-parameter    ap_ST_fsm_pp0_stage8 = 31'd512;
-parameter    ap_ST_fsm_pp0_stage9 = 31'd1024;
-parameter    ap_ST_fsm_pp0_stage10 = 31'd2048;
-parameter    ap_ST_fsm_pp0_stage11 = 31'd4096;
-parameter    ap_ST_fsm_pp0_stage12 = 31'd8192;
-parameter    ap_ST_fsm_pp0_stage13 = 31'd16384;
-parameter    ap_ST_fsm_state28 = 31'd32768;
-parameter    ap_ST_fsm_state29 = 31'd65536;
-parameter    ap_ST_fsm_state30 = 31'd131072;
-parameter    ap_ST_fsm_state31 = 31'd262144;
-parameter    ap_ST_fsm_state32 = 31'd524288;
-parameter    ap_ST_fsm_state33 = 31'd1048576;
-parameter    ap_ST_fsm_state34 = 31'd2097152;
-parameter    ap_ST_fsm_state35 = 31'd4194304;
-parameter    ap_ST_fsm_state36 = 31'd8388608;
-parameter    ap_ST_fsm_state37 = 31'd16777216;
-parameter    ap_ST_fsm_state38 = 31'd33554432;
-parameter    ap_ST_fsm_state39 = 31'd67108864;
-parameter    ap_ST_fsm_state40 = 31'd134217728;
-parameter    ap_ST_fsm_state41 = 31'd268435456;
-parameter    ap_ST_fsm_state42 = 31'd536870912;
-parameter    ap_ST_fsm_state43 = 31'd1073741824;
+parameter    ap_ST_fsm_state1 = 12'd1;
+parameter    ap_ST_fsm_pp0_stage0 = 12'd2;
+parameter    ap_ST_fsm_state9 = 12'd4;
+parameter    ap_ST_fsm_state10 = 12'd8;
+parameter    ap_ST_fsm_state11 = 12'd16;
+parameter    ap_ST_fsm_state12 = 12'd32;
+parameter    ap_ST_fsm_state13 = 12'd64;
+parameter    ap_ST_fsm_state14 = 12'd128;
+parameter    ap_ST_fsm_state15 = 12'd256;
+parameter    ap_ST_fsm_state16 = 12'd512;
+parameter    ap_ST_fsm_state17 = 12'd1024;
+parameter    ap_ST_fsm_state18 = 12'd2048;
 
 input   ap_clk;
 input   ap_rst;
@@ -70,234 +51,129 @@ reg ap_idle;
 reg ap_ready;
 reg C_ap_vld;
 
-(* fsm_encoding = "none" *) reg   [30:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [11:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-reg   [31:0] grp_load_fu_111_p1;
-wire    ap_CS_fsm_pp0_stage11;
-reg    ap_enable_reg_pp0_iter0;
-wire    ap_block_state13_pp0_stage11_iter0;
-wire    ap_block_state27_pp0_stage11_iter1;
-wire    ap_block_pp0_stage11_11001;
-reg   [0:0] tmp_1_reg_422;
-wire    ap_CS_fsm_state28;
-wire   [31:0] grp_fu_99_p2;
-reg   [31:0] reg_122;
-wire    ap_CS_fsm_pp0_stage3;
-reg    ap_enable_reg_pp0_iter1;
-wire    ap_block_state5_pp0_stage3_iter0;
-wire    ap_block_state19_pp0_stage3_iter1;
-wire    ap_block_pp0_stage3_11001;
-wire    ap_CS_fsm_pp0_stage10;
-wire    ap_block_state12_pp0_stage10_iter0;
-wire    ap_block_state26_pp0_stage10_iter1;
-wire    ap_block_pp0_stage10_11001;
-wire   [0:0] tmp_1_fu_140_p3;
+wire   [12:0] shl_ln_fu_133_p3;
+reg   [12:0] shl_ln_reg_413;
 wire    ap_CS_fsm_pp0_stage0;
 wire    ap_block_state2_pp0_stage0_iter0;
-wire    ap_block_state16_pp0_stage0_iter1;
+wire    ap_block_state3_pp0_stage0_iter1;
+wire    ap_block_state4_pp0_stage0_iter2;
+wire    ap_block_state5_pp0_stage0_iter3;
+wire    ap_block_state6_pp0_stage0_iter4;
+wire    ap_block_state7_pp0_stage0_iter5;
+wire    ap_block_state8_pp0_stage0_iter6;
 wire    ap_block_pp0_stage0_11001;
-wire   [12:0] shl_ln_fu_152_p3;
-reg   [12:0] shl_ln_reg_426;
-wire   [8191:0] shl_ln18_fu_184_p2;
-reg   [8191:0] shl_ln18_reg_433;
-wire   [8184:0] shl_ln18_1_fu_190_p2;
-reg   [8184:0] shl_ln18_1_reg_438;
-wire    ap_CS_fsm_pp0_stage1;
-wire    ap_block_state3_pp0_stage1_iter0;
-wire    ap_block_state17_pp0_stage1_iter1;
-wire    ap_block_pp0_stage1_11001;
-wire   [8191:0] zext_ln18_4_fu_225_p1;
-reg   [8191:0] zext_ln18_4_reg_448;
-wire   [8191:0] select_ln18_fu_257_p3;
-reg   [8191:0] select_ln18_reg_454;
-wire   [8191:0] shl_ln18_3_fu_265_p2;
-reg   [8191:0] shl_ln18_3_reg_459;
-wire   [8191:0] grp_fu_210_p2;
-reg   [8191:0] sub_ln18_reg_464;
-wire    ap_CS_fsm_pp0_stage2;
-wire    ap_block_state4_pp0_stage2_iter0;
-wire    ap_block_state18_pp0_stage2_iter1;
-wire    ap_block_pp0_stage2_11001;
-wire   [8:0] sub_ln18_1_fu_314_p2;
-reg   [8:0] sub_ln18_1_reg_470;
-wire   [8191:0] grp_fu_271_p2;
-reg   [8191:0] sub_ln18_2_reg_475;
-wire   [17:0] mul_ln18_fu_323_p2;
-reg   [17:0] mul_ln18_reg_481;
-wire    ap_CS_fsm_pp0_stage4;
-wire    ap_block_state6_pp0_stage4_iter0;
-wire    ap_block_state20_pp0_stage4_iter1;
-wire    ap_block_pp0_stage4_11001;
-wire   [8:0] sub_ln18_3_fu_363_p2;
-reg   [8:0] sub_ln18_3_reg_486;
-wire  signed [31:0] sext_ln18_2_fu_369_p1;
-wire    ap_CS_fsm_pp0_stage5;
-wire    ap_block_state7_pp0_stage5_iter0;
-wire    ap_block_state21_pp0_stage5_iter1;
-wire    ap_block_pp0_stage5_11001;
-wire   [17:0] mul_ln18_1_fu_376_p2;
-reg   [17:0] mul_ln18_1_reg_496;
-wire  signed [31:0] sext_ln18_3_fu_382_p1;
-wire    ap_CS_fsm_pp0_stage6;
-wire    ap_block_state8_pp0_stage6_iter0;
-wire    ap_block_state22_pp0_stage6_iter1;
-wire    ap_block_pp0_stage6_11001;
-wire   [31:0] grp_fu_103_p1;
-reg   [31:0] conv_reg_506;
-reg   [31:0] conv11_1_reg_511;
+wire   [0:0] tmp_fu_121_p3;
+reg   [12:0] shl_ln_reg_413_pp0_iter1_reg;
+reg   [12:0] shl_ln_reg_413_pp0_iter2_reg;
+wire   [13:0] add_ln18_fu_151_p2;
+reg   [13:0] add_ln18_reg_420;
+wire   [8191:0] select_ln18_fu_191_p3;
+reg   [8191:0] select_ln18_reg_425;
+wire   [8191:0] zext_ln18_4_fu_243_p1;
+reg   [8191:0] zext_ln18_4_reg_440;
+reg   [8191:0] zext_ln18_4_reg_440_pp0_iter2_reg;
+wire   [8191:0] grp_fu_232_p2;
+reg   [8191:0] sub_ln18_reg_451;
+wire   [8191:0] grp_fu_253_p2;
+reg   [8191:0] sub_ln18_2_reg_457;
+wire  signed [17:0] sext_ln18_fu_303_p1;
+wire   [8:0] sub_ln18_3_fu_341_p2;
+reg   [8:0] sub_ln18_3_reg_469;
+reg   [8:0] sub_ln18_3_reg_469_pp0_iter4_reg;
+wire  signed [17:0] mul_ln18_1_fu_350_p2;
+wire    ap_CS_fsm_state9;
+reg    ap_enable_reg_pp0_iter0;
 wire    ap_block_pp0_stage0_subdone;
 reg    ap_condition_pp0_exit_iter0_state2;
-wire    ap_block_state15_pp0_stage13_iter0;
-wire    ap_block_pp0_stage13_subdone;
-wire    ap_CS_fsm_pp0_stage13;
-wire    ap_block_pp0_stage11_subdone;
-reg   [31:0] result_fu_72;
-reg   [31:0] ap_sig_allocacmp_result_load;
-wire    ap_block_pp0_stage11;
-reg   [10:0] i_fu_76;
-wire   [10:0] add_ln14_fu_196_p2;
+reg    ap_enable_reg_pp0_iter1;
+reg    ap_enable_reg_pp0_iter2;
+reg    ap_enable_reg_pp0_iter3;
+reg    ap_enable_reg_pp0_iter4;
+reg    ap_enable_reg_pp0_iter5;
+reg    ap_enable_reg_pp0_iter6;
+wire   [15:0] grp_sqrt_fixed_32_32_s_fu_99_ap_return;
+reg   [26:0] result_fu_72;
+wire   [26:0] result_1_fu_359_p2;
 wire    ap_block_pp0_stage0;
-wire    ap_CS_fsm_state43;
-reg   [31:0] grp_fu_99_p0;
-reg   [31:0] grp_fu_99_p1;
-wire    ap_block_pp0_stage4;
-reg  signed [31:0] grp_fu_103_p0;
-wire    ap_block_pp0_stage5;
-wire    ap_block_pp0_stage6;
-wire   [9:0] trunc_ln18_fu_148_p1;
-wire   [12:0] or_ln18_fu_160_p2;
-wire   [13:0] zext_ln18_2_fu_170_p1;
-wire   [13:0] add_ln18_fu_174_p2;
-wire   [8191:0] zext_ln18_3_fu_180_p1;
-wire   [8184:0] zext_ln18_1_fu_166_p1;
-wire    ap_block_pp0_stage1;
-wire   [8191:0] grp_fu_210_p1;
-wire   [12:0] or_ln18_1_fu_215_p2;
-wire   [12:0] or_ln18_2_fu_220_p2;
-wire   [13:0] zext_ln18_8_fu_229_p1;
-wire   [13:0] add_ln18_1_fu_233_p2;
-wire   [8191:0] zext_ln18_9_fu_239_p1;
-wire   [0:0] tmp_2_fu_249_p3;
-wire   [8191:0] shl_ln18_2_fu_243_p2;
-wire    ap_block_pp0_stage2;
-wire    ap_block_pp0_stage3;
-wire   [8191:0] and_ln18_fu_278_p2;
-wire   [8191:0] zext_ln18_fu_275_p1;
-wire   [8191:0] lshr_ln18_fu_282_p2;
-wire   [7:0] trunc_ln18_1_fu_288_p1;
-wire   [8191:0] and_ln18_1_fu_296_p2;
-wire   [8191:0] lshr_ln18_1_fu_300_p2;
-wire   [7:0] trunc_ln18_2_fu_306_p1;
-wire   [8:0] zext_ln18_6_fu_292_p1;
-wire   [8:0] zext_ln18_7_fu_310_p1;
-wire  signed [8:0] mul_ln18_fu_323_p0;
-wire  signed [17:0] sext_ln18_fu_320_p1;
-wire  signed [8:0] mul_ln18_fu_323_p1;
-wire   [8191:0] and_ln18_2_fu_329_p2;
-wire   [8191:0] lshr_ln18_2_fu_333_p2;
-wire   [7:0] trunc_ln18_3_fu_338_p1;
-wire   [8191:0] and_ln18_3_fu_346_p2;
-wire   [8191:0] lshr_ln18_3_fu_350_p2;
-wire   [7:0] trunc_ln18_4_fu_355_p1;
-wire   [8:0] zext_ln18_10_fu_342_p1;
-wire   [8:0] zext_ln18_11_fu_359_p1;
-wire  signed [8:0] mul_ln18_1_fu_376_p0;
-wire  signed [17:0] sext_ln18_1_fu_373_p1;
-wire  signed [8:0] mul_ln18_1_fu_376_p1;
-wire   [31:0] grp_fu_106_p2;
-reg   [30:0] ap_NS_fsm;
+reg   [10:0] i_fu_76;
+wire   [10:0] add_ln14_fu_199_p2;
+wire    ap_CS_fsm_state18;
+wire   [9:0] trunc_ln18_fu_129_p1;
+wire   [12:0] or_ln18_fu_141_p2;
+wire   [13:0] zext_ln18_2_fu_147_p1;
+wire   [12:0] or_ln18_2_fu_157_p2;
+wire   [13:0] zext_ln18_8_fu_163_p1;
+wire   [13:0] add_ln18_1_fu_167_p2;
+wire   [8191:0] zext_ln18_9_fu_173_p1;
+wire   [0:0] tmp_33_fu_183_p3;
+wire   [8191:0] shl_ln18_2_fu_177_p2;
+wire   [8191:0] zext_ln18_3_fu_213_p1;
+wire   [8184:0] zext_ln18_1_fu_210_p1;
+wire   [8184:0] shl_ln18_1_fu_222_p2;
+wire   [8191:0] grp_fu_232_p0;
+wire   [8191:0] grp_fu_232_p1;
+wire   [12:0] or_ln18_1_fu_238_p2;
+wire   [8191:0] grp_fu_253_p1;
+wire   [8191:0] and_ln18_fu_261_p2;
+wire   [8191:0] zext_ln18_fu_258_p1;
+wire   [8191:0] lshr_ln18_fu_265_p2;
+wire   [7:0] trunc_ln18_1_fu_271_p1;
+wire   [8191:0] and_ln18_1_fu_279_p2;
+wire   [8191:0] lshr_ln18_1_fu_283_p2;
+wire   [7:0] trunc_ln18_2_fu_289_p1;
+wire   [8:0] zext_ln18_6_fu_275_p1;
+wire   [8:0] zext_ln18_7_fu_293_p1;
+wire   [8:0] sub_ln18_1_fu_297_p2;
+wire   [8191:0] and_ln18_2_fu_307_p2;
+wire   [8191:0] lshr_ln18_2_fu_311_p2;
+wire   [7:0] trunc_ln18_3_fu_316_p1;
+wire   [8191:0] and_ln18_3_fu_324_p2;
+wire   [8191:0] lshr_ln18_3_fu_328_p2;
+wire   [7:0] trunc_ln18_4_fu_333_p1;
+wire   [8:0] zext_ln18_10_fu_320_p1;
+wire   [8:0] zext_ln18_11_fu_337_p1;
+wire  signed [8:0] mul_ln18_1_fu_350_p0;
+wire  signed [17:0] sext_ln18_1_fu_347_p1;
+wire  signed [8:0] mul_ln18_1_fu_350_p1;
+wire  signed [17:0] grp_fu_375_p3;
+wire  signed [26:0] sext_ln18_2_fu_356_p1;
+wire  signed [8:0] grp_fu_375_p0;
+wire  signed [8:0] grp_fu_375_p1;
+reg   [11:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
-wire    ap_ST_fsm_state28_blk;
-wire    ap_ST_fsm_state29_blk;
-wire    ap_ST_fsm_state30_blk;
-wire    ap_ST_fsm_state31_blk;
-wire    ap_ST_fsm_state32_blk;
-wire    ap_ST_fsm_state33_blk;
-wire    ap_ST_fsm_state34_blk;
-wire    ap_ST_fsm_state35_blk;
-wire    ap_ST_fsm_state36_blk;
-wire    ap_ST_fsm_state37_blk;
-wire    ap_ST_fsm_state38_blk;
-wire    ap_ST_fsm_state39_blk;
-wire    ap_ST_fsm_state40_blk;
-wire    ap_ST_fsm_state41_blk;
-wire    ap_ST_fsm_state42_blk;
-wire    ap_ST_fsm_state43_blk;
-wire    ap_block_pp0_stage1_subdone;
-wire    ap_block_pp0_stage2_subdone;
-wire    ap_block_pp0_stage3_subdone;
-wire    ap_block_pp0_stage4_subdone;
-wire    ap_block_pp0_stage5_subdone;
-wire    ap_block_pp0_stage6_subdone;
-wire    ap_block_state9_pp0_stage7_iter0;
-wire    ap_block_state23_pp0_stage7_iter1;
-wire    ap_block_pp0_stage7_subdone;
-wire    ap_block_pp0_stage7_11001;
-wire    ap_block_state10_pp0_stage8_iter0;
-wire    ap_block_state24_pp0_stage8_iter1;
-wire    ap_block_pp0_stage8_subdone;
-wire    ap_block_pp0_stage8_11001;
-wire    ap_block_state11_pp0_stage9_iter0;
-wire    ap_block_state25_pp0_stage9_iter1;
-wire    ap_block_pp0_stage9_subdone;
-wire    ap_block_pp0_stage9_11001;
-wire    ap_block_pp0_stage10_subdone;
-wire    ap_block_state14_pp0_stage12_iter0;
-wire    ap_block_pp0_stage12_subdone;
-wire    ap_block_pp0_stage12_11001;
-wire    ap_block_pp0_stage13_11001;
+wire    ap_ST_fsm_state9_blk;
+wire    ap_ST_fsm_state10_blk;
+wire    ap_ST_fsm_state11_blk;
+wire    ap_ST_fsm_state12_blk;
+wire    ap_ST_fsm_state13_blk;
+wire    ap_ST_fsm_state14_blk;
+wire    ap_ST_fsm_state15_blk;
+wire    ap_ST_fsm_state16_blk;
+wire    ap_ST_fsm_state17_blk;
+wire    ap_ST_fsm_state18_blk;
 reg    ap_idle_pp0;
 wire    ap_enable_pp0;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 31'd1;
+#0 ap_CS_fsm = 12'd1;
 #0 ap_enable_reg_pp0_iter0 = 1'b0;
 #0 ap_enable_reg_pp0_iter1 = 1'b0;
+#0 ap_enable_reg_pp0_iter2 = 1'b0;
+#0 ap_enable_reg_pp0_iter3 = 1'b0;
+#0 ap_enable_reg_pp0_iter4 = 1'b0;
+#0 ap_enable_reg_pp0_iter5 = 1'b0;
+#0 ap_enable_reg_pp0_iter6 = 1'b0;
 end
 
-eucHW_fadd_32ns_32ns_32_7_full_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 7 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_7_full_dsp_1_U1(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(grp_fu_99_p0),
-    .din1(grp_fu_99_p1),
-    .ce(1'b1),
-    .dout(grp_fu_99_p2)
-);
-
-eucHW_sitofp_32s_32_6_no_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 6 ),
-    .din0_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-sitofp_32s_32_6_no_dsp_1_U2(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(grp_fu_103_p0),
-    .ce(1'b1),
-    .dout(grp_fu_103_p1)
-);
-
-eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1 #(
-    .ID( 1 ),
-    .NUM_STAGE( 16 ),
-    .din0_WIDTH( 32 ),
-    .din1_WIDTH( 32 ),
-    .dout_WIDTH( 32 ))
-fsqrt_32ns_32ns_32_16_no_dsp_1_U3(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .din0(32'd0),
-    .din1(grp_load_fu_111_p1),
-    .ce(1'b1),
-    .dout(grp_fu_106_p2)
+eucHW_sqrt_fixed_32_32_s grp_sqrt_fixed_32_32_s_fu_99(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .x(result_fu_72),
+    .ap_return(grp_sqrt_fixed_32_32_s_fu_99_ap_return)
 );
 
 eucHW_sub_8192ns_8192ns_8192_2_1 #(
@@ -306,13 +182,13 @@ eucHW_sub_8192ns_8192ns_8192_2_1 #(
     .din0_WIDTH( 8192 ),
     .din1_WIDTH( 8192 ),
     .dout_WIDTH( 8192 ))
-sub_8192ns_8192ns_8192_2_1_U4(
+sub_8192ns_8192ns_8192_2_1_U2(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(shl_ln18_reg_433),
-    .din1(grp_fu_210_p1),
+    .din0(grp_fu_232_p0),
+    .din1(grp_fu_232_p1),
     .ce(1'b1),
-    .dout(grp_fu_210_p2)
+    .dout(grp_fu_232_p2)
 );
 
 eucHW_sub_8192ns_8192ns_8192_2_1 #(
@@ -321,13 +197,13 @@ eucHW_sub_8192ns_8192ns_8192_2_1 #(
     .din0_WIDTH( 8192 ),
     .din1_WIDTH( 8192 ),
     .dout_WIDTH( 8192 ))
-sub_8192ns_8192ns_8192_2_1_U5(
+sub_8192ns_8192ns_8192_2_1_U3(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(select_ln18_reg_454),
-    .din1(shl_ln18_3_reg_459),
+    .din0(select_ln18_reg_425),
+    .din1(grp_fu_253_p1),
     .ce(1'b1),
-    .dout(grp_fu_271_p2)
+    .dout(grp_fu_253_p2)
 );
 
 eucHW_mul_9s_9s_18_1_1 #(
@@ -336,22 +212,27 @@ eucHW_mul_9s_9s_18_1_1 #(
     .din0_WIDTH( 9 ),
     .din1_WIDTH( 9 ),
     .dout_WIDTH( 18 ))
-mul_9s_9s_18_1_1_U6(
-    .din0(mul_ln18_fu_323_p0),
-    .din1(mul_ln18_fu_323_p1),
-    .dout(mul_ln18_fu_323_p2)
+mul_9s_9s_18_1_1_U4(
+    .din0(mul_ln18_1_fu_350_p0),
+    .din1(mul_ln18_1_fu_350_p1),
+    .dout(mul_ln18_1_fu_350_p2)
 );
 
-eucHW_mul_9s_9s_18_1_1 #(
+eucHW_mac_muladd_9s_9s_18s_18_4_1 #(
     .ID( 1 ),
-    .NUM_STAGE( 1 ),
+    .NUM_STAGE( 4 ),
     .din0_WIDTH( 9 ),
     .din1_WIDTH( 9 ),
+    .din2_WIDTH( 18 ),
     .dout_WIDTH( 18 ))
-mul_9s_9s_18_1_1_U7(
-    .din0(mul_ln18_1_fu_376_p0),
-    .din1(mul_ln18_1_fu_376_p1),
-    .dout(mul_ln18_1_fu_376_p2)
+mac_muladd_9s_9s_18s_18_4_1_U5(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(grp_fu_375_p0),
+    .din1(grp_fu_375_p1),
+    .din2(mul_ln18_1_fu_350_p2),
+    .ce(1'b1),
+    .dout(grp_fu_375_p3)
 );
 
 always @ (posedge ap_clk) begin
@@ -366,9 +247,9 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp0_iter0 <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_subdone) & (1'b1 == ap_condition_pp0_exit_iter0_state2) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        if (((1'b0 == ap_block_pp0_stage0_subdone) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_condition_pp0_exit_iter0_state2))) begin
             ap_enable_reg_pp0_iter0 <= 1'b0;
-        end else if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+        end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
             ap_enable_reg_pp0_iter0 <= 1'b1;
         end
     end
@@ -378,103 +259,135 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp0_iter1 <= 1'b0;
     end else begin
-        if ((((1'b0 == ap_block_pp0_stage11_subdone) & (ap_enable_reg_pp0_iter0 == 1'b0) & (1'b1 == ap_CS_fsm_pp0_stage11)) | ((1'b0 == ap_block_pp0_stage13_subdone) & (1'b1 == ap_CS_fsm_pp0_stage13)))) begin
-            ap_enable_reg_pp0_iter1 <= ap_enable_reg_pp0_iter0;
-        end else if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-            ap_enable_reg_pp0_iter1 <= 1'b0;
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            if ((1'b1 == ap_condition_pp0_exit_iter0_state2)) begin
+                ap_enable_reg_pp0_iter1 <= (1'b1 ^ ap_condition_pp0_exit_iter0_state2);
+            end else if ((1'b1 == 1'b1)) begin
+                ap_enable_reg_pp0_iter1 <= ap_enable_reg_pp0_iter0;
+            end
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (ap_rst == 1'b1) begin
+        ap_enable_reg_pp0_iter2 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter2 <= ap_enable_reg_pp0_iter1;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_enable_reg_pp0_iter3 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter3 <= ap_enable_reg_pp0_iter2;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_enable_reg_pp0_iter4 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter4 <= ap_enable_reg_pp0_iter3;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_enable_reg_pp0_iter5 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter5 <= ap_enable_reg_pp0_iter4;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_enable_reg_pp0_iter6 <= 1'b0;
+    end else begin
+        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+            ap_enable_reg_pp0_iter6 <= ap_enable_reg_pp0_iter5;
+        end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+            ap_enable_reg_pp0_iter6 <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
         i_fu_76 <= 11'd0;
-    end else if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (tmp_1_fu_140_p3 == 1'd0))) begin
-        i_fu_76 <= add_ln14_fu_196_p2;
+    end else if (((tmp_fu_121_p3 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        i_fu_76 <= add_ln14_fu_199_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        result_fu_72 <= 32'd0;
-    end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage11_11001) & (1'b1 == ap_CS_fsm_pp0_stage11))) begin
-        result_fu_72 <= reg_122;
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+        result_fu_72 <= 27'd0;
+    end else if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter6 == 1'b1))) begin
+        result_fu_72 <= result_1_fu_359_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((tmp_1_reg_422 == 1'd0) & (1'b0 == ap_block_pp0_stage11_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage11))) begin
-        conv11_1_reg_511 <= grp_fu_103_p1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((tmp_1_reg_422 == 1'd0) & (1'b0 == ap_block_pp0_stage10_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage10))) begin
-        conv_reg_506 <= grp_fu_103_p1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((tmp_1_reg_422 == 1'd0) & (1'b0 == ap_block_pp0_stage5_11001) & (1'b1 == ap_CS_fsm_pp0_stage5))) begin
-        mul_ln18_1_reg_496 <= mul_ln18_1_fu_376_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((tmp_1_reg_422 == 1'd0) & (1'b0 == ap_block_pp0_stage4_11001) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-        mul_ln18_reg_481 <= mul_ln18_fu_323_p2;
-        sub_ln18_3_reg_486 <= sub_ln18_3_fu_363_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage3_11001) & (1'b1 == ap_CS_fsm_pp0_stage3)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage10_11001) & (1'b1 == ap_CS_fsm_pp0_stage10)))) begin
-        reg_122 <= grp_fu_99_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((tmp_1_reg_422 == 1'd0) & (1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        select_ln18_reg_454 <= select_ln18_fu_257_p3;
-        shl_ln18_3_reg_459[8191 : 8] <= shl_ln18_3_fu_265_p2[8191 : 8];
-        zext_ln18_4_reg_448[12 : 4] <= zext_ln18_4_fu_225_p1[12 : 4];
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (tmp_1_fu_140_p3 == 1'd0))) begin
-        shl_ln18_1_reg_438 <= shl_ln18_1_fu_190_p2;
-        shl_ln18_reg_433 <= shl_ln18_fu_184_p2;
-        shl_ln_reg_426[12 : 3] <= shl_ln_fu_152_p3[12 : 3];
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((tmp_1_reg_422 == 1'd0) & (1'b0 == ap_block_pp0_stage3_11001) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
-        sub_ln18_1_reg_470 <= sub_ln18_1_fu_314_p2;
-        sub_ln18_2_reg_475 <= grp_fu_271_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((tmp_1_reg_422 == 1'd0) & (1'b0 == ap_block_pp0_stage2_11001) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
-        sub_ln18_reg_464 <= grp_fu_210_p2;
+    if (((tmp_fu_121_p3 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        add_ln18_reg_420[13 : 3] <= add_ln18_fu_151_p2[13 : 3];
+        select_ln18_reg_425 <= select_ln18_fu_191_p3;
+        shl_ln_reg_413[12 : 3] <= shl_ln_fu_133_p3[12 : 3];
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        tmp_1_reg_422 <= i_fu_76[32'd10];
+        shl_ln_reg_413_pp0_iter1_reg[12 : 3] <= shl_ln_reg_413[12 : 3];
+        zext_ln18_4_reg_440[12 : 4] <= zext_ln18_4_fu_243_p1[12 : 4];
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b0 == ap_block_pp0_stage0_11001)) begin
+        shl_ln_reg_413_pp0_iter2_reg[12 : 3] <= shl_ln_reg_413_pp0_iter1_reg[12 : 3];
+        sub_ln18_2_reg_457 <= grp_fu_253_p2;
+        sub_ln18_3_reg_469 <= sub_ln18_3_fu_341_p2;
+        sub_ln18_3_reg_469_pp0_iter4_reg <= sub_ln18_3_reg_469;
+        sub_ln18_reg_451 <= grp_fu_232_p2;
+        zext_ln18_4_reg_440_pp0_iter2_reg[12 : 4] <= zext_ln18_4_reg_440[12 : 4];
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state43)) begin
+    if ((1'b1 == ap_CS_fsm_state18)) begin
         C_ap_vld = 1'b1;
     end else begin
         C_ap_vld = 1'b0;
     end
 end
+
+assign ap_ST_fsm_state10_blk = 1'b0;
+
+assign ap_ST_fsm_state11_blk = 1'b0;
+
+assign ap_ST_fsm_state12_blk = 1'b0;
+
+assign ap_ST_fsm_state13_blk = 1'b0;
+
+assign ap_ST_fsm_state14_blk = 1'b0;
+
+assign ap_ST_fsm_state15_blk = 1'b0;
+
+assign ap_ST_fsm_state16_blk = 1'b0;
+
+assign ap_ST_fsm_state17_blk = 1'b0;
+
+assign ap_ST_fsm_state18_blk = 1'b0;
 
 always @ (*) begin
     if ((ap_start == 1'b0)) begin
@@ -484,40 +397,10 @@ always @ (*) begin
     end
 end
 
-assign ap_ST_fsm_state28_blk = 1'b0;
-
-assign ap_ST_fsm_state29_blk = 1'b0;
-
-assign ap_ST_fsm_state30_blk = 1'b0;
-
-assign ap_ST_fsm_state31_blk = 1'b0;
-
-assign ap_ST_fsm_state32_blk = 1'b0;
-
-assign ap_ST_fsm_state33_blk = 1'b0;
-
-assign ap_ST_fsm_state34_blk = 1'b0;
-
-assign ap_ST_fsm_state35_blk = 1'b0;
-
-assign ap_ST_fsm_state36_blk = 1'b0;
-
-assign ap_ST_fsm_state37_blk = 1'b0;
-
-assign ap_ST_fsm_state38_blk = 1'b0;
-
-assign ap_ST_fsm_state39_blk = 1'b0;
-
-assign ap_ST_fsm_state40_blk = 1'b0;
-
-assign ap_ST_fsm_state41_blk = 1'b0;
-
-assign ap_ST_fsm_state42_blk = 1'b0;
-
-assign ap_ST_fsm_state43_blk = 1'b0;
+assign ap_ST_fsm_state9_blk = 1'b0;
 
 always @ (*) begin
-    if ((tmp_1_fu_140_p3 == 1'd1)) begin
+    if ((tmp_fu_121_p3 == 1'd1)) begin
         ap_condition_pp0_exit_iter0_state2 = 1'b1;
     end else begin
         ap_condition_pp0_exit_iter0_state2 = 1'b0;
@@ -525,7 +408,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state43)) begin
+    if ((1'b1 == ap_CS_fsm_state18)) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -533,7 +416,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0))) begin
         ap_idle = 1'b1;
     end else begin
         ap_idle = 1'b0;
@@ -541,7 +424,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
+    if (((ap_enable_reg_pp0_iter6 == 1'b0) & (ap_enable_reg_pp0_iter5 == 1'b0) & (ap_enable_reg_pp0_iter4 == 1'b0) & (ap_enable_reg_pp0_iter3 == 1'b0) & (ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
         ap_idle_pp0 = 1'b1;
     end else begin
         ap_idle_pp0 = 1'b0;
@@ -549,7 +432,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state43)) begin
+    if ((1'b1 == ap_CS_fsm_state18)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -557,214 +440,51 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage11) & (1'b1 == ap_CS_fsm_pp0_stage11))) begin
-        ap_sig_allocacmp_result_load = reg_122;
-    end else begin
-        ap_sig_allocacmp_result_load = result_fu_72;
-    end
-end
-
-always @ (*) begin
-    if ((ap_enable_reg_pp0_iter0 == 1'b1)) begin
-        if (((1'b0 == ap_block_pp0_stage6) & (1'b1 == ap_CS_fsm_pp0_stage6))) begin
-            grp_fu_103_p0 = sext_ln18_3_fu_382_p1;
-        end else if (((1'b0 == ap_block_pp0_stage5) & (1'b1 == ap_CS_fsm_pp0_stage5))) begin
-            grp_fu_103_p0 = sext_ln18_2_fu_369_p1;
-        end else begin
-            grp_fu_103_p0 = 'bx;
-        end
-    end else begin
-        grp_fu_103_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage4) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-        grp_fu_99_p0 = reg_122;
-    end else if (((1'b0 == ap_block_pp0_stage11) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage11))) begin
-        grp_fu_99_p0 = grp_load_fu_111_p1;
-    end else begin
-        grp_fu_99_p0 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage4) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-        grp_fu_99_p1 = conv11_1_reg_511;
-    end else if (((1'b0 == ap_block_pp0_stage11) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage11))) begin
-        grp_fu_99_p1 = conv_reg_506;
-    end else begin
-        grp_fu_99_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state28)) begin
-        grp_load_fu_111_p1 = result_fu_72;
-    end else if (((tmp_1_reg_422 == 1'd0) & (1'b0 == ap_block_pp0_stage11) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage11))) begin
-        grp_load_fu_111_p1 = ap_sig_allocacmp_result_load;
-    end else begin
-        grp_load_fu_111_p1 = 'bx;
-    end
-end
-
-always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage0;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_pp0_stage0 : begin
-            if ((~((ap_enable_reg_pp0_iter1 == 1'b0) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (tmp_1_fu_140_p3 == 1'd1)) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage1;
-            end else if (((ap_enable_reg_pp0_iter1 == 1'b0) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (tmp_1_fu_140_p3 == 1'd1))) begin
-                ap_NS_fsm = ap_ST_fsm_state28;
+            if ((~((tmp_fu_121_p3 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b1)) & ~((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter6 == 1'b1) & (ap_enable_reg_pp0_iter5 == 1'b0)))) begin
+                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
+            end else if ((((tmp_fu_121_p3 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b1)) | ((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter6 == 1'b1) & (ap_enable_reg_pp0_iter5 == 1'b0)))) begin
+                ap_NS_fsm = ap_ST_fsm_state9;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage0;
             end
         end
-        ap_ST_fsm_pp0_stage1 : begin
-            if ((1'b0 == ap_block_pp0_stage1_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage2;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage1;
-            end
+        ap_ST_fsm_state9 : begin
+            ap_NS_fsm = ap_ST_fsm_state10;
         end
-        ap_ST_fsm_pp0_stage2 : begin
-            if ((1'b0 == ap_block_pp0_stage2_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage3;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage2;
-            end
+        ap_ST_fsm_state10 : begin
+            ap_NS_fsm = ap_ST_fsm_state11;
         end
-        ap_ST_fsm_pp0_stage3 : begin
-            if ((1'b0 == ap_block_pp0_stage3_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage4;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage3;
-            end
+        ap_ST_fsm_state11 : begin
+            ap_NS_fsm = ap_ST_fsm_state12;
         end
-        ap_ST_fsm_pp0_stage4 : begin
-            if ((1'b0 == ap_block_pp0_stage4_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage5;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage4;
-            end
+        ap_ST_fsm_state12 : begin
+            ap_NS_fsm = ap_ST_fsm_state13;
         end
-        ap_ST_fsm_pp0_stage5 : begin
-            if ((1'b0 == ap_block_pp0_stage5_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage6;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage5;
-            end
+        ap_ST_fsm_state13 : begin
+            ap_NS_fsm = ap_ST_fsm_state14;
         end
-        ap_ST_fsm_pp0_stage6 : begin
-            if ((1'b0 == ap_block_pp0_stage6_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage7;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage6;
-            end
+        ap_ST_fsm_state14 : begin
+            ap_NS_fsm = ap_ST_fsm_state15;
         end
-        ap_ST_fsm_pp0_stage7 : begin
-            if ((1'b0 == ap_block_pp0_stage7_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage8;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage7;
-            end
+        ap_ST_fsm_state15 : begin
+            ap_NS_fsm = ap_ST_fsm_state16;
         end
-        ap_ST_fsm_pp0_stage8 : begin
-            if ((1'b0 == ap_block_pp0_stage8_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage9;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage8;
-            end
+        ap_ST_fsm_state16 : begin
+            ap_NS_fsm = ap_ST_fsm_state17;
         end
-        ap_ST_fsm_pp0_stage9 : begin
-            if ((1'b0 == ap_block_pp0_stage9_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage10;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage9;
-            end
+        ap_ST_fsm_state17 : begin
+            ap_NS_fsm = ap_ST_fsm_state18;
         end
-        ap_ST_fsm_pp0_stage10 : begin
-            if ((1'b0 == ap_block_pp0_stage10_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage11;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage10;
-            end
-        end
-        ap_ST_fsm_pp0_stage11 : begin
-            if ((~((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage11_subdone) & (ap_enable_reg_pp0_iter0 == 1'b0) & (1'b1 == ap_CS_fsm_pp0_stage11)) & (1'b0 == ap_block_pp0_stage11_subdone))) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage12;
-            end else if (((ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage11_subdone) & (ap_enable_reg_pp0_iter0 == 1'b0) & (1'b1 == ap_CS_fsm_pp0_stage11))) begin
-                ap_NS_fsm = ap_ST_fsm_state28;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage11;
-            end
-        end
-        ap_ST_fsm_pp0_stage12 : begin
-            if ((1'b0 == ap_block_pp0_stage12_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage13;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage12;
-            end
-        end
-        ap_ST_fsm_pp0_stage13 : begin
-            if ((1'b0 == ap_block_pp0_stage13_subdone)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage13;
-            end
-        end
-        ap_ST_fsm_state28 : begin
-            ap_NS_fsm = ap_ST_fsm_state29;
-        end
-        ap_ST_fsm_state29 : begin
-            ap_NS_fsm = ap_ST_fsm_state30;
-        end
-        ap_ST_fsm_state30 : begin
-            ap_NS_fsm = ap_ST_fsm_state31;
-        end
-        ap_ST_fsm_state31 : begin
-            ap_NS_fsm = ap_ST_fsm_state32;
-        end
-        ap_ST_fsm_state32 : begin
-            ap_NS_fsm = ap_ST_fsm_state33;
-        end
-        ap_ST_fsm_state33 : begin
-            ap_NS_fsm = ap_ST_fsm_state34;
-        end
-        ap_ST_fsm_state34 : begin
-            ap_NS_fsm = ap_ST_fsm_state35;
-        end
-        ap_ST_fsm_state35 : begin
-            ap_NS_fsm = ap_ST_fsm_state36;
-        end
-        ap_ST_fsm_state36 : begin
-            ap_NS_fsm = ap_ST_fsm_state37;
-        end
-        ap_ST_fsm_state37 : begin
-            ap_NS_fsm = ap_ST_fsm_state38;
-        end
-        ap_ST_fsm_state38 : begin
-            ap_NS_fsm = ap_ST_fsm_state39;
-        end
-        ap_ST_fsm_state39 : begin
-            ap_NS_fsm = ap_ST_fsm_state40;
-        end
-        ap_ST_fsm_state40 : begin
-            ap_NS_fsm = ap_ST_fsm_state41;
-        end
-        ap_ST_fsm_state41 : begin
-            ap_NS_fsm = ap_ST_fsm_state42;
-        end
-        ap_ST_fsm_state42 : begin
-            ap_NS_fsm = ap_ST_fsm_state43;
-        end
-        ap_ST_fsm_state43 : begin
+        ap_ST_fsm_state18 : begin
             ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
@@ -773,47 +493,29 @@ always @ (*) begin
     endcase
 end
 
-assign C = grp_fu_106_p2;
+assign C = grp_sqrt_fixed_32_32_s_fu_99_ap_return;
 
-assign add_ln14_fu_196_p2 = (i_fu_76 + 11'd2);
+assign add_ln14_fu_199_p2 = (i_fu_76 + 11'd2);
 
-assign add_ln18_1_fu_233_p2 = (zext_ln18_8_fu_229_p1 + 14'd1);
+assign add_ln18_1_fu_167_p2 = (zext_ln18_8_fu_163_p1 + 14'd1);
 
-assign add_ln18_fu_174_p2 = (zext_ln18_2_fu_170_p1 + 14'd1);
+assign add_ln18_fu_151_p2 = (zext_ln18_2_fu_147_p1 + 14'd1);
 
-assign and_ln18_1_fu_296_p2 = (sub_ln18_reg_464 & B);
+assign and_ln18_1_fu_279_p2 = (sub_ln18_reg_451 & B);
 
-assign and_ln18_2_fu_329_p2 = (sub_ln18_2_reg_475 & A);
+assign and_ln18_2_fu_307_p2 = (sub_ln18_2_reg_457 & A);
 
-assign and_ln18_3_fu_346_p2 = (sub_ln18_2_reg_475 & B);
+assign and_ln18_3_fu_324_p2 = (sub_ln18_2_reg_457 & B);
 
-assign and_ln18_fu_278_p2 = (sub_ln18_reg_464 & A);
+assign and_ln18_fu_261_p2 = (sub_ln18_reg_451 & A);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd1];
 
-assign ap_CS_fsm_pp0_stage1 = ap_CS_fsm[32'd2];
-
-assign ap_CS_fsm_pp0_stage10 = ap_CS_fsm[32'd11];
-
-assign ap_CS_fsm_pp0_stage11 = ap_CS_fsm[32'd12];
-
-assign ap_CS_fsm_pp0_stage13 = ap_CS_fsm[32'd14];
-
-assign ap_CS_fsm_pp0_stage2 = ap_CS_fsm[32'd3];
-
-assign ap_CS_fsm_pp0_stage3 = ap_CS_fsm[32'd4];
-
-assign ap_CS_fsm_pp0_stage4 = ap_CS_fsm[32'd5];
-
-assign ap_CS_fsm_pp0_stage5 = ap_CS_fsm[32'd6];
-
-assign ap_CS_fsm_pp0_stage6 = ap_CS_fsm[32'd7];
-
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign ap_CS_fsm_state28 = ap_CS_fsm[32'd15];
+assign ap_CS_fsm_state18 = ap_CS_fsm[32'd11];
 
-assign ap_CS_fsm_state43 = ap_CS_fsm[32'd30];
+assign ap_CS_fsm_state9 = ap_CS_fsm[32'd2];
 
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
@@ -821,215 +523,115 @@ assign ap_block_pp0_stage0_11001 = ~(1'b1 == 1'b1);
 
 assign ap_block_pp0_stage0_subdone = ~(1'b1 == 1'b1);
 
-assign ap_block_pp0_stage1 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage10_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage10_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage11 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage11_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage11_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage12_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage12_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage13_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage13_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage1_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage1_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage2 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage2_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage2_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage3 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage3_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage3_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage4 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage4_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage4_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage5 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage5_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage5_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage6 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage6_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage6_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage7_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage7_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage8_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage8_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage9_11001 = ~(1'b1 == 1'b1);
-
-assign ap_block_pp0_stage9_subdone = ~(1'b1 == 1'b1);
-
-assign ap_block_state10_pp0_stage8_iter0 = ~(1'b1 == 1'b1);
-
-assign ap_block_state11_pp0_stage9_iter0 = ~(1'b1 == 1'b1);
-
-assign ap_block_state12_pp0_stage10_iter0 = ~(1'b1 == 1'b1);
-
-assign ap_block_state13_pp0_stage11_iter0 = ~(1'b1 == 1'b1);
-
-assign ap_block_state14_pp0_stage12_iter0 = ~(1'b1 == 1'b1);
-
-assign ap_block_state15_pp0_stage13_iter0 = ~(1'b1 == 1'b1);
-
-assign ap_block_state16_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
-
-assign ap_block_state17_pp0_stage1_iter1 = ~(1'b1 == 1'b1);
-
-assign ap_block_state18_pp0_stage2_iter1 = ~(1'b1 == 1'b1);
-
-assign ap_block_state19_pp0_stage3_iter1 = ~(1'b1 == 1'b1);
-
-assign ap_block_state20_pp0_stage4_iter1 = ~(1'b1 == 1'b1);
-
-assign ap_block_state21_pp0_stage5_iter1 = ~(1'b1 == 1'b1);
-
-assign ap_block_state22_pp0_stage6_iter1 = ~(1'b1 == 1'b1);
-
-assign ap_block_state23_pp0_stage7_iter1 = ~(1'b1 == 1'b1);
-
-assign ap_block_state24_pp0_stage8_iter1 = ~(1'b1 == 1'b1);
-
-assign ap_block_state25_pp0_stage9_iter1 = ~(1'b1 == 1'b1);
-
-assign ap_block_state26_pp0_stage10_iter1 = ~(1'b1 == 1'b1);
-
-assign ap_block_state27_pp0_stage11_iter1 = ~(1'b1 == 1'b1);
-
 assign ap_block_state2_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
 
-assign ap_block_state3_pp0_stage1_iter0 = ~(1'b1 == 1'b1);
+assign ap_block_state3_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
 
-assign ap_block_state4_pp0_stage2_iter0 = ~(1'b1 == 1'b1);
+assign ap_block_state4_pp0_stage0_iter2 = ~(1'b1 == 1'b1);
 
-assign ap_block_state5_pp0_stage3_iter0 = ~(1'b1 == 1'b1);
+assign ap_block_state5_pp0_stage0_iter3 = ~(1'b1 == 1'b1);
 
-assign ap_block_state6_pp0_stage4_iter0 = ~(1'b1 == 1'b1);
+assign ap_block_state6_pp0_stage0_iter4 = ~(1'b1 == 1'b1);
 
-assign ap_block_state7_pp0_stage5_iter0 = ~(1'b1 == 1'b1);
+assign ap_block_state7_pp0_stage0_iter5 = ~(1'b1 == 1'b1);
 
-assign ap_block_state8_pp0_stage6_iter0 = ~(1'b1 == 1'b1);
-
-assign ap_block_state9_pp0_stage7_iter0 = ~(1'b1 == 1'b1);
+assign ap_block_state8_pp0_stage0_iter6 = ~(1'b1 == 1'b1);
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
-assign grp_fu_210_p1 = shl_ln18_1_reg_438;
+assign grp_fu_232_p0 = 8192'd1 << zext_ln18_3_fu_213_p1;
 
-assign lshr_ln18_1_fu_300_p2 = and_ln18_1_fu_296_p2 >> zext_ln18_fu_275_p1;
+assign grp_fu_232_p1 = shl_ln18_1_fu_222_p2;
 
-assign lshr_ln18_2_fu_333_p2 = and_ln18_2_fu_329_p2 >> zext_ln18_4_reg_448;
+assign grp_fu_253_p1 = 8192'd1 << zext_ln18_4_fu_243_p1;
 
-assign lshr_ln18_3_fu_350_p2 = and_ln18_3_fu_346_p2 >> zext_ln18_4_reg_448;
+assign grp_fu_375_p0 = sext_ln18_fu_303_p1;
 
-assign lshr_ln18_fu_282_p2 = and_ln18_fu_278_p2 >> zext_ln18_fu_275_p1;
+assign grp_fu_375_p1 = sext_ln18_fu_303_p1;
 
-assign mul_ln18_1_fu_376_p0 = sext_ln18_1_fu_373_p1;
+assign lshr_ln18_1_fu_283_p2 = and_ln18_1_fu_279_p2 >> zext_ln18_fu_258_p1;
 
-assign mul_ln18_1_fu_376_p1 = sext_ln18_1_fu_373_p1;
+assign lshr_ln18_2_fu_311_p2 = and_ln18_2_fu_307_p2 >> zext_ln18_4_reg_440_pp0_iter2_reg;
 
-assign mul_ln18_fu_323_p0 = sext_ln18_fu_320_p1;
+assign lshr_ln18_3_fu_328_p2 = and_ln18_3_fu_324_p2 >> zext_ln18_4_reg_440_pp0_iter2_reg;
 
-assign mul_ln18_fu_323_p1 = sext_ln18_fu_320_p1;
+assign lshr_ln18_fu_265_p2 = and_ln18_fu_261_p2 >> zext_ln18_fu_258_p1;
 
-assign or_ln18_1_fu_215_p2 = (shl_ln_reg_426 | 13'd8);
+assign mul_ln18_1_fu_350_p0 = sext_ln18_1_fu_347_p1;
 
-assign or_ln18_2_fu_220_p2 = (shl_ln_reg_426 | 13'd15);
+assign mul_ln18_1_fu_350_p1 = sext_ln18_1_fu_347_p1;
 
-assign or_ln18_fu_160_p2 = (shl_ln_fu_152_p3 | 13'd7);
+assign or_ln18_1_fu_238_p2 = (shl_ln_reg_413 | 13'd8);
 
-assign select_ln18_fu_257_p3 = ((tmp_2_fu_249_p3[0:0] == 1'b1) ? 8192'd0 : shl_ln18_2_fu_243_p2);
+assign or_ln18_2_fu_157_p2 = (shl_ln_fu_133_p3 | 13'd15);
 
-assign sext_ln18_1_fu_373_p1 = $signed(sub_ln18_3_reg_486);
+assign or_ln18_fu_141_p2 = (shl_ln_fu_133_p3 | 13'd7);
 
-assign sext_ln18_2_fu_369_p1 = $signed(mul_ln18_reg_481);
+assign result_1_fu_359_p2 = ($signed(result_fu_72) + $signed(sext_ln18_2_fu_356_p1));
 
-assign sext_ln18_3_fu_382_p1 = $signed(mul_ln18_1_reg_496);
+assign select_ln18_fu_191_p3 = ((tmp_33_fu_183_p3[0:0] == 1'b1) ? 8192'd0 : shl_ln18_2_fu_177_p2);
 
-assign sext_ln18_fu_320_p1 = $signed(sub_ln18_1_reg_470);
+assign sext_ln18_1_fu_347_p1 = $signed(sub_ln18_3_reg_469_pp0_iter4_reg);
 
-assign shl_ln18_1_fu_190_p2 = 8185'd1 << zext_ln18_1_fu_166_p1;
+assign sext_ln18_2_fu_356_p1 = grp_fu_375_p3;
 
-assign shl_ln18_2_fu_243_p2 = 8192'd1 << zext_ln18_9_fu_239_p1;
+assign sext_ln18_fu_303_p1 = $signed(sub_ln18_1_fu_297_p2);
 
-assign shl_ln18_3_fu_265_p2 = 8192'd1 << zext_ln18_4_fu_225_p1;
+assign shl_ln18_1_fu_222_p2 = 8185'd1 << zext_ln18_1_fu_210_p1;
 
-assign shl_ln18_fu_184_p2 = 8192'd1 << zext_ln18_3_fu_180_p1;
+assign shl_ln18_2_fu_177_p2 = 8192'd1 << zext_ln18_9_fu_173_p1;
 
-assign shl_ln_fu_152_p3 = {{trunc_ln18_fu_148_p1}, {3'd0}};
+assign shl_ln_fu_133_p3 = {{trunc_ln18_fu_129_p1}, {3'd0}};
 
-assign sub_ln18_1_fu_314_p2 = (zext_ln18_6_fu_292_p1 - zext_ln18_7_fu_310_p1);
+assign sub_ln18_1_fu_297_p2 = (zext_ln18_6_fu_275_p1 - zext_ln18_7_fu_293_p1);
 
-assign sub_ln18_3_fu_363_p2 = (zext_ln18_10_fu_342_p1 - zext_ln18_11_fu_359_p1);
+assign sub_ln18_3_fu_341_p2 = (zext_ln18_10_fu_320_p1 - zext_ln18_11_fu_337_p1);
 
-assign tmp_1_fu_140_p3 = i_fu_76[32'd10];
+assign tmp_33_fu_183_p3 = add_ln18_1_fu_167_p2[32'd13];
 
-assign tmp_2_fu_249_p3 = add_ln18_1_fu_233_p2[32'd13];
+assign tmp_fu_121_p3 = i_fu_76[32'd10];
 
-assign trunc_ln18_1_fu_288_p1 = lshr_ln18_fu_282_p2[7:0];
+assign trunc_ln18_1_fu_271_p1 = lshr_ln18_fu_265_p2[7:0];
 
-assign trunc_ln18_2_fu_306_p1 = lshr_ln18_1_fu_300_p2[7:0];
+assign trunc_ln18_2_fu_289_p1 = lshr_ln18_1_fu_283_p2[7:0];
 
-assign trunc_ln18_3_fu_338_p1 = lshr_ln18_2_fu_333_p2[7:0];
+assign trunc_ln18_3_fu_316_p1 = lshr_ln18_2_fu_311_p2[7:0];
 
-assign trunc_ln18_4_fu_355_p1 = lshr_ln18_3_fu_350_p2[7:0];
+assign trunc_ln18_4_fu_333_p1 = lshr_ln18_3_fu_328_p2[7:0];
 
-assign trunc_ln18_fu_148_p1 = i_fu_76[9:0];
+assign trunc_ln18_fu_129_p1 = i_fu_76[9:0];
 
-assign zext_ln18_10_fu_342_p1 = trunc_ln18_3_fu_338_p1;
+assign zext_ln18_10_fu_320_p1 = trunc_ln18_3_fu_316_p1;
 
-assign zext_ln18_11_fu_359_p1 = trunc_ln18_4_fu_355_p1;
+assign zext_ln18_11_fu_337_p1 = trunc_ln18_4_fu_333_p1;
 
-assign zext_ln18_1_fu_166_p1 = shl_ln_fu_152_p3;
+assign zext_ln18_1_fu_210_p1 = shl_ln_reg_413;
 
-assign zext_ln18_2_fu_170_p1 = or_ln18_fu_160_p2;
+assign zext_ln18_2_fu_147_p1 = or_ln18_fu_141_p2;
 
-assign zext_ln18_3_fu_180_p1 = add_ln18_fu_174_p2;
+assign zext_ln18_3_fu_213_p1 = add_ln18_reg_420;
 
-assign zext_ln18_4_fu_225_p1 = or_ln18_1_fu_215_p2;
+assign zext_ln18_4_fu_243_p1 = or_ln18_1_fu_238_p2;
 
-assign zext_ln18_6_fu_292_p1 = trunc_ln18_1_fu_288_p1;
+assign zext_ln18_6_fu_275_p1 = trunc_ln18_1_fu_271_p1;
 
-assign zext_ln18_7_fu_310_p1 = trunc_ln18_2_fu_306_p1;
+assign zext_ln18_7_fu_293_p1 = trunc_ln18_2_fu_289_p1;
 
-assign zext_ln18_8_fu_229_p1 = or_ln18_2_fu_220_p2;
+assign zext_ln18_8_fu_163_p1 = or_ln18_2_fu_157_p2;
 
-assign zext_ln18_9_fu_239_p1 = add_ln18_1_fu_233_p2;
+assign zext_ln18_9_fu_173_p1 = add_ln18_1_fu_167_p2;
 
-assign zext_ln18_fu_275_p1 = shl_ln_reg_426;
+assign zext_ln18_fu_258_p1 = shl_ln_reg_413_pp0_iter2_reg;
 
 always @ (posedge ap_clk) begin
-    shl_ln_reg_426[2:0] <= 3'b000;
-    zext_ln18_4_reg_448[3:0] <= 4'b1000;
-    zext_ln18_4_reg_448[8191:13] <= 8179'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
-    shl_ln18_3_reg_459[7:0] <= 8'b00000000;
+    shl_ln_reg_413[2:0] <= 3'b000;
+    shl_ln_reg_413_pp0_iter1_reg[2:0] <= 3'b000;
+    shl_ln_reg_413_pp0_iter2_reg[2:0] <= 3'b000;
+    add_ln18_reg_420[2:0] <= 3'b000;
+    zext_ln18_4_reg_440[3:0] <= 4'b1000;
+    zext_ln18_4_reg_440[8191:13] <= 8179'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+    zext_ln18_4_reg_440_pp0_iter2_reg[3:0] <= 4'b1000;
+    zext_ln18_4_reg_440_pp0_iter2_reg[8191:13] <= 8179'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 end
 
 endmodule //eucHW

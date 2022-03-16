@@ -4,18 +4,18 @@ target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:20
 target triple = "fpga64-xilinx-none"
 
 ; Function Attrs: noinline
-define void @apatb_eucHW_ir(i8* %A, i8* %B, float* %C) local_unnamed_addr #0 {
+define void @apatb_eucHW_ir(i8* %A, i8* %B, i32* %C) local_unnamed_addr #0 {
 entry:
   %A_copy1 = alloca i8192, align 512
   %B_copy2 = alloca i8192, align 512
-  %C_copy = alloca [1 x float], align 512
+  %C_copy = alloca [1 x i32], align 512
   %0 = bitcast i8* %A to [1024 x i8]*
   %1 = bitcast i8* %B to [1024 x i8]*
-  %2 = bitcast float* %C to [1 x float]*
-  call void @copy_in([1024 x i8]* %0, i8192* nonnull align 512 %A_copy1, [1024 x i8]* %1, i8192* nonnull align 512 %B_copy2, [1 x float]* %2, [1 x float]* nonnull align 512 %C_copy)
-  %3 = getelementptr inbounds [1 x float], [1 x float]* %C_copy, i32 0, i32 0
-  call void @apatb_eucHW_hw(i8192* %A_copy1, i8192* %B_copy2, float* %3)
-  call void @copy_out([1024 x i8]* %0, i8192* nonnull align 512 %A_copy1, [1024 x i8]* %1, i8192* nonnull align 512 %B_copy2, [1 x float]* %2, [1 x float]* nonnull align 512 %C_copy)
+  %2 = bitcast i32* %C to [1 x i32]*
+  call void @copy_in([1024 x i8]* %0, i8192* nonnull align 512 %A_copy1, [1024 x i8]* %1, i8192* nonnull align 512 %B_copy2, [1 x i32]* %2, [1 x i32]* nonnull align 512 %C_copy)
+  %3 = getelementptr inbounds [1 x i32], [1 x i32]* %C_copy, i32 0, i32 0
+  call void @apatb_eucHW_hw(i8192* %A_copy1, i8192* %B_copy2, i32* %3)
+  call void @copy_out([1024 x i8]* %0, i8192* nonnull align 512 %A_copy1, [1024 x i8]* %1, i8192* nonnull align 512 %B_copy2, [1 x i32]* %2, [1 x i32]* nonnull align 512 %C_copy)
   ret void
 }
 
@@ -23,16 +23,16 @@ entry:
 declare void @llvm.memcpy.p0i8.p0i8.i64(i8* nocapture writeonly, i8* nocapture readonly, i64, i1) #1
 
 ; Function Attrs: argmemonly noinline
-define internal fastcc void @onebyonecpy_hls.p0a1f32([1 x float]* noalias align 512, [1 x float]* noalias readonly) unnamed_addr #2 {
+define internal fastcc void @onebyonecpy_hls.p0a1i32([1 x i32]* noalias align 512, [1 x i32]* noalias readonly) unnamed_addr #2 {
 entry:
-  %2 = icmp eq [1 x float]* %0, null
-  %3 = icmp eq [1 x float]* %1, null
+  %2 = icmp eq [1 x i32]* %0, null
+  %3 = icmp eq [1 x i32]* %1, null
   %4 = or i1 %2, %3
   br i1 %4, label %ret, label %for.loop
 
 for.loop:                                         ; preds = %entry
-  %5 = bitcast [1 x float]* %0 to i8*
-  %6 = bitcast [1 x float]* %1 to i8*
+  %5 = bitcast [1 x i32]* %0 to i8*
+  %6 = bitcast [1 x i32]* %1 to i8*
   call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %5, i8* align 1 %6, i64 4, i1 false)
   br label %ret
 
@@ -41,7 +41,7 @@ ret:                                              ; preds = %for.loop, %entry
 }
 
 ; Function Attrs: argmemonly noinline
-define internal void @onebyonecpy_hls.p0a1024i8.3.4(i8192* noalias align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="0", [1024 x i8]* noalias readonly "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1") #2 {
+define internal void @onebyonecpy_hls.p0a1024i8.15.16(i8192* noalias align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="0", [1024 x i8]* noalias readonly "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1") #2 {
 entry:
   %2 = icmp eq i8192* %0, null
   %3 = icmp eq [1024 x i8]* %1, null
@@ -85,16 +85,16 @@ ret:                                              ; preds = %ret.loopexit, %entr
 }
 
 ; Function Attrs: argmemonly noinline
-define internal void @copy_in([1024 x i8]* readonly "orig.arg.no"="0", i8192* noalias align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1", [1024 x i8]* readonly "orig.arg.no"="2", i8192* noalias align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="3", [1 x float]* readonly "orig.arg.no"="4", [1 x float]* noalias align 512 "orig.arg.no"="5") #3 {
+define internal void @copy_in([1024 x i8]* readonly "orig.arg.no"="0", i8192* noalias align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1", [1024 x i8]* readonly "orig.arg.no"="2", i8192* noalias align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="3", [1 x i32]* readonly "orig.arg.no"="4", [1 x i32]* noalias align 512 "orig.arg.no"="5") #3 {
 entry:
-  call void @onebyonecpy_hls.p0a1024i8.3.4(i8192* align 512 %1, [1024 x i8]* %0)
-  call void @onebyonecpy_hls.p0a1024i8.3.4(i8192* align 512 %3, [1024 x i8]* %2)
-  call fastcc void @onebyonecpy_hls.p0a1f32([1 x float]* align 512 %5, [1 x float]* %4)
+  call void @onebyonecpy_hls.p0a1024i8.15.16(i8192* align 512 %1, [1024 x i8]* %0)
+  call void @onebyonecpy_hls.p0a1024i8.15.16(i8192* align 512 %3, [1024 x i8]* %2)
+  call fastcc void @onebyonecpy_hls.p0a1i32([1 x i32]* align 512 %5, [1 x i32]* %4)
   ret void
 }
 
 ; Function Attrs: argmemonly noinline
-define internal void @onebyonecpy_hls.p0a1024i8.9.10([1024 x i8]* noalias "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="0", i8192* noalias readonly align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1") #2 {
+define internal void @onebyonecpy_hls.p0a1024i8.21.22([1024 x i8]* noalias "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="0", i8192* noalias readonly align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1") #2 {
 entry:
   %2 = icmp eq [1024 x i8]* %0, null
   %3 = icmp eq i8192* %1, null
@@ -131,31 +131,31 @@ ret:                                              ; preds = %for.loop, %entry
 }
 
 ; Function Attrs: argmemonly noinline
-define internal void @copy_out([1024 x i8]* "orig.arg.no"="0", i8192* noalias readonly align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1", [1024 x i8]* "orig.arg.no"="2", i8192* noalias readonly align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="3", [1 x float]* "orig.arg.no"="4", [1 x float]* noalias readonly align 512 "orig.arg.no"="5") #4 {
+define internal void @copy_out([1024 x i8]* "orig.arg.no"="0", i8192* noalias readonly align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="1", [1024 x i8]* "orig.arg.no"="2", i8192* noalias readonly align 512 "fpga.caller.interfaces"="layout_transformed" "orig.arg.no"="3", [1 x i32]* "orig.arg.no"="4", [1 x i32]* noalias readonly align 512 "orig.arg.no"="5") #4 {
 entry:
-  call void @onebyonecpy_hls.p0a1024i8.9.10([1024 x i8]* %0, i8192* align 512 %1)
-  call void @onebyonecpy_hls.p0a1024i8.9.10([1024 x i8]* %2, i8192* align 512 %3)
-  call fastcc void @onebyonecpy_hls.p0a1f32([1 x float]* %4, [1 x float]* align 512 %5)
+  call void @onebyonecpy_hls.p0a1024i8.21.22([1024 x i8]* %0, i8192* align 512 %1)
+  call void @onebyonecpy_hls.p0a1024i8.21.22([1024 x i8]* %2, i8192* align 512 %3)
+  call fastcc void @onebyonecpy_hls.p0a1i32([1 x i32]* %4, [1 x i32]* align 512 %5)
   ret void
 }
 
-declare void @apatb_eucHW_hw(i8192*, i8192*, float*)
+declare void @apatb_eucHW_hw(i8192*, i8192*, i32*)
 
-define void @eucHW_hw_stub_wrapper(i8192*, i8192*, float*) #5 {
+define void @eucHW_hw_stub_wrapper(i8192*, i8192*, i32*) #5 {
 entry:
   %3 = alloca [1024 x i8]
   %4 = alloca [1024 x i8]
-  %5 = bitcast float* %2 to [1 x float]*
-  call void @copy_out([1024 x i8]* %3, i8192* %0, [1024 x i8]* %4, i8192* %1, [1 x float]* null, [1 x float]* %5)
+  %5 = bitcast i32* %2 to [1 x i32]*
+  call void @copy_out([1024 x i8]* %3, i8192* %0, [1024 x i8]* %4, i8192* %1, [1 x i32]* null, [1 x i32]* %5)
   %6 = bitcast [1024 x i8]* %3 to i8*
   %7 = bitcast [1024 x i8]* %4 to i8*
-  %8 = bitcast [1 x float]* %5 to float*
-  call void @eucHW_hw_stub(i8* %6, i8* %7, float* %8)
-  call void @copy_in([1024 x i8]* %3, i8192* %0, [1024 x i8]* %4, i8192* %1, [1 x float]* null, [1 x float]* %5)
+  %8 = bitcast [1 x i32]* %5 to i32*
+  call void @eucHW_hw_stub(i8* %6, i8* %7, i32* %8)
+  call void @copy_in([1024 x i8]* %3, i8192* %0, [1024 x i8]* %4, i8192* %1, [1 x i32]* null, [1 x i32]* %5)
   ret void
 }
 
-declare void @eucHW_hw_stub(i8*, i8*, float*)
+declare void @eucHW_hw_stub(i8*, i8*, i32*)
 
 attributes #0 = { noinline "fpga.wrapper.func"="wrapper" }
 attributes #1 = { argmemonly nounwind }

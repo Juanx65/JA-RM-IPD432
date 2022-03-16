@@ -13,8 +13,8 @@
       </RtlPort>
       <RtlPort>
         <name>C</name>
-        <type>Floating-point</type>
-        <fractionWidth>24</fractionWidth>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
         <name>C_ap_vld</name>
@@ -28,7 +28,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>7196</latency>
-    <II>7197</II>
+    <latency>273</latency>
+    <II>274</II>
   </modelParameters>
 </AdditionalInfo>

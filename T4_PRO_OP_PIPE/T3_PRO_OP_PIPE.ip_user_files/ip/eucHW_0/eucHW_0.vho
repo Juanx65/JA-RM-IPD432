@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:eucHW:1.0
--- IP Revision: 2112418519
+-- IP Revision: 2112418558
 
 -- The following code must appear in the VHDL architecture header.
 

@@ -15,34 +15,34 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>6.342</EstimatedClockPeriod>
+            <EstimatedClockPeriod>7.007</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>7196</Best-caseLatency>
-            <Average-caseLatency>7196</Average-caseLatency>
-            <Worst-caseLatency>7196</Worst-caseLatency>
-            <Best-caseRealTimeLatency>71.960 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>71.960 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>71.960 us</Worst-caseRealTimeLatency>
-            <Interval-min>7197</Interval-min>
-            <Interval-max>7197</Interval-max>
+            <Best-caseLatency>528</Best-caseLatency>
+            <Average-caseLatency>528</Average-caseLatency>
+            <Worst-caseLatency>528</Worst-caseLatency>
+            <Best-caseRealTimeLatency>5.280 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>5.280 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>5.280 us</Worst-caseRealTimeLatency>
+            <Interval-min>529</Interval-min>
+            <Interval-max>529</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
             <loopManDist>
                 <TripCount>512</TripCount>
-                <Latency>7179</Latency>
-                <AbsoluteTimeLatency>71790</AbsoluteTimeLatency>
-                <PipelineII>14</PipelineII>
-                <PipelineDepth>26</PipelineDepth>
+                <Latency>517</Latency>
+                <AbsoluteTimeLatency>5170</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>7</PipelineDepth>
             </loopManDist>
         </SummaryOfLoopLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <DSP>2</DSP>
-            <FF>50849</FF>
-            <LUT>36766</LUT>
+            <DSP>1</DSP>
+            <FF>26557</FF>
+            <LUT>37773</LUT>
             <BRAM_18K>0</BRAM_18K>
             <URAM>0</URAM>
         </Resources>
@@ -173,10 +173,59 @@
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="2">
             <ModuleName>eucHW</ModuleName>
-            <BindInstances>add_ln18_fu_174_p2 sub_8192ns_8192ns_8192_2_1_U4 sub_ln18_1_fu_314_p2 mul_9s_9s_18_1_1_U6 fadd_32ns_32ns_32_7_full_dsp_1_U1 add_ln18_1_fu_233_p2 sub_8192ns_8192ns_8192_2_1_U5 sub_ln18_3_fu_363_p2 mul_9s_9s_18_1_1_U7 fadd_32ns_32ns_32_7_full_dsp_1_U1 add_ln14_fu_196_p2 fsqrt_32ns_32ns_32_16_no_dsp_1_U3</BindInstances>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_sqrt_fixed_32_32_s_fu_99</InstName>
+                    <ModuleName>sqrt_fixed_32_32_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>99</ID>
+                </Instance>
+            </InstancesList>
+            <BindInstances>add_ln18_fu_151_p2 sub_8192ns_8192ns_8192_2_1_U2 sub_ln18_1_fu_297_p2 mac_muladd_9s_9s_18s_18_4_1_U5 add_ln18_1_fu_167_p2 sub_8192ns_8192ns_8192_2_1_U3 sub_ln18_3_fu_341_p2 mul_9s_9s_18_1_1_U4 mac_muladd_9s_9s_18s_18_4_1_U5 result_1_fu_359_p2 add_ln14_fu_199_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
+        <Module>
+            <Name>sqrt_fixed_32_32_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>4294967295</TargetInitiationInterval>
+                    <EstimatedClockPeriod>7.007</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>8</Best-caseLatency>
+                    <Average-caseLatency>8</Average-caseLatency>
+                    <Worst-caseLatency>8</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>80.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>80.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>80.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>9</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>643</FF>
+                    <AVAIL_FF>16000</AVAIL_FF>
+                    <UTIL_FF>4</UTIL_FF>
+                    <LUT>1368</LUT>
+                    <AVAIL_LUT>8000</AVAIL_LUT>
+                    <UTIL_LUT>17</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>40</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>40</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
         <Module>
             <Name>eucHW</Name>
             <Loops>
@@ -186,41 +235,41 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>6.342</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.007</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>7196</Best-caseLatency>
-                    <Average-caseLatency>7196</Average-caseLatency>
-                    <Worst-caseLatency>7196</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>71.960 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>71.960 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>71.960 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>7197</PipelineInitiationInterval>
+                    <Best-caseLatency>528</Best-caseLatency>
+                    <Average-caseLatency>528</Average-caseLatency>
+                    <Worst-caseLatency>528</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.280 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.280 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.280 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>529</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <loopManDist>
                         <Name>loopManDist</Name>
                         <TripCount>512</TripCount>
-                        <Latency>7179</Latency>
-                        <AbsoluteTimeLatency>71.790 us</AbsoluteTimeLatency>
-                        <PipelineII>14</PipelineII>
-                        <PipelineDepth>26</PipelineDepth>
+                        <Latency>517</Latency>
+                        <AbsoluteTimeLatency>5.170 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>7</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                     </loopManDist>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <DSP>2</DSP>
+                    <DSP>1</DSP>
                     <AVAIL_DSP>40</AVAIL_DSP>
-                    <UTIL_DSP>5</UTIL_DSP>
-                    <FF>50849</FF>
+                    <UTIL_DSP>2</UTIL_DSP>
+                    <FF>26557</FF>
                     <AVAIL_FF>16000</AVAIL_FF>
-                    <UTIL_FF>317</UTIL_FF>
-                    <LUT>36766</LUT>
+                    <UTIL_FF>165</UTIL_FF>
+                    <LUT>37773</LUT>
                     <AVAIL_LUT>8000</AVAIL_LUT>
-                    <UTIL_LUT>459</UTIL_LUT>
+                    <UTIL_LUT>472</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>40</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
@@ -230,24 +279,23 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_fu_174_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="add_ln18"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="sub" PRAGMA="" RTLNAME="sub_8192ns_8192ns_8192_2_1_U4" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="sub_ln18"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln18_1_fu_314_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="sub_ln18_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loopManDist" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U6" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="mul_ln18"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="loopManDist" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U1" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="result_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_1_fu_233_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="add_ln18_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="sub" PRAGMA="" RTLNAME="sub_8192ns_8192ns_8192_2_1_U5" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="sub_ln18_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln18_3_fu_363_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="sub_ln18_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loopManDist" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U7" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="mul_ln18_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="loopManDist" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U1" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="result_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="add" PRAGMA="" RTLNAME="add_ln14_fu_196_p2" SOURCE="src/EucHW.cpp:14" URAM="0" VARIABLE="add_ln14"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="15" LOOP="" OPTYPE="fsqrt" PRAGMA="" RTLNAME="fsqrt_32ns_32ns_32_16_no_dsp_1_U3" SOURCE="r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:8" URAM="0" VARIABLE="tmp"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_fu_151_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="add_ln18"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="sub" PRAGMA="" RTLNAME="sub_8192ns_8192ns_8192_2_1_U2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="sub_ln18"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln18_1_fu_297_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="sub_ln18_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="loopManDist" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U5" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="mul_ln18"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_1_fu_167_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="add_ln18_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="sub" PRAGMA="" RTLNAME="sub_8192ns_8192ns_8192_2_1_U3" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="sub_ln18_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln18_3_fu_341_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="sub_ln18_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="loopManDist" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U4" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="mul_ln18_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="loopManDist" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U5" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="add_ln18_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="add" PRAGMA="" RTLNAME="result_1_fu_359_p2" SOURCE="src/EucHW.cpp:18" URAM="0" VARIABLE="result_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="1" LOOP="loopManDist" OPTYPE="add" PRAGMA="" RTLNAME="add_ln14_fu_199_p2" SOURCE="src/EucHW.cpp:14" URAM="0" VARIABLE="add_ln14"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
     <UserConfigCommands>
-        <config_export output="C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_pipe.zip"/>
+        <config_export output="C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_pip4_int.zip"/>
     </UserConfigCommands>
     <Args>
         <Arg ArgName="A" index="0" direction="in" srcType="unsigned char*" srcSize="8">
@@ -260,7 +308,7 @@
                 <hwRef type="port" interface="B" name="B" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="C" index="2" direction="out" srcType="float*" srcSize="32">
+        <Arg ArgName="C" index="2" direction="out" srcType="int*" srcSize="32">
             <hwRefs>
                 <hwRef type="port" interface="C" name="C" usage="data" direction="out"/>
                 <hwRef type="port" interface="C_ap_vld" name="C_ap_vld" usage="control" direction="out"/>
@@ -370,7 +418,7 @@
                     <keys size="3">Argument, Direction, Datatype</keys>
                     <column name="A">in, unsigned char*</column>
                     <column name="B">in, unsigned char*</column>
-                    <column name="C">out, float*</column>
+                    <column name="C">out, int*</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
