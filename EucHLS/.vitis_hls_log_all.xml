@@ -12,11 +12,8 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed&lt;32, 32>' to 'sqrt_fixed_32_32_s'." projectName="EucHLS" solutionName="solution1" date="2022-03-16T18:06:19.881-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 214-292] Unsupported reshape pragma/directive on variable 'A'. The port size might be shrunk or fail cosim as the bit-width after reshape (8192) is larger than 4096" projectName="EucHLS" solutionName="solution1" date="2022-03-16T18:05:43.634-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 214-292] Unsupported reshape pragma/directive on variable 'B'. The port size might be shrunk or fail cosim as the bit-width after reshape (8192) is larger than 4096" projectName="EucHLS" solutionName="solution1" date="2022-03-16T18:05:43.596-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16" projectName="EucHLS" solutionName="solution1" date="2022-03-16T18:04:05.047-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-949] non-portable path to file '&quot;EucHW.h&quot;'; specified path differs in case from file name on disk: src/EucHW_RC.cpp:1:10" projectName="EucHLS" solutionName="solution1" date="2022-03-16T18:04:04.985-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16" projectName="EucHLS" solutionName="solution1" date="2022-03-17T01:15:29.684-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 207-949] non-portable path to file '&quot;EucHW.h&quot;'; specified path differs in case from file name on disk: src/EucHW_RC.cpp:1:10" projectName="EucHLS" solutionName="solution1" date="2022-03-17T01:15:29.659-0300" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

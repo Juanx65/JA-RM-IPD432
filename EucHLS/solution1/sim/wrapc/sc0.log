@@ -1,7 +1,7 @@
    Build using "C:/Xilinx/Vitis_HLS/2021.1/tps/win64/msys64/mingw64/bin/g++"
-   Compiling apatb_eucHW_RC.cpp
    Compiling EucTB.cpp_pre.cpp.tb.cpp
    Compiling EucHW_RC.cpp_pre.cpp.tb.cpp
    Compiling EucSW.cpp_pre.cpp.tb.cpp
-   Compiling apatb_eucHW_RC_ir.ll
+   Compiling apatb_eucHW.cpp
+   Compiling apatb_eucHW_ir.ll
    Generating cosim.tv.exe

@@ -71259,7 +71259,7 @@ namespace hls {
 
 };
 # 7 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucHW.h" 2
-void eucHW_RC (T A[1024], T B[1024], Tout C[1]);
+void eucHW (T A[1024], T B[1024], Tout C[1]);
 
 Tout adder( Tout array[1024] );
 # 6 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp" 2
@@ -71279,8 +71279,6 @@ using namespace std;
 void genRandArray(int min, int max, int size, T *array);
 int compare(Tout* gold, Tout* result, int size, double th);
 
-
-
 int main (){
  int errors = 0;
  int tests = 100;
@@ -71298,7 +71296,7 @@ int main (){
   genRandArray(min, max, 1024, B);
 
   eucSW (A, B, C_SW);
-  eucHW_RC (A, B, C_HW);
+  eucHW (A, B, C_HW);
 
   errors += compare(C_SW, C_HW, 1, th);
   cout << "C_SW: " << C_SW[0] << ", C_HW: " << C_HW[0] << endl;

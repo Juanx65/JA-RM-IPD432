@@ -7,12 +7,11 @@
     </downStreamTool>
     <synthesis askAgain="true"/>
     <config>
-        <config_export format="ip_catalog" output="C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_tree_int.zip" rtl="verilog"/>
+        <config_export format="ip_catalog" output="C:/Users/juan_/Documents/FPGA/IPs/eucDistHW.zip" rtl="verilog"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="true" showDetailDesignViewer="false">
             <Platform>xilinx/artix7/artix7</Platform>
-            <Platform>xilinx/artix7/artix7_fpv6</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -41,8 +40,8 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_tree_int.zip" rtl="verilog" rtlButton="true" rtlCombo="verilog">
-        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="eucHW_RC" version="" display_name="" taxonomy=""/>
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="C:/Users/juan_/Documents/FPGA/IPs/eucDistHW.zip" rtl="verilog" rtlButton="true" rtlCombo="verilog">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="eucHW" version="" display_name="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>
@@ -70,7 +69,7 @@
         <library value="xilinx/artix7/artix7" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock name="default" default="false" period="10"/>
+        <clock default="false" name="default" period="10"/>
     </clockList>
 </solution>
 

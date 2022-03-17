@@ -1,0 +1,6 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc rfile:../../../../../T3_PRO_OP_PIPE.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/retiming_op/dont_touch.xdc rfile:../../../dont_touch.xdc id:2} [current_design]
+set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]
+create_clock -period 20.000 -name sys_clk_pin -waveform {0.000 10.000} -add [get_ports CLK100MHZ]
+set_property src_info {type:TCL file:{} line:-1 export:INPUT save:INPUT read:READ} [current_design]
+set_property KEEP_HIERARCHY SOFT [get_cells PROCC]

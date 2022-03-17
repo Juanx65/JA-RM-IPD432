@@ -1,15 +1,29 @@
 {"sourceFile": [{
       "name": "",
-      "directive": [{
-          "functionName": "eucHW_RC",
+      "directive": [
+        {
+          "functionName": "eucHW",
           "label": "",
           "functionLabel": "",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "eucHW_RC"
+                "value": "eucHW"
               }]
           }
-        }]
+        },
+        {
+          "functionName": "eucHW",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "eucHW"
+              }]
+          }
+        }
+      ]
     }]}

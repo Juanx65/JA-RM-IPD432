@@ -26404,14 +26404,14 @@ namespace hls {
 
 };
 # 7 "src/eucHW.h" 2
-__attribute__((sdx_kernel("eucHW_RC", 0))) void eucHW_RC (T A[1024], T B[1024], Tout C[1]);
+__attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C[1]);
 
 Tout adder( Tout array[1024] );
 # 2 "src/EucHW_RC.cpp" 2
 
-__attribute__((sdx_kernel("eucHW_RC", 0))) void eucHW_RC (T A[1024], T B[1024], Tout C[1])
+__attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C[1])
 {_ssdm_SpecArrayDimSize(A, 1024);_ssdm_SpecArrayDimSize(B, 1024);_ssdm_SpecArrayDimSize(C, 1);
-#pragma HLS TOP name=eucHW_RC
+#pragma HLS TOP name=eucHW
 # 4 "src/EucHW_RC.cpp"
 
 #pragma HLS ARRAY_RESHAPE variable=A complete dim=1
@@ -26421,11 +26421,14 @@ __attribute__((sdx_kernel("eucHW_RC", 0))) void eucHW_RC (T A[1024], T B[1024], 
 
 #pragma HLS array_partition variable=out_array complete dim=1
 
- VITIS_LOOP_12_1: for(int i=0;i<1024;i++)
+
+
+ VITIS_LOOP_14_1: for(int i=0;i<1024;i++)
  {
 #pragma HLS UNROLL
  out_array[i] = (A[i]-B[i])*(A[i]-B[i]);
  }
+
 
  C[0]= hls::sqrt(adder(out_array));
  return;
@@ -26436,15 +26439,18 @@ Tout adder( Tout array[1024] )
 {
 #pragma HLS inline
 
- VITIS_LOOP_27_1: for(int idx = 1024/2; idx >= 2 ; idx = idx/2)
+ VITIS_LOOP_30_1: for(int idx = 1024/2; idx >= 2 ; idx = idx/2)
     {
 #pragma HLS UNROLL
- VITIS_LOOP_30_2: for (int i = 0 ; i < idx ; i++)
+
+ VITIS_LOOP_34_2: for (int i = 0 ; i < idx ; i++)
         {
 #pragma HLS UNROLL
- Tout tem1 = array[i];
-         Tout tem2 = array[i+idx];
-            array[i] = tem1 + tem2;
+
+ Tout tem1 = array[2*i];
+         Tout tem2 = array[2*i+1];
+         Tout tem3 = tem1 + tem2;
+            array[i] = tem3;
         }
     }
 

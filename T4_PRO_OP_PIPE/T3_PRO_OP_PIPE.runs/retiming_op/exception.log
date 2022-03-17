@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\T4_PRO_OP_PIPE\T3_PRO_OP_PIPE.runs\retiming_op/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permiso denegado

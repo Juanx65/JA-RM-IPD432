@@ -71279,12 +71279,12 @@ namespace hls {
 
 };
 # 7 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucHW.h" 2
-void eucHW_RC (T A[1024], T B[1024], Tout C[1]);
+void eucHW (T A[1024], T B[1024], Tout C[1]);
 
 Tout adder( Tout array[1024] );
 # 2 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucHW_RC.cpp" 2
 
-void eucHW_RC (T A[1024], T B[1024], Tout C[1])
+void eucHW (T A[1024], T B[1024], Tout C[1])
 {
 #pragma HLS ARRAY_RESHAPE variable=A complete dim=1
 #pragma HLS ARRAY_RESHAPE variable=B complete dim=1
@@ -71293,11 +71293,14 @@ void eucHW_RC (T A[1024], T B[1024], Tout C[1])
 
 #pragma HLS array_partition variable=out_array complete dim=1
 
+
+
  for(int i=0;i<1024;i++)
  {
 #pragma HLS UNROLL
   out_array[i] = (A[i]-B[i])*(A[i]-B[i]);
  }
+
 
  C[0]= hls::sqrt(adder(out_array));
  return;
@@ -71306,23 +71309,23 @@ void eucHW_RC (T A[1024], T B[1024], Tout C[1])
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_eucHW_RC_ir(unsigned char *, unsigned char *, int *);
+void apatb_eucHW_ir(unsigned char *, unsigned char *, int *);
 #ifdef __cplusplus
 extern "C"
 #endif
-void eucHW_RC_hw_stub(unsigned char *A, unsigned char *B, int *C){
-eucHW_RC(A, B, C);
+void eucHW_hw_stub(unsigned char *A, unsigned char *B, int *C){
+eucHW(A, B, C);
 return ;
 }
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_eucHW_RC_sw(unsigned char *A, unsigned char *B, int *C){
-apatb_eucHW_RC_ir(A, B, C);
+void apatb_eucHW_sw(unsigned char *A, unsigned char *B, int *C){
+apatb_eucHW_ir(A, B, C);
 return ;
 }
 #endif
-# 20 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucHW_RC.cpp"
+# 23 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucHW_RC.cpp"
 
 
 

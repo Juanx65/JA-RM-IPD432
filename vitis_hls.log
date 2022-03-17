@@ -1,23 +1,23 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'juan_' on host 'juankahp' (Windows NT_amd64 version 6.2) on Wed Mar 16 18:09:38 -0300 2022
+INFO: [HLS 200-10] For user 'juan_' on host 'juankahp' (Windows NT_amd64 version 6.2) on Thu Mar 17 01:14:59 -0300 2022
 INFO: [HLS 200-10] In directory 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432'
-Sourcing Tcl script 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/export.tcl'
+Sourcing Tcl script 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/csynth.tcl'
 INFO: [HLS 200-1510] Running: open_project EucHLS 
 INFO: [HLS 200-10] Opening project 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS'.
-INFO: [HLS 200-1510] Running: set_top eucHW_RC 
-INFO: [HLS 200-1510] Running: add_files src/EucHW.h 
-INFO: [HLS 200-10] Adding design file 'src/EucHW.h' to the project
-INFO: [HLS 200-1510] Running: add_files src/EucHW_RC.cpp 
-INFO: [HLS 200-10] Adding design file 'src/EucHW_RC.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top eucHW 
 INFO: [HLS 200-1510] Running: add_files src/specs.h 
 INFO: [HLS 200-10] Adding design file 'src/specs.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb src/EucSW.cpp 
-INFO: [HLS 200-10] Adding test bench file 'src/EucSW.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files -tb src/EucSW.h -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
-INFO: [HLS 200-10] Adding test bench file 'src/EucSW.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/EucHW_RC.cpp 
+INFO: [HLS 200-10] Adding design file 'src/EucHW_RC.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/EucHW.h 
+INFO: [HLS 200-10] Adding design file 'src/EucHW.h' to the project
 INFO: [HLS 200-1510] Running: add_files -tb src/EucTB.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'src/EucTB.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb src/EucSW.h -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'src/EucSW.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb src/EucSW.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'src/EucSW.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -25,23 +25,16 @@ INFO: [HLS 200-1611] Setting target device to 'xc7a12ti-csg325-1L'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
 INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
-INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_tree_float.zip
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/juan_/Documents/FPGA/IPs/eucDistHW.zip
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 INFO: [HLS 200-1510] Running: set_part xc7a12ti-csg325-1L 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_tree_float.zip -rtl verilog 
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_tree_int.zip 
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-
-****** Vivado v2021.1 (64-bit)
-  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
-  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 16 18:10:00 2022...
-INFO: [HLS 200-802] Generated output file C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_tree_int.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 8 seconds. CPU system time: 1 seconds. Elapsed time: 20.185 seconds; current allocated memory: 129.551 MB.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/eucDistHW.zip -rtl verilog 
+INFO: [HLS 200-1510] Running: set_directive_top -name eucHW eucHW 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 1007.083 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/EucHW_RC.cpp' ... 
+WARNING: [HLS 207-949] non-portable path to file '"EucHW.h"'; specified path differs in case from file name on disk: src/EucHW_RC.cpp:1:10
+WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 29.174 seconds; current allocated memory: 118.869 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.

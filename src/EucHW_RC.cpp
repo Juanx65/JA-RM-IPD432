@@ -1,6 +1,6 @@
 #include "eucHW.h"
 
-void eucHW_RC (T A[LENGTH], T B[LENGTH], Tout C[1])
+void eucHW (T A[LENGTH], T B[LENGTH], Tout C[1])
 {
 	#pragma HLS ARRAY_RESHAPE variable=A complete dim=1
 	#pragma HLS ARRAY_RESHAPE variable=B complete dim=1
@@ -29,13 +29,16 @@ Tout adder( Tout array[LENGTH] )
 
     for(int idx = LENGTH/2; idx >= 2 ; idx = idx/2)
     {
-    	#pragma HLS UNROLL // factor = 10 //while
+    	#pragma HLS UNROLL
+		//#pragma HLS dependence variable=array inter false
         for (int i = 0 ; i < idx ; i++)
         {
-			#pragma HLS UNROLL //for
-        	Tout tem1 = array[i];
-        	Tout tem2 = array[i+idx];
-            array[i] = tem1 + tem2;
+			#pragma HLS UNROLL
+			//#pragma HLS dependence variable=array inter false
+        	Tout tem1 = array[2*i];
+        	Tout tem2 = array[2*i+1];
+        	Tout tem3 = tem1 + tem2;
+            array[i] = tem3;
         }
     }
 

@@ -1,106 +1,4 @@
 Euc Dist calculation: 
-C_SW: 3311, C_HW: 2560
-C_SW: 3483, C_HW: 2446
-C_SW: 3356, C_HW: 1207
-C_SW: 3344, C_HW: 2911
-C_SW: 3281, C_HW: 1829
-C_SW: 3260, C_HW: 2632
-C_SW: 3467, C_HW: 2260
-C_SW: 3281, C_HW: 2699
-C_SW: 3365, C_HW: 1618
-C_SW: 3271, C_HW: 1896
-C_SW: 3288, C_HW: 1255
-C_SW: 3476, C_HW: 1413
-C_SW: 3260, C_HW: 1950
-C_SW: 3334, C_HW: 2839
-C_SW: 3381, C_HW: 3348
-C_SW: 3235, C_HW: 3060
-C_SW: 3277, C_HW: 3047
-C_SW: 3417, C_HW: 2487
-C_SW: 3379, C_HW: 2864
-C_SW: 3343, C_HW: 3287
-C_SW: 3356, C_HW: 2993
-C_SW: 3347, C_HW: 2191
-C_SW: 3220, C_HW: 2309
-C_SW: 3323, C_HW: 1689
-C_SW: 3373, C_HW: 1643
-C_SW: 3449, C_HW: 1932
-C_SW: 3261, C_HW: 1501
-C_SW: 3261, C_HW: 2200
-C_SW: 3295, C_HW: 1639
-C_SW: 3338, C_HW: 2654
-C_SW: 3338, C_HW: 1996
-C_SW: 3308, C_HW: 2081
-C_SW: 3312, C_HW: 1940
-C_SW: 3230, C_HW: 2631
-C_SW: 3429, C_HW: 2228
-C_SW: 3370, C_HW: 1991
-C_SW: 3306, C_HW: 788
-C_SW: 3224, C_HW: 2302
-C_SW: 3474, C_HW: 2318
-C_SW: 3352, C_HW: 2626
-C_SW: 3334, C_HW: 1755
-C_SW: 3398, C_HW: 1970
-C_SW: 3120, C_HW: 1773
-C_SW: 3283, C_HW: 2236
-C_SW: 3399, C_HW: 3136
-C_SW: 3301, C_HW: 1888
-C_SW: 3330, C_HW: 1371
-C_SW: 3341, C_HW: 2482
-C_SW: 3353, C_HW: 1526
-C_SW: 3267, C_HW: 2352
-C_SW: 3271, C_HW: 1901
-C_SW: 3366, C_HW: 1768
-C_SW: 3395, C_HW: 2270
-C_SW: 3405, C_HW: 1524
-C_SW: 3392, C_HW: 3154
-C_SW: 3360, C_HW: 2378
-C_SW: 3240, C_HW: 1219
-C_SW: 3320, C_HW: 2644
-C_SW: 3321, C_HW: 1994
-C_SW: 3302, C_HW: 3102
-C_SW: 3263, C_HW: 1410
-C_SW: 3392, C_HW: 2302
-C_SW: 3291, C_HW: 2402
-C_SW: 3335, C_HW: 1282
-C_SW: 3321, C_HW: 1951
-C_SW: 3256, C_HW: 2632
-C_SW: 3341, C_HW: 2007
-C_SW: 3269, C_HW: 1893
-C_SW: 3347, C_HW: 2685
-C_SW: 3311, C_HW: 2351
-C_SW: 3205, C_HW: 3185
-C_SW: 3330, C_HW: 2015
-C_SW: 3252, C_HW: 2629
-C_SW: 3292, C_HW: 2098
-C_SW: 3264, C_HW: 1235
-C_SW: 3297, C_HW: 3259
-C_SW: 3285, C_HW: 1969
-C_SW: 3350, C_HW: 1806
-C_SW: 3331, C_HW: 1894
-C_SW: 3339, C_HW: 2269
-C_SW: 3240, C_HW: 1588
-C_SW: 3274, C_HW: 3252
-C_SW: 3299, C_HW: 1937
-C_SW: 3260, C_HW: 2744
-C_SW: 3321, C_HW: 1705
-C_SW: 3320, C_HW: 1791
-C_SW: 3380, C_HW: 1409
-C_SW: 3451, C_HW: 3723
-C_SW: 3374, C_HW: 2002
-C_SW: 3363, C_HW: 2455
-C_SW: 3241, C_HW: 2469
-C_SW: 3287, C_HW: 2070
-C_SW: 3286, C_HW: 2879
-C_SW: 3377, C_HW: 2426
-C_SW: 3354, C_HW: 1971
-C_SW: 3370, C_HW: 3136
-C_SW: 3245, C_HW: 1364
-C_SW: 3371, C_HW: 3046
-C_SW: 3358, C_HW: 1737
-C_SW: 3420, C_HW: 2897
-Number of errors: 100
-Euc Dist calculation: 
 C_SW: 3311, C_HW: 3311
 C_SW: 3483, C_HW: 3483
 C_SW: 3356, C_HW: 3357
@@ -205,24 +103,24 @@ Number of errors: 54
 
 C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\EucHLS\solution1\sim\verilog>set PATH= 
 
-C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\EucHLS\solution1\sim\verilog>call C:/Xilinx/Vivado/2021.1/bin/xelab xil_defaultlib.apatb_eucHW_RC_top glbl -Oenable_linking_all_libraries  -prj eucHW_RC.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_19 -L floating_point_v7_1_12 --lib "ieee_proposed=./ieee_proposed" -s eucHW_RC  
+C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\EucHLS\solution1\sim\verilog>call C:/Xilinx/Vivado/2021.1/bin/xelab xil_defaultlib.apatb_eucHW_top glbl -Oenable_linking_all_libraries  -prj eucHW.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_19 -L floating_point_v7_1_12 --lib "ieee_proposed=./ieee_proposed" -s eucHW  
 Vivado Simulator v2021.1
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_eucHW_RC_top glbl -Oenable_linking_all_libraries -prj eucHW_RC.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_19 -L floating_point_v7_1_12 --lib ieee_proposed=./ieee_proposed -s eucHW_RC 
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_eucHW_top glbl -Oenable_linking_all_libraries -prj eucHW.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_19 -L floating_point_v7_1_12 --lib ieee_proposed=./ieee_proposed -s eucHW 
 Multi-threading is on. Using 10 slave threads.
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW_RC.autotb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module apatb_eucHW_RC_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW_RC.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module eucHW_RC
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW_RC_mac_muladd_9s_9s_18s_18_4_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module eucHW_RC_mac_muladd_9s_9s_18s_18_4_1_DSP48_0
-INFO: [VRFC 10-311] analyzing module eucHW_RC_mac_muladd_9s_9s_18s_18_4_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW_RC_mul_9s_9s_18_1_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module eucHW_RC_mul_9s_9s_18_1_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW_RC_sqrt_fixed_32_32_s.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module eucHW_RC_sqrt_fixed_32_32_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_eucHW_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eucHW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW_mac_muladd_9s_9s_18s_18_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eucHW_mac_muladd_9s_9s_18s_18_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module eucHW_mac_muladd_9s_9s_18s_18_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW_mul_9s_9s_18_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eucHW_mul_9s_9s_18_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW_sqrt_fixed_32_32_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eucHW_sqrt_fixed_32_32_s
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dataflow_monitor
 Starting static elaboration
@@ -232,34 +130,34 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
-Compiling module xil_defaultlib.eucHW_RC_sqrt_fixed_32_32_s
-Compiling module xil_defaultlib.eucHW_RC_mul_9s_9s_18_1_1(NUM_ST...
-Compiling module xil_defaultlib.eucHW_RC_mac_muladd_9s_9s_18s_18...
-Compiling module xil_defaultlib.eucHW_RC_mac_muladd_9s_9s_18s_18...
-Compiling module xil_defaultlib.eucHW_RC
+Compiling module xil_defaultlib.eucHW_sqrt_fixed_32_32_s
+Compiling module xil_defaultlib.eucHW_mul_9s_9s_18_1_1(NUM_STAGE...
+Compiling module xil_defaultlib.eucHW_mac_muladd_9s_9s_18s_18_4_...
+Compiling module xil_defaultlib.eucHW_mac_muladd_9s_9s_18s_18_4_...
+Compiling module xil_defaultlib.eucHW
 Compiling module xil_defaultlib.nodf_module_intf
 Compiling module xil_defaultlib.dataflow_monitor_1
-Compiling module xil_defaultlib.apatb_eucHW_RC_top
+Compiling module xil_defaultlib.apatb_eucHW_top
 Compiling module work.glbl
-Built simulation snapshot eucHW_RC
+Built simulation snapshot eucHW
 
 ****** Webtalk v2021.1 (64-bit)
   **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
   **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
-source C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/xsim.dir/eucHW_RC/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Wed Mar 16 17:50:53 2022...
+source C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/xsim.dir/eucHW/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Mar 16 19:46:47 2022...
 
 ****** xsim v2021.1 (64-bit)
   **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
   **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
-source xsim.dir/eucHW_RC/xsim_script.tcl
-# xsim {eucHW_RC} -autoloadwcfg -tclbatch {eucHW_RC.tcl}
+source xsim.dir/eucHW/xsim_script.tcl
+# xsim {eucHW} -autoloadwcfg -tclbatch {eucHW.tcl}
 Time resolution is 1 ps
-source eucHW_RC.tcl
+source eucHW.tcl
 ## run all
 ////////////////////////////////////////////////////////////////////////////////////
 // Inter-Transaction Progress: Completed Transaction / Total Transaction
@@ -369,9 +267,9 @@ source eucHW_RC.tcl
 // RTL Simulation : 99 / 100 [100.00%] @ "16965000"
 // RTL Simulation : 100 / 100 [100.00%] @ "17135000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 17195 ns : File "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW_RC.autotb.v" Line 339
+$finish called at time : 17195 ns : File "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW.autotb.v" Line 339
 ## quit
-INFO: [Common 17-206] Exiting xsim at Wed Mar 16 17:51:00 2022...
+INFO: [Common 17-206] Exiting xsim at Wed Mar 16 19:46:52 2022...
 Euc Dist calculation: 
 C_SW: 3311, C_HW: 3311
 C_SW: 3483, C_HW: 3483

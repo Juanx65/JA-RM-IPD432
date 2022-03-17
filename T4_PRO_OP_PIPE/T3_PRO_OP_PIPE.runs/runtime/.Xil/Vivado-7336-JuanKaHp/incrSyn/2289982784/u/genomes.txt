@@ -1,0 +1,9 @@
+BRAM
+eucHW__GB0
+eucHW__GB1
+eucHW__GB2
+eucHW__GB3
+eucHW__GB4
+eucHW__GB5
+eucHW__GB6
+TOP__GC0

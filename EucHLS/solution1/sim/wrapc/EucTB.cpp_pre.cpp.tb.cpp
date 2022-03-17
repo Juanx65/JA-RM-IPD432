@@ -71263,7 +71263,7 @@ namespace hls {
 
 };
 # 7 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucHW.h" 2
-void eucHW_RC (T A[1024], T B[1024], Tout C[1]);
+void eucHW (T A[1024], T B[1024], Tout C[1]);
 
 Tout adder( Tout array[1024] );
 # 6 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp" 2
@@ -71283,14 +71283,12 @@ using namespace std;
 void genRandArray(int min, int max, int size, T *array);
 int compare(Tout* gold, Tout* result, int size, double th);
 
-
-
 #ifndef HLS_FASTSIM
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_eucHW_RC_sw(unsigned char *, unsigned char *, int *);
-# 15 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp"
+void apatb_eucHW_sw(unsigned char *, unsigned char *, int *);
+# 13 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp"
 int main (){
  int errors = 0;
  int tests = 100;
@@ -71310,12 +71308,12 @@ int main (){
   eucSW (A, B, C_SW);
   
 #ifndef HLS_FASTSIM
-#define eucHW_RC apatb_eucHW_RC_sw
+#define eucHW apatb_eucHW_sw
 #endif
-# 32 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp"
-eucHW_RC (A, B, C_HW);
-#undef eucHW_RC
-# 32 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp"
+# 30 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp"
+eucHW (A, B, C_HW);
+#undef eucHW
+# 30 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp"
 
 
   errors += compare(C_SW, C_HW, 1, th);
@@ -71328,7 +71326,7 @@ eucHW_RC (A, B, C_HW);
  return 0;
 }
 #endif
-# 42 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp"
+# 40 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp"
 
 
 
