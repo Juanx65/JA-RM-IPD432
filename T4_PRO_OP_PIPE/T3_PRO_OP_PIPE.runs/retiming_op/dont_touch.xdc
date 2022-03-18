@@ -3,7 +3,7 @@
 
 # XDC: new/Nexys-4-DDR-Master.xdc
 
-# IP: c:/Users/juan_/Documents/FPGA/IP/eucHW_0_26/eucHW_0.xci
+# IP: c:/Users/juan_/Documents/FPGA/IP/eucHW_0_27/eucHW_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==eucHW_0 || ORIG_REF_NAME==eucHW_0} -quiet] -quiet
 
-# XDC: c:/Users/juan_/Documents/FPGA/IP/eucHW_0_26/constraints/eucHW_ooc.xdc
+# XDC: c:/Users/juan_/Documents/FPGA/IP/eucHW_0_27/constraints/eucHW_ooc.xdc

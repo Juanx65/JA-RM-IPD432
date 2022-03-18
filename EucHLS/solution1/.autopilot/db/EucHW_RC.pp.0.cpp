@@ -463,7 +463,7 @@ namespace std
 # 5 "src/specs.h" 2
 
 typedef uint8_t T;
-typedef float Tout;
+typedef int Tout;
 # 5 "src/eucHW.h" 2
 # 1 "C:/Xilinx/Vitis_HLS/2021.1/tps/mingw/6.2.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\6.2.0\\include\\c++\\math.h" 1 3
 # 36 "C:/Xilinx/Vitis_HLS/2021.1/tps/mingw/6.2.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\6.2.0\\include\\c++\\math.h" 3
@@ -26407,24 +26407,21 @@ namespace hls {
 
 __attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C[1]);
 # 2 "src/EucHW_RC.cpp" 2
-# 23 "src/EucHW_RC.cpp"
+
 __attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C[1])
 {_ssdm_SpecArrayDimSize(A, 1024);_ssdm_SpecArrayDimSize(B, 1024);_ssdm_SpecArrayDimSize(C, 1);
 #pragma HLS TOP name=eucHW
-# 24 "src/EucHW_RC.cpp"
+# 4 "src/EucHW_RC.cpp"
 
-#pragma HLS array_reshape variable=A type=complete dim=1
- Tout tem1 = 0;
- Tout tem2 = 0;
- Tout tem3 = 0;
+#pragma HLS array_reshape variable=A type=cyclic factor=512 dim=1
+#pragma HLS array_reshape variable=B type=cyclic factor=512 dim=1
+
+ Tout result = 0;
  sumLoop:for(int i=0;i<1024;i++)
  {
-#pragma HLS UNROLL
- tem2 = (A[i]-B[i]);
-  tem1 += tem2*tem2;
+#pragma HLS UNROLL factor=512
+ result += (A[i]-B[i])*(A[i]-B[i]);
  }
-#pragma HLS RESOURCE variable=tem3 core=DRSqrt
- tem3 = hls::sqrt(tem1);
- C[0] = tem3;
+ C[0] = hls::sqrt(result);
  return;
 }

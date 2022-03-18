@@ -1,8 +1,8 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'juan_' on host 'juankahp' (Windows NT_amd64 version 6.2) on Fri Mar 18 01:12:25 -0300 2022
+INFO: [HLS 200-10] For user 'juan_' on host 'juankahp' (Windows NT_amd64 version 6.2) on Fri Mar 18 02:40:44 -0300 2022
 INFO: [HLS 200-10] In directory 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432'
-Sourcing Tcl script 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/csynth.tcl'
+Sourcing Tcl script 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/export.tcl'
 INFO: [HLS 200-1510] Running: open_project EucHLS 
 INFO: [HLS 200-10] Opening project 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS'.
 INFO: [HLS 200-1510] Running: set_top eucHW 
@@ -31,62 +31,18 @@ INFO: [HLS 200-1510] Running: set_part xc7a12ti-csg325-1L
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_512.zip -rtl verilog 
 INFO: [HLS 200-1510] Running: set_directive_top -name eucHW eucHW 
-INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 1007.084 MB.
-INFO: [HLS 200-10] Analyzing design file 'src/EucHW_RC.cpp' ... 
-WARNING: [HLS 207-949] non-portable path to file '"EucHW.h"'; specified path differs in case from file name on disk: src/EucHW_RC.cpp:1:10
-WARNING: [HLS 207-5514] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: src/EucHW_RC.cpp:35:9
-WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16
-WARNING: [HLS 207-5514] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: src/EucHW_RC.cpp:35:9
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 29.648 seconds; current allocated memory: 118.869 MB.
-INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 214-279] Initial Interval estimation mode is set into default.
-INFO: [HLS 214-284] Auto array partition mode is set into default.
-INFO: [HLS 214-186] Unrolling loop 'sumLoop' (src/EucHW_RC.cpp:29:10) in function 'eucHW' completely with a factor of 1024 (src/EucHW_RC.cpp:24:0)
-INFO: [HLS 214-178] Inlining function 'hls::sqrt(float)' into 'eucHW(unsigned char*, unsigned char*, float*)' (src/EucHW_RC.cpp:24:0)
-WARNING: [HLS 214-292] Unsupported reshape pragma/directive on variable 'A'. The port size might be shrunk or fail cosim as the bit-width after reshape (8192) is larger than 4096
-INFO: [HLS 214-248] Applying array_reshape to 'A': Complete reshaping on dimension 1. (src/EucHW_RC.cpp:24:0)
-INFO: [HLS 214-270] Starting automatic array partition analysis...
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 8 seconds. CPU system time: 0 seconds. Elapsed time: 21.092 seconds; current allocated memory: 131.769 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 131.770 MB.
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.907 seconds; current allocated memory: 184.550 MB.
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.612 seconds; current allocated memory: 210.477 MB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.86 seconds; current allocated memory: 557.428 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 5.027 seconds; current allocated memory: 619.398 MB.
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'eucHW' ...
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'eucHW' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 42 seconds. CPU system time: 0 seconds. Elapsed time: 42.347 seconds; current allocated memory: 666.220 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 302 seconds. CPU system time: 1 seconds. Elapsed time: 302.361 seconds; current allocated memory: 1.017 GB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'eucHW' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'eucHW/A' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'eucHW/B' to 'ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'eucHW/C' to 'ap_vld'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'eucHW' to 'ap_ctrl_hs'.
-INFO: [RTGEN 206-104] Estimated max fanout for 'eucHW' is 8193 from HDL expression: (1'b1 == ap_CS_fsm_state2)
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'sitofp_32s_32_6_no_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'eucHW'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 79 seconds. CPU system time: 1 seconds. Elapsed time: 79.924 seconds; current allocated memory: 1.314 GB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 67 seconds. CPU system time: 11 seconds. Elapsed time: 78.44 seconds; current allocated memory: 1.452 GB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.097 seconds; current allocated memory: 1.481 GB.
-INFO: [VHDL 208-304] Generating VHDL RTL for eucHW.
-INFO: [VLOG 209-307] Generating Verilog RTL for eucHW.
-INFO: [HLS 200-789] **** Estimated Fmax: 120.92 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 513 seconds. CPU system time: 13 seconds. Elapsed time: 566.95 seconds; current allocated memory: 1.481 GB.
-INFO: [HLS 200-112] Total CPU user time: 515 seconds. Total CPU system time: 14 seconds. Total elapsed time: 568.835 seconds; peak allocated memory: 1.481 GB.
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_512.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 18 02:40:56 2022...
+INFO: [HLS 200-802] Generated output file C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_512.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 12.085 seconds; current allocated memory: 125.536 MB.

@@ -5,11 +5,6 @@
                 <option name="name" value="eucHW"/>
             </pragma>
         </directive>
-        <directive functionName="eucHW" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="eucHW"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

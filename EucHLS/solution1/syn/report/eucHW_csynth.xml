@@ -18,26 +18,35 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>8.270</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.272</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>7195</Best-caseLatency>
-<Average-caseLatency>7195</Average-caseLatency>
-<Worst-caseLatency>7195</Worst-caseLatency>
-<Best-caseRealTimeLatency>71.950 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>71.950 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>71.950 us</Worst-caseRealTimeLatency>
-<Interval-min>7196</Interval-min>
-<Interval-max>7196</Interval-max>
+<Best-caseLatency>19</Best-caseLatency>
+<Average-caseLatency>19</Average-caseLatency>
+<Worst-caseLatency>19</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.190 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.190 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.190 us</Worst-caseRealTimeLatency>
+<Interval-min>20</Interval-min>
+<Interval-max>20</Interval-max>
 </SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<sumLoop>
+<TripCount>2</TripCount>
+<Latency>8</Latency>
+<AbsoluteTimeLatency>80</AbsoluteTimeLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>8</PipelineDepth>
+</sumLoop>
+</SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<DSP>5</DSP>
-<FF>25141</FF>
-<LUT>24860</LUT>
+<DSP>256</DSP>
+<FF>6799</FF>
+<LUT>29638</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -118,14 +127,38 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>A</name>
+<name>A_address0</name>
 <Object>A</Object>
-<Type>pointer</Type>
+<Type>array</Type>
 <Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>address</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>A_ce0</name>
+<Object>A</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>A_q0</name>
+<Object>A</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8192</Bits>
+<Bits>4096</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -137,7 +170,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>10</Bits>
+<Bits>1</Bits>
 <Attribute>address</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -161,7 +194,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>4096</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>

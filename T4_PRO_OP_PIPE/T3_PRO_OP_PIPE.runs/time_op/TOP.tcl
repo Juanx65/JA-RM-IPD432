@@ -123,7 +123,6 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
-  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part_repo_paths {C:/Users/juan_/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store} [current_project]
@@ -134,14 +133,14 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/wt [current_project]
   set_property parent.project_path C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.xpr [current_project]
-  set_property ip_repo_paths C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_512 [current_project]
+  set_property ip_repo_paths C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucDistHW_512 [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/retiming_op/TOP.dcp
-  read_ip -quiet c:/Users/juan_/Documents/FPGA/IP/eucHW_0_26/eucHW_0.xci
+  read_ip -quiet c:/Users/juan_/Documents/FPGA/IP/eucHW_0_27/eucHW_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc
 OPTRACE "read constraints: implementation" END { }

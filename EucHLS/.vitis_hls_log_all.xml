@@ -12,13 +12,13 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [HLS 214-292] Unsupported reshape pragma/directive on variable 'A'. The port size might be shrunk or fail cosim as the bit-width after reshape (8192) is larger than 4096" projectName="EucHLS" solutionName="solution1" date="2022-03-18T01:13:16.808-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5514] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: src/EucHW_RC.cpp:35:9" projectName="EucHLS" solutionName="solution1" date="2022-03-18T01:12:55.887-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16" projectName="EucHLS" solutionName="solution1" date="2022-03-18T01:12:55.865-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5514] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: src/EucHW_RC.cpp:35:9" projectName="EucHLS" solutionName="solution1" date="2022-03-18T01:12:55.852-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-949] non-portable path to file '&quot;EucHW.h&quot;'; specified path differs in case from file name on disk: src/EucHW_RC.cpp:1:10" projectName="EucHLS" solutionName="solution1" date="2022-03-18T01:12:30.950-0300" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed&lt;32, 32>' to 'sqrt_fixed_32_32_s'." projectName="EucHLS" solutionName="solution1" date="2022-03-18T02:37:09.784-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16" projectName="EucHLS" solutionName="solution1" date="2022-03-18T02:34:16.224-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 207-949] non-portable path to file '&quot;EucHW.h&quot;'; specified path differs in case from file name on disk: src/EucHW_RC.cpp:1:10" projectName="EucHLS" solutionName="solution1" date="2022-03-18T02:34:16.196-0300" type="Warning"/>
       </synLog>
-      <simLog/>
+      <simLog>
+        <logs message="WARNING: [HLS 200-626] This design is unable to schedule all read ports in the first II cycle. The RTL testbench may treat the design as non-pipelined" projectName="EucHLS" solutionName="solution1" date="2022-03-18T02:38:27.884-0300" type="Warning"/>
+      </simLog>
       <mgLog/>
       <packageLog/>
       <csimLog/>

@@ -71259,9 +71259,8 @@ namespace hls {
 
 };
 # 7 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucHW.h" 2
-void eucHW (T A[1024], T B[1024], Tout C[1]);
 
-Tout adder( Tout array[1024] );
+void eucHW (T A[1024], T B[1024], Tout C[1]);
 # 6 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp" 2
 # 1 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucSW.h" 1
 
