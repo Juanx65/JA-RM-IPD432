@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/synth_1_copy_1/TOP.tcl"
+  variable script "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/synth_1_copy_1/TOP.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,49 +70,49 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1_copy_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/wt [current_project]
-set_property parent.project_path C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.xpr [current_project]
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
+set_property webtalk.parent_dir C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/wt [current_project]
+set_property parent.project_path C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {C:/Users/ricar/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part_repo_paths {C:/Users/juan_/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/ip [current_project]
+set_property ip_repo_paths c:/Users/juan_/Documents/FPGA/IPs/eucDistHW_512 [current_project]
+update_ip_catalog
+set_property ip_output_repo c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/BRAM.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/CommandDecoder.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/DISP_MOD.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/ProcessingCore.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/UART_RX_Logic.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/UART_TX_Logic.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/add.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/add_pairs.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/adder_tree.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/basic_op.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/clk_divider.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/display.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/fsm_adder_tree.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/fsm_rx.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/fsm_rx_data_in.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/fsm_send32.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/fsm_unpack.sv
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/TOP.sv
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/BRAM.sv
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/CommandDecoder.sv
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/DISP_MOD.sv
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/UART_RX_Logic.sv
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/UART_TX_Logic.sv
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/clk_divider.sv
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/display.sv
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/fsm_rx.sv
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/fsm_rx_data_in.sv
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/fsm_send32.sv
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/TOP.sv
 }
 read_verilog -library xil_defaultlib {
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/data_sync.v
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/uart_baud_tick_gen.v
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/uart_rx.v
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/uart_tx.v
-  C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/unsigned_to_bcd.v
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/data_sync.v
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/uart_baud_tick_gen.v
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/uart_rx.v
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/uart_tx.v
+  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/new/unsigned_to_bcd.v
 }
+read_ip -quiet c:/Users/juan_/Documents/FPGA/IP/eucHW_0_25/eucHW_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/juan_/Documents/FPGA/IP/eucHW_0_25/constraints/eucHW_ooc.xdc]
+
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -122,9 +122,11 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc]
+read_xdc C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

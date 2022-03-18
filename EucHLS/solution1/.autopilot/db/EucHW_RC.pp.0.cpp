@@ -463,7 +463,7 @@ namespace std
 # 5 "src/specs.h" 2
 
 typedef uint8_t T;
-typedef int Tout;
+typedef float Tout;
 # 5 "src/eucHW.h" 2
 # 1 "C:/Xilinx/Vitis_HLS/2021.1/tps/mingw/6.2.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\6.2.0\\include\\c++\\math.h" 1 3
 # 36 "C:/Xilinx/Vitis_HLS/2021.1/tps/mingw/6.2.0/win64.o/nt\\lib\\gcc\\x86_64-w64-mingw32\\6.2.0\\include\\c++\\math.h" 3
@@ -26404,55 +26404,27 @@ namespace hls {
 
 };
 # 7 "src/eucHW.h" 2
+
 __attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C[1]);
-
-Tout adder( Tout array[1024] );
 # 2 "src/EucHW_RC.cpp" 2
-
+# 23 "src/EucHW_RC.cpp"
 __attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C[1])
 {_ssdm_SpecArrayDimSize(A, 1024);_ssdm_SpecArrayDimSize(B, 1024);_ssdm_SpecArrayDimSize(C, 1);
 #pragma HLS TOP name=eucHW
-# 4 "src/EucHW_RC.cpp"
+# 24 "src/EucHW_RC.cpp"
 
-#pragma HLS ARRAY_RESHAPE variable=A complete dim=1
-#pragma HLS ARRAY_RESHAPE variable=B complete dim=1
-
- Tout out_array[1024];
-
-#pragma HLS array_partition variable=out_array complete dim=1
-
-
-
- VITIS_LOOP_14_1: for(int i=0;i<1024;i++)
+#pragma HLS array_reshape variable=A type=complete dim=1
+ Tout tem1 = 0;
+ Tout tem2 = 0;
+ Tout tem3 = 0;
+ sumLoop:for(int i=0;i<1024;i++)
  {
 #pragma HLS UNROLL
- out_array[i] = (A[i]-B[i])*(A[i]-B[i]);
+ tem2 = (A[i]-B[i]);
+  tem1 += tem2*tem2;
  }
-
-
- C[0]= hls::sqrt(adder(out_array));
+#pragma HLS RESOURCE variable=tem3 core=DRSqrt
+ tem3 = hls::sqrt(tem1);
+ C[0] = tem3;
  return;
-}
-
-
-Tout adder( Tout array[1024] )
-{
-#pragma HLS inline
-
- VITIS_LOOP_30_1: for(int idx = 1024/2; idx >= 2 ; idx = idx/2)
-    {
-#pragma HLS UNROLL
-
- VITIS_LOOP_34_2: for (int i = 0 ; i < idx ; i++)
-        {
-#pragma HLS UNROLL
-
- Tout tem1 = array[2*i];
-         Tout tem2 = array[2*i+1];
-         Tout tem3 = tem1 + tem2;
-            array[i] = tem3;
-        }
-    }
-
-    return array[0] + array[1];
 }

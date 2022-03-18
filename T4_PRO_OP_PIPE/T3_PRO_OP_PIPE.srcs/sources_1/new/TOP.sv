@@ -130,8 +130,32 @@ module TOP
         end
     endgenerate
     
+    logic [NBITS*BR_SIZE/2-1:0] Awp;
+    logic [NBITS*BR_SIZE/2-1:0] Bwp;
+    
+    logic A_ce0, B_ce0;
+    
+    assign Awp = (A_ce0)? Awrapped[NBITS*BR_SIZE/2-1:0]:Awrapped[NBITS*BR_SIZE-1:NBITS*BR_SIZE/2];
+    assign Bwp = (B_ce0)? Bwrapped[NBITS*BR_SIZE/2-1:0]:Bwrapped[NBITS*BR_SIZE-1:NBITS*BR_SIZE/2];
+    
     // instancia IP
-   
+    eucHW_0 PROCC (
+  .A_ce0(A_ce0),            // output wire A_ce0
+  .B_ce0(B_ce0),            // output wire B_ce0
+  .C_ap_vld(flag_ready32),      // output wire C_ap_vld
+  .ap_clk(CLK100MHZ),          // input wire ap_clk
+  .ap_rst(~CPU_RESETN),          // input wire ap_rst
+  .ap_start(flag_process),      // input wire ap_start
+  .ap_done(),        // output wire ap_done
+  .ap_idle(),        // output wire ap_idle
+  .ap_ready(),      // output wire ap_ready
+  .A_address0(),  // output wire [0 : 0] A_address0
+  .A_q0(Awp),              // input wire [4095 : 0] A_q0
+  .B_address0(),  // output wire [0 : 0] B_address0
+  .B_q0(Bwp),              // input wire [4095 : 0] B_q0
+  .C(data32)                    // output wire [31 : 0] C
+);
+   /*
     eucHW_0 PROCC (
     .C_ap_vld(flag_ready32),  // output wire C_ap_vld
     .ap_clk(CLK100MHZ),      // input wire ap_clk
@@ -143,7 +167,7 @@ module TOP
     .A(Awrapped),                // input wire [127 : 0] A
     .B(Bwrapped),                // input wire [127 : 0] B
     .C(data32)                // output wire [31 : 0] C
-);
+);*/
 /*
 ila_0 ILA (
 	.clk(clk), // input wire clk

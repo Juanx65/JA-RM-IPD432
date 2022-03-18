@@ -112,7 +112,7 @@ wire   [34:0] zext_ln666_fu_224_p1;
 wire   [2:0] select_ln212_fu_236_p3;
 wire   [34:0] p_Result_50_fu_244_p5;
 wire   [15:0] res_I_V_32_fu_264_p3;
-wire   [1:0] p_Result_s_58_fu_272_p4;
+wire   [1:0] p_Result_s_61_fu_272_p4;
 wire   [34:0] x_l_I_V_31_fu_256_p3;
 wire   [2:0] tmp_1_fu_282_p3;
 wire   [3:0] p_Result_51_fu_290_p4;
@@ -462,7 +462,7 @@ assign p_Result_94_fu_1406_p5 = {{x_l_I_V_44_reg_1647[34:18]}, {sub_ln212_14_reg
 
 assign p_Result_95_fu_1416_p4 = {res_I_V_45_reg_1653[16-1:1], |(1'd1)};
 
-assign p_Result_s_58_fu_272_p4 = {{res_I_V_32_fu_264_p3[15:14]}};
+assign p_Result_s_61_fu_272_p4 = {{res_I_V_32_fu_264_p3[15:14]}};
 
 assign p_Result_s_fu_1399_p3 = x_read_reg_1477_pp0_iter7_reg[32'd26];
 
@@ -548,7 +548,7 @@ assign tmp_13_fu_1302_p3 = {{p_Result_40_reg_1642}, {1'd1}};
 
 assign tmp_14_fu_1371_p3 = {{res_I_V_45_fu_1364_p3}, {1'd1}};
 
-assign tmp_1_fu_282_p3 = {{p_Result_s_58_fu_272_p4}, {1'd1}};
+assign tmp_1_fu_282_p3 = {{p_Result_s_61_fu_272_p4}, {1'd1}};
 
 assign tmp_2_fu_364_p3 = {{p_Result_4_fu_354_p4}, {1'd1}};
 

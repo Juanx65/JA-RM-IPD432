@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: xilinx.com:hls:eucHW:1.0
-// IP Revision: 2112420108
+// IP Revision: 2112421850
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -55,16 +55,20 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 eucHW_0 your_instance_name (
-  .C_ap_vld(C_ap_vld),  // output wire C_ap_vld
-  .ap_clk(ap_clk),      // input wire ap_clk
-  .ap_rst(ap_rst),      // input wire ap_rst
-  .ap_start(ap_start),  // input wire ap_start
-  .ap_done(ap_done),    // output wire ap_done
-  .ap_idle(ap_idle),    // output wire ap_idle
-  .ap_ready(ap_ready),  // output wire ap_ready
-  .A(A),                // input wire [8191 : 0] A
-  .B(B),                // input wire [8191 : 0] B
-  .C(C)                // output wire [31 : 0] C
+  .A_ce0(A_ce0),            // output wire A_ce0
+  .B_ce0(B_ce0),            // output wire B_ce0
+  .C_ap_vld(C_ap_vld),      // output wire C_ap_vld
+  .ap_clk(ap_clk),          // input wire ap_clk
+  .ap_rst(ap_rst),          // input wire ap_rst
+  .ap_start(ap_start),      // input wire ap_start
+  .ap_done(ap_done),        // output wire ap_done
+  .ap_idle(ap_idle),        // output wire ap_idle
+  .ap_ready(ap_ready),      // output wire ap_ready
+  .A_address0(A_address0),  // output wire [0 : 0] A_address0
+  .A_q0(A_q0),              // input wire [4095 : 0] A_q0
+  .B_address0(B_address0),  // output wire [0 : 0] B_address0
+  .B_q0(B_q0),              // input wire [4095 : 0] B_q0
+  .C(C)                    // output wire [31 : 0] C
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

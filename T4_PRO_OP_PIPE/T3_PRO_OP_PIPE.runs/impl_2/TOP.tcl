@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/impl_2/TOP.tcl"
+  variable script "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/impl_2/TOP.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,24 +122,27 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 2
+  set_param chipscope.maxJobs 3
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
-  set_property board_part_repo_paths {C:/Users/ricar/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store} [current_project]
+  set_property board_part_repo_paths {C:/Users/juan_/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store} [current_project]
   set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/wt [current_project]
-  set_property parent.project_path C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.xpr [current_project]
-  set_property ip_output_repo C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/wt [current_project]
+  set_property parent.project_path C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.xpr [current_project]
+  set_property ip_repo_paths c:/Users/juan_/Documents/FPGA/IPs/eucDistHW_512 [current_project]
+  update_ip_catalog
+  set_property ip_output_repo C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/synth_1_copy_1/TOP.dcp
+  add_files -quiet C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/synth_1_copy_1/TOP.dcp
+  read_ip -quiet c:/Users/juan_/Documents/FPGA/IP/eucHW_0_25/eucHW_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc
+  read_xdc C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/ricar/Desktop/super_digitales/Repo/T3_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/impl_2'
+HD_PWD='C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/impl_2'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

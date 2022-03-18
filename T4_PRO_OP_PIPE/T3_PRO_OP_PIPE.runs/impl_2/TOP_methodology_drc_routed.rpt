@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sat Jan  8 04:02:13 2022
-| Host         : LAPTOP-R5U6T19K running 64-bit major release  (build 9200)
+| Date         : Fri Mar 18 00:08:33 2022
+| Host         : JuanKaHp running 64-bit major release  (build 9200)
 | Command      : report_methodology -file TOP_methodology_drc_routed.rpt -pb TOP_methodology_drc_routed.pb -rpx TOP_methodology_drc_routed.rpx
 | Design       : TOP
 | Device       : xc7a100tcsg324-1
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
              Max violations: <unlimited>
              Violations found: 22
-+-----------+------------------+-------------------------------------------+------------+
-| Rule      | Severity         | Description                               | Violations |
-+-----------+------------------+-------------------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell               | 3          |
-| TIMING-18 | Warning          | Missing input or output delay             | 18         |
-| ULMTCS-2  | Warning          | Control Sets use limits require reduction | 1          |
-+-----------+------------------+-------------------------------------------+------------+
++-----------+------------------+---------------------------------------------+------------+
+| Rule      | Severity         | Description                                 | Violations |
++-----------+------------------+---------------------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                 | 3          |
+| TIMING-18 | Warning          | Missing input or output delay               | 18         |
+| ULMTCS-1  | Warning          | Control Sets use limits recommend reduction | 1          |
++-----------+------------------+---------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -139,9 +139,9 @@ Missing input or output delay
 An output delay is missing on UART_TX relative to clock(s) sys_clk_pin
 Related violations: <none>
 
-ULMTCS-2#1 Warning
-Control Sets use limits require reduction  
-This design uses 2483 control sets (vs. available limit of 15850, determined by 1 control set per CLB). This exceeds the control set use guideline of 15 percent. This is at a level where reduction is REQUIRED (see UG949). Use report_control_sets to get more details.
+ULMTCS-1#1 Warning
+Control Sets use limits recommend reduction  
+This design uses 2095 control sets (vs. available limit of 15850, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
 Related violations: <none>
 
 

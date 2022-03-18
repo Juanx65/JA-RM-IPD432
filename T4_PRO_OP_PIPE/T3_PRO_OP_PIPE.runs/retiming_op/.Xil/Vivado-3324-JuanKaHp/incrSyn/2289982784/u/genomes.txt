@@ -1,9 +1,0 @@
-BRAM
-eucHW_RC__GB0
-eucHW_RC__GB1
-eucHW_RC__GB2
-eucHW_RC__GB3
-eucHW_RC__GB4
-eucHW_RC__GB5
-eucHW_RC__GB6
-TOP__GC0

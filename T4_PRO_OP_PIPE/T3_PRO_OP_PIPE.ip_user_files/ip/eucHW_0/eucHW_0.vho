@@ -47,13 +47,15 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:eucHW:1.0
--- IP Revision: 2112420108
+-- IP Revision: 2112421850
 
 -- The following code must appear in the VHDL architecture header.
 
 ------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
 COMPONENT eucHW_0
   PORT (
+    A_ce0 : OUT STD_LOGIC;
+    B_ce0 : OUT STD_LOGIC;
     C_ap_vld : OUT STD_LOGIC;
     ap_clk : IN STD_LOGIC;
     ap_rst : IN STD_LOGIC;
@@ -61,8 +63,10 @@ COMPONENT eucHW_0
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    A : IN STD_LOGIC_VECTOR(8191 DOWNTO 0);
-    B : IN STD_LOGIC_VECTOR(8191 DOWNTO 0);
+    A_address0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    A_q0 : IN STD_LOGIC_VECTOR(4095 DOWNTO 0);
+    B_address0 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    B_q0 : IN STD_LOGIC_VECTOR(4095 DOWNTO 0);
     C : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END COMPONENT;
@@ -74,6 +78,8 @@ END COMPONENT;
 ------------- Begin Cut here for INSTANTIATION Template ----- INST_TAG
 your_instance_name : eucHW_0
   PORT MAP (
+    A_ce0 => A_ce0,
+    B_ce0 => B_ce0,
     C_ap_vld => C_ap_vld,
     ap_clk => ap_clk,
     ap_rst => ap_rst,
@@ -81,8 +87,10 @@ your_instance_name : eucHW_0
     ap_done => ap_done,
     ap_idle => ap_idle,
     ap_ready => ap_ready,
-    A => A,
-    B => B,
+    A_address0 => A_address0,
+    A_q0 => A_q0,
+    B_address0 => B_address0,
+    B_q0 => B_q0,
     C => C
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
