@@ -2918,13 +2918,13 @@ using std::trunc;
 
 
 # 7 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucSW.h"
-void eucSW (T A[1024], T B[1024], Tout C[1]);
+void eucSW (T A[128], T B[128], Tout C[1]);
 # 2 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucSW.cpp" 2
 
-void eucSW (T A[1024], T B[1024],Tout C[1])
+void eucSW (T A[128], T B[128],Tout C[1])
 {
  C[0] = 0;
- for (int i = 0; i < 1024; i++)
+ for (int i = 0; i < 128; i++)
  {
   C[0] = C[0] + (A[i]-B[i])*(A[i]-B[i]);
  }

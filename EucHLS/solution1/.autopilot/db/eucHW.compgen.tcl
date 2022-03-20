@@ -6,7 +6,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set id 258
+set id 66
 set name eucHW_mac_muladd_9s_9s_18s_18_4_1
 set corename simcore_mac
 set op mac
@@ -73,71 +73,242 @@ if {${::AESL::PGuard_autoexp_gen}} {
 }
 
 set axilite_register_dict [dict create]
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 516 \
-    name A \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename A \
-    op interface \
-    ports { A_address0 { O 1 vector } A_ce0 { O 1 bit } A_q0 { I 4096 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'A'"
+set port_control {
+A_0 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 16
+	offset_end 31
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
 }
+A_1 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 32
+	offset_end 47
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
 }
+A_2 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 48
+	offset_end 63
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+A_3 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 64
+	offset_end 79
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+A_4 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 80
+	offset_end 95
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+A_5 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 96
+	offset_end 111
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+A_6 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 112
+	offset_end 127
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+A_7 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 128
+	offset_end 143
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+B_0 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 144
+	offset_end 159
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+B_1 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 160
+	offset_end 175
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+B_2 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 176
+	offset_end 191
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+B_3 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 192
+	offset_end 207
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+B_4 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 208
+	offset_end 223
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+B_5 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 224
+	offset_end 239
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+B_6 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 240
+	offset_end 255
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+B_7 { 
+	dir I
+	width 8
+	depth 16
+	mode ap_memory
+	offset 256
+	offset_end 271
+	core_op ram_1p
+	core_impl bram
+	core_latency 1
+	byte_write 0
+}
+C { 
+	dir O
+	width 32
+	depth 1
+	mode ap_vld
+	offset 272
+	offset_end 279
+}
+ap_start {
+	mailbox_input_ctrl 0
+	mailbox_output_ctrl 0
+	auto_restart_enabled 1
+	auto_restart_counter_num 0
+	auto_restart_counter_offset 16
+	auto_restart_counter_size 32
+}
+ap_done { }
+ap_ready { }
+ap_idle { }
+}
+dict set axilite_register_dict control $port_control
 
 
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 517 \
-    name B \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename B \
-    op interface \
-    ports { B_address0 { O 1 vector } B_ce0 { O 1 bit } B_q0 { I 4096 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'B'"
-}
-}
-
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 518 \
-    name C \
-    type other \
-    dir O \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_C \
-    op interface \
-    ports { C { O 32 vector } C_ap_vld { O 1 bit } } \
-} "
+# Native S_AXILite:
+if {${::AESL::PGuard_simmodel_gen}} {
+	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
+		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
+			id 132 \
+			corename eucHW_control_axilite \
+			name eucHW_control_s_axi \
+			ports {$port_control} \
+			op interface \
+			interrupt_mode default \
+			is_flushable 0 \
+			is_datawidth64 0 \
+		} "
+	} else {
+		puts "@W \[IMPL-110\] Cannot find AXI Lite interface model in the library. Ignored generation of AXI Lite  interface for 'control'"
+	}
 }
 
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id -1 \
-    name ap_ctrl \
-    type ap_ctrl \
-    reset_level 1 \
-    sync_rst true \
-    corename ap_ctrl \
-    op interface \
-    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } } \
-} "
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler eucHW_control_s_axi BINDTYPE interface TYPE interface_s_axilite
 }
 
 
@@ -147,9 +318,9 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_clock] == "cg_default_interface_gen_clock"} {
 eval "cg_default_interface_gen_clock { \
-    id -2 \
+    id -1 \
     name ${PortName} \
-    reset_level 1 \
+    reset_level 0 \
     sync_rst true \
     corename apif_ap_clk \
     data_wd ${DataWd} \
@@ -162,16 +333,16 @@ puts "@W \[IMPL-113\] Cannot find bus interface model in the library. Ignored ge
 
 
 # Adapter definition:
-set PortName ap_rst
+set PortName ap_rst_n
 set DataWd 1 
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_reset] == "cg_default_interface_gen_reset"} {
 eval "cg_default_interface_gen_reset { \
-    id -3 \
+    id -2 \
     name ${PortName} \
-    reset_level 1 \
+    reset_level 0 \
     sync_rst true \
-    corename apif_ap_rst \
+    corename apif_ap_rst_n \
     data_wd ${DataWd} \
     op interface \
 }"

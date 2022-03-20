@@ -1,4 +1,5 @@
 eucHW_mul_9s_9s_18_1_1
 eucHW_mac_muladd_9s_9s_18s_18_4_1
+eucHW_control_s_axi
 sqrt_fixed_32_32_s
 eucHW

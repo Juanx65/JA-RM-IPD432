@@ -12,13 +12,14 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed&lt;32, 32>' to 'sqrt_fixed_32_32_s'." projectName="EucHLS" solutionName="solution1" date="2022-03-18T02:37:09.784-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16" projectName="EucHLS" solutionName="solution1" date="2022-03-18T02:34:16.224-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-949] non-portable path to file '&quot;EucHW.h&quot;'; specified path differs in case from file name on disk: src/EucHW_RC.cpp:1:10" projectName="EucHLS" solutionName="solution1" date="2022-03-18T02:34:16.196-0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="EucHLS" solutionName="solution1" date="2022-03-20T17:25:36.369-0300" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed&lt;32, 32>' to 'sqrt_fixed_32_32_s'." projectName="EucHLS" solutionName="solution1" date="2022-03-20T17:25:28.238-0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-803] Dropped interface mode 'ap_auto' on 'C' as it is incompatible with its interface mode 's_axilite'." projectName="EucHLS" solutionName="solution1" date="2022-03-20T17:25:26.999-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16" projectName="EucHLS" solutionName="solution1" date="2022-03-20T17:25:10.069-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5528] Ignore interface attribute or pragma which is not used in top function: src/EucHW_RC.cpp:8:9" projectName="EucHLS" solutionName="solution1" date="2022-03-20T17:25:10.040-0300" type="Warning"/>
+        <logs message="WARNING: [HLS 207-949] non-portable path to file '&quot;EucHW.h&quot;'; specified path differs in case from file name on disk: src/EucHW_RC.cpp:1:10" projectName="EucHLS" solutionName="solution1" date="2022-03-20T17:24:44.952-0300" type="Warning"/>
       </synLog>
-      <simLog>
-        <logs message="WARNING: [HLS 200-626] This design is unable to schedule all read ports in the first II cycle. The RTL testbench may treat the design as non-pipelined" projectName="EucHLS" solutionName="solution1" date="2022-03-18T02:38:27.884-0300" type="Warning"/>
-      </simLog>
+      <simLog/>
       <mgLog/>
       <packageLog/>
       <csimLog/>

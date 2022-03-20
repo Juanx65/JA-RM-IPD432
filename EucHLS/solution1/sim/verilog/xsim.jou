@@ -2,8 +2,8 @@
 # xsim v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Fri Mar 18 02:40:11 2022
-# Process ID: 15600
+# Start of session at: Sun Mar 20 17:27:32 2022
+# Process ID: 10588
 # Current directory: C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog
 # Command line: xsim.exe -mode tcl -source {xsim.dir/eucHW/xsim_script.tcl}
 # Log file: C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/xsim.log

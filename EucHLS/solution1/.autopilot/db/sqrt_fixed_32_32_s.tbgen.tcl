@@ -12,23 +12,23 @@ set isEnableWaveformDebug 1
 set C_modelName {sqrt_fixed<32, 32>}
 set C_modelType { int 16 }
 set C_modelArgList {
-	{ x int 27 regular  }
+	{ x int 24 regular  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "x", "interface" : "wire", "bitwidth" : 27, "direction" : "READONLY"} , 
+	{ "Name" : "x", "interface" : "wire", "bitwidth" : 24, "direction" : "READONLY"} , 
  	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 16} ]}
 # RTL Port declarations: 
 set portNum 4
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
-	{ x sc_in sc_lv 27 signal 0 } 
+	{ x sc_in sc_lv 24 signal 0 } 
 	{ ap_return sc_out sc_lv 16 signal -1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
  	{ "name": "ap_rst", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst", "role": "default" }} , 
- 	{ "name": "x", "direction": "in", "datatype": "sc_lv", "bitwidth":27, "type": "signal", "bundle":{"name": "x", "role": "default" }} , 
+ 	{ "name": "x", "direction": "in", "datatype": "sc_lv", "bitwidth":24, "type": "signal", "bundle":{"name": "x", "role": "default" }} , 
  	{ "name": "ap_return", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "ap_return", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
@@ -38,7 +38,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0", "real_start" : "0",
 		"Pipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "1",
-		"VariableLatency" : "0", "ExactLatency" : "8", "EstimateLatencyMin" : "8", "EstimateLatencyMax" : "8",
+		"VariableLatency" : "0", "ExactLatency" : "7", "EstimateLatencyMin" : "7", "EstimateLatencyMax" : "7",
 		"Combinational" : "0",
 		"Datapath" : "1",
 		"ClockEnable" : "0",
@@ -56,7 +56,7 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "8", "Max" : "8"}
+	{"Name" : "Latency", "Min" : "7", "Max" : "7"}
 	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
 ]}
 
@@ -64,5 +64,5 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	x { ap_none {  { x in_data 0 27 } } }
+	x { ap_none {  { x in_data 0 24 } } }
 }

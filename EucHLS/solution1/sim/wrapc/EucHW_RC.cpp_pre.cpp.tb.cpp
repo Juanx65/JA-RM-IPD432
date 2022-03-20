@@ -71280,18 +71280,22 @@ namespace hls {
 };
 # 7 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucHW.h" 2
 
-void eucHW (T A[1024], T B[1024], Tout C[1]);
+void eucHW (T A[128], T B[128], Tout C[1]);
 # 2 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucHW_RC.cpp" 2
 
-void eucHW (T A[1024], T B[1024], Tout C[1])
+void eucHW (T A[128], T B[128], Tout C[1])
 {
-#pragma HLS array_reshape variable=A type=cyclic factor=512 dim=1
-#pragma HLS array_reshape variable=B type=cyclic factor=512 dim=1
+#pragma HLS INTERFACE mode=s_axilite port=A storage_impl=bram
+#pragma HLS INTERFACE mode=s_axilite port=B storage_impl=bram
+#pragma HLS INTERFACE mode=s_axilite port=C
+#pragma HLS INTERFACE mode=s_axilite port=return
+#pragma HLS ARRAY_PARTITION variable=A type=cyclic factor=8
+#pragma HLS ARRAY_PARTITION variable=B type=cyclic factor=8
 
  Tout result = 0;
- sumLoop:for(int i=0;i<1024;i++)
+ sumLoop:for(int i=0;i<128;i++)
  {
-#pragma HLS UNROLL factor=512
+#pragma HLS UNROLL
   result += (A[i]-B[i])*(A[i]-B[i]);
  }
  C[0] = hls::sqrt(result);
@@ -71317,5 +71321,5 @@ apatb_eucHW_ir(A, B, C);
 return ;
 }
 #endif
-# 16 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucHW_RC.cpp"
+# 20 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucHW_RC.cpp"
 

@@ -80,8 +80,22 @@ proc check_tvin_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "c.eucHW.autotvin_A.dat"
-         "c.eucHW.autotvin_B.dat"
+         "c.eucHW.autotvin_A_0.dat"
+         "c.eucHW.autotvin_A_1.dat"
+         "c.eucHW.autotvin_A_2.dat"
+         "c.eucHW.autotvin_A_3.dat"
+         "c.eucHW.autotvin_A_4.dat"
+         "c.eucHW.autotvin_A_5.dat"
+         "c.eucHW.autotvin_A_6.dat"
+         "c.eucHW.autotvin_A_7.dat"
+         "c.eucHW.autotvin_B_0.dat"
+         "c.eucHW.autotvin_B_1.dat"
+         "c.eucHW.autotvin_B_2.dat"
+         "c.eucHW.autotvin_B_3.dat"
+         "c.eucHW.autotvin_B_4.dat"
+         "c.eucHW.autotvin_B_5.dat"
+         "c.eucHW.autotvin_B_6.dat"
+         "c.eucHW.autotvin_B_7.dat"
          "c.eucHW.autotvout_C.dat"
     }
     foreach rtlfile $rtlfilelist {

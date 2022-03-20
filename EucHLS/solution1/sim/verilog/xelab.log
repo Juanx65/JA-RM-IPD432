@@ -4,14 +4,15 @@ Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.
 Multi-threading is on. Using 10 slave threads.
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/AESL_automem_A.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_A
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/AESL_automem_B.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_automem_B
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_eucHW_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module eucHW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eucHW_control_s_axi
+INFO: [VRFC 10-311] analyzing module eucHW_control_s_axi_ram
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/sim/verilog/eucHW_mac_muladd_9s_9s_18s_18_4_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module eucHW_mac_muladd_9s_9s_18s_18_4_1_DSP48_0
 INFO: [VRFC 10-311] analyzing module eucHW_mac_muladd_9s_9s_18s_18_4_1
@@ -29,14 +30,14 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
 Compiling module xil_defaultlib.eucHW_sqrt_fixed_32_32_s
+Compiling module xil_defaultlib.eucHW_control_s_axi_ram(MEM_STYL...
+Compiling module xil_defaultlib.eucHW_control_s_axi
 Compiling module xil_defaultlib.eucHW_mul_9s_9s_18_1_1(NUM_STAGE...
 Compiling module xil_defaultlib.eucHW_mac_muladd_9s_9s_18s_18_4_...
 Compiling module xil_defaultlib.eucHW_mac_muladd_9s_9s_18s_18_4_...
 Compiling module xil_defaultlib.eucHW
-Compiling module xil_defaultlib.AESL_automem_A
-Compiling module xil_defaultlib.AESL_automem_B
+Compiling module xil_defaultlib.AESL_axi_slave_control
 Compiling module xil_defaultlib.nodf_module_intf
-Compiling module xil_defaultlib.pp_loop_intf(FSM_WIDTH=12)
 Compiling module xil_defaultlib.dataflow_monitor_1
 Compiling module xil_defaultlib.apatb_eucHW_top
 Compiling module work.glbl

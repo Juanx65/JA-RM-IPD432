@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="eucHW" xd:componentRef="eucHW" xd:initiationInterval="20" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
-  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
-  <xd:arg xd:name="*(A)" xd:originalName="A" xd:direction="in" xd:interfaceRef="A_q0" xd:busTypeRef="ap_memory" xd:dataWidth="4096"/>
-  <xd:arg xd:name="*(B)" xd:originalName="B" xd:direction="in" xd:interfaceRef="B_q0" xd:busTypeRef="ap_memory" xd:dataWidth="4096"/>
-  <xd:arg xd:name="*(C)" xd:originalName="C" xd:direction="out" xd:interfaceRef="C" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="32"/>
-  <xd:latencyEstimates xd:best-case="19" xd:worst-case="19" xd:average-case="19"/>
-  <xd:resourceEstimates xd:LUT="29638" xd:FF="6799" xd:BRAM="0" xd:DSP="256"/>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="eucHW" xd:componentRef="eucHW" xd:initiationInterval="32" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="A" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="A" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="A" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="A" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="A" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="A" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="A" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="A" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="B" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="B" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="B" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="B" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="B" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="B" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="B" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(s_axi_control)" xd:originalName="B" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(C)" xd:originalName="C" xd:direction="out" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x110" xd:statusOffset="0x114" xd:handshakeRef="ap_vld" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="31" xd:worst-case="31" xd:average-case="31"/>
+  <xd:resourceEstimates xd:LUT="10755" xd:FF="3112" xd:BRAM="0" xd:DSP="64"/>
 </xd:acceleratorMap>

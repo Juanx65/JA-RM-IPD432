@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
-	<Message severity="WARNING" prefix="[HLS 200-626]" key="HLS 200-626" tag="" content="This design is unable to schedule all read ports in the first II cycle. The RTL testbench may treat the design as non-pipelined" resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-47]" key="COSIM_TCL_47_1115" tag="" content="Using XSIM for RTL simulation." resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-14]" key="COSIM_TCL_14_1084" tag="" content="Instrumenting C test bench ..." resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-302]" key="COSIM_TCL_302_1177" tag="" content="Starting C TB testing ..." resolution=""/>
@@ -11,5 +10,5 @@
 	<Message severity="INFO" prefix="[COSIM 212-15]" key="COSIM_TCL_15_1085" tag="" content="Starting XSIM ..." resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-316]" key="COSIM_TCL_316_1188" tag="" content="Starting C post checking ..." resolution=""/>
 	<Message severity="INFO" prefix="[COSIM 212-1000]" key="COSIM_TCL_1000_1070" tag="" content="*** C/RTL co-simulation finished: PASS ***" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command cosim_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 114.087 seconds; current allocated memory: 122.273 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command cosim_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 43.451 seconds; current allocated memory: 122.048 MB." resolution=""/>
 </Messages>

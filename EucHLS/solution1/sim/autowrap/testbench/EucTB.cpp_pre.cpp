@@ -71260,7 +71260,7 @@ namespace hls {
 };
 # 7 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucHW.h" 2
 
-void eucHW (T A[1024], T B[1024], Tout C[1]);
+void eucHW (T A[128], T B[128], Tout C[1]);
 # 6 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp" 2
 # 1 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucSW.h" 1
 
@@ -71270,7 +71270,7 @@ void eucHW (T A[1024], T B[1024], Tout C[1]);
 # 1 "C:/Xilinx/Vitis_HLS/2021.1/tps/win64/msys64/mingw64/include/c++/6.2.0/math.h" 1 3
 # 6 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucSW.h" 2
 
-void eucSW (T A[1024], T B[1024], Tout C[1]);
+void eucSW (T A[128], T B[128], Tout C[1]);
 # 7 "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/EucTB.cpp" 2
 
 using namespace std;
@@ -71282,7 +71282,7 @@ int main (){
  int errors = 0;
  int tests = 100;
 
- T A[1024], B[1024];
+ T A[128], B[128];
  Tout C_HW[1], C_SW[1];
 
  double diff;
@@ -71291,8 +71291,8 @@ int main (){
  int max = 254;
  cout << "Euc Dist calculation: "<< endl;
  for (int i=0; i<tests; i++){
-  genRandArray(min, max, 1024, A);
-  genRandArray(min, max, 1024, B);
+  genRandArray(min, max, 128, A);
+  genRandArray(min, max, 128, B);
 
   eucSW (A, B, C_SW);
   eucHW (A, B, C_HW);
