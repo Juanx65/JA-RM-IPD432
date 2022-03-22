@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <xparameters.h>
+#include <xscugic.h>
+//#include <xgpio.h>
+#include <xil_exception.h>
+#include "xeuchw.h"
+
+#include <stdint.h>
+
+#define INTC_DEVICE_ID			XPAR_PS7_SCUGIC_0_DEVICE_ID
+#define XEUCHLS_DEVICE_ID		XPAR_EUCHW_0_DEVICE_ID
+
+#define N_VECTORS				2
+#define VECTOR_SIZE 			128
+#define BRAMS					128
+
+typedef u32 T;  /* tipo de dato para el vector de entrada */
+
+enum errTypes
+{
+	ERR_HLS_INIT,
+	//ERR_GPIO_INIT,
+	ERR_INTC_INIT,
+	ERR_DEFAULT
+};
+
+enum IP_ready
+{
+	IP_Ready,
+	IP_Busy
+};
+
+int errorHandler(enum errTypes err);
+int TxDataSend(XEuchw *InstancePtr, T data[VECTOR_SIZE],int BRAM_ID);
+int ReceiverHandler(void *InstPtr);
+
+XScuGic intc;
+XEuchw hls_ip;
+volatile int ip_status;
+
+void (*XHLSWriterFuncA[])() = {
+
+
+};
+
+void (*XHLSWriterFuncB[])() = {
+
+
+};
+
+int TxDataSend(XEuchw *InstancePtr, T data[VECTOR_SIZE], int BRAM_ID)
+{
+	int status = XST_SUCCESS;
+	if(BRAM_ID == 0) // BRAM A
+	{
+		for(int br = 0; br < BRAMS; br++)
+		{
+			XHLSWriterFuncA[br](InstancePtr, data[br]);
+		}
+	}else if(BRAM_ID == 1 ) // BRAM B
+	{
+
+	}else{
+		return -1;
+	}
+	return status;
+}
+
+

@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AdditionalInfo>
   <CTypeInfo>
+      <RtlPort>
+        <name>A</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>B</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>C</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>C_ap_vld</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
   </CTypeInfo>
   <DesignConstraint>
     <clk_period>10</clk_period>
@@ -8,7 +28,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>31</latency>
-    <II>32</II>
+    <latency>9</latency>
+    <II>10</II>
   </modelParameters>
 </AdditionalInfo>

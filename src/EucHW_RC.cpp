@@ -6,19 +6,18 @@ void eucHW (T A[LENGTH], T B[LENGTH], Tout C[1])
 	#pragma HLS INTERFACE mode=s_axilite port=B storage_impl=bram
 	#pragma HLS INTERFACE mode=s_axilite port=C
 	#pragma HLS INTERFACE mode=s_axilite port=return
-	#pragma HLS ARRAY_PARTITION variable=A type=cyclic factor=8
-	#pragma HLS ARRAY_PARTITION variable=B type=cyclic factor=8
+	#pragma HLS ARRAY_PARTITION variable=A type=complete
+	#pragma HLS ARRAY_PARTITION variable=B type=complete
 
 	Tout result = 0;
 	sumLoop:for(int i=0;i<LENGTH;i++)
 	{
-		#pragma HLS UNROLL //factor=8
+		#pragma HLS UNROLL
 		result += (A[i]-B[i])*(A[i]-B[i]);
 	}
 	C[0] =  hls::sqrt(result);
 	return;
 }
-
 /*
 void eucHW (T A[LENGTH], T B[LENGTH], Tout C[1])
 {

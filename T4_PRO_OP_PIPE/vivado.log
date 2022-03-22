@@ -2,206 +2,21 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Mar 15 10:39:23 2022
-# Process ID: 14416
+# Start of session at: Mon Mar 21 00:45:43 2022
+# Process ID: 17144
 # Current directory: C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18324 C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\T4_PRO_OP_PIPE\T3_PRO_OP_PIPE.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16708 C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\T4_PRO_OP_PIPE\T3_PRO_OP_PIPE.xpr
 # Log file: C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/vivado.log
 # Journal file: C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/ricar/Desktop/super_digitales/Tarea 4/T4_PRO_OP_PIPE' since last save.
-WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_unroll', nor could it be found using path 'C:/Users/ricar/Desktop/super_digitales/IPs/eucDistHW_unroll'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/juan_/Documents/FPGA/IPs/eucDistHW_unroll'; Can't find the specified path.
-If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/src/eucDistHW_512'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
-WARNING: [IP_Flow 19-2162] IP 'eucHW_1' is locked:
-* IP definition 'eucHW (1.0)' for IP 'eucHW_1' (customized with software release 2021.1) was not found in the IP Catalog.
-WARNING: [IP_Flow 19-2162] IP 'eucHW1' is locked:
-* IP definition 'eucHW (1.0)' for IP 'eucHW1' (customized with software release 2021.1) was not found in the IP Catalog.
-open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1472.809 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:11 . Memory (MB): peak = 1450.887 ; gain = 0.000
 update_compile_order -fileset sources_1
-launch_runs impl_3 -to_step write_bitstream -jobs 2
-[Tue Mar 15 10:41:08 2022] Launched retiming_op...
-Run output will be captured here: C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/retiming_op/runme.log
-[Tue Mar 15 10:41:08 2022] Launched impl_3...
-Run output will be captured here: C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/impl_3/runme.log
-set_property  ip_repo_paths  {} [current_project]
-update_ip_catalog
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-set_property  ip_repo_paths  C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_factor2 [current_project]
-update_ip_catalog
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/juan_/Documents/FPGA/IPs/eucDistHW_factor2'.
-create_ip -name eucHW -vendor xilinx.com -library hls -version 1.0 -module_name eucHW_0 -dir C:/Users/juan_/Documents/FPGA/IP
-generate_target {instantiation_template} [get_files c:/Users/juan_/Documents/FPGA/IP/eucHW_0_2/eucHW_0.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'eucHW_0'...
-update_compile_order -fileset sources_1
-set_property generate_synth_checkpoint false [get_files  c:/Users/juan_/Documents/FPGA/IP/eucHW_0_2/eucHW_0.xci]
-generate_target all [get_files  c:/Users/juan_/Documents/FPGA/IP/eucHW_0_2/eucHW_0.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'eucHW_0'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'eucHW_0'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'eucHW_0'...
-INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'eucHW_0'...
-export_ip_user_files -of_objects [get_files c:/Users/juan_/Documents/FPGA/IP/eucHW_0_2/eucHW_0.xci] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files c:/Users/juan_/Documents/FPGA/IP/eucHW_0_2/eucHW_0.xci] -directory C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.ip_user_files -ipstatic_source_dir C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/compile_simlib/modelsim} {questa=C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/compile_simlib/questa} {riviera=C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/compile_simlib/riviera} {activehdl=C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/ip/eucHW1/eucHW1.xci] -no_script -reset -force -quiet
-remove_files  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/ip/eucHW1/eucHW1.xci
-export_ip_user_files -of_objects  [get_files C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/ip/eucHW_1/eucHW_1.xci] -no_script -reset -force -quiet
-remove_files  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.srcs/sources_1/ip/eucHW_1/eucHW_1.xci
-reset_run retiming_op
-launch_runs impl_3 -to_step write_bitstream -jobs 2
-[Tue Mar 15 11:21:33 2022] Launched retiming_op...
-Run output will be captured here: C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/retiming_op/runme.log
-[Tue Mar 15 11:21:33 2022] Launched impl_3...
-Run output will be captured here: C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_PRO_OP_PIPE/T3_PRO_OP_PIPE.runs/impl_3/runme.log
-open_run impl_3
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.698 . Memory (MB): peak = 1579.883 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 12151 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2021.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2496.496 ; gain = 53.988
-Restored from archive | CPU: 5.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2496.496 ; gain = 53.988
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2496.496 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:41 ; elapsed = 00:00:31 . Memory (MB): peak = 2603.656 ; gain = 1130.848
-open_report: Time (s): cpu = 00:00:41 ; elapsed = 00:00:14 . Memory (MB): peak = 2760.918 ; gain = 126.941
-CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
-INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
-INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-report_timing_summary: Time (s): cpu = 00:00:25 ; elapsed = 00:00:13 . Memory (MB): peak = 3000.531 ; gain = 114.258
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2021.1
-  **** Build date : Jun 10 2021 at 20:17:23
-    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-******** Xilinx cs_server v2021.1
-  ****** Build date   : May 26 2021-13:32:33
-    **** Build number : 2021.1.1622050353
-      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
-
-
-
-connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 3042.875 ; gain = 0.000
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
-disconnect_hw_server localhost:3121
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
-INFO: [Labtools 27-3414] Connected to existing cs_server.
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 15 12:11:09 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 21 00:56:00 2022...

@@ -26404,28 +26404,16 @@ namespace hls {
 
 };
 # 7 "src/eucHW.h" 2
-
-__attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[128], T B[128], Tout C[1]);
+__attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C[1]);
 # 2 "src/EucHW_RC.cpp" 2
-
-__attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[128], T B[128], Tout C[1])
-{_ssdm_SpecArrayDimSize(A, 128);_ssdm_SpecArrayDimSize(B, 128);_ssdm_SpecArrayDimSize(C, 1);
+__attribute__((sdx_kernel("eucHW", 0))) void eucHW(T * A, T * B, Tout* C){
 #pragma HLS TOP name=eucHW
-# 4 "src/EucHW_RC.cpp"
+# 2 "src/EucHW_RC.cpp"
 
-#pragma HLS INTERFACE mode=s_axilite port=A storage_impl=bram
-#pragma HLS INTERFACE mode=s_axilite port=B storage_impl=bram
-#pragma HLS INTERFACE mode=s_axilite port=C
-#pragma HLS INTERFACE mode=s_axilite port=return
-#pragma HLS ARRAY_PARTITION variable=A type=cyclic factor=8
-#pragma HLS ARRAY_PARTITION variable=B type=cyclic factor=8
-
- Tout result = 0;
- sumLoop:for(int i=0;i<128;i++)
- {
-#pragma HLS UNROLL
- result += (A[i]-B[i])*(A[i]-B[i]);
- }
- C[0] = hls::sqrt(result);
- return;
+    uint32_t temp = 0;
+    eachElement:for(int index = 0; index < 1024; index ++){
+      temp += (A[index]-B[index])*(A[index]-B[index]);
+    }
+    C[0] = (Tout) hls::sqrt(temp);
+    return;
 }

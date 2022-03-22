@@ -6,6 +6,6 @@
 typedef uint8_t T;
 typedef int Tout;
 
-#define LENGTH 128
+#define LENGTH 1024
 
 #endif

@@ -13,8 +13,8 @@ set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
-set HasDSPModule 1
-set ResetLevelFlag 0
+set HasDSPModule 0
+set ResetLevelFlag 1
 set ResetStyle control
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
@@ -45,7 +45,7 @@ set TargetInfo xc7z010i:-clg400:-1L
 set SourceFiles {sc {} c ../../src/EucHW_RC.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/EucHLS/solution1/solution1.directive
-set TBFiles {verilog {../../src/EucSW.cpp ../../src/EucSW.h ../../src/EucTB.cpp} bc {../../src/EucSW.cpp ../../src/EucSW.h ../../src/EucTB.cpp} vhdl {../../src/EucSW.cpp ../../src/EucSW.h ../../src/EucTB.cpp} sc {../../src/EucSW.cpp ../../src/EucSW.h ../../src/EucTB.cpp} cas {../../src/EucSW.cpp ../../src/EucSW.h ../../src/EucTB.cpp} c {}}
+set TBFiles {verilog {../../src/EucTB.cpp ../../src/EucSW.h ../../src/EucSW.cpp} bc {../../src/EucTB.cpp ../../src/EucSW.h ../../src/EucSW.cpp} vhdl {../../src/EucTB.cpp ../../src/EucSW.h ../../src/EucSW.cpp} sc {../../src/EucTB.cpp ../../src/EucSW.h ../../src/EucSW.cpp} cas {../../src/EucTB.cpp ../../src/EucSW.h ../../src/EucSW.cpp} c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

@@ -1,0 +1,31 @@
+Nothing to build in platform 'euc128'
+
+19:57:27 **** Incremental Build of configuration Debug for project euc128vitis ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/juan_/Desktop/zybo_128_vitis/euc128/export/euc128/sw/euc128/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: euc128vitis.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/juan_/Desktop/zybo_128_vitis/euc128/export/euc128/sw/euc128/standalone_ps7_cortexa9_0/bsplib/lib -o "euc128vitis.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: euc128vitis.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size euc128vitis.elf  |tee "euc128vitis.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 150366	   4358	  22704	 177428	  2b514	euc128vitis.elf
+'Finished building: euc128vitis.elf.size'
+' '
+19:57:29 **** Incremental Build of configuration Debug for project euc128vitis_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 53340 C:/Users/juan_/Desktop/zybo_128_vitis/euc128/export/euc128/euc128.xpfm standalone_ps7_cortexa9_0 C:/Users/juan_/Desktop/zybo_128_vitis/euc128vitis_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/juan_/Desktop/zybo_128_vitis/euc128/export/euc128/euc128.xpfm --sys_config euc128 --bif C:/Users/juan_/Desktop/zybo_128_vitis/euc128vitis_system/Debug/system.bif --bitstream C:/Users/juan_/Desktop/zybo_128_vitis/euc128vitis/_ide/bitstream/euc128.bit --elf C:/Users/juan_/Desktop/zybo_128_vitis/euc128vitis/Debug/euc128vitis.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/juan_/Desktop/zybo_128_vitis/euc128vitis/_ide/bitstream/euc128.bit
+Running C:/Xilinx/Vitis/2021.1/bin/bootgen  -image C:/Users/juan_/Desktop/zybo_128_vitis/euc128vitis_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

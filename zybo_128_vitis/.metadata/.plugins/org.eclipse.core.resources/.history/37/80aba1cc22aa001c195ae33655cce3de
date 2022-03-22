@@ -1,0 +1,276 @@
+#include <stdio.h>
+#include <xparameters.h>
+#include <xscugic.h>
+//#include <xgpio.h>
+#include <xil_exception.h>
+#include "xeuchw.h"
+#include <xil_printf.h>
+
+#include <stdint.h>
+
+#define INTC_DEVICE_ID			XPAR_PS7_SCUGIC_0_DEVICE_ID
+#define XEUCHLS_DEVICE_ID		XPAR_EUCHW_DEVICE_ID
+#define INTC_ADDT_INT_ID		XPAR_FABRIC_EUCHW_INTERRUPT_INTR
+#define xil_printf 				printf
+
+#define N_VECTORS				2
+#define VECTOR_SIZE 			128
+#define BRAMS					128
+
+typedef int T;  /* tipo de dato para el vector de entrada */
+
+enum errTypes
+{
+	ERR_HLS_INIT,
+	//ERR_GPIO_INIT,
+	ERR_INTC_INIT,
+	ERR_DEFAULT
+};
+
+enum IP_ready
+{
+	IP_Ready,
+	IP_Busy
+};
+
+XScuGic intc;
+XEuchw hls_ip;
+volatile int ip_status;
+
+int IntcInitFunction(u16 DeviceId);
+int errorHandler(enum errTypes err);
+int TxDataSend(XEuchw *InstancePtr, T data[VECTOR_SIZE],int BRAM_ID);
+void ReceiverHandler(void *InstPtr);
+void getVector(T vec[VECTOR_SIZE]);
+void getMemType(int BRAM_ID[1]);
+
+int main()
+{
+	int status = XST_SUCCESS;
+	/* INIT */
+	/* HLS IP init */
+	status += XEuchw_Initialize(&hls_ip,XEUCHLS_DEVICE_ID);
+	if (status != XST_SUCCESS) return errorHandler(ERR_HLS_INIT);
+
+	/* interrupt controller init*/
+	status = IntcInitFunction(INTC_DEVICE_ID);
+	if (status != XST_SUCCESS) return errorHandler(ERR_INTC_INIT);
+
+	ip_status = IP_Ready;
+
+	/*
+	 * Expected : -14766, -115.359
+	 */
+	T txbuffer[VECTOR_SIZE];
+	int bramID[1];
+	for (int trial = 0; trial < N_VECTORS; trial++ )
+	{
+		while (ip_status == IP_Busy) {};
+		getMemType(bramID);
+		getVector(txbuffer);
+		TxDataSend(&hls_ip, txbuffer,bramID[0]);
+		ip_status = IP_Busy;
+		XEuchw_Start(&hls_ip);
+	}
+
+	while(1);
+	return 0;
+}
+
+void (*XHLSWriterFuncA[])() = {
+					XEuchw_Set_A_0,
+					XEuchw_Set_A_1, XEuchw_Set_A_2, XEuchw_Set_A_3,
+					XEuchw_Set_A_4, XEuchw_Set_A_5, XEuchw_Set_A_6,
+					XEuchw_Set_A_7, XEuchw_Set_A_8, XEuchw_Set_A_9,
+					XEuchw_Set_A_10, XEuchw_Set_A_11, XEuchw_Set_A_12,
+					XEuchw_Set_A_13, XEuchw_Set_A_14, XEuchw_Set_A_15,
+					XEuchw_Set_A_16, XEuchw_Set_A_17, XEuchw_Set_A_18,
+					XEuchw_Set_A_19, XEuchw_Set_A_20, XEuchw_Set_A_21,
+					XEuchw_Set_A_22, XEuchw_Set_A_23, XEuchw_Set_A_24,
+					XEuchw_Set_A_25, XEuchw_Set_A_26, XEuchw_Set_A_27,
+					XEuchw_Set_A_28, XEuchw_Set_A_29, XEuchw_Set_A_30,
+					XEuchw_Set_A_31, XEuchw_Set_A_32, XEuchw_Set_A_33,
+					XEuchw_Set_A_34, XEuchw_Set_A_35, XEuchw_Set_A_36,
+					XEuchw_Set_A_37, XEuchw_Set_A_38, XEuchw_Set_A_39,
+					XEuchw_Set_A_40, XEuchw_Set_A_41, XEuchw_Set_A_42,
+					XEuchw_Set_A_43, XEuchw_Set_A_44, XEuchw_Set_A_45,
+					XEuchw_Set_A_46, XEuchw_Set_A_47, XEuchw_Set_A_48,
+					XEuchw_Set_A_49, XEuchw_Set_A_50, XEuchw_Set_A_51,
+					XEuchw_Set_A_52, XEuchw_Set_A_53, XEuchw_Set_A_54,
+					XEuchw_Set_A_55, XEuchw_Set_A_56, XEuchw_Set_A_57,
+					XEuchw_Set_A_58, XEuchw_Set_A_59, XEuchw_Set_A_60,
+					XEuchw_Set_A_61, XEuchw_Set_A_62, XEuchw_Set_A_63,
+					XEuchw_Set_A_64, XEuchw_Set_A_65, XEuchw_Set_A_66,
+					XEuchw_Set_A_67, XEuchw_Set_A_68, XEuchw_Set_A_69,
+					XEuchw_Set_A_70, XEuchw_Set_A_71, XEuchw_Set_A_72,
+					XEuchw_Set_A_73, XEuchw_Set_A_74, XEuchw_Set_A_75,
+					XEuchw_Set_A_76, XEuchw_Set_A_77, XEuchw_Set_A_78,
+					XEuchw_Set_A_79, XEuchw_Set_A_80, XEuchw_Set_A_81,
+					XEuchw_Set_A_82, XEuchw_Set_A_83, XEuchw_Set_A_84,
+					XEuchw_Set_A_85, XEuchw_Set_A_86, XEuchw_Set_A_87,
+					XEuchw_Set_A_88, XEuchw_Set_A_89, XEuchw_Set_A_90,
+					XEuchw_Set_A_91, XEuchw_Set_A_92, XEuchw_Set_A_93,
+					XEuchw_Set_A_94, XEuchw_Set_A_95, XEuchw_Set_A_96,
+					XEuchw_Set_A_97, XEuchw_Set_A_98, XEuchw_Set_A_99,
+					XEuchw_Set_A_100, XEuchw_Set_A_101, XEuchw_Set_A_102,
+					XEuchw_Set_A_103, XEuchw_Set_A_104, XEuchw_Set_A_105,
+					XEuchw_Set_A_106, XEuchw_Set_A_107, XEuchw_Set_A_108,
+					XEuchw_Set_A_109, XEuchw_Set_A_110, XEuchw_Set_A_111,
+					XEuchw_Set_A_112, XEuchw_Set_A_113, XEuchw_Set_A_114,
+					XEuchw_Set_A_115, XEuchw_Set_A_116, XEuchw_Set_A_117,
+					XEuchw_Set_A_118, XEuchw_Set_A_119, XEuchw_Set_A_120,
+					XEuchw_Set_A_121, XEuchw_Set_A_122, XEuchw_Set_A_123,
+					XEuchw_Set_A_124, XEuchw_Set_A_125, XEuchw_Set_A_126,
+					XEuchw_Set_A_127
+};
+
+void (*XHLSWriterFuncB[])() = {
+					XEuchw_Set_B_0,
+					XEuchw_Set_B_1, XEuchw_Set_B_2, XEuchw_Set_B_3,
+					XEuchw_Set_B_4, XEuchw_Set_B_5, XEuchw_Set_B_6,
+					XEuchw_Set_B_7, XEuchw_Set_B_8, XEuchw_Set_B_9,
+					XEuchw_Set_B_10, XEuchw_Set_B_11, XEuchw_Set_B_12,
+					XEuchw_Set_B_13, XEuchw_Set_B_14, XEuchw_Set_B_15,
+					XEuchw_Set_B_16, XEuchw_Set_B_17, XEuchw_Set_B_18,
+					XEuchw_Set_B_19, XEuchw_Set_B_20, XEuchw_Set_B_21,
+					XEuchw_Set_B_22, XEuchw_Set_B_23, XEuchw_Set_B_24,
+					XEuchw_Set_B_25, XEuchw_Set_B_26, XEuchw_Set_B_27,
+					XEuchw_Set_B_28, XEuchw_Set_B_29, XEuchw_Set_B_30,
+					XEuchw_Set_B_31, XEuchw_Set_B_32, XEuchw_Set_B_33,
+					XEuchw_Set_B_34, XEuchw_Set_B_35, XEuchw_Set_B_36,
+					XEuchw_Set_B_37, XEuchw_Set_B_38, XEuchw_Set_B_39,
+					XEuchw_Set_B_40, XEuchw_Set_B_41, XEuchw_Set_B_42,
+					XEuchw_Set_B_43, XEuchw_Set_B_44, XEuchw_Set_B_45,
+					XEuchw_Set_B_46, XEuchw_Set_B_47, XEuchw_Set_B_48,
+					XEuchw_Set_B_49, XEuchw_Set_B_50, XEuchw_Set_B_51,
+					XEuchw_Set_B_52, XEuchw_Set_B_53, XEuchw_Set_B_54,
+					XEuchw_Set_B_55, XEuchw_Set_B_56, XEuchw_Set_B_57,
+					XEuchw_Set_B_58, XEuchw_Set_B_59, XEuchw_Set_B_60,
+					XEuchw_Set_B_61, XEuchw_Set_B_62, XEuchw_Set_B_63,
+					XEuchw_Set_B_64, XEuchw_Set_B_65, XEuchw_Set_B_66,
+					XEuchw_Set_B_67, XEuchw_Set_B_68, XEuchw_Set_B_69,
+					XEuchw_Set_B_70, XEuchw_Set_B_71, XEuchw_Set_B_72,
+					XEuchw_Set_B_73, XEuchw_Set_B_74, XEuchw_Set_B_75,
+					XEuchw_Set_B_76, XEuchw_Set_B_77, XEuchw_Set_B_78,
+					XEuchw_Set_B_79, XEuchw_Set_B_80, XEuchw_Set_B_81,
+					XEuchw_Set_B_82, XEuchw_Set_B_83, XEuchw_Set_B_84,
+					XEuchw_Set_B_85, XEuchw_Set_B_86, XEuchw_Set_B_87,
+					XEuchw_Set_B_88, XEuchw_Set_B_89, XEuchw_Set_B_90,
+					XEuchw_Set_B_91, XEuchw_Set_B_92, XEuchw_Set_B_93,
+					XEuchw_Set_B_94, XEuchw_Set_B_95, XEuchw_Set_B_96,
+					XEuchw_Set_B_97, XEuchw_Set_B_98, XEuchw_Set_B_99,
+					XEuchw_Set_B_100, XEuchw_Set_B_101, XEuchw_Set_B_102,
+					XEuchw_Set_B_103, XEuchw_Set_B_104, XEuchw_Set_B_105,
+					XEuchw_Set_B_106, XEuchw_Set_B_107, XEuchw_Set_B_108,
+					XEuchw_Set_B_109, XEuchw_Set_B_110, XEuchw_Set_B_111,
+					XEuchw_Set_B_112, XEuchw_Set_B_113, XEuchw_Set_B_114,
+					XEuchw_Set_B_115, XEuchw_Set_B_116, XEuchw_Set_B_117,
+					XEuchw_Set_B_118, XEuchw_Set_B_119, XEuchw_Set_B_120,
+					XEuchw_Set_B_121, XEuchw_Set_B_122, XEuchw_Set_B_123,
+					XEuchw_Set_B_124, XEuchw_Set_B_125, XEuchw_Set_B_126,
+					XEuchw_Set_B_127
+};
+
+u32 RxData[1]; // resultado
+
+int TxDataSend(XEuchw *InstancePtr, T data[VECTOR_SIZE], int BRAM_ID)
+{
+	int status = XST_SUCCESS;
+	if(BRAM_ID == 0) // BRAM A
+	{
+		for(int br = 0; br < BRAMS; br++)
+		{
+			XHLSWriterFuncA[br](InstancePtr, data[br]);
+		}
+	}else if(BRAM_ID == 1 ) // BRAM B
+	{
+		for(int br = 0; br < BRAMS; br++)
+		{
+			XHLSWriterFuncA[br](InstancePtr, data[br]);
+		}
+	}else{
+		return errorHandler(ERR_DEFAULT);
+	}
+	return status;
+}
+
+void ReceiverHandler(void *InstPtr)
+{
+	float result[1];
+	XEuchw_InterruptDisable(&hls_ip,1);
+
+	RxData[0] = XEuchw_Get_C(&hls_ip);
+	result[0] = *((int*) &(RxData[0]));
+
+	xil_printf("Resultados: %f \n", result[0]);
+	ip_status = IP_Ready;
+	XEuchw_InterruptClear(&hls_ip,1);
+	XEuchw_InterruptEnable(&hls_ip,1);
+}
+
+void getVector(T vec[VECTOR_SIZE])
+{
+	for (int i = 0; i < VECTOR_SIZE; i++)
+	{
+		scanf("%d", &vec[i]);
+	}
+}
+
+void getMemType(int BRAM_ID[1])
+{
+	scanf("%d",&BRAM_ID[0]);
+}
+
+int errorHandler(enum errTypes err)
+{
+	switch(err)
+	{
+		case(ERR_HLS_INIT):
+		{
+			xil_printf("Error inicializando bloque HLS\n");
+			break;
+		}
+		case(ERR_INTC_INIT):
+		{
+			xil_printf("Error inicializando INTC\n");
+			break;
+		}
+		default:
+		{
+			xil_printf("Error en ejecucion\n");
+		}
+	}
+	return XST_FAILURE;
+}
+
+int IntcInitFunction(u16 DeviceId)
+{
+	XScuGic_Config *IntcConfig;
+	int status;
+
+	// Interrupt controller initialization
+	IntcConfig = XScuGic_LookupConfig(DeviceId);
+	status = XScuGic_CfgInitialize(&intc, IntcConfig, IntcConfig->CpuBaseAddress);
+	if(status != XST_SUCCESS) return status;
+
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+								(Xil_ExceptionHandler) XScuGic_InterruptHandler,
+								&intc);
+
+	Xil_ExceptionEnable();
+
+	status = XScuGic_Connect(&intc,
+								INTC_ADDT_INT_ID,
+								(Xil_ExceptionHandler)ReceiverHandler,
+								(void *) (&hls_ip));
+
+	// Enable GPIO interrupts interrupt
+	XEuchw_InterruptEnable(&hls_ip, 1);
+	XEuchw_InterruptGlobalEnable(&hls_ip);
+
+	return XST_SUCCESS;
+}
+
+
+
