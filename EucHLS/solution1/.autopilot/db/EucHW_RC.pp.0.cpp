@@ -26404,16 +26404,29 @@ namespace hls {
 
 };
 # 7 "src/eucHW.h" 2
-__attribute__((sdx_kernel("eucHW", 0))) void eucHW (T A[1024], T B[1024], Tout C[1]);
-# 2 "src/EucHW_RC.cpp" 2
-__attribute__((sdx_kernel("eucHW", 0))) void eucHW(T * A, T * B, Tout* C){
-#pragma HLS TOP name=eucHW
-# 2 "src/EucHW_RC.cpp"
 
-    uint32_t temp = 0;
-    eachElement:for(int index = 0; index < 1024; index ++){
-      temp += (A[index]-B[index])*(A[index]-B[index]);
-    }
-    C[0] = (Tout) hls::sqrt(temp);
-    return;
+__attribute__((sdx_kernel("eucHW", 0))) void eucHW (Tout *y_add, Tout *y_sqrt, T x[2*16]);
+# 2 "src/EucHW_RC.cpp" 2
+
+__attribute__((sdx_kernel("eucHW", 0))) void eucHW(Tout *y_add, Tout *y_sqrt, T x[2*16])
+{_ssdm_SpecArrayDimSize(x, 32);
+#pragma HLS TOP name=eucHW
+# 4 "src/EucHW_RC.cpp"
+
+#pragma HLS INTERFACE mode=s_axilite port=x storage_impl=bram
+#pragma HLS INTERFACE mode=s_axilite port=y_add
+#pragma HLS INTERFACE mode=s_axilite port=y_sqrt
+#pragma HLS INTERFACE mode=s_axilite port=return
+#pragma HLS ARRAY_PARTITION variable=x type=complete
+
+ Tout res = 0;
+
+ MainLoop: for (int i = 0; i < 16; ++i)
+ {
+#pragma HLS UNROLL
+ res += (x[i+ 16] -x[i])*(x[i+ 16] -x[i]);
+ }
+ *y_add = res;
+ *y_sqrt = hls::sqrt(res);
+ return;
 }

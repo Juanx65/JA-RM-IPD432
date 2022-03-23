@@ -3,23 +3,17 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed&lt;33, 33>' to 'sqrt_fixed_33_33_s'." projectName="EucHLS" solutionName="solution1" date="2022-03-22T12:32:10.920-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5301] unused parameter 'print': C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:792:16" projectName="EucHLS" solutionName="solution1" date="2022-03-22T12:31:58.330-0300" type="Warning"/>
-        <logs message="WARNING: [HLS 207-949] non-portable path to file '&quot;EucHW.h&quot;'; specified path differs in case from file name on disk: src/EucHW_RC.cpp:1:10" projectName="EucHLS" solutionName="solution1" date="2022-03-22T12:31:58.311-0300" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="EucHLS" solutionName="solution1" date="2022-03-22T23:53:29.269-0300" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sqrt_fixed&lt;32, 32>' to 'sqrt_fixed_32_32_s'." projectName="EucHLS" solutionName="solution1" date="2022-03-22T23:53:26.547-0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-803] Dropped interface mode 'ap_auto' on 'x_31' as it is incompatible with its interface mode 's_axilite'." projectName="EucHLS" solutionName="solution1" date="2022-03-22T23:53:25.702-0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-803] Dropped interface mode 'ap_auto' on 'x_30' as it is incompatible with its interface mode 's_axilite'." projectName="EucHLS" solutionName="solution1" date="2022-03-22T23:53:25.168-0300" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-803] Dropped interface mode 'ap_auto' on 'x_29' as it is incompatible with its interface mode 's_axilite'." projectName="EucHLS" solutionName="solution1" date="2022-03-22T23:53:25.146-0300" type="Warning"/>
       </synLog>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

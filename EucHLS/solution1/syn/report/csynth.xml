@@ -15,26 +15,26 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>7.259</EstimatedClockPeriod>
+            <EstimatedClockPeriod>7.155</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>9</Best-caseLatency>
-            <Average-caseLatency>9</Average-caseLatency>
-            <Worst-caseLatency>9</Worst-caseLatency>
-            <Best-caseRealTimeLatency>90.000 ns</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>90.000 ns</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>90.000 ns</Worst-caseRealTimeLatency>
-            <Interval-min>10</Interval-min>
-            <Interval-max>10</Interval-max>
+            <Best-caseLatency>14</Best-caseLatency>
+            <Average-caseLatency>14</Average-caseLatency>
+            <Worst-caseLatency>14</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.140 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.140 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.140 us</Worst-caseRealTimeLatency>
+            <Interval-min>15</Interval-min>
+            <Interval-max>15</Interval-max>
         </SummaryOfOverallLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <DSP>0</DSP>
-            <FF>555</FF>
-            <LUT>1465</LUT>
             <BRAM_18K>0</BRAM_18K>
+            <DSP>8</DSP>
+            <FF>1297</FF>
+            <LUT>2900</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -47,6 +47,193 @@
     </AreaEstimates>
     <InterfaceSummary>
         <RtlPorts>
+            <name>s_axi_control_AWVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWADDR</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>9</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WDATA</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WSTRB</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARADDR</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>9</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RDATA</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RRESP</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BRESP</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
             <name>ap_clk</name>
             <Object>eucHW</Object>
             <Type>return value</Type>
@@ -58,7 +245,7 @@
             <Attribute>control</Attribute>
         </RtlPorts>
         <RtlPorts>
-            <name>ap_rst</name>
+            <name>ap_rst_n</name>
             <Object>eucHW</Object>
             <Type>return value</Type>
             <Scope/>
@@ -69,18 +256,7 @@
             <Attribute>control</Attribute>
         </RtlPorts>
         <RtlPorts>
-            <name>ap_start</name>
-            <Object>eucHW</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>in</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_done</name>
+            <name>interrupt</name>
             <Object>eucHW</Object>
             <Type>return value</Type>
             <Scope/>
@@ -88,77 +264,7 @@
             <IOConfig/>
             <Dir>out</Dir>
             <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_idle</name>
-            <Object>eucHW</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>ap_ready</name>
-            <Object>eucHW</Object>
-            <Type>return value</Type>
-            <Scope/>
-            <IOProtocol>ap_ctrl_hs</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-        </RtlPorts>
-        <RtlPorts>
-            <name>A</name>
-            <Object>A</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>ap_none</IOProtocol>
-            <IOConfig/>
-            <Dir>in</Dir>
-            <Bits>8</Bits>
-            <Attribute>data</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>B</name>
-            <Object>B</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>ap_none</IOProtocol>
-            <IOConfig/>
-            <Dir>in</Dir>
-            <Bits>8</Bits>
-            <Attribute>data</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>C</name>
-            <Object>C</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>ap_vld</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>32</Bits>
-            <Attribute>data</Attribute>
-            <CType>int</CType>
-        </RtlPorts>
-        <RtlPorts>
-            <name>C_ap_vld</name>
-            <Object>C</Object>
-            <Type>pointer</Type>
-            <Scope/>
-            <IOProtocol>ap_vld</IOProtocol>
-            <IOConfig/>
-            <Dir>out</Dir>
-            <Bits>1</Bits>
-            <Attribute>control</Attribute>
-            <CType>int</CType>
+            <Attribute>unknown</Attribute>
         </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
@@ -166,24 +272,24 @@
             <ModuleName>eucHW</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_sqrt_fixed_33_33_s_fu_49</InstName>
-                    <ModuleName>sqrt_fixed_33_33_s</ModuleName>
+                    <InstName>grp_sqrt_fixed_32_32_s_fu_364</InstName>
+                    <ModuleName>sqrt_fixed_32_32_s</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>49</ID>
+                    <ID>364</ID>
                 </Instance>
             </InstancesList>
-            <BindInstances>sub_ln4_fu_62_p2 mul_9s_9s_17_1_1_U2</BindInstances>
+            <BindInstances>sub_ln16_fu_377_p2 mul_9s_9s_18_1_1_U2 sub_ln16_1_fu_391_p2 mul_9s_9s_18_1_1_U3 sub_ln16_2_fu_405_p2 mac_muladd_9s_9s_18s_18_4_1_U10 sub_ln16_3_fu_423_p2 mul_9s_9s_18_1_1_U4 sub_ln16_4_fu_437_p2 mac_muladd_9s_9s_18s_18_4_1_U11 sub_ln16_5_fu_455_p2 mul_9s_9s_18_1_1_U5 sub_ln16_6_fu_469_p2 mac_muladd_9s_9s_18s_18_4_1_U12 sub_ln16_7_fu_487_p2 mac_muladd_9s_9s_18s_18_4_1_U13 sub_ln16_8_fu_505_p2 mul_9s_9s_18_1_1_U6 sub_ln16_9_fu_519_p2 mac_muladd_9s_9s_18s_18_4_1_U14 sub_ln16_10_fu_537_p2 mul_9s_9s_18_1_1_U7 sub_ln16_11_fu_551_p2 mac_muladd_9s_9s_18s_18_4_1_U15 sub_ln16_12_fu_569_p2 mul_9s_9s_18_1_1_U8 sub_ln16_13_fu_583_p2 mul_9s_9s_18_1_1_U9 sub_ln16_14_fu_597_p2 mac_muladd_9s_9s_18s_18_4_1_U16 sub_ln16_15_fu_615_p2 mac_muladd_9s_9s_18s_18_4_1_U17 mac_muladd_9s_9s_18s_18_4_1_U16 mac_muladd_9s_9s_18s_18_4_1_U15 add_ln16_2_fu_703_p2 mac_muladd_9s_9s_18s_18_4_1_U13 mac_muladd_9s_9s_18s_18_4_1_U14 add_ln16_5_fu_719_p2 add_ln16_6_fu_729_p2 mac_muladd_9s_9s_18s_18_4_1_U10 mac_muladd_9s_9s_18s_18_4_1_U11 add_ln16_9_fu_741_p2 mac_muladd_9s_9s_18s_18_4_1_U12 mac_muladd_9s_9s_18s_18_4_1_U17 add_ln16_12_fu_757_p2 add_ln16_13_fu_767_p2 res_2_fu_779_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>sqrt_fixed_33_33_s</Name>
+            <Name>sqrt_fixed_32_32_s</Name>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
                     <TargetInitiationInterval>4294967295</TargetInitiationInterval>
-                    <EstimatedClockPeriod>7.259</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.155</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>7</Best-caseLatency>
@@ -199,10 +305,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>528</FF>
+                    <FF>573</FF>
                     <AVAIL_FF>35200</AVAIL_FF>
                     <UTIL_FF>1</UTIL_FF>
-                    <LUT>1341</LUT>
+                    <LUT>1337</LUT>
                     <AVAIL_LUT>17600</AVAIL_LUT>
                     <UTIL_LUT>7</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -223,70 +329,455 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.259</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.155</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>9</Best-caseLatency>
-                    <Average-caseLatency>9</Average-caseLatency>
-                    <Worst-caseLatency>9</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>90.000 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>90.000 ns</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>90.000 ns</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>10</PipelineInitiationInterval>
+                    <Best-caseLatency>14</Best-caseLatency>
+                    <Average-caseLatency>14</Average-caseLatency>
+                    <Worst-caseLatency>14</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.140 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.140 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.140 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>15</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>80</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
-                    <FF>555</FF>
-                    <AVAIL_FF>35200</AVAIL_FF>
-                    <UTIL_FF>1</UTIL_FF>
-                    <LUT>1465</LUT>
-                    <AVAIL_LUT>17600</AVAIL_LUT>
-                    <UTIL_LUT>8</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>120</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>8</DSP>
+                    <AVAIL_DSP>80</AVAIL_DSP>
+                    <UTIL_DSP>10</UTIL_DSP>
+                    <FF>1297</FF>
+                    <AVAIL_FF>35200</AVAIL_FF>
+                    <UTIL_FF>3</UTIL_FF>
+                    <LUT>2900</LUT>
+                    <AVAIL_LUT>17600</AVAIL_LUT>
+                    <UTIL_LUT>16</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln4_fu_62_p2" SOURCE="src/EucHW_RC.cpp:4" URAM="0" VARIABLE="sub_ln4"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_17_1_1_U2" SOURCE="r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/include/header_files\ap_fixed_base.h:408" URAM="0" VARIABLE="mul_ln408"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_fu_377_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_1_fu_391_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U3" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_2_fu_405_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U10" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_3_fu_423_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U4" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_4_fu_437_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U11" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_5_fu_455_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U5" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_6_fu_469_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U12" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_7_fu_487_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U13" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_8_fu_505_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U6" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_9_fu_519_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U14" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_10_fu_537_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U7" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_11_fu_551_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U15" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_12_fu_569_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U8" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_13_fu_583_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U9" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_14_fu_597_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U16" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_15_fu_615_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U17" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U16" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U15" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_2_fu_703_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U13" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U14" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_5_fu_719_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_6_fu_729_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U10" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U11" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_9_fu_741_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U12" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U17" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_12_fu_757_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_13_fu_767_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="res_2_fu_779_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_2"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
     <UserConfigCommands>
-        <config_export output="C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_128_zybo.zip"/>
+        <config_export output="C:/Users/juan_/Documents/FPGA/IPs/euc128_concatenado.zip"/>
     </UserConfigCommands>
     <Args>
-        <Arg ArgName="A" index="0" direction="in" srcType="unsigned char*" srcSize="8">
+        <Arg ArgName="y_add" index="0" direction="out" srcType="int*" srcSize="32">
             <hwRefs>
-                <hwRef type="port" interface="A" name="A" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="y_add" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="y_add_ctrl" usage="control" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="B" index="1" direction="in" srcType="unsigned char*" srcSize="8">
+        <Arg ArgName="y_sqrt" index="1" direction="out" srcType="int*" srcSize="32">
             <hwRefs>
-                <hwRef type="port" interface="B" name="B" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="y_sqrt" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="y_sqrt_ctrl" usage="control" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="C" index="2" direction="out" srcType="int*" srcSize="32">
+        <Arg ArgName="x" index="2" direction="in" srcType="unsigned char*" srcSize="8">
             <hwRefs>
-                <hwRef type="port" interface="C" name="C" usage="data" direction="out"/>
-                <hwRef type="port" interface="C_ap_vld" name="C_ap_vld" usage="control" direction="out"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_control" name="" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
     </Args>
     <Interfaces>
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="9" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_">
+            <ports>
+                <port>s_axi_control_ARADDR</port>
+                <port>s_axi_control_ARREADY</port>
+                <port>s_axi_control_ARVALID</port>
+                <port>s_axi_control_AWADDR</port>
+                <port>s_axi_control_AWREADY</port>
+                <port>s_axi_control_AWVALID</port>
+                <port>s_axi_control_BREADY</port>
+                <port>s_axi_control_BRESP</port>
+                <port>s_axi_control_BVALID</port>
+                <port>s_axi_control_RDATA</port>
+                <port>s_axi_control_RREADY</port>
+                <port>s_axi_control_RRESP</port>
+                <port>s_axi_control_RVALID</port>
+                <port>s_axi_control_WDATA</port>
+                <port>s_axi_control_WREADY</port>
+                <port>s_axi_control_WSTRB</port>
+                <port>s_axi_control_WVALID</port>
+            </ports>
+            <registers>
+                <register offset="0x00" name="CTRL" access="RW" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="3" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="9" width="1" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
+                        <field offset="10" width="22" name="RESERVED_4" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                        <field offset="2" width="30" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="RTOW" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 input interrupt, 1 = Channel 0 input interrup"/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="RTOW" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 input interrupt, 1 = Channel 1 input interrup"/>
+                        <field offset="2" width="30" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x10" name="y_add" access="R" description="Data signal of y_add" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="y_add" access="R" description="Bit 31 to 0 of y_add"/>
+                    </fields>
+                </register>
+                <register offset="0x14" name="y_add_ctrl" access="R" description="Control signal of y_add" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="y_add_ap_vld" access="R" description="Control signal y_add_ap_vld"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x20" name="y_sqrt" access="R" description="Data signal of y_sqrt" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="y_sqrt" access="R" description="Bit 31 to 0 of y_sqrt"/>
+                    </fields>
+                </register>
+                <register offset="0x24" name="y_sqrt_ctrl" access="R" description="Control signal of y_sqrt" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="y_sqrt_ap_vld" access="R" description="Control signal y_sqrt_ap_vld"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x30" name="x_0" access="W" description="Data signal of x_0" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_0" access="W" description="Bit 7 to 0 of x_0"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x38" name="x_1" access="W" description="Data signal of x_1" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_1" access="W" description="Bit 7 to 0 of x_1"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x40" name="x_2" access="W" description="Data signal of x_2" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_2" access="W" description="Bit 7 to 0 of x_2"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x48" name="x_3" access="W" description="Data signal of x_3" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_3" access="W" description="Bit 7 to 0 of x_3"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x50" name="x_4" access="W" description="Data signal of x_4" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_4" access="W" description="Bit 7 to 0 of x_4"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x58" name="x_5" access="W" description="Data signal of x_5" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_5" access="W" description="Bit 7 to 0 of x_5"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x60" name="x_6" access="W" description="Data signal of x_6" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_6" access="W" description="Bit 7 to 0 of x_6"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x68" name="x_7" access="W" description="Data signal of x_7" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_7" access="W" description="Bit 7 to 0 of x_7"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x70" name="x_8" access="W" description="Data signal of x_8" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_8" access="W" description="Bit 7 to 0 of x_8"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x78" name="x_9" access="W" description="Data signal of x_9" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_9" access="W" description="Bit 7 to 0 of x_9"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x80" name="x_10" access="W" description="Data signal of x_10" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_10" access="W" description="Bit 7 to 0 of x_10"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x88" name="x_11" access="W" description="Data signal of x_11" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_11" access="W" description="Bit 7 to 0 of x_11"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x90" name="x_12" access="W" description="Data signal of x_12" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_12" access="W" description="Bit 7 to 0 of x_12"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x98" name="x_13" access="W" description="Data signal of x_13" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_13" access="W" description="Bit 7 to 0 of x_13"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0xa0" name="x_14" access="W" description="Data signal of x_14" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_14" access="W" description="Bit 7 to 0 of x_14"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0xa8" name="x_15" access="W" description="Data signal of x_15" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_15" access="W" description="Bit 7 to 0 of x_15"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0xb0" name="x_16" access="W" description="Data signal of x_16" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_16" access="W" description="Bit 7 to 0 of x_16"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0xb8" name="x_17" access="W" description="Data signal of x_17" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_17" access="W" description="Bit 7 to 0 of x_17"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0xc0" name="x_18" access="W" description="Data signal of x_18" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_18" access="W" description="Bit 7 to 0 of x_18"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0xc8" name="x_19" access="W" description="Data signal of x_19" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_19" access="W" description="Bit 7 to 0 of x_19"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0xd0" name="x_20" access="W" description="Data signal of x_20" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_20" access="W" description="Bit 7 to 0 of x_20"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0xd8" name="x_21" access="W" description="Data signal of x_21" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_21" access="W" description="Bit 7 to 0 of x_21"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0xe0" name="x_22" access="W" description="Data signal of x_22" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_22" access="W" description="Bit 7 to 0 of x_22"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0xe8" name="x_23" access="W" description="Data signal of x_23" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_23" access="W" description="Bit 7 to 0 of x_23"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0xf0" name="x_24" access="W" description="Data signal of x_24" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_24" access="W" description="Bit 7 to 0 of x_24"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0xf8" name="x_25" access="W" description="Data signal of x_25" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_25" access="W" description="Bit 7 to 0 of x_25"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x100" name="x_26" access="W" description="Data signal of x_26" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_26" access="W" description="Bit 7 to 0 of x_26"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x108" name="x_27" access="W" description="Data signal of x_27" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_27" access="W" description="Bit 7 to 0 of x_27"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x110" name="x_28" access="W" description="Data signal of x_28" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_28" access="W" description="Bit 7 to 0 of x_28"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x118" name="x_29" access="W" description="Data signal of x_29" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_29" access="W" description="Bit 7 to 0 of x_29"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x120" name="x_30" access="W" description="Data signal of x_30" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_30" access="W" description="Bit 7 to 0 of x_30"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x128" name="x_31" access="W" description="Data signal of x_31" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="x_31" access="W" description="Bit 7 to 0 of x_31"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="y_add"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="32" argName="y_sqrt"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="48" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="56" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="72" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="80" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="88" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="96" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="112" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="120" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="128" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="136" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="144" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="152" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="160" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="168" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="176" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="184" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="192" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="200" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="208" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="216" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="224" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="232" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="240" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="248" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="256" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="264" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="272" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="280" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="288" argName="x"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="296" argName="x"/>
+            </constraints>
+        </Interface>
         <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
             <busParams>
-                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
             </busParams>
             <portMaps>
                 <portMap portMapName="ap_clk">CLK</portMap>
@@ -295,81 +786,44 @@
                 <port>ap_clk</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
             <busParams>
-                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
             </busParams>
             <portMaps>
-                <portMap portMapName="ap_rst">RST</portMap>
+                <portMap portMapName="ap_rst_n">RST</portMap>
             </portMaps>
             <ports>
-                <port>ap_rst</port>
+                <port>ap_rst_n</port>
             </ports>
         </Interface>
-        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+        <Interface InterfaceName="interrupt" type="interrupt" busTypeName="interrupt" mode="master" dataWidth="1">
+            <busParams>
+                <busParam busParamName="SENSITIVITY">LEVEL_HIGH</busParam>
+            </busParams>
             <portMaps>
-                <portMap portMapName="ap_start">start</portMap>
-                <portMap portMapName="ap_done">done</portMap>
-                <portMap portMapName="ap_idle">idle</portMap>
-                <portMap portMapName="ap_ready">ready</portMap>
+                <portMap portMapName="interrupt">INTERRUPT</portMap>
             </portMaps>
             <ports>
-                <port>ap_done</port>
-                <port>ap_idle</port>
-                <port>ap_ready</port>
-                <port>ap_start</port>
+                <port>interrupt</port>
             </ports>
-        </Interface>
-        <Interface InterfaceName="A" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
-            <portMaps>
-                <portMap portMapName="A">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>A</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="A"/>
-            </constraints>
-        </Interface>
-        <Interface InterfaceName="B" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
-            <portMaps>
-                <portMap portMapName="B">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>B</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="B"/>
-            </constraints>
-        </Interface>
-        <Interface InterfaceName="C" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="32">
-            <portMaps>
-                <portMap portMapName="C">DATA</portMap>
-            </portMaps>
-            <ports>
-                <port>C</port>
-            </ports>
-            <constraints>
-                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="C"/>
-            </constraints>
         </Interface>
     </Interfaces>
     <ReportHWInterface>
         <section name="HW Interfaces" level="0">
-            <item name="REGISTER">
+            <item name="S_AXILITE">
                 <table isCollapsed="0">
-                    <keys size="3">Interface, Mode, Bitwidth</keys>
-                    <column name="A">ap_none, 8</column>
-                    <column name="B">ap_none, 8</column>
-                    <column name="C">ap_none, 32</column>
+                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
+                    <column name="s_axi_control">32, 9, 16, 0</column>
                 </table>
             </item>
             <item name="TOP LEVEL CONTROL">
                 <table isCollapsed="0">
                     <keys size="3">Interface, Type, Ports</keys>
                     <column name="ap_clk">clock, ap_clk</column>
-                    <column name="ap_rst">reset, ap_rst</column>
-                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="interrupt">interrupt, interrupt</column>
+                    <column name="ap_ctrl">ap_ctrl_hs</column>
                 </table>
             </item>
         </section>
@@ -379,18 +833,50 @@
             <item name="Top Function Arguments">
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="A">in, unsigned char*</column>
-                    <column name="B">in, unsigned char*</column>
-                    <column name="C">out, int*</column>
+                    <column name="y_add">out, int*</column>
+                    <column name="y_sqrt">out, int*</column>
+                    <column name="x">in, unsigned char*</column>
                 </table>
             </item>
             <item name="SW-to-HW Mapping">
                 <table isCollapsed="1">
-                    <keys size="3">Argument, HW Name, HW Type</keys>
-                    <column name="A">A, port</column>
-                    <column name="B">B, port</column>
-                    <column name="C">C, port</column>
-                    <column name="C">C_ap_vld, port</column>
+                    <keys size="4">Argument, HW Name, HW Type, HW Info</keys>
+                    <column name="y_add">s_axi_control y_add, register, offset=0x10 range=32</column>
+                    <column name="y_add">s_axi_control y_add_ctrl, register, offset=0x14 range=32</column>
+                    <column name="y_sqrt">s_axi_control y_sqrt, register, offset=0x20 range=32</column>
+                    <column name="y_sqrt">s_axi_control y_sqrt_ctrl, register, offset=0x24 range=32</column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
+                    <column name="x">s_axi_control, interface, </column>
                 </table>
             </item>
         </section>

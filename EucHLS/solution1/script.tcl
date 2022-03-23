@@ -14,9 +14,9 @@ add_files -tb src/EucTB.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unkn
 open_solution "solution1" -flow_target vivado
 set_part {xc7z010i-clg400-1L}
 create_clock -period 10 -name default
-config_export -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/eucDistHW_128_zybo.zip -rtl verilog
+config_export -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/euc128_concatenado.zip -rtl verilog
 source "./EucHLS/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design
-export_design -rtl verilog -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/Wauro21.zip
+export_design -rtl verilog -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/euc16_concatenado.zip

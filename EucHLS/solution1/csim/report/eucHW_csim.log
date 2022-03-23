@@ -2,109 +2,46 @@ INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../src/EucSW.cpp in debug mode
    Compiling ../../../../src/EucTB.cpp in debug mode
-   Compiling ../../../../src/EucHW_RC.cpp in debug mode
-   Generating csim.exe
-Euc Dist calculation: 
-C_SW: 3311, C_HW: 3311
-C_SW: 3483, C_HW: 3483
-C_SW: 3356, C_HW: 3357
-C_SW: 3344, C_HW: 3345
-C_SW: 3281, C_HW: 3282
-C_SW: 3260, C_HW: 3261
-C_SW: 3467, C_HW: 3468
-C_SW: 3281, C_HW: 3282
-C_SW: 3365, C_HW: 3366
-C_SW: 3271, C_HW: 3271
-C_SW: 3288, C_HW: 3289
-C_SW: 3476, C_HW: 3476
-C_SW: 3260, C_HW: 3261
-C_SW: 3334, C_HW: 3334
-C_SW: 3381, C_HW: 3382
-C_SW: 3235, C_HW: 3235
-C_SW: 3277, C_HW: 3277
-C_SW: 3417, C_HW: 3417
-C_SW: 3379, C_HW: 3379
-C_SW: 3343, C_HW: 3344
-C_SW: 3356, C_HW: 3357
-C_SW: 3347, C_HW: 3347
-C_SW: 3220, C_HW: 3221
-C_SW: 3323, C_HW: 3324
-C_SW: 3373, C_HW: 3374
-C_SW: 3449, C_HW: 3450
-C_SW: 3261, C_HW: 3261
-C_SW: 3261, C_HW: 3262
-C_SW: 3295, C_HW: 3296
-C_SW: 3338, C_HW: 3338
-C_SW: 3338, C_HW: 3339
-C_SW: 3308, C_HW: 3309
-C_SW: 3312, C_HW: 3312
-C_SW: 3230, C_HW: 3230
-C_SW: 3429, C_HW: 3430
-C_SW: 3370, C_HW: 3370
-C_SW: 3306, C_HW: 3306
-C_SW: 3224, C_HW: 3224
-C_SW: 3474, C_HW: 3474
-C_SW: 3352, C_HW: 3353
-C_SW: 3334, C_HW: 3334
-C_SW: 3398, C_HW: 3398
-C_SW: 3120, C_HW: 3121
-C_SW: 3283, C_HW: 3284
-C_SW: 3399, C_HW: 3399
-C_SW: 3301, C_HW: 3302
-C_SW: 3330, C_HW: 3330
-C_SW: 3341, C_HW: 3341
-C_SW: 3353, C_HW: 3354
-C_SW: 3267, C_HW: 3267
-C_SW: 3271, C_HW: 3271
-C_SW: 3366, C_HW: 3366
-C_SW: 3395, C_HW: 3395
-C_SW: 3405, C_HW: 3406
-C_SW: 3392, C_HW: 3392
-C_SW: 3360, C_HW: 3361
-C_SW: 3240, C_HW: 3241
-C_SW: 3320, C_HW: 3321
-C_SW: 3321, C_HW: 3322
-C_SW: 3302, C_HW: 3302
-C_SW: 3263, C_HW: 3264
-C_SW: 3392, C_HW: 3392
-C_SW: 3291, C_HW: 3291
-C_SW: 3335, C_HW: 3336
-C_SW: 3321, C_HW: 3321
-C_SW: 3256, C_HW: 3257
-C_SW: 3341, C_HW: 3342
-C_SW: 3269, C_HW: 3269
-C_SW: 3347, C_HW: 3348
-C_SW: 3311, C_HW: 3312
-C_SW: 3205, C_HW: 3206
-C_SW: 3330, C_HW: 3331
-C_SW: 3252, C_HW: 3253
-C_SW: 3292, C_HW: 3292
-C_SW: 3264, C_HW: 3264
-C_SW: 3297, C_HW: 3297
-C_SW: 3285, C_HW: 3286
-C_SW: 3350, C_HW: 3351
-C_SW: 3331, C_HW: 3332
-C_SW: 3339, C_HW: 3340
-C_SW: 3240, C_HW: 3240
-C_SW: 3274, C_HW: 3275
-C_SW: 3299, C_HW: 3299
-C_SW: 3260, C_HW: 3260
-C_SW: 3321, C_HW: 3322
-C_SW: 3320, C_HW: 3320
-C_SW: 3380, C_HW: 3380
-C_SW: 3451, C_HW: 3451
-C_SW: 3374, C_HW: 3374
-C_SW: 3363, C_HW: 3364
-C_SW: 3241, C_HW: 3242
-C_SW: 3287, C_HW: 3288
-C_SW: 3286, C_HW: 3286
-C_SW: 3377, C_HW: 3377
-C_SW: 3354, C_HW: 3355
-C_SW: 3370, C_HW: 3371
-C_SW: 3245, C_HW: 3246
-C_SW: 3371, C_HW: 3372
-C_SW: 3358, C_HW: 3358
-C_SW: 3420, C_HW: 3421
-Number of errors: 54
-INFO: [SIM 1] CSim done with 0 errors.
+csim.mk:78: recipe for target 'obj/EucTB.o' failed
+In file included from ../../../../src/eucSW.h:4:0,
+                 from ../../../../src/EucSW.cpp:1:
+../../../../src/specs.h:4:2: warning: #import is a deprecated GCC extension [-Wdeprecated]
+ #import <cstdint>
+  ^~~~~~
+In file included from ../../../../src/EucTB.cpp:4:0:
+../../../../src/specs.h:4:2: warning: #import is a deprecated GCC extension [-Wdeprecated]
+ #import <cstdint>
+  ^~~~~~
+In file included from C:/Xilinx/Vitis_HLS/2021.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_fpo.h:189,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h:41,
+                 from ../../../../src/eucHW.h:6,
+                 from ../../../../src/EucTB.cpp:5:
+C:/Xilinx/Vitis_HLS/2021.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2021.1/include/hls_fpo.h:189:0,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h:41,
+                 from ../../../../src/eucHW.h:6,
+                 from ../../../../src/EucTB.cpp:5:
+C:/Xilinx/Vitis_HLS/2021.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2021.1/include/hls_hotbm_apfixed.h:45:0,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h:1065,
+                 from ../../../../src/eucHW.h:6,
+                 from ../../../../src/EucTB.cpp:5:
+C:/Xilinx/Vitis_HLS/2021.1/include/utils/x_hls_utils.h:243:40: warning: 'hls_preserve' attribute directive ignored [-Wattributes]
+ __attribute__((hls_preserve)) T reg(T d)
+                                        ^
+../../../../src/EucTB.cpp: In function 'int main()':
+../../../../src/EucTB.cpp:30:20: error: cannot convert 'T* {aka unsigned char*}' to 'Tout* {aka int*}' for argument '1' to 'void eucHW(Tout*, Tout*, T*)'
+   eucHW (A, B, C_HW);
+                    ^
+make: *** [obj/EucTB.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
 INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,5 +1,25 @@
 #include "eucHW.h"
 
+void eucHW(Tout *y_add, Tout *y_sqrt, T x[2*LENGTH])
+{
+	#pragma HLS INTERFACE mode=s_axilite port=x storage_impl=bram
+	#pragma HLS INTERFACE mode=s_axilite port=y_add
+	#pragma HLS INTERFACE mode=s_axilite port=y_sqrt
+	#pragma HLS INTERFACE mode=s_axilite port=return
+	#pragma HLS ARRAY_PARTITION variable=x type=complete
+
+	Tout res = 0;
+
+	MainLoop: for (int i = 0; i < LENGTH; ++i)
+	{
+		#pragma HLS UNROLL
+		res += (x[i+ LENGTH] -x[i])*(x[i+ LENGTH] -x[i]);
+	}
+	*y_add = res;
+	*y_sqrt = hls::sqrt(res);
+	return;
+}
+/*
 void eucHW (T A[LENGTH], T B[LENGTH], Tout C[1])
 {
 	#pragma HLS INTERFACE mode=s_axilite port=A storage_impl=bram
@@ -18,6 +38,7 @@ void eucHW (T A[LENGTH], T B[LENGTH], Tout C[1])
 	C[0] =  hls::sqrt(result);
 	return;
 }
+*/
 /*
 void eucHW (T A[LENGTH], T B[LENGTH], Tout C[1])
 {
