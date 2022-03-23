@@ -15,26 +15,26 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>7.155</EstimatedClockPeriod>
+            <EstimatedClockPeriod>8.567</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>14</Best-caseLatency>
-            <Average-caseLatency>14</Average-caseLatency>
-            <Worst-caseLatency>14</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.140 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.140 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.140 us</Worst-caseRealTimeLatency>
-            <Interval-min>15</Interval-min>
-            <Interval-max>15</Interval-max>
+            <Best-caseLatency>97</Best-caseLatency>
+            <Average-caseLatency>97</Average-caseLatency>
+            <Worst-caseLatency>97</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.970 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.970 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.970 us</Worst-caseRealTimeLatency>
+            <Interval-min>98</Interval-min>
+            <Interval-max>98</Interval-max>
         </SummaryOfOverallLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
             <BRAM_18K>0</BRAM_18K>
-            <DSP>8</DSP>
-            <FF>1297</FF>
-            <LUT>2900</LUT>
+            <DSP>2</DSP>
+            <FF>1373</FF>
+            <LUT>2697</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -270,75 +270,26 @@
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="2">
             <ModuleName>eucHW</ModuleName>
-            <InstancesList>
-                <Instance>
-                    <InstName>grp_sqrt_fixed_32_32_s_fu_364</InstName>
-                    <ModuleName>sqrt_fixed_32_32_s</ModuleName>
-                    <IsCompInst>true</IsCompInst>
-                    <ID>364</ID>
-                </Instance>
-            </InstancesList>
-            <BindInstances>sub_ln16_fu_377_p2 mul_9s_9s_18_1_1_U2 sub_ln16_1_fu_391_p2 mul_9s_9s_18_1_1_U3 sub_ln16_2_fu_405_p2 mac_muladd_9s_9s_18s_18_4_1_U10 sub_ln16_3_fu_423_p2 mul_9s_9s_18_1_1_U4 sub_ln16_4_fu_437_p2 mac_muladd_9s_9s_18s_18_4_1_U11 sub_ln16_5_fu_455_p2 mul_9s_9s_18_1_1_U5 sub_ln16_6_fu_469_p2 mac_muladd_9s_9s_18s_18_4_1_U12 sub_ln16_7_fu_487_p2 mac_muladd_9s_9s_18s_18_4_1_U13 sub_ln16_8_fu_505_p2 mul_9s_9s_18_1_1_U6 sub_ln16_9_fu_519_p2 mac_muladd_9s_9s_18s_18_4_1_U14 sub_ln16_10_fu_537_p2 mul_9s_9s_18_1_1_U7 sub_ln16_11_fu_551_p2 mac_muladd_9s_9s_18s_18_4_1_U15 sub_ln16_12_fu_569_p2 mul_9s_9s_18_1_1_U8 sub_ln16_13_fu_583_p2 mul_9s_9s_18_1_1_U9 sub_ln16_14_fu_597_p2 mac_muladd_9s_9s_18s_18_4_1_U16 sub_ln16_15_fu_615_p2 mac_muladd_9s_9s_18s_18_4_1_U17 mac_muladd_9s_9s_18s_18_4_1_U16 mac_muladd_9s_9s_18s_18_4_1_U15 add_ln16_2_fu_703_p2 mac_muladd_9s_9s_18s_18_4_1_U13 mac_muladd_9s_9s_18s_18_4_1_U14 add_ln16_5_fu_719_p2 add_ln16_6_fu_729_p2 mac_muladd_9s_9s_18s_18_4_1_U10 mac_muladd_9s_9s_18s_18_4_1_U11 add_ln16_9_fu_741_p2 mac_muladd_9s_9s_18s_18_4_1_U12 mac_muladd_9s_9s_18s_18_4_1_U17 add_ln16_12_fu_757_p2 add_ln16_13_fu_767_p2 res_2_fu_779_p2</BindInstances>
+            <BindInstances>sub_ln16_fu_399_p2 mul_9s_9s_18_1_1_U5 sub_ln16_1_fu_423_p2 mul_9s_9s_18_1_1_U6 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_2_fu_447_p2 mul_9s_9s_18_1_1_U7 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_3_fu_461_p2 mul_9s_9s_18_1_1_U8 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_4_fu_475_p2 mul_9s_9s_18_1_1_U9 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_5_fu_489_p2 mul_9s_9s_18_1_1_U10 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_6_fu_503_p2 mul_9s_9s_18_1_1_U11 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_7_fu_517_p2 mul_9s_9s_18_1_1_U12 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_8_fu_531_p2 mul_9s_9s_18_1_1_U13 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_9_fu_545_p2 mul_9s_9s_18_1_1_U14 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_10_fu_559_p2 mul_9s_9s_18_1_1_U15 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_11_fu_573_p2 mul_9s_9s_18_1_1_U16 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_12_fu_587_p2 mul_9s_9s_18_1_1_U17 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_13_fu_601_p2 mul_9s_9s_18_1_1_U18 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_14_fu_615_p2 mul_9s_9s_18_1_1_U19 fadd_32ns_32ns_32_5_full_dsp_1_U1 sub_ln16_15_fu_629_p2 mul_9s_9s_18_1_1_U20 fadd_32ns_32ns_32_5_full_dsp_1_U1 fsqrt_32ns_32ns_32_16_no_dsp_1_U4</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
-        <Module>
-            <Name>sqrt_fixed_32_32_s</Name>
-            <PerformanceEstimates>
-                <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>10.00</TargetClockPeriod>
-                    <ClockUncertainty>2.70</ClockUncertainty>
-                    <TargetInitiationInterval>4294967295</TargetInitiationInterval>
-                    <EstimatedClockPeriod>7.155</EstimatedClockPeriod>
-                </SummaryOfTimingAnalysis>
-                <SummaryOfOverallLatency>
-                    <Best-caseLatency>7</Best-caseLatency>
-                    <Average-caseLatency>7</Average-caseLatency>
-                    <Worst-caseLatency>7</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>70.000 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>70.000 ns</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>70.000 ns</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
-                    <PipelineDepth>8</PipelineDepth>
-                    <PipelineType>yes</PipelineType>
-                </SummaryOfOverallLatency>
-            </PerformanceEstimates>
-            <AreaEstimates>
-                <Resources>
-                    <FF>573</FF>
-                    <AVAIL_FF>35200</AVAIL_FF>
-                    <UTIL_FF>1</UTIL_FF>
-                    <LUT>1337</LUT>
-                    <AVAIL_LUT>17600</AVAIL_LUT>
-                    <UTIL_LUT>7</UTIL_LUT>
-                    <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>120</AVAIL_BRAM>
-                    <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>80</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
-                    <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
-                    <UTIL_URAM>0</UTIL_URAM>
-                </Resources>
-            </AreaEstimates>
-        </Module>
         <Module>
             <Name>eucHW</Name>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.155</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>8.567</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>14</Best-caseLatency>
-                    <Average-caseLatency>14</Average-caseLatency>
-                    <Worst-caseLatency>14</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.140 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.140 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.140 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>15</PipelineInitiationInterval>
+                    <Best-caseLatency>97</Best-caseLatency>
+                    <Average-caseLatency>97</Average-caseLatency>
+                    <Worst-caseLatency>97</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.970 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.970 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.970 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>98</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
@@ -347,83 +298,84 @@
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>120</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>8</DSP>
+                    <DSP>2</DSP>
                     <AVAIL_DSP>80</AVAIL_DSP>
-                    <UTIL_DSP>10</UTIL_DSP>
-                    <FF>1297</FF>
+                    <UTIL_DSP>2</UTIL_DSP>
+                    <FF>1373</FF>
                     <AVAIL_FF>35200</AVAIL_FF>
                     <UTIL_FF>3</UTIL_FF>
-                    <LUT>2900</LUT>
+                    <LUT>2697</LUT>
                     <AVAIL_LUT>17600</AVAIL_LUT>
-                    <UTIL_LUT>16</UTIL_LUT>
+                    <UTIL_LUT>15</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_fu_377_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_1_fu_391_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U3" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_2_fu_405_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U10" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_3_fu_423_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U4" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_4_fu_437_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U11" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_5_fu_455_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U5" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_6_fu_469_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U12" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_7_fu_487_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U13" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_8_fu_505_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_8"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U6" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_9_fu_519_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_9"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U14" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_8"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_10_fu_537_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_10"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U7" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_9"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_11_fu_551_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_11"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U15" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_10"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_12_fu_569_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_12"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U8" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_11"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_13_fu_583_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_13"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U9" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_12"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_14_fu_597_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_14"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U16" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_13"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_15_fu_615_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_15"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U17" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_14"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U16" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U15" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_2_fu_703_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U13" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U14" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_4"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_5_fu_719_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_5"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_6_fu_729_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U10" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_7"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U11" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_8"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_9_fu_741_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_9"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U12" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_10"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9s_9s_18s_18_4_1_U17" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_11"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_12_fu_757_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_12"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_13_fu_767_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="add_ln16_13"/>
-                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="res_2_fu_779_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_fu_399_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U5" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_1_fu_423_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U6" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_2_fu_447_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U7" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_3_fu_461_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U8" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_4_fu_475_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U9" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_5_fu_489_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U10" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_6_fu_503_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U11" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_7_fu_517_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U12" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_8_fu_531_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U13" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_9_fu_545_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U14" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_10_fu_559_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U15" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_11_fu_573_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U16" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_12_fu_587_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U17" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_13_fu_601_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U18" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_14_fu_615_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U19" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln16_15_fu_629_p2" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="sub_ln16_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9s_9s_18_1_1_U20" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="mul_ln16_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="4" LOOP="" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_5_full_dsp_1_U1" SOURCE="src/EucHW_RC.cpp:16" URAM="0" VARIABLE="res_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op fsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="15" LOOP="" OPTYPE="fsqrt" PRAGMA="" RTLNAME="fsqrt_32ns_32ns_32_16_no_dsp_1_U4" SOURCE="r:/builds/2021.1/rdi_builds/continuous/2021_06_10_3247384/src/shared/hls/clib/hlsmath/src/c++/sqrtfloat.cpp:8" URAM="0" VARIABLE="tmp"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
     <UserConfigCommands>
-        <config_export output="C:/Users/juan_/Documents/FPGA/IPs/euc128_concatenado.zip"/>
+        <config_export output="C:/Users/juan_/Documents/FPGA/IPs/euc16_concatenado.zip"/>
     </UserConfigCommands>
     <Args>
-        <Arg ArgName="y_add" index="0" direction="out" srcType="int*" srcSize="32">
+        <Arg ArgName="y_add" index="0" direction="out" srcType="float*" srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control" name="y_add" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="y_add_ctrl" usage="control" direction="out"/>
             </hwRefs>
         </Arg>
-        <Arg ArgName="y_sqrt" index="1" direction="out" srcType="int*" srcSize="32">
+        <Arg ArgName="y_sqrt" index="1" direction="out" srcType="float*" srcSize="32">
             <hwRefs>
                 <hwRef type="register" interface="s_axi_control" name="y_sqrt" usage="data" direction="out"/>
                 <hwRef type="register" interface="s_axi_control" name="y_sqrt_ctrl" usage="control" direction="out"/>
@@ -833,8 +785,8 @@
             <item name="Top Function Arguments">
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="y_add">out, int*</column>
-                    <column name="y_sqrt">out, int*</column>
+                    <column name="y_add">out, float*</column>
+                    <column name="y_sqrt">out, float*</column>
                     <column name="x">in, unsigned char*</column>
                 </table>
             </item>

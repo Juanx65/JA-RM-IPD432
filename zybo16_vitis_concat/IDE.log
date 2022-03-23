@@ -735,3 +735,4 @@ con
 ----------------End of Script----------------
 
 01:24:22 INFO  : Launch script is exported to file 'C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\zybo16_vitis_concat\euc16concat_system\_ide\scripts\debugger_euc16concat-default.tcl'
+01:30:02 INFO  : Disconnected from the channel tcfchan#15.

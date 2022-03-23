@@ -16173,3 +16173,9 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-20: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2022-03-23 01:24:22.538
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-20: Launching Debugger_euc16concat-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-03-23 01:30:02.786
+!MESSAGE XSCT Command: [disconnect tcfchan#15], Thread: Thread-1541
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-03-23 01:30:02.790
+!MESSAGE XSCT command with result: [disconnect tcfchan#15], Result: [null, ]. Thread: Thread-1541

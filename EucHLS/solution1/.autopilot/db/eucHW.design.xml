@@ -3,121 +3,26 @@
 <RTLDesignHierarchy>
 <TopModule>
 <ModuleName>eucHW</ModuleName>
-<InstancesList>
-<Instance>
-<InstName>grp_sqrt_fixed_32_32_s_fu_364</InstName>
-<ModuleName>sqrt_fixed_32_32_s</ModuleName>
-<IsCompInst>true</IsCompInst>
-<ID>364</ID>
-</Instance>
-</InstancesList>
 </TopModule>
 </RTLDesignHierarchy>
 
 <ModuleInformation>
-<Module>
-<Name>sqrt_fixed_32_32_s</Name>
-<PerformanceEstimates>
-<SummaryOfTimingAnalysis>
-<TargetClockPeriod>10.00</TargetClockPeriod>
-<ClockUncertainty>2.70</ClockUncertainty>
-<TargetInitiationInterval>4294967295</TargetInitiationInterval>
-<EstimatedClockPeriod>7.155</EstimatedClockPeriod>
-</SummaryOfTimingAnalysis>
-<SummaryOfOverallLatency>
-<Best-caseLatency>7</Best-caseLatency>
-<Average-caseLatency>7</Average-caseLatency>
-<Worst-caseLatency>7</Worst-caseLatency>
-<Best-caseRealTimeLatency>70.000 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>70.000 ns</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>70.000 ns</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>1</PipelineInitiationInterval>
-<PipelineDepth>8</PipelineDepth>
-<PipelineType>yes</PipelineType>
-</SummaryOfOverallLatency>
-</PerformanceEstimates>
-<AreaEstimates>
-<Resources>
-<FF>573</FF>
-<AVAIL_FF>35200</AVAIL_FF>
-<UTIL_FF>1</UTIL_FF>
-<LUT>1337</LUT>
-<AVAIL_LUT>17600</AVAIL_LUT>
-<UTIL_LUT>7</UTIL_LUT>
-<BRAM_18K>0</BRAM_18K>
-<AVAIL_BRAM>120</AVAIL_BRAM>
-<UTIL_BRAM>0</UTIL_BRAM>
-<DSP>0</DSP>
-<AVAIL_DSP>80</AVAIL_DSP>
-<UTIL_DSP>0</UTIL_DSP>
-<URAM>0</URAM>
-<AVAIL_URAM>0</AVAIL_URAM>
-<UTIL_URAM>0</UTIL_URAM>
-</Resources>
-</AreaEstimates>
-<InterfaceSummary>
-<RtlPorts>
-<name>ap_clk</name>
-<Object>sqrt_fixed&lt;32, 32&gt;</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_rst</name>
-<Object>sqrt_fixed&lt;32, 32&gt;</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>1</Bits>
-<Attribute>control</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>ap_return</name>
-<Object>sqrt_fixed&lt;32, 32&gt;</Object>
-<Type>return value</Type>
-<Scope></Scope>
-<IOProtocol>ap_ctrl_hs</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>out</Dir>
-<Bits>16</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>x</name>
-<Object>x</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>21</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-</InterfaceSummary>
-</Module>
 <Module>
 <Name>eucHW</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
 <TargetClockPeriod>10.00</TargetClockPeriod>
 <ClockUncertainty>2.70</ClockUncertainty>
-<EstimatedClockPeriod>7.155</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.567</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>14</Best-caseLatency>
-<Average-caseLatency>14</Average-caseLatency>
-<Worst-caseLatency>14</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.140 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.140 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.140 us</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>15</PipelineInitiationInterval>
+<Best-caseLatency>97</Best-caseLatency>
+<Average-caseLatency>97</Average-caseLatency>
+<Worst-caseLatency>97</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.970 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.970 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.970 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>98</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
@@ -126,15 +31,15 @@
 <BRAM_18K>0</BRAM_18K>
 <AVAIL_BRAM>120</AVAIL_BRAM>
 <UTIL_BRAM>0</UTIL_BRAM>
-<DSP>8</DSP>
+<DSP>2</DSP>
 <AVAIL_DSP>80</AVAIL_DSP>
-<UTIL_DSP>10</UTIL_DSP>
-<FF>1297</FF>
+<UTIL_DSP>2</UTIL_DSP>
+<FF>1373</FF>
 <AVAIL_FF>35200</AVAIL_FF>
 <UTIL_FF>3</UTIL_FF>
-<LUT>2900</LUT>
+<LUT>2697</LUT>
 <AVAIL_LUT>17600</AVAIL_LUT>
-<UTIL_LUT>16</UTIL_LUT>
+<UTIL_LUT>15</UTIL_LUT>
 <URAM>0</URAM>
 <AVAIL_URAM>0</AVAIL_URAM>
 <UTIL_URAM>0</UTIL_URAM>

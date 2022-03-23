@@ -4,7 +4,7 @@
 #import <cstdint>
 
 typedef uint8_t T;
-typedef int Tout;
+typedef float Tout;
 
 #define LENGTH 16
 

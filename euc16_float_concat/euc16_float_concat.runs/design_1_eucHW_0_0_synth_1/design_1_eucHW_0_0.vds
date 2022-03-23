@@ -1,0 +1,290 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Mar 23 01:38:46 2022
+# Process ID: 19152
+# Current directory: C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.runs/design_1_eucHW_0_0_synth_1
+# Command line: vivado.exe -log design_1_eucHW_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_eucHW_0_0.tcl
+# Log file: C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.runs/design_1_eucHW_0_0_synth_1/design_1_eucHW_0_0.vds
+# Journal file: C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.runs/design_1_eucHW_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_eucHW_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/juan_/Documents/FPGA/IPs/euc16_float_concatenado'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.cache/ip 
+Command: synth_design -top design_1_eucHW_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10900
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1119.562 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_eucHW_0_0' [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ip/design_1_eucHW_0_0/synth/design_1_eucHW_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'eucHW' [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW.v:12]
+INFO: [Synth 8-6157] synthesizing module 'eucHW_control_s_axi' [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW_control_s_axi.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW_control_s_axi.v:468]
+INFO: [Synth 8-6155] done synthesizing module 'eucHW_control_s_axi' (1#1) [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW_control_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'eucHW_fadd_32ns_32ns_32_5_full_dsp_1' [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW_fadd_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'eucHW_fadd_32ns_32ns_32_5_full_dsp_1_ip' [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/ip/eucHW_fadd_32ns_32ns_32_5_full_dsp_1_ip.v:60]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [C:/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:59102]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (2#1) [C:/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:59102]
+INFO: [Synth 8-6155] done synthesizing module 'eucHW_fadd_32ns_32ns_32_5_full_dsp_1_ip' (21#1) [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/ip/eucHW_fadd_32ns_32ns_32_5_full_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'eucHW_fadd_32ns_32ns_32_5_full_dsp_1' (22#1) [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW_fadd_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'eucHW_sitofp_32s_32_6_no_dsp_1' [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW_sitofp_32s_32_6_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'eucHW_sitofp_32s_32_6_no_dsp_1_ip' [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/ip/eucHW_sitofp_32s_32_6_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'eucHW_sitofp_32s_32_6_no_dsp_1_ip' (31#1) [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/ip/eucHW_sitofp_32s_32_6_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'eucHW_sitofp_32s_32_6_no_dsp_1' (32#1) [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW_sitofp_32s_32_6_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1' [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip' [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/ip/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip' (37#1) [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/ip/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1' (38#1) [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'eucHW_mul_9s_9s_18_1_1' [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW_mul_9s_9s_18_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'eucHW_mul_9s_9s_18_1_1' (39#1) [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW_mul_9s_9s_18_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'eucHW' (40#1) [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ipshared/002b/hdl/verilog/eucHW.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_eucHW_0_0' (41#1) [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ip/design_1_eucHW_0_0/synth/design_1_eucHW_0_0.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 1119.562 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 1119.562 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 1119.562 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.238 . Memory (MB): peak = 1119.562 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1254 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ip/design_1_eucHW_0_0/constraints/eucHW_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.gen/sources_1/bd/design_1/ip/design_1_eucHW_0_0/constraints/eucHW_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.runs/design_1_eucHW_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.runs/design_1_eucHW_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1122.863 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 35 instances were transformed.
+  FDE => FDRE: 35 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 1135.836 ; gain = 12.973
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:42 ; elapsed = 00:00:57 . Memory (MB): peak = 1135.836 ; gain = 16.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:42 ; elapsed = 00:00:57 . Memory (MB): peak = 1135.836 ; gain = 16.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.runs/design_1_eucHW_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:57 . Memory (MB): peak = 1135.836 ; gain = 16.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'eucHW_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'eucHW_control_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'eucHW_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'eucHW_control_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:47 ; elapsed = 00:01:02 . Memory (MB): peak = 1135.836 ; gain = 16.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/fadd_32ns_32ns_32_5_full_dsp_1_U1/eucHW_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'inst/fadd_32ns_32ns_32_5_full_dsp_1_U1/eucHW_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/fadd_32ns_32ns_32_5_full_dsp_1_U1/eucHW_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fadd_32ns_32ns_32_5_full_dsp_1_U1/eucHW_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fadd_32ns_32ns_32_5_full_dsp_1_U1/eucHW_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fadd_32ns_32ns_32_5_full_dsp_1_U1/eucHW_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized27) to 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized27) to 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'eucHW_sitofp_32s_32_6_no_dsp_1:/eucHW_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized27) to 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized27) to 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/SQRT_OP.SPD.OP/i_mant_calc.ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/fsqrt_32ns_32ns_32_16_no_dsp_1_U4/eucHW_fsqrt_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 1135.836 ; gain = 16.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:22 . Memory (MB): peak = 1177.898 ; gain = 58.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:23 . Memory (MB): peak = 1204.457 ; gain = 84.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:10 ; elapsed = 00:01:25 . Memory (MB): peak = 1217.227 ; gain = 97.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:13 ; elapsed = 00:01:28 . Memory (MB): peak = 1226.168 ; gain = 106.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:13 ; elapsed = 00:01:28 . Memory (MB): peak = 1226.168 ; gain = 106.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:28 . Memory (MB): peak = 1226.168 ; gain = 106.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:28 . Memory (MB): peak = 1226.168 ; gain = 106.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:14 ; elapsed = 00:01:28 . Memory (MB): peak = 1226.168 ; gain = 106.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:14 ; elapsed = 00:01:28 . Memory (MB): peak = 1226.168 ; gain = 106.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    51|
+|2     |DSP48E1 |    18|
+|7     |LUT1    |    41|
+|8     |LUT2    |   287|
+|9     |LUT3    |   849|
+|10    |LUT4    |   170|
+|11    |LUT5    |   152|
+|12    |LUT6    |   346|
+|13    |MUXCY   |   635|
+|14    |MUXF7   |    28|
+|15    |SRL16E  |    26|
+|16    |XORCY   |   537|
+|17    |FDE     |    35|
+|18    |FDRE    |  1511|
+|19    |FDSE    |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:14 ; elapsed = 00:01:29 . Memory (MB): peak = 1226.168 ; gain = 106.605
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:01:22 . Memory (MB): peak = 1226.168 ; gain = 90.332
+Synthesis Optimization Complete : Time (s): cpu = 00:01:14 ; elapsed = 00:01:29 . Memory (MB): peak = 1226.168 ; gain = 106.605
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1226.168 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1304 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1241.914 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 213 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 178 instances
+  FDE => FDRE: 35 instances
+
+Synth Design complete, checksum: b8157f12
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:20 ; elapsed = 00:01:37 . Memory (MB): peak = 1241.914 ; gain = 122.352
+INFO: [Common 17-1381] The checkpoint 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.runs/design_1_eucHW_0_0_synth_1/design_1_eucHW_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_eucHW_0_0, cache-ID = 305a7aa31a5700a8
+INFO: [Coretcl 2-1174] Renamed 293 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_float_concat/euc16_float_concat.runs/design_1_eucHW_0_0_synth_1/design_1_eucHW_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_eucHW_0_0_utilization_synth.rpt -pb design_1_eucHW_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 23 01:40:38 2022...
