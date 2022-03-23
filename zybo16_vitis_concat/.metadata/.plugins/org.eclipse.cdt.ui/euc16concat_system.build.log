@@ -1,0 +1,10 @@
+02:32:41 **** Incremental Build of configuration Debug for project euc16concat_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 58799 C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/zybo16_concat.xpfm standalone_ps7_cortexa9_0 C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/zybo16_concat.xpfm --sys_config zybo16_concat --bif C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat_system/Debug/system.bif --bitstream C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit --elf C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit
+Running C:/Xilinx/Vitis/2021.1/bin/bootgen  -image C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+02:32:50 Build Finished (took 8s.398ms)
+

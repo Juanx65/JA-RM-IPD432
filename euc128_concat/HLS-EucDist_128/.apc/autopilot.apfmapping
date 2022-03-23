@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="EucHW.h" path="C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\euc128_concat\EucHW.h"/>
+    <originFiles name="EucHW.h" path="C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\euc128_concat\HLS-EucDist_128\EucHW.h"/>
+    <originFiles name="EucHW_RC.cpp" path="C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\euc128_concat\HLS-EucDist_128\EucHW_RC.cpp"/>
+    <originFiles name="specs.h" path="C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\euc128_concat\HLS-EucDist_128\specs.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -735,3 +735,443 @@ con
 ----------------End of Script----------------
 
 01:24:22 INFO  : Launch script is exported to file 'C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\zybo16_vitis_concat\euc16concat_system\_ide\scripts\debugger_euc16concat-default.tcl'
+02:22:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\zybo16_vitis_concat\temp_xsdb_launch_script.tcl
+02:22:20 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+02:22:20 INFO  : Platform repository initialization has completed.
+02:22:20 INFO  : XSCT server has started successfully.
+02:22:21 INFO  : Registering command handlers for Vitis TCF services
+02:22:26 INFO  : plnx-install-location is set to ''
+02:22:26 INFO  : Successfully done setting XSCT server connection channel  
+02:22:26 INFO  : Successfully done query RDI_DATADIR 
+02:22:26 INFO  : Successfully done setting workspace for the tool. 
+02:23:39 INFO  : Result from executing command 'getProjects': zybo16_concat
+02:23:39 INFO  : Result from executing command 'getPlatforms': 
+02:23:40 INFO  : Checking for BSP changes to sync application flags for project 'euc16concat'...
+02:24:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:24:18 INFO  : Jtag cable 'Digilent Zybo 210279778070A' is selected.
+02:24:18 INFO  : 'jtag frequency' command is executed.
+02:24:18 INFO  : Context for 'APU' is selected.
+02:24:18 INFO  : System reset is completed.
+02:24:21 INFO  : 'after 3000' command is executed.
+02:24:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:24:23 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:24:23 INFO  : Context for 'APU' is selected.
+02:24:23 INFO  : Hardware design and registers information is loaded from 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa'.
+02:24:23 INFO  : 'configparams force-mem-access 1' command is executed.
+02:24:23 INFO  : Context for 'APU' is selected.
+02:24:23 INFO  : Sourcing of 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl' is done.
+02:24:24 INFO  : 'ps7_init' command is executed.
+02:24:24 INFO  : 'ps7_post_config' command is executed.
+02:24:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:24:24 INFO  : The application 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:24:24 INFO  : 'configparams force-mem-access 0' command is executed.
+02:24:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}
+fpga -file C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:24:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:24:24 INFO  : 'con' command is executed.
+02:24:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:24:24 INFO  : Launch script is exported to file 'C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\zybo16_vitis_concat\euc16concat_system\_ide\scripts\debugger_euc16concat-default.tcl'
+02:25:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:25:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:25:12 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:26:48 INFO  : Checking for BSP changes to sync application flags for project 'euc16concat'...
+02:27:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:27:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:27:37 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:27:48 INFO  : Disconnected from the channel tcfchan#2.
+02:27:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:27:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+02:27:58 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+02:28:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:28:08 INFO  : Jtag cable 'Digilent Zybo 210279778070A' is selected.
+02:28:08 INFO  : 'jtag frequency' command is executed.
+02:28:08 INFO  : Context for 'APU' is selected.
+02:28:08 INFO  : System reset is completed.
+02:28:11 INFO  : 'after 3000' command is executed.
+02:28:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:28:12 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:28:12 INFO  : Context for 'APU' is selected.
+02:28:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa'.
+02:28:12 INFO  : 'configparams force-mem-access 1' command is executed.
+02:28:12 INFO  : Context for 'APU' is selected.
+02:28:12 INFO  : Sourcing of 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl' is done.
+02:28:13 INFO  : 'ps7_init' command is executed.
+02:28:13 INFO  : 'ps7_post_config' command is executed.
+02:28:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:28:13 INFO  : The application 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:28:13 INFO  : 'configparams force-mem-access 0' command is executed.
+02:28:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}
+fpga -file C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:28:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:28:14 INFO  : 'con' command is executed.
+02:28:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:28:14 INFO  : Launch script is exported to file 'C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\zybo16_vitis_concat\euc16concat_system\_ide\scripts\debugger_euc16concat-default.tcl'
+02:28:58 INFO  : Checking for BSP changes to sync application flags for project 'euc16concat'...
+02:32:40 INFO  : Checking for BSP changes to sync application flags for project 'euc16concat'...
+02:32:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:32:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:33:00 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:33:07 INFO  : Disconnected from the channel tcfchan#4.
+02:33:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:33:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+02:33:17 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+02:33:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:33:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:33:37 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:33:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:33:44 INFO  : Jtag cable 'Digilent Zybo 210279778070A' is selected.
+02:33:44 INFO  : 'jtag frequency' command is executed.
+02:33:44 INFO  : Context for 'APU' is selected.
+02:33:44 INFO  : System reset is completed.
+02:33:47 INFO  : 'after 3000' command is executed.
+02:33:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:33:49 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:33:49 INFO  : Context for 'APU' is selected.
+02:33:49 INFO  : Hardware design and registers information is loaded from 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa'.
+02:33:49 INFO  : 'configparams force-mem-access 1' command is executed.
+02:33:49 INFO  : Context for 'APU' is selected.
+02:33:49 INFO  : Sourcing of 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl' is done.
+02:33:49 INFO  : 'ps7_init' command is executed.
+02:33:49 INFO  : 'ps7_post_config' command is executed.
+02:33:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:33:50 INFO  : The application 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:33:50 INFO  : 'configparams force-mem-access 0' command is executed.
+02:33:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}
+fpga -file C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:33:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:33:50 INFO  : 'con' command is executed.
+02:33:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:33:50 INFO  : Launch script is exported to file 'C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\zybo16_vitis_concat\euc16concat_system\_ide\scripts\debugger_euc16concat-default.tcl'
+02:37:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:37:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:37:25 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:37:36 INFO  : Disconnected from the channel tcfchan#7.
+02:37:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:37:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+02:37:46 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+02:37:55 INFO  : Checking for BSP changes to sync application flags for project 'euc16concat'...
+02:38:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:38:20 INFO  : Jtag cable 'Digilent Zybo 210279778070A' is selected.
+02:38:20 INFO  : 'jtag frequency' command is executed.
+02:38:20 INFO  : Context for 'APU' is selected.
+02:38:20 INFO  : System reset is completed.
+02:38:23 INFO  : 'after 3000' command is executed.
+02:38:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:38:24 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:38:24 INFO  : Context for 'APU' is selected.
+02:38:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa'.
+02:38:24 INFO  : 'configparams force-mem-access 1' command is executed.
+02:38:24 INFO  : Context for 'APU' is selected.
+02:38:24 INFO  : Sourcing of 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl' is done.
+02:38:25 INFO  : 'ps7_init' command is executed.
+02:38:25 INFO  : 'ps7_post_config' command is executed.
+02:38:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:38:25 INFO  : The application 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:38:25 INFO  : 'configparams force-mem-access 0' command is executed.
+02:38:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}
+fpga -file C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:38:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:38:25 INFO  : 'con' command is executed.
+02:38:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:38:25 INFO  : Launch script is exported to file 'C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\zybo16_vitis_concat\euc16concat_system\_ide\scripts\debugger_euc16concat-default.tcl'
+02:41:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:41:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:41:03 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:41:14 INFO  : Disconnected from the channel tcfchan#8.
+02:41:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:41:16 INFO  : Jtag cable 'Digilent Zybo 210279778070A' is selected.
+02:41:16 ERROR : port closed
+02:41:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+02:41:16 ERROR : port closed
+02:41:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:41:28 INFO  : Jtag cable 'Digilent Zybo 210279778070A' is selected.
+02:41:28 INFO  : 'jtag frequency' command is executed.
+02:41:28 INFO  : Context for 'APU' is selected.
+02:41:29 INFO  : System reset is completed.
+02:41:32 INFO  : 'after 3000' command is executed.
+02:41:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:41:33 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:41:33 INFO  : Context for 'APU' is selected.
+02:41:33 INFO  : Hardware design and registers information is loaded from 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa'.
+02:41:33 INFO  : 'configparams force-mem-access 1' command is executed.
+02:41:33 INFO  : Context for 'APU' is selected.
+02:41:33 INFO  : Sourcing of 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl' is done.
+02:41:33 INFO  : 'ps7_init' command is executed.
+02:41:33 INFO  : 'ps7_post_config' command is executed.
+02:41:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:41:34 INFO  : The application 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:41:34 INFO  : 'configparams force-mem-access 0' command is executed.
+02:41:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}
+fpga -file C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:41:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:41:34 INFO  : 'con' command is executed.
+02:41:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:41:34 INFO  : Launch script is exported to file 'C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\zybo16_vitis_concat\euc16concat_system\_ide\scripts\debugger_euc16concat-default.tcl'
+02:43:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:43:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:43:39 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:43:52 INFO  : Disconnected from the channel tcfchan#9.
+02:43:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:44:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+02:44:02 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+02:44:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:44:10 INFO  : Jtag cable 'Digilent Zybo 210279778070A' is selected.
+02:44:10 INFO  : 'jtag frequency' command is executed.
+02:44:11 INFO  : Context for 'APU' is selected.
+02:44:11 INFO  : System reset is completed.
+02:44:14 INFO  : 'after 3000' command is executed.
+02:44:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:44:15 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:44:15 INFO  : Context for 'APU' is selected.
+02:44:15 INFO  : Hardware design and registers information is loaded from 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa'.
+02:44:15 INFO  : 'configparams force-mem-access 1' command is executed.
+02:44:15 INFO  : Context for 'APU' is selected.
+02:44:15 INFO  : Sourcing of 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl' is done.
+02:44:15 INFO  : 'ps7_init' command is executed.
+02:44:15 INFO  : 'ps7_post_config' command is executed.
+02:44:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:44:16 INFO  : The application 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:44:16 INFO  : 'configparams force-mem-access 0' command is executed.
+02:44:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}
+fpga -file C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:44:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:44:16 INFO  : 'con' command is executed.
+02:44:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:44:16 INFO  : Launch script is exported to file 'C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\zybo16_vitis_concat\euc16concat_system\_ide\scripts\debugger_euc16concat-default.tcl'
+02:46:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:46:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:46:36 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:46:51 INFO  : Disconnected from the channel tcfchan#10.
+02:46:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:47:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+02:47:01 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+02:47:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:47:30 INFO  : Jtag cable 'Digilent Zybo 210279778070A' is selected.
+02:47:30 INFO  : 'jtag frequency' command is executed.
+02:47:30 INFO  : Context for 'APU' is selected.
+02:47:30 INFO  : System reset is completed.
+02:47:33 INFO  : 'after 3000' command is executed.
+02:47:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}' command is executed.
+02:47:35 INFO  : Device configured successfully with "C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit"
+02:47:35 INFO  : Context for 'APU' is selected.
+02:47:35 INFO  : Hardware design and registers information is loaded from 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa'.
+02:47:35 INFO  : 'configparams force-mem-access 1' command is executed.
+02:47:35 INFO  : Context for 'APU' is selected.
+02:47:35 INFO  : Sourcing of 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl' is done.
+02:47:35 INFO  : 'ps7_init' command is executed.
+02:47:35 INFO  : 'ps7_post_config' command is executed.
+02:47:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:47:35 INFO  : The application 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:47:35 INFO  : 'configparams force-mem-access 0' command is executed.
+02:47:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279778070A" && level==0 && jtag_device_ctx=="jsn-Zybo-210279778070A-13722093-0"}
+fpga -file C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/bitstream/zybo16_concat.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/hw/zybo16_concat.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/zybo16_vitis_concat/euc16concat/Debug/euc16concat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:47:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:47:36 INFO  : 'con' command is executed.
+02:47:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:47:36 INFO  : Launch script is exported to file 'C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\zybo16_vitis_concat\euc16concat_system\_ide\scripts\debugger_euc16concat-default.tcl'

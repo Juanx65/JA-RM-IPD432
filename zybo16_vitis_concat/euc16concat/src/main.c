@@ -13,7 +13,7 @@
 #define INTC_ADDT_INT_ID		XPAR_FABRIC_EUCHW_INTERRUPT_INTR
 #define xil_printf 				printf
 
-#define N_VECTORS				10
+#define N_VECTORS				100
 #define VECTOR_SIZE				32 // 2*16
 #define BUFFER_SIZE				1
 #define BRAMS					32

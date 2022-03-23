@@ -1,0 +1,48 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2021.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'ricar' on host 'laptop-r5u6t19k' (Windows NT_amd64 version 6.2) on Wed Mar 23 01:58:16 -0300 2022
+INFO: [HLS 200-10] In directory 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/euc128_concat'
+Sourcing Tcl script 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/euc128_concat/HLS-EucDist_128/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: open_project HLS-EucDist_128 
+INFO: [HLS 200-10] Opening project 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/euc128_concat/HLS-EucDist_128'.
+INFO: [HLS 200-1510] Running: set_top eucHW 
+INFO: [HLS 200-1510] Running: add_files EucHW.h 
+WARNING: [HLS 200-40] Cannot find design file 'EucHW.h'
+INFO: [HLS 200-1510] Running: add_files HLS-EucDist_128/EucHW_RC.cpp 
+INFO: [HLS 200-10] Adding design file 'HLS-EucDist_128/EucHW_RC.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files HLS-EucDist_128/specs.h 
+INFO: [HLS 200-10] Adding design file 'HLS-EucDist_128/specs.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb EucTB.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+WARNING: [HLS 200-40] Cannot find test bench file 'EucTB.cpp'
+INFO: [HLS 200-1510] Running: add_files -tb EucSW.h -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+WARNING: [HLS 200-40] Cannot find test bench file 'EucSW.h'
+INFO: [HLS 200-1510] Running: add_files -tb EucSW.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+WARNING: [HLS 200-40] Cannot find test bench file 'EucSW.cpp'
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/euc128_concat/HLS-EucDist_128/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010i-clg400-1L'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/Users/juan_/Documents/FPGA/IPs/euc16_concatenado.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z010i-clg400-1L 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output C:/Users/juan_/Documents/FPGA/IPs/euc16_concatenado.zip -rtl verilog 
+INFO: [HLS 200-1510] Running: set_directive_top -name eucHW eucHW 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/euc128_concat/eucHW.zip 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 23 02:01:34 2022...
+INFO: [HLS 200-802] Generated output file eucHW.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 174 seconds. CPU system time: 1 seconds. Elapsed time: 196.165 seconds; current allocated memory: 135.262 MB.
