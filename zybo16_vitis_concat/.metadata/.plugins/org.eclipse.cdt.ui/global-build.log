@@ -1,27 +1,9 @@
 Nothing to build in platform 'zybo16_concat'
 
-01:20:30 **** Incremental Build of configuration Debug for project euc16concat ****
+02:37:55 **** Incremental Build of configuration Debug for project euc16concat ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/juan_/Documents/FPGA/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/sw/zybo16_concat/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:44:12: warning: 'led_data' defined but not used [-Wunused-variable]
-   44 | static int led_data;
-      |            ^~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: euc16concat.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/juan_/Documents/FPGA/JA-RM-IPD432/zybo16_vitis_concat/zybo16_concat/export/zybo16_concat/sw/zybo16_concat/standalone_ps7_cortexa9_0/bsplib/lib -o "euc16concat.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: euc16concat.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size euc16concat.elf  |tee "euc16concat.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  94358	   3478	  22768	 120604	  1d71c	euc16concat.elf
-'Finished building: euc16concat.elf.size'
-' '
+make[1]: Nothing to be done for 'main-build'.

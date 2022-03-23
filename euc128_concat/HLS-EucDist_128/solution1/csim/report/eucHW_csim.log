@@ -1,0 +1,47 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../src/EucSW.cpp in debug mode
+   Compiling ../../../../src/EucTB.cpp in debug mode
+csim.mk:78: recipe for target 'obj/EucTB.o' failed
+In file included from ../../../../src/eucSW.h:4:0,
+                 from ../../../../src/EucSW.cpp:1:
+../../../../src/specs.h:4:2: warning: #import is a deprecated GCC extension [-Wdeprecated]
+ #import <cstdint>
+  ^~~~~~
+In file included from ../../../../src/EucTB.cpp:4:0:
+../../../../src/specs.h:4:2: warning: #import is a deprecated GCC extension [-Wdeprecated]
+ #import <cstdint>
+  ^~~~~~
+In file included from C:/Xilinx/Vitis_HLS/2021.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_fpo.h:189,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h:41,
+                 from ../../../../src/eucHW.h:6,
+                 from ../../../../src/EucTB.cpp:5:
+C:/Xilinx/Vitis_HLS/2021.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2021.1/include/hls_fpo.h:189:0,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half_fpo.h:64,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_half.h:71,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h:41,
+                 from ../../../../src/eucHW.h:6,
+                 from ../../../../src/EucTB.cpp:5:
+C:/Xilinx/Vitis_HLS/2021.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2021.1/include/hls_hotbm_apfixed.h:45:0,
+                 from C:/Xilinx/Vitis_HLS/2021.1/include/hls_math.h:1065,
+                 from ../../../../src/eucHW.h:6,
+                 from ../../../../src/EucTB.cpp:5:
+C:/Xilinx/Vitis_HLS/2021.1/include/utils/x_hls_utils.h:243:40: warning: 'hls_preserve' attribute directive ignored [-Wattributes]
+ __attribute__((hls_preserve)) T reg(T d)
+                                        ^
+../../../../src/EucTB.cpp: In function 'int main()':
+../../../../src/EucTB.cpp:30:20: error: cannot convert 'T* {aka unsigned char*}' to 'Tout* {aka int*}' for argument '1' to 'void eucHW(Tout*, Tout*, T*)'
+   eucHW (A, B, C_HW);
+                    ^
+make: *** [obj/EucTB.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

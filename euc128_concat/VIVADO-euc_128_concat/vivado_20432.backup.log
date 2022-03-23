@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Mar 23 02:02:48 2022
+# Process ID: 20432
+# Current directory: C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/euc128_concat/VIVADO-euc_128_concat
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9072 C:\Users\ricar\Desktop\super_digitales\Tarea4\JA-RM-IPD432\euc128_concat\VIVADO-euc_128_concat\euc16_concat.xpr
+# Log file: C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/euc128_concat/VIVADO-euc_128_concat/vivado.log
+# Journal file: C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/euc128_concat/VIVADO-euc_128_concat\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/euc128_concat/VIVADO-euc_128_concat/euc16_concat.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/euc128_concat/VIVADO-euc_128_concat'
+INFO: [Project 1-313] Project file moved from 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_concat' since last save.
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/Users/ricar/Desktop/super_digitales/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store', nor could it be found using path 'C:/Users/juan_/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store'.
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/IPs/euc16_concatenado', nor could it be found using path 'C:/Users/juan_/Documents/FPGA/IPs/euc16_concatenado'.
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/euc128_concat/VIVADO-euc_128_concat/euc16_concat.ip_user_files', nor could it be found using path 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc16_concat/euc16_concat.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/ricar/Desktop/super_digitales/Tarea4/JA-RM-IPD432/IPs/euc16_concatenado'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_eucHW_0_0
+
+open_project: Time (s): cpu = 00:00:40 ; elapsed = 00:00:20 . Memory (MB): peak = 1124.426 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 23 02:06:24 2022...

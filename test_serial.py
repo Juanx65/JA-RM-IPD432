@@ -61,21 +61,23 @@ class zynqTest():
 
             res_err = 100*abs((y_sqrt - self.expected)/self.expected)
 
-            print("HARDARE RESULT:", y_sqrt, "\t SOFTWARE RESULT: ", self.expected)
+            print("TRIAL", tst+1, "HARDWARE RESULT:", y_sqrt, "\t SOFTWARE RESULT: ", round(self.expected,4), end="")
 
 
-            if (res_err > 5):
+            if (res_err > 1):
                 result+=1
-                print("TRIAL: %d FAILED", tst)
-
-
+                print(" TRIAL FAILED")
+            else:
+                print(" TRIAL PASS")
+            
+                
 
 
         return result
 
 
 if __name__ == "__main__":
-    zynqDev = zynqTest('COM10', 115200, 16, 10)
+    zynqDev = zynqTest('COM13', 115200, 16, 100)
 
     print("Listening...")
 
@@ -87,15 +89,16 @@ if __name__ == "__main__":
 
     res = zynqDev.runTest()
 
-    if res:
+    percent = 100*res/zynqDev.tests
+    
+    if percent > 90:
         print(50*"*")
-        print("*" + 22 * "" + "FAIL" + 22*"" + "*")
+        print("*" + 22 * "", str(percent) + "%  TRIALS FAILED" + 22*"" + "*")
         print(50*"*")
     else:
         print(50*"*")
-        print("*" + 22 * "" + "PASS" + 22*"" + "*")
+        print("*" + 22 * "", str(100- percent) + "% TRIALS PASSED" + 22*"" + "*")
         print(50*"*")
+    
 
-    print(res)
-
-    zynqDev.closeSerial()
+   # zynqDev.closeSerial()
