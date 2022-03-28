@@ -1,0 +1,96 @@
+01:52:51 **** Incremental Build of configuration Debug for project euc64intTEST ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc64_int/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:42:33: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   42 | void (*XHLSWriteFunc_A[])() = { XEuchw_Write_A_0_Words,
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:42:33: note: (near initialization for 'XHLSWriteFunc_A[0]')
+../src/main.c:43:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   43 |    XEuchw_Write_A_1_Words, XEuchw_Write_A_2_Words, XEuchw_Write_A_3_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:43:4: note: (near initialization for 'XHLSWriteFunc_A[1]')
+../src/main.c:43:28: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   43 |    XEuchw_Write_A_1_Words, XEuchw_Write_A_2_Words, XEuchw_Write_A_3_Words,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:43:28: note: (near initialization for 'XHLSWriteFunc_A[2]')
+../src/main.c:43:52: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   43 |    XEuchw_Write_A_1_Words, XEuchw_Write_A_2_Words, XEuchw_Write_A_3_Words,
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:43:52: note: (near initialization for 'XHLSWriteFunc_A[3]')
+../src/main.c:44:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   44 |    XEuchw_Write_A_4_Words, XEuchw_Write_A_5_Words, XEuchw_Write_A_6_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:44:4: note: (near initialization for 'XHLSWriteFunc_A[4]')
+../src/main.c:44:28: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   44 |    XEuchw_Write_A_4_Words, XEuchw_Write_A_5_Words, XEuchw_Write_A_6_Words,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:44:28: note: (near initialization for 'XHLSWriteFunc_A[5]')
+../src/main.c:44:52: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   44 |    XEuchw_Write_A_4_Words, XEuchw_Write_A_5_Words, XEuchw_Write_A_6_Words,
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:44:52: note: (near initialization for 'XHLSWriteFunc_A[6]')
+../src/main.c:45:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   45 |    XEuchw_Write_A_7_Words};
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:45:4: note: (near initialization for 'XHLSWriteFunc_A[7]')
+../src/main.c:47:33: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   47 | void (*XHLSWriteFunc_B[])() = { XEuchw_Write_B_0_Words,
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:47:33: note: (near initialization for 'XHLSWriteFunc_B[0]')
+../src/main.c:48:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   48 |    XEuchw_Write_B_1_Words, XEuchw_Write_B_2_Words, XEuchw_Write_B_3_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:48:4: note: (near initialization for 'XHLSWriteFunc_B[1]')
+../src/main.c:48:28: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   48 |    XEuchw_Write_B_1_Words, XEuchw_Write_B_2_Words, XEuchw_Write_B_3_Words,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:48:28: note: (near initialization for 'XHLSWriteFunc_B[2]')
+../src/main.c:48:52: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   48 |    XEuchw_Write_B_1_Words, XEuchw_Write_B_2_Words, XEuchw_Write_B_3_Words,
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:48:52: note: (near initialization for 'XHLSWriteFunc_B[3]')
+../src/main.c:49:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   49 |    XEuchw_Write_B_4_Words, XEuchw_Write_B_5_Words, XEuchw_Write_B_6_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:49:4: note: (near initialization for 'XHLSWriteFunc_B[4]')
+../src/main.c:49:28: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   49 |    XEuchw_Write_B_4_Words, XEuchw_Write_B_5_Words, XEuchw_Write_B_6_Words,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:49:28: note: (near initialization for 'XHLSWriteFunc_B[5]')
+../src/main.c:49:52: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   49 |    XEuchw_Write_B_4_Words, XEuchw_Write_B_5_Words, XEuchw_Write_B_6_Words,
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:49:52: note: (near initialization for 'XHLSWriteFunc_B[6]')
+../src/main.c:50:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   50 |    XEuchw_Write_B_7_Words};
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:50:4: note: (near initialization for 'XHLSWriteFunc_B[7]')
+../src/main.c: In function 'AdderTreeReceiveHandler':
+../src/main.c:97:28: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+   97 |   xil_printf("Resultados: %f\n", results[0]);
+      |                           ~^     ~~~~~~~~~~
+      |                            |            |
+      |                            double       int
+      |                           %d
+'Finished building: ../src/main.c'
+' '
+'Building target: euc64intTEST.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc64_int/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "euc64intTEST.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: euc64intTEST.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size euc64intTEST.elf  |tee "euc64intTEST.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 108438	   3398	  22736	 134572	  20dac	euc64intTEST.elf
+'Finished building: euc64intTEST.elf.size'
+' '
+
+01:52:52 Build Finished (took 1s.384ms)
+

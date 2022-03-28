@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-802]" key="HLS 200-802" tag="" content="Generated output file C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/IP/eucHW.zip" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 9.86 seconds; current allocated memory: 123.173 MB." resolution=""/>
+</Messages>

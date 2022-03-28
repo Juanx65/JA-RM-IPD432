@@ -1,0 +1,16 @@
+01:35:41 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\T4_P3_2\euc64_int\Vitis\design_1_wrapper\temp_xsdb_launch_script.tcl
+01:35:41 INFO  : Registering command handlers for Vitis TCF services
+01:35:41 INFO  : Platform repository initialization has completed.
+01:35:46 INFO  : XSCT server has started successfully.
+01:35:46 INFO  : Successfully done setting XSCT server connection channel  
+01:35:46 INFO  : plnx-install-location is set to ''
+01:35:46 INFO  : Successfully done query RDI_DATADIR 
+01:35:46 INFO  : Successfully done setting workspace for the tool. 
+01:37:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\T4_P3_2\euc64_int\Vitis\design_1_wrapper\temp_xsdb_launch_script.tcl
+01:37:14 INFO  : Registering command handlers for Vitis TCF services
+01:37:14 INFO  : Platform repository initialization has completed.
+01:37:17 INFO  : XSCT server has started successfully.
+01:37:17 INFO  : Successfully done setting XSCT server connection channel  
+01:37:17 INFO  : plnx-install-location is set to ''
+01:37:17 INFO  : Successfully done setting workspace for the tool. 
+01:37:17 INFO  : Successfully done query RDI_DATADIR 

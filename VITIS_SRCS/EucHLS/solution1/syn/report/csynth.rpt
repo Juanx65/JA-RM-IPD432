@@ -1,0 +1,104 @@
+
+
+================================================================
+== Synthesis Summary Report of 'eucHW'
+================================================================
++ General Information: 
+    * Date:           Sun Mar 27 19:30:34 2022
+    * Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:33 MDT 2021)
+    * Project:        EucHLS
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010i-clg400-1L
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------+------+------+---------+---------+----------+---------+------+----------+----------+----------+------------+------------+-----+
+    |              Modules             | Issue|      | Latency | Latency | Iteration|         | Trip |          |          |          |            |            |     |
+    |              & Loops             | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP   |     FF     |     LUT    | URAM|
+    +----------------------------------+------+------+---------+---------+----------+---------+------+----------+----------+----------+------------+------------+-----+
+    |+ eucHW                           |     -|  0.15|       81|  810.000|         -|       82|     -|        no|  32 (26%)|  16 (20%)|  4114 (11%)|  6313 (35%)|    -|
+    | + grp_sqrt_fixed_32_32_s_fu_949  |    II|  0.15|        7|   70.000|         -|        1|     -|       yes|         -|         -|    585 (1%)|   1337 (7%)|    -|
+    | o MainLoop                       |    II|  7.30|       70|  700.000|         9|        2|    32|       yes|         -|         -|           -|           -|    -|
+    +----------------------------------+------+------+---------+---------+----------+---------+------+----------+----------+----------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 12            | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------+
+| Argument | Direction | Datatype       |
++----------+-----------+----------------+
+| y_sqrt   | out       | int*           |
+| x        | in        | unsigned char* |
++----------+-----------+----------------+
+
+* SW-to-HW Mapping
++----------+---------------------------+-----------+-----------------------+
+| Argument | HW Name                   | HW Type   | HW Info               |
++----------+---------------------------+-----------+-----------------------+
+| y_sqrt   | s_axi_control y_sqrt      | register  | offset=0x10, range=32 |
+| y_sqrt   | s_axi_control y_sqrt_ctrl | register  | offset=0x14, range=32 |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
+| x        | s_axi_control             | interface |                       |
++----------+---------------------------+-----------+-----------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+

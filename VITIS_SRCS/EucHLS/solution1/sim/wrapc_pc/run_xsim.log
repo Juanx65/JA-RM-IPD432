@@ -1,0 +1,383 @@
+Euc Dist calculation: 
+C_SW: 842, C_HW: 842
+C_SW: 729, C_HW: 730
+C_SW: 830, C_HW: 830
+C_SW: 795, C_HW: 795
+C_SW: 818, C_HW: 819
+C_SW: 818, C_HW: 819
+C_SW: 751, C_HW: 751
+C_SW: 907, C_HW: 907
+C_SW: 942, C_HW: 943
+C_SW: 721, C_HW: 721
+C_SW: 756, C_HW: 756
+C_SW: 775, C_HW: 775
+C_SW: 958, C_HW: 959
+C_SW: 820, C_HW: 821
+C_SW: 842, C_HW: 842
+C_SW: 858, C_HW: 859
+C_SW: 906, C_HW: 907
+C_SW: 862, C_HW: 862
+C_SW: 872, C_HW: 873
+C_SW: 872, C_HW: 872
+C_SW: 891, C_HW: 892
+C_SW: 897, C_HW: 897
+C_SW: 879, C_HW: 879
+C_SW: 855, C_HW: 855
+C_SW: 772, C_HW: 773
+C_SW: 841, C_HW: 841
+C_SW: 849, C_HW: 849
+C_SW: 785, C_HW: 786
+C_SW: 970, C_HW: 971
+C_SW: 815, C_HW: 816
+C_SW: 783, C_HW: 784
+C_SW: 797, C_HW: 797
+C_SW: 702, C_HW: 702
+C_SW: 789, C_HW: 790
+C_SW: 785, C_HW: 785
+C_SW: 670, C_HW: 671
+C_SW: 889, C_HW: 890
+C_SW: 762, C_HW: 762
+C_SW: 823, C_HW: 824
+C_SW: 796, C_HW: 797
+C_SW: 875, C_HW: 875
+C_SW: 797, C_HW: 797
+C_SW: 865, C_HW: 865
+C_SW: 837, C_HW: 837
+C_SW: 827, C_HW: 828
+C_SW: 886, C_HW: 886
+C_SW: 839, C_HW: 840
+C_SW: 835, C_HW: 836
+C_SW: 752, C_HW: 753
+C_SW: 802, C_HW: 802
+C_SW: 757, C_HW: 758
+C_SW: 919, C_HW: 920
+C_SW: 868, C_HW: 869
+C_SW: 850, C_HW: 851
+C_SW: 769, C_HW: 770
+C_SW: 846, C_HW: 847
+C_SW: 830, C_HW: 830
+C_SW: 854, C_HW: 854
+C_SW: 762, C_HW: 762
+C_SW: 798, C_HW: 798
+C_SW: 853, C_HW: 853
+C_SW: 830, C_HW: 830
+C_SW: 828, C_HW: 829
+C_SW: 702, C_HW: 702
+C_SW: 797, C_HW: 797
+C_SW: 884, C_HW: 885
+C_SW: 823, C_HW: 823
+C_SW: 794, C_HW: 794
+C_SW: 861, C_HW: 861
+C_SW: 856, C_HW: 857
+C_SW: 953, C_HW: 953
+C_SW: 828, C_HW: 828
+C_SW: 904, C_HW: 905
+C_SW: 814, C_HW: 814
+C_SW: 771, C_HW: 772
+C_SW: 844, C_HW: 845
+C_SW: 896, C_HW: 897
+C_SW: 867, C_HW: 867
+C_SW: 935, C_HW: 935
+C_SW: 808, C_HW: 809
+C_SW: 790, C_HW: 790
+C_SW: 843, C_HW: 844
+C_SW: 1034, C_HW: 1035
+C_SW: 871, C_HW: 872
+C_SW: 779, C_HW: 780
+C_SW: 856, C_HW: 856
+C_SW: 779, C_HW: 780
+C_SW: 711, C_HW: 711
+C_SW: 648, C_HW: 648
+C_SW: 729, C_HW: 729
+C_SW: 707, C_HW: 708
+C_SW: 759, C_HW: 760
+C_SW: 799, C_HW: 800
+C_SW: 822, C_HW: 822
+C_SW: 846, C_HW: 846
+C_SW: 809, C_HW: 810
+C_SW: 777, C_HW: 778
+C_SW: 795, C_HW: 796
+C_SW: 839, C_HW: 840
+C_SW: 878, C_HW: 878
+Number of errors: 50
+
+C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\VITIS_SRCS\EucHLS\solution1\sim\verilog>set PATH= 
+
+C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\VITIS_SRCS\EucHLS\solution1\sim\verilog>call C:/Xilinx/Vivado/2021.1/bin/xelab xil_defaultlib.apatb_eucHW_top glbl -Oenable_linking_all_libraries  -prj eucHW.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_19 -L floating_point_v7_1_12 --lib "ieee_proposed=./ieee_proposed" -s eucHW  
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_eucHW_top glbl -Oenable_linking_all_libraries -prj eucHW.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_19 -L floating_point_v7_1_12 --lib ieee_proposed=./ieee_proposed -s eucHW 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/VITIS_SRCS/EucHLS/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/VITIS_SRCS/EucHLS/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/VITIS_SRCS/EucHLS/solution1/sim/verilog/eucHW.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_eucHW_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/VITIS_SRCS/EucHLS/solution1/sim/verilog/eucHW.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eucHW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/VITIS_SRCS/EucHLS/solution1/sim/verilog/eucHW_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eucHW_control_s_axi
+INFO: [VRFC 10-311] analyzing module eucHW_control_s_axi_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/VITIS_SRCS/EucHLS/solution1/sim/verilog/eucHW_mac_muladd_9s_9s_18s_18_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eucHW_mac_muladd_9s_9s_18s_18_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module eucHW_mac_muladd_9s_9s_18s_18_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/VITIS_SRCS/EucHLS/solution1/sim/verilog/eucHW_mul_9s_9s_18_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eucHW_mul_9s_9s_18_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/VITIS_SRCS/EucHLS/solution1/sim/verilog/eucHW_sqrt_fixed_32_32_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eucHW_sqrt_fixed_32_32_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/VITIS_SRCS/EucHLS/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.eucHW_sqrt_fixed_32_32_s
+Compiling module xil_defaultlib.eucHW_control_s_axi_ram(MEM_STYL...
+Compiling module xil_defaultlib.eucHW_control_s_axi
+Compiling module xil_defaultlib.eucHW_mul_9s_9s_18_1_1(NUM_STAGE...
+Compiling module xil_defaultlib.eucHW_mac_muladd_9s_9s_18s_18_4_...
+Compiling module xil_defaultlib.eucHW_mac_muladd_9s_9s_18s_18_4_...
+Compiling module xil_defaultlib.eucHW
+Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.pp_loop_intf(FSM_WIDTH=12)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_eucHW_top
+Compiling module work.glbl
+Built simulation snapshot eucHW
+
+****** Webtalk v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/VITIS_SRCS/EucHLS/solution1/sim/verilog/xsim.dir/eucHW/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Mar 26 00:22:02 2022...
+
+****** xsim v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/eucHW/xsim_script.tcl
+# xsim {eucHW} -autoloadwcfg -tclbatch {eucHW.tcl}
+Time resolution is 1 ps
+source eucHW.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 100 [0.00%] @ "125000"
+// RTL Simulation : 1 / 100 [100.00%] @ "3025000"
+// RTL Simulation : 2 / 100 [100.00%] @ "5915000"
+// RTL Simulation : 3 / 100 [100.00%] @ "8805000"
+// RTL Simulation : 4 / 100 [100.00%] @ "11695000"
+// RTL Simulation : 5 / 100 [100.00%] @ "14585000"
+// RTL Simulation : 6 / 100 [100.00%] @ "17475000"
+// RTL Simulation : 7 / 100 [100.00%] @ "20365000"
+// RTL Simulation : 8 / 100 [100.00%] @ "23255000"
+// RTL Simulation : 9 / 100 [100.00%] @ "26145000"
+// RTL Simulation : 10 / 100 [100.00%] @ "29035000"
+// RTL Simulation : 11 / 100 [100.00%] @ "31925000"
+// RTL Simulation : 12 / 100 [100.00%] @ "34815000"
+// RTL Simulation : 13 / 100 [100.00%] @ "37705000"
+// RTL Simulation : 14 / 100 [100.00%] @ "40595000"
+// RTL Simulation : 15 / 100 [100.00%] @ "43485000"
+// RTL Simulation : 16 / 100 [100.00%] @ "46375000"
+// RTL Simulation : 17 / 100 [100.00%] @ "49265000"
+// RTL Simulation : 18 / 100 [100.00%] @ "52155000"
+// RTL Simulation : 19 / 100 [100.00%] @ "55045000"
+// RTL Simulation : 20 / 100 [100.00%] @ "57935000"
+// RTL Simulation : 21 / 100 [100.00%] @ "60825000"
+// RTL Simulation : 22 / 100 [100.00%] @ "63715000"
+// RTL Simulation : 23 / 100 [100.00%] @ "66605000"
+// RTL Simulation : 24 / 100 [100.00%] @ "69495000"
+// RTL Simulation : 25 / 100 [100.00%] @ "72385000"
+// RTL Simulation : 26 / 100 [100.00%] @ "75275000"
+// RTL Simulation : 27 / 100 [100.00%] @ "78165000"
+// RTL Simulation : 28 / 100 [100.00%] @ "81055000"
+// RTL Simulation : 29 / 100 [100.00%] @ "83945000"
+// RTL Simulation : 30 / 100 [100.00%] @ "86835000"
+// RTL Simulation : 31 / 100 [100.00%] @ "89725000"
+// RTL Simulation : 32 / 100 [100.00%] @ "92615000"
+// RTL Simulation : 33 / 100 [100.00%] @ "95505000"
+// RTL Simulation : 34 / 100 [100.00%] @ "98395000"
+// RTL Simulation : 35 / 100 [100.00%] @ "101285000"
+// RTL Simulation : 36 / 100 [100.00%] @ "104175000"
+// RTL Simulation : 37 / 100 [100.00%] @ "107065000"
+// RTL Simulation : 38 / 100 [100.00%] @ "109955000"
+// RTL Simulation : 39 / 100 [100.00%] @ "112845000"
+// RTL Simulation : 40 / 100 [100.00%] @ "115735000"
+// RTL Simulation : 41 / 100 [100.00%] @ "118625000"
+// RTL Simulation : 42 / 100 [100.00%] @ "121515000"
+// RTL Simulation : 43 / 100 [100.00%] @ "124405000"
+// RTL Simulation : 44 / 100 [100.00%] @ "127295000"
+// RTL Simulation : 45 / 100 [100.00%] @ "130185000"
+// RTL Simulation : 46 / 100 [100.00%] @ "133075000"
+// RTL Simulation : 47 / 100 [100.00%] @ "135965000"
+// RTL Simulation : 48 / 100 [100.00%] @ "138855000"
+// RTL Simulation : 49 / 100 [100.00%] @ "141745000"
+// RTL Simulation : 50 / 100 [100.00%] @ "144635000"
+// RTL Simulation : 51 / 100 [100.00%] @ "147525000"
+// RTL Simulation : 52 / 100 [100.00%] @ "150415000"
+// RTL Simulation : 53 / 100 [100.00%] @ "153305000"
+// RTL Simulation : 54 / 100 [100.00%] @ "156195000"
+// RTL Simulation : 55 / 100 [100.00%] @ "159085000"
+// RTL Simulation : 56 / 100 [100.00%] @ "161975000"
+// RTL Simulation : 57 / 100 [100.00%] @ "164865000"
+// RTL Simulation : 58 / 100 [100.00%] @ "167755000"
+// RTL Simulation : 59 / 100 [100.00%] @ "170645000"
+// RTL Simulation : 60 / 100 [100.00%] @ "173535000"
+// RTL Simulation : 61 / 100 [100.00%] @ "176425000"
+// RTL Simulation : 62 / 100 [100.00%] @ "179315000"
+// RTL Simulation : 63 / 100 [100.00%] @ "182205000"
+// RTL Simulation : 64 / 100 [100.00%] @ "185095000"
+// RTL Simulation : 65 / 100 [100.00%] @ "187985000"
+// RTL Simulation : 66 / 100 [100.00%] @ "190875000"
+// RTL Simulation : 67 / 100 [100.00%] @ "193765000"
+// RTL Simulation : 68 / 100 [100.00%] @ "196655000"
+// RTL Simulation : 69 / 100 [100.00%] @ "199545000"
+// RTL Simulation : 70 / 100 [100.00%] @ "202435000"
+// RTL Simulation : 71 / 100 [100.00%] @ "205325000"
+// RTL Simulation : 72 / 100 [100.00%] @ "208215000"
+// RTL Simulation : 73 / 100 [100.00%] @ "211105000"
+// RTL Simulation : 74 / 100 [100.00%] @ "213995000"
+// RTL Simulation : 75 / 100 [100.00%] @ "216885000"
+// RTL Simulation : 76 / 100 [100.00%] @ "219775000"
+// RTL Simulation : 77 / 100 [100.00%] @ "222665000"
+// RTL Simulation : 78 / 100 [100.00%] @ "225555000"
+// RTL Simulation : 79 / 100 [100.00%] @ "228445000"
+// RTL Simulation : 80 / 100 [100.00%] @ "231335000"
+// RTL Simulation : 81 / 100 [100.00%] @ "234225000"
+// RTL Simulation : 82 / 100 [100.00%] @ "237115000"
+// RTL Simulation : 83 / 100 [100.00%] @ "240005000"
+// RTL Simulation : 84 / 100 [100.00%] @ "242895000"
+// RTL Simulation : 85 / 100 [100.00%] @ "245785000"
+// RTL Simulation : 86 / 100 [100.00%] @ "248675000"
+// RTL Simulation : 87 / 100 [100.00%] @ "251565000"
+// RTL Simulation : 88 / 100 [100.00%] @ "254455000"
+// RTL Simulation : 89 / 100 [100.00%] @ "257345000"
+// RTL Simulation : 90 / 100 [100.00%] @ "260235000"
+// RTL Simulation : 91 / 100 [100.00%] @ "263125000"
+// RTL Simulation : 92 / 100 [100.00%] @ "266015000"
+// RTL Simulation : 93 / 100 [100.00%] @ "268905000"
+// RTL Simulation : 94 / 100 [100.00%] @ "271795000"
+// RTL Simulation : 95 / 100 [100.00%] @ "274685000"
+// RTL Simulation : 96 / 100 [100.00%] @ "277575000"
+// RTL Simulation : 97 / 100 [100.00%] @ "280465000"
+// RTL Simulation : 98 / 100 [100.00%] @ "283355000"
+// RTL Simulation : 99 / 100 [100.00%] @ "286245000"
+// RTL Simulation : 100 / 100 [100.00%] @ "289135000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 289195 ns : File "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/VITIS_SRCS/EucHLS/solution1/sim/verilog/eucHW.autotb.v" Line 350
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Mar 26 00:22:11 2022...
+Euc Dist calculation: 
+C_SW: 842, C_HW: 842
+C_SW: 729, C_HW: 730
+C_SW: 830, C_HW: 830
+C_SW: 795, C_HW: 795
+C_SW: 818, C_HW: 819
+C_SW: 818, C_HW: 819
+C_SW: 751, C_HW: 751
+C_SW: 907, C_HW: 907
+C_SW: 942, C_HW: 943
+C_SW: 721, C_HW: 721
+C_SW: 756, C_HW: 756
+C_SW: 775, C_HW: 775
+C_SW: 958, C_HW: 959
+C_SW: 820, C_HW: 821
+C_SW: 842, C_HW: 842
+C_SW: 858, C_HW: 859
+C_SW: 906, C_HW: 907
+C_SW: 862, C_HW: 862
+C_SW: 872, C_HW: 873
+C_SW: 872, C_HW: 872
+C_SW: 891, C_HW: 892
+C_SW: 897, C_HW: 897
+C_SW: 879, C_HW: 879
+C_SW: 855, C_HW: 855
+C_SW: 772, C_HW: 773
+C_SW: 841, C_HW: 841
+C_SW: 849, C_HW: 849
+C_SW: 785, C_HW: 786
+C_SW: 970, C_HW: 971
+C_SW: 815, C_HW: 816
+C_SW: 783, C_HW: 784
+C_SW: 797, C_HW: 797
+C_SW: 702, C_HW: 702
+C_SW: 789, C_HW: 790
+C_SW: 785, C_HW: 785
+C_SW: 670, C_HW: 671
+C_SW: 889, C_HW: 890
+C_SW: 762, C_HW: 762
+C_SW: 823, C_HW: 824
+C_SW: 796, C_HW: 797
+C_SW: 875, C_HW: 875
+C_SW: 797, C_HW: 797
+C_SW: 865, C_HW: 865
+C_SW: 837, C_HW: 837
+C_SW: 827, C_HW: 828
+C_SW: 886, C_HW: 886
+C_SW: 839, C_HW: 840
+C_SW: 835, C_HW: 836
+C_SW: 752, C_HW: 753
+C_SW: 802, C_HW: 802
+C_SW: 757, C_HW: 758
+C_SW: 919, C_HW: 920
+C_SW: 868, C_HW: 869
+C_SW: 850, C_HW: 851
+C_SW: 769, C_HW: 770
+C_SW: 846, C_HW: 847
+C_SW: 830, C_HW: 830
+C_SW: 854, C_HW: 854
+C_SW: 762, C_HW: 762
+C_SW: 798, C_HW: 798
+C_SW: 853, C_HW: 853
+C_SW: 830, C_HW: 830
+C_SW: 828, C_HW: 829
+C_SW: 702, C_HW: 702
+C_SW: 797, C_HW: 797
+C_SW: 884, C_HW: 885
+C_SW: 823, C_HW: 823
+C_SW: 794, C_HW: 794
+C_SW: 861, C_HW: 861
+C_SW: 856, C_HW: 857
+C_SW: 953, C_HW: 953
+C_SW: 828, C_HW: 828
+C_SW: 904, C_HW: 905
+C_SW: 814, C_HW: 814
+C_SW: 771, C_HW: 772
+C_SW: 844, C_HW: 845
+C_SW: 896, C_HW: 897
+C_SW: 867, C_HW: 867
+C_SW: 935, C_HW: 935
+C_SW: 808, C_HW: 809
+C_SW: 790, C_HW: 790
+C_SW: 843, C_HW: 844
+C_SW: 1034, C_HW: 1035
+C_SW: 871, C_HW: 872
+C_SW: 779, C_HW: 780
+C_SW: 856, C_HW: 856
+C_SW: 779, C_HW: 780
+C_SW: 711, C_HW: 711
+C_SW: 648, C_HW: 648
+C_SW: 729, C_HW: 729
+C_SW: 707, C_HW: 708
+C_SW: 759, C_HW: 760
+C_SW: 799, C_HW: 800
+C_SW: 822, C_HW: 822
+C_SW: 846, C_HW: 846
+C_SW: 809, C_HW: 810
+C_SW: 777, C_HW: 778
+C_SW: 795, C_HW: 796
+C_SW: 839, C_HW: 840
+C_SW: 878, C_HW: 878
+Number of errors: 50

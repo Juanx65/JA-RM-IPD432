@@ -1,0 +1,545 @@
+02:05:01 **** Incremental Build of configuration Debug for project euc512int ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc512_int/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:40:33: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   40 | void (*XHLSWriteFunc_A[])() = { XEuchw_Write_A_0_Words,
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:40:33: note: (near initialization for 'XHLSWriteFunc_A[0]')
+../src/main.c:41:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   41 |    XEuchw_Write_A_1_Words, XEuchw_Write_A_2_Words, XEuchw_Write_A_3_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:41:4: note: (near initialization for 'XHLSWriteFunc_A[1]')
+../src/main.c:41:28: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   41 |    XEuchw_Write_A_1_Words, XEuchw_Write_A_2_Words, XEuchw_Write_A_3_Words,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:41:28: note: (near initialization for 'XHLSWriteFunc_A[2]')
+../src/main.c:41:52: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   41 |    XEuchw_Write_A_1_Words, XEuchw_Write_A_2_Words, XEuchw_Write_A_3_Words,
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:41:52: note: (near initialization for 'XHLSWriteFunc_A[3]')
+../src/main.c:42:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   42 |    XEuchw_Write_A_4_Words, XEuchw_Write_A_5_Words, XEuchw_Write_A_6_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:42:4: note: (near initialization for 'XHLSWriteFunc_A[4]')
+../src/main.c:42:28: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   42 |    XEuchw_Write_A_4_Words, XEuchw_Write_A_5_Words, XEuchw_Write_A_6_Words,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:42:28: note: (near initialization for 'XHLSWriteFunc_A[5]')
+../src/main.c:42:52: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   42 |    XEuchw_Write_A_4_Words, XEuchw_Write_A_5_Words, XEuchw_Write_A_6_Words,
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:42:52: note: (near initialization for 'XHLSWriteFunc_A[6]')
+../src/main.c:43:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   43 |    XEuchw_Write_A_7_Words, XEuchw_Write_A_8_Words, XEuchw_Write_A_9_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:43:4: note: (near initialization for 'XHLSWriteFunc_A[7]')
+../src/main.c:43:28: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   43 |    XEuchw_Write_A_7_Words, XEuchw_Write_A_8_Words, XEuchw_Write_A_9_Words,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:43:28: note: (near initialization for 'XHLSWriteFunc_A[8]')
+../src/main.c:43:52: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   43 |    XEuchw_Write_A_7_Words, XEuchw_Write_A_8_Words, XEuchw_Write_A_9_Words,
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:43:52: note: (near initialization for 'XHLSWriteFunc_A[9]')
+../src/main.c:44:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   44 |    XEuchw_Write_A_10_Words, XEuchw_Write_A_11_Words, XEuchw_Write_A_12_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:44:4: note: (near initialization for 'XHLSWriteFunc_A[10]')
+../src/main.c:44:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   44 |    XEuchw_Write_A_10_Words, XEuchw_Write_A_11_Words, XEuchw_Write_A_12_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:44:29: note: (near initialization for 'XHLSWriteFunc_A[11]')
+../src/main.c:44:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   44 |    XEuchw_Write_A_10_Words, XEuchw_Write_A_11_Words, XEuchw_Write_A_12_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:44:54: note: (near initialization for 'XHLSWriteFunc_A[12]')
+../src/main.c:45:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   45 |    XEuchw_Write_A_13_Words, XEuchw_Write_A_14_Words, XEuchw_Write_A_15_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:45:4: note: (near initialization for 'XHLSWriteFunc_A[13]')
+../src/main.c:45:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   45 |    XEuchw_Write_A_13_Words, XEuchw_Write_A_14_Words, XEuchw_Write_A_15_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:45:29: note: (near initialization for 'XHLSWriteFunc_A[14]')
+../src/main.c:45:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   45 |    XEuchw_Write_A_13_Words, XEuchw_Write_A_14_Words, XEuchw_Write_A_15_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:45:54: note: (near initialization for 'XHLSWriteFunc_A[15]')
+../src/main.c:46:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   46 |    XEuchw_Write_A_16_Words, XEuchw_Write_A_17_Words, XEuchw_Write_A_18_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:46:4: note: (near initialization for 'XHLSWriteFunc_A[16]')
+../src/main.c:46:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   46 |    XEuchw_Write_A_16_Words, XEuchw_Write_A_17_Words, XEuchw_Write_A_18_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:46:29: note: (near initialization for 'XHLSWriteFunc_A[17]')
+../src/main.c:46:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   46 |    XEuchw_Write_A_16_Words, XEuchw_Write_A_17_Words, XEuchw_Write_A_18_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:46:54: note: (near initialization for 'XHLSWriteFunc_A[18]')
+../src/main.c:47:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   47 |    XEuchw_Write_A_19_Words, XEuchw_Write_A_20_Words, XEuchw_Write_A_21_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:47:4: note: (near initialization for 'XHLSWriteFunc_A[19]')
+../src/main.c:47:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   47 |    XEuchw_Write_A_19_Words, XEuchw_Write_A_20_Words, XEuchw_Write_A_21_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:47:29: note: (near initialization for 'XHLSWriteFunc_A[20]')
+../src/main.c:47:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   47 |    XEuchw_Write_A_19_Words, XEuchw_Write_A_20_Words, XEuchw_Write_A_21_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:47:54: note: (near initialization for 'XHLSWriteFunc_A[21]')
+../src/main.c:48:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   48 |    XEuchw_Write_A_22_Words, XEuchw_Write_A_23_Words, XEuchw_Write_A_24_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:48:4: note: (near initialization for 'XHLSWriteFunc_A[22]')
+../src/main.c:48:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   48 |    XEuchw_Write_A_22_Words, XEuchw_Write_A_23_Words, XEuchw_Write_A_24_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:48:29: note: (near initialization for 'XHLSWriteFunc_A[23]')
+../src/main.c:48:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   48 |    XEuchw_Write_A_22_Words, XEuchw_Write_A_23_Words, XEuchw_Write_A_24_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:48:54: note: (near initialization for 'XHLSWriteFunc_A[24]')
+../src/main.c:49:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   49 |    XEuchw_Write_A_25_Words, XEuchw_Write_A_26_Words, XEuchw_Write_A_27_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:49:4: note: (near initialization for 'XHLSWriteFunc_A[25]')
+../src/main.c:49:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   49 |    XEuchw_Write_A_25_Words, XEuchw_Write_A_26_Words, XEuchw_Write_A_27_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:49:29: note: (near initialization for 'XHLSWriteFunc_A[26]')
+../src/main.c:49:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   49 |    XEuchw_Write_A_25_Words, XEuchw_Write_A_26_Words, XEuchw_Write_A_27_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:49:54: note: (near initialization for 'XHLSWriteFunc_A[27]')
+../src/main.c:50:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   50 |    XEuchw_Write_A_28_Words, XEuchw_Write_A_29_Words, XEuchw_Write_A_30_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:50:4: note: (near initialization for 'XHLSWriteFunc_A[28]')
+../src/main.c:50:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   50 |    XEuchw_Write_A_28_Words, XEuchw_Write_A_29_Words, XEuchw_Write_A_30_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:50:29: note: (near initialization for 'XHLSWriteFunc_A[29]')
+../src/main.c:50:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   50 |    XEuchw_Write_A_28_Words, XEuchw_Write_A_29_Words, XEuchw_Write_A_30_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:50:54: note: (near initialization for 'XHLSWriteFunc_A[30]')
+../src/main.c:51:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   51 |    XEuchw_Write_A_31_Words, XEuchw_Write_A_32_Words, XEuchw_Write_A_33_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:51:4: note: (near initialization for 'XHLSWriteFunc_A[31]')
+../src/main.c:51:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   51 |    XEuchw_Write_A_31_Words, XEuchw_Write_A_32_Words, XEuchw_Write_A_33_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:51:29: note: (near initialization for 'XHLSWriteFunc_A[32]')
+../src/main.c:51:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   51 |    XEuchw_Write_A_31_Words, XEuchw_Write_A_32_Words, XEuchw_Write_A_33_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:51:54: note: (near initialization for 'XHLSWriteFunc_A[33]')
+../src/main.c:52:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   52 |    XEuchw_Write_A_34_Words, XEuchw_Write_A_35_Words, XEuchw_Write_A_36_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:52:4: note: (near initialization for 'XHLSWriteFunc_A[34]')
+../src/main.c:52:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   52 |    XEuchw_Write_A_34_Words, XEuchw_Write_A_35_Words, XEuchw_Write_A_36_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:52:29: note: (near initialization for 'XHLSWriteFunc_A[35]')
+../src/main.c:52:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   52 |    XEuchw_Write_A_34_Words, XEuchw_Write_A_35_Words, XEuchw_Write_A_36_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:52:54: note: (near initialization for 'XHLSWriteFunc_A[36]')
+../src/main.c:53:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   53 |    XEuchw_Write_A_37_Words, XEuchw_Write_A_38_Words, XEuchw_Write_A_39_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:53:4: note: (near initialization for 'XHLSWriteFunc_A[37]')
+../src/main.c:53:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   53 |    XEuchw_Write_A_37_Words, XEuchw_Write_A_38_Words, XEuchw_Write_A_39_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:53:29: note: (near initialization for 'XHLSWriteFunc_A[38]')
+../src/main.c:53:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   53 |    XEuchw_Write_A_37_Words, XEuchw_Write_A_38_Words, XEuchw_Write_A_39_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:53:54: note: (near initialization for 'XHLSWriteFunc_A[39]')
+../src/main.c:54:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   54 |    XEuchw_Write_A_40_Words, XEuchw_Write_A_41_Words, XEuchw_Write_A_42_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:54:4: note: (near initialization for 'XHLSWriteFunc_A[40]')
+../src/main.c:54:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   54 |    XEuchw_Write_A_40_Words, XEuchw_Write_A_41_Words, XEuchw_Write_A_42_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:54:29: note: (near initialization for 'XHLSWriteFunc_A[41]')
+../src/main.c:54:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   54 |    XEuchw_Write_A_40_Words, XEuchw_Write_A_41_Words, XEuchw_Write_A_42_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:54:54: note: (near initialization for 'XHLSWriteFunc_A[42]')
+../src/main.c:55:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   55 |    XEuchw_Write_A_43_Words, XEuchw_Write_A_44_Words, XEuchw_Write_A_45_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:55:4: note: (near initialization for 'XHLSWriteFunc_A[43]')
+../src/main.c:55:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   55 |    XEuchw_Write_A_43_Words, XEuchw_Write_A_44_Words, XEuchw_Write_A_45_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:55:29: note: (near initialization for 'XHLSWriteFunc_A[44]')
+../src/main.c:55:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   55 |    XEuchw_Write_A_43_Words, XEuchw_Write_A_44_Words, XEuchw_Write_A_45_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:55:54: note: (near initialization for 'XHLSWriteFunc_A[45]')
+../src/main.c:56:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   56 |    XEuchw_Write_A_46_Words, XEuchw_Write_A_47_Words, XEuchw_Write_A_48_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:56:4: note: (near initialization for 'XHLSWriteFunc_A[46]')
+../src/main.c:56:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   56 |    XEuchw_Write_A_46_Words, XEuchw_Write_A_47_Words, XEuchw_Write_A_48_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:56:29: note: (near initialization for 'XHLSWriteFunc_A[47]')
+../src/main.c:56:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   56 |    XEuchw_Write_A_46_Words, XEuchw_Write_A_47_Words, XEuchw_Write_A_48_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:56:54: note: (near initialization for 'XHLSWriteFunc_A[48]')
+../src/main.c:57:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   57 |    XEuchw_Write_A_49_Words, XEuchw_Write_A_50_Words, XEuchw_Write_A_51_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:57:4: note: (near initialization for 'XHLSWriteFunc_A[49]')
+../src/main.c:57:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   57 |    XEuchw_Write_A_49_Words, XEuchw_Write_A_50_Words, XEuchw_Write_A_51_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:57:29: note: (near initialization for 'XHLSWriteFunc_A[50]')
+../src/main.c:57:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   57 |    XEuchw_Write_A_49_Words, XEuchw_Write_A_50_Words, XEuchw_Write_A_51_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:57:54: note: (near initialization for 'XHLSWriteFunc_A[51]')
+../src/main.c:58:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   58 |    XEuchw_Write_A_52_Words, XEuchw_Write_A_53_Words, XEuchw_Write_A_54_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:58:4: note: (near initialization for 'XHLSWriteFunc_A[52]')
+../src/main.c:58:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   58 |    XEuchw_Write_A_52_Words, XEuchw_Write_A_53_Words, XEuchw_Write_A_54_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:58:29: note: (near initialization for 'XHLSWriteFunc_A[53]')
+../src/main.c:58:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   58 |    XEuchw_Write_A_52_Words, XEuchw_Write_A_53_Words, XEuchw_Write_A_54_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:58:54: note: (near initialization for 'XHLSWriteFunc_A[54]')
+../src/main.c:59:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   59 |    XEuchw_Write_A_55_Words, XEuchw_Write_A_56_Words, XEuchw_Write_A_57_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:59:4: note: (near initialization for 'XHLSWriteFunc_A[55]')
+../src/main.c:59:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   59 |    XEuchw_Write_A_55_Words, XEuchw_Write_A_56_Words, XEuchw_Write_A_57_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:59:29: note: (near initialization for 'XHLSWriteFunc_A[56]')
+../src/main.c:59:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   59 |    XEuchw_Write_A_55_Words, XEuchw_Write_A_56_Words, XEuchw_Write_A_57_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:59:54: note: (near initialization for 'XHLSWriteFunc_A[57]')
+../src/main.c:60:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   60 |    XEuchw_Write_A_58_Words, XEuchw_Write_A_59_Words, XEuchw_Write_A_60_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:60:4: note: (near initialization for 'XHLSWriteFunc_A[58]')
+../src/main.c:60:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   60 |    XEuchw_Write_A_58_Words, XEuchw_Write_A_59_Words, XEuchw_Write_A_60_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:60:29: note: (near initialization for 'XHLSWriteFunc_A[59]')
+../src/main.c:60:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   60 |    XEuchw_Write_A_58_Words, XEuchw_Write_A_59_Words, XEuchw_Write_A_60_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:60:54: note: (near initialization for 'XHLSWriteFunc_A[60]')
+../src/main.c:61:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   61 |    XEuchw_Write_A_61_Words, XEuchw_Write_A_62_Words, XEuchw_Write_A_63_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:61:4: note: (near initialization for 'XHLSWriteFunc_A[61]')
+../src/main.c:61:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   61 |    XEuchw_Write_A_61_Words, XEuchw_Write_A_62_Words, XEuchw_Write_A_63_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:61:29: note: (near initialization for 'XHLSWriteFunc_A[62]')
+../src/main.c:61:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   61 |    XEuchw_Write_A_61_Words, XEuchw_Write_A_62_Words, XEuchw_Write_A_63_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:61:54: note: (near initialization for 'XHLSWriteFunc_A[63]')
+../src/main.c:62:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   62 |    XEuchw_Write_A_63_Words};
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:62:4: note: (near initialization for 'XHLSWriteFunc_A[64]')
+../src/main.c:64:33: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   64 | void (*XHLSWriteFunc_B[])() = { XEuchw_Write_B_0_Words,
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:64:33: note: (near initialization for 'XHLSWriteFunc_B[0]')
+../src/main.c:65:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   65 |    XEuchw_Write_B_1_Words, XEuchw_Write_B_2_Words, XEuchw_Write_B_3_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:65:4: note: (near initialization for 'XHLSWriteFunc_B[1]')
+../src/main.c:65:28: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   65 |    XEuchw_Write_B_1_Words, XEuchw_Write_B_2_Words, XEuchw_Write_B_3_Words,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:65:28: note: (near initialization for 'XHLSWriteFunc_B[2]')
+../src/main.c:65:52: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   65 |    XEuchw_Write_B_1_Words, XEuchw_Write_B_2_Words, XEuchw_Write_B_3_Words,
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:65:52: note: (near initialization for 'XHLSWriteFunc_B[3]')
+../src/main.c:66:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   66 |    XEuchw_Write_B_4_Words, XEuchw_Write_B_5_Words, XEuchw_Write_B_6_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:66:4: note: (near initialization for 'XHLSWriteFunc_B[4]')
+../src/main.c:66:28: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   66 |    XEuchw_Write_B_4_Words, XEuchw_Write_B_5_Words, XEuchw_Write_B_6_Words,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:66:28: note: (near initialization for 'XHLSWriteFunc_B[5]')
+../src/main.c:66:52: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   66 |    XEuchw_Write_B_4_Words, XEuchw_Write_B_5_Words, XEuchw_Write_B_6_Words,
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:66:52: note: (near initialization for 'XHLSWriteFunc_B[6]')
+../src/main.c:67:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   67 |    XEuchw_Write_B_7_Words, XEuchw_Write_B_8_Words, XEuchw_Write_B_9_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:4: note: (near initialization for 'XHLSWriteFunc_B[7]')
+../src/main.c:67:28: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   67 |    XEuchw_Write_B_7_Words, XEuchw_Write_B_8_Words, XEuchw_Write_B_9_Words,
+      |                            ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:28: note: (near initialization for 'XHLSWriteFunc_B[8]')
+../src/main.c:67:52: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   67 |    XEuchw_Write_B_7_Words, XEuchw_Write_B_8_Words, XEuchw_Write_B_9_Words,
+      |                                                    ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:52: note: (near initialization for 'XHLSWriteFunc_B[9]')
+../src/main.c:68:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   68 |    XEuchw_Write_B_10_Words, XEuchw_Write_B_11_Words, XEuchw_Write_B_12_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:68:4: note: (near initialization for 'XHLSWriteFunc_B[10]')
+../src/main.c:68:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   68 |    XEuchw_Write_B_10_Words, XEuchw_Write_B_11_Words, XEuchw_Write_B_12_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:68:29: note: (near initialization for 'XHLSWriteFunc_B[11]')
+../src/main.c:68:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   68 |    XEuchw_Write_B_10_Words, XEuchw_Write_B_11_Words, XEuchw_Write_B_12_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:68:54: note: (near initialization for 'XHLSWriteFunc_B[12]')
+../src/main.c:69:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   69 |    XEuchw_Write_B_13_Words, XEuchw_Write_B_14_Words, XEuchw_Write_B_15_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:69:4: note: (near initialization for 'XHLSWriteFunc_B[13]')
+../src/main.c:69:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   69 |    XEuchw_Write_B_13_Words, XEuchw_Write_B_14_Words, XEuchw_Write_B_15_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:69:29: note: (near initialization for 'XHLSWriteFunc_B[14]')
+../src/main.c:69:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   69 |    XEuchw_Write_B_13_Words, XEuchw_Write_B_14_Words, XEuchw_Write_B_15_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:69:54: note: (near initialization for 'XHLSWriteFunc_B[15]')
+../src/main.c:70:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   70 |    XEuchw_Write_B_16_Words, XEuchw_Write_B_17_Words, XEuchw_Write_B_18_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:70:4: note: (near initialization for 'XHLSWriteFunc_B[16]')
+../src/main.c:70:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   70 |    XEuchw_Write_B_16_Words, XEuchw_Write_B_17_Words, XEuchw_Write_B_18_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:70:29: note: (near initialization for 'XHLSWriteFunc_B[17]')
+../src/main.c:70:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   70 |    XEuchw_Write_B_16_Words, XEuchw_Write_B_17_Words, XEuchw_Write_B_18_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:70:54: note: (near initialization for 'XHLSWriteFunc_B[18]')
+../src/main.c:71:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   71 |    XEuchw_Write_B_19_Words, XEuchw_Write_B_20_Words, XEuchw_Write_B_21_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:71:4: note: (near initialization for 'XHLSWriteFunc_B[19]')
+../src/main.c:71:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   71 |    XEuchw_Write_B_19_Words, XEuchw_Write_B_20_Words, XEuchw_Write_B_21_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:71:29: note: (near initialization for 'XHLSWriteFunc_B[20]')
+../src/main.c:71:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   71 |    XEuchw_Write_B_19_Words, XEuchw_Write_B_20_Words, XEuchw_Write_B_21_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:71:54: note: (near initialization for 'XHLSWriteFunc_B[21]')
+../src/main.c:72:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   72 |    XEuchw_Write_B_22_Words, XEuchw_Write_B_23_Words, XEuchw_Write_B_24_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:72:4: note: (near initialization for 'XHLSWriteFunc_B[22]')
+../src/main.c:72:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   72 |    XEuchw_Write_B_22_Words, XEuchw_Write_B_23_Words, XEuchw_Write_B_24_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:72:29: note: (near initialization for 'XHLSWriteFunc_B[23]')
+../src/main.c:72:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   72 |    XEuchw_Write_B_22_Words, XEuchw_Write_B_23_Words, XEuchw_Write_B_24_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:72:54: note: (near initialization for 'XHLSWriteFunc_B[24]')
+../src/main.c:73:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   73 |    XEuchw_Write_B_25_Words, XEuchw_Write_B_26_Words, XEuchw_Write_B_27_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:73:4: note: (near initialization for 'XHLSWriteFunc_B[25]')
+../src/main.c:73:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   73 |    XEuchw_Write_B_25_Words, XEuchw_Write_B_26_Words, XEuchw_Write_B_27_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:73:29: note: (near initialization for 'XHLSWriteFunc_B[26]')
+../src/main.c:73:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   73 |    XEuchw_Write_B_25_Words, XEuchw_Write_B_26_Words, XEuchw_Write_B_27_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:73:54: note: (near initialization for 'XHLSWriteFunc_B[27]')
+../src/main.c:74:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   74 |    XEuchw_Write_B_28_Words, XEuchw_Write_B_29_Words, XEuchw_Write_B_30_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:74:4: note: (near initialization for 'XHLSWriteFunc_B[28]')
+../src/main.c:74:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   74 |    XEuchw_Write_B_28_Words, XEuchw_Write_B_29_Words, XEuchw_Write_B_30_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:74:29: note: (near initialization for 'XHLSWriteFunc_B[29]')
+../src/main.c:74:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   74 |    XEuchw_Write_B_28_Words, XEuchw_Write_B_29_Words, XEuchw_Write_B_30_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:74:54: note: (near initialization for 'XHLSWriteFunc_B[30]')
+../src/main.c:75:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   75 |    XEuchw_Write_B_31_Words, XEuchw_Write_B_32_Words, XEuchw_Write_B_33_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:75:4: note: (near initialization for 'XHLSWriteFunc_B[31]')
+../src/main.c:75:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   75 |    XEuchw_Write_B_31_Words, XEuchw_Write_B_32_Words, XEuchw_Write_B_33_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:75:29: note: (near initialization for 'XHLSWriteFunc_B[32]')
+../src/main.c:75:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   75 |    XEuchw_Write_B_31_Words, XEuchw_Write_B_32_Words, XEuchw_Write_B_33_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:75:54: note: (near initialization for 'XHLSWriteFunc_B[33]')
+../src/main.c:76:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   76 |    XEuchw_Write_B_34_Words, XEuchw_Write_B_35_Words, XEuchw_Write_B_36_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:76:4: note: (near initialization for 'XHLSWriteFunc_B[34]')
+../src/main.c:76:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   76 |    XEuchw_Write_B_34_Words, XEuchw_Write_B_35_Words, XEuchw_Write_B_36_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:76:29: note: (near initialization for 'XHLSWriteFunc_B[35]')
+../src/main.c:76:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   76 |    XEuchw_Write_B_34_Words, XEuchw_Write_B_35_Words, XEuchw_Write_B_36_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:76:54: note: (near initialization for 'XHLSWriteFunc_B[36]')
+../src/main.c:77:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   77 |    XEuchw_Write_B_37_Words, XEuchw_Write_B_38_Words, XEuchw_Write_B_39_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:77:4: note: (near initialization for 'XHLSWriteFunc_B[37]')
+../src/main.c:77:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   77 |    XEuchw_Write_B_37_Words, XEuchw_Write_B_38_Words, XEuchw_Write_B_39_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:77:29: note: (near initialization for 'XHLSWriteFunc_B[38]')
+../src/main.c:77:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   77 |    XEuchw_Write_B_37_Words, XEuchw_Write_B_38_Words, XEuchw_Write_B_39_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:77:54: note: (near initialization for 'XHLSWriteFunc_B[39]')
+../src/main.c:78:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   78 |    XEuchw_Write_B_40_Words, XEuchw_Write_B_41_Words, XEuchw_Write_B_42_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:78:4: note: (near initialization for 'XHLSWriteFunc_B[40]')
+../src/main.c:78:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   78 |    XEuchw_Write_B_40_Words, XEuchw_Write_B_41_Words, XEuchw_Write_B_42_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:78:29: note: (near initialization for 'XHLSWriteFunc_B[41]')
+../src/main.c:78:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   78 |    XEuchw_Write_B_40_Words, XEuchw_Write_B_41_Words, XEuchw_Write_B_42_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:78:54: note: (near initialization for 'XHLSWriteFunc_B[42]')
+../src/main.c:79:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   79 |    XEuchw_Write_B_43_Words, XEuchw_Write_B_44_Words, XEuchw_Write_B_45_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:79:4: note: (near initialization for 'XHLSWriteFunc_B[43]')
+../src/main.c:79:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   79 |    XEuchw_Write_B_43_Words, XEuchw_Write_B_44_Words, XEuchw_Write_B_45_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:79:29: note: (near initialization for 'XHLSWriteFunc_B[44]')
+../src/main.c:79:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   79 |    XEuchw_Write_B_43_Words, XEuchw_Write_B_44_Words, XEuchw_Write_B_45_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:79:54: note: (near initialization for 'XHLSWriteFunc_B[45]')
+../src/main.c:80:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   80 |    XEuchw_Write_B_46_Words, XEuchw_Write_B_47_Words, XEuchw_Write_B_48_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:80:4: note: (near initialization for 'XHLSWriteFunc_B[46]')
+../src/main.c:80:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   80 |    XEuchw_Write_B_46_Words, XEuchw_Write_B_47_Words, XEuchw_Write_B_48_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:80:29: note: (near initialization for 'XHLSWriteFunc_B[47]')
+../src/main.c:80:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   80 |    XEuchw_Write_B_46_Words, XEuchw_Write_B_47_Words, XEuchw_Write_B_48_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:80:54: note: (near initialization for 'XHLSWriteFunc_B[48]')
+../src/main.c:81:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   81 |    XEuchw_Write_B_49_Words, XEuchw_Write_B_50_Words, XEuchw_Write_B_51_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:81:4: note: (near initialization for 'XHLSWriteFunc_B[49]')
+../src/main.c:81:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   81 |    XEuchw_Write_B_49_Words, XEuchw_Write_B_50_Words, XEuchw_Write_B_51_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:81:29: note: (near initialization for 'XHLSWriteFunc_B[50]')
+../src/main.c:81:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   81 |    XEuchw_Write_B_49_Words, XEuchw_Write_B_50_Words, XEuchw_Write_B_51_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:81:54: note: (near initialization for 'XHLSWriteFunc_B[51]')
+../src/main.c:82:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   82 |    XEuchw_Write_B_52_Words, XEuchw_Write_B_53_Words, XEuchw_Write_B_54_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:82:4: note: (near initialization for 'XHLSWriteFunc_B[52]')
+../src/main.c:82:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   82 |    XEuchw_Write_B_52_Words, XEuchw_Write_B_53_Words, XEuchw_Write_B_54_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:82:29: note: (near initialization for 'XHLSWriteFunc_B[53]')
+../src/main.c:82:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   82 |    XEuchw_Write_B_52_Words, XEuchw_Write_B_53_Words, XEuchw_Write_B_54_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:82:54: note: (near initialization for 'XHLSWriteFunc_B[54]')
+../src/main.c:83:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   83 |    XEuchw_Write_B_55_Words, XEuchw_Write_B_56_Words, XEuchw_Write_B_57_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:83:4: note: (near initialization for 'XHLSWriteFunc_B[55]')
+../src/main.c:83:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   83 |    XEuchw_Write_B_55_Words, XEuchw_Write_B_56_Words, XEuchw_Write_B_57_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:83:29: note: (near initialization for 'XHLSWriteFunc_B[56]')
+../src/main.c:83:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   83 |    XEuchw_Write_B_55_Words, XEuchw_Write_B_56_Words, XEuchw_Write_B_57_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:83:54: note: (near initialization for 'XHLSWriteFunc_B[57]')
+../src/main.c:84:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   84 |    XEuchw_Write_B_58_Words, XEuchw_Write_B_59_Words, XEuchw_Write_B_60_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:84:4: note: (near initialization for 'XHLSWriteFunc_B[58]')
+../src/main.c:84:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   84 |    XEuchw_Write_B_58_Words, XEuchw_Write_B_59_Words, XEuchw_Write_B_60_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:84:29: note: (near initialization for 'XHLSWriteFunc_B[59]')
+../src/main.c:84:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   84 |    XEuchw_Write_B_58_Words, XEuchw_Write_B_59_Words, XEuchw_Write_B_60_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:84:54: note: (near initialization for 'XHLSWriteFunc_B[60]')
+../src/main.c:85:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   85 |    XEuchw_Write_B_61_Words, XEuchw_Write_B_62_Words, XEuchw_Write_B_63_Words,
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:85:4: note: (near initialization for 'XHLSWriteFunc_B[61]')
+../src/main.c:85:29: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   85 |    XEuchw_Write_B_61_Words, XEuchw_Write_B_62_Words, XEuchw_Write_B_63_Words,
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:85:29: note: (near initialization for 'XHLSWriteFunc_B[62]')
+../src/main.c:85:54: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   85 |    XEuchw_Write_B_61_Words, XEuchw_Write_B_62_Words, XEuchw_Write_B_63_Words,
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:85:54: note: (near initialization for 'XHLSWriteFunc_B[63]')
+../src/main.c:86:4: warning: initialization of 'void (*)()' from incompatible pointer type 'u32 (*)(XEuchw *, int,  word_type *, int)' {aka 'long unsigned int (*)(XEuchw *, int,  long unsigned int *, int)'} [-Wincompatible-pointer-types]
+   86 |    XEuchw_Write_B_63_Words};
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:86:4: note: (near initialization for 'XHLSWriteFunc_B[64]')
+'Finished building: ../src/main.c'
+' '
+'Building target: euc512int.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/juan_/Documents/FPGA/JA-RM-IPD432/euc512_int/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "euc512int.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: euc512int.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size euc512int.elf  |tee "euc512int.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 272406	   3854	  23216	 299476	  491d4	euc512int.elf
+'Finished building: euc512int.elf.size'
+' '
+
+02:05:02 Build Finished (took 920ms)
+

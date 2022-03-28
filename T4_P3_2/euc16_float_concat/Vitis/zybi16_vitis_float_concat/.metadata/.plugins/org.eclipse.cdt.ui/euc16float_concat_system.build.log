@@ -1,0 +1,10 @@
+01:13:29 **** Incremental Build of configuration Debug for project euc16float_concat_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 53519 C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc16_float_concat/Vitis/zybi16_vitis_float_concat/zybo16float_concat/export/zybo16float_concat/zybo16float_concat.xpfm standalone_ps7_cortexa9_0 C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc16_float_concat/Vitis/zybi16_vitis_float_concat/euc16float_concat_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc16_float_concat/Vitis/zybi16_vitis_float_concat/zybo16float_concat/export/zybo16float_concat/zybo16float_concat.xpfm --sys_config zybo16float_concat --bif C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc16_float_concat/Vitis/zybi16_vitis_float_concat/euc16float_concat_system/Debug/system.bif --bitstream C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc16_float_concat/Vitis/zybi16_vitis_float_concat/euc16float_concat/_ide/bitstream/zybo16float_concat.bit --elf C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc16_float_concat/Vitis/zybi16_vitis_float_concat/euc16float_concat/Debug/euc16float_concat.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc16_float_concat/Vitis/zybi16_vitis_float_concat/euc16float_concat/_ide/bitstream/zybo16float_concat.bit
+Running C:/Xilinx/Vitis/2021.1/bin/bootgen  -image C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc16_float_concat/Vitis/zybi16_vitis_float_concat/euc16float_concat_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+01:13:38 Build Finished (took 9s.119ms)
+

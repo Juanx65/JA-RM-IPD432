@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="EucHW.h" path="C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\VITIS_SRCS\src\EucHW.h"/>
+    <originFiles name="EucHW_RC.cpp" path="C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\VITIS_SRCS\src\EucHW_RC.cpp"/>
+    <originFiles name="specs.h" path="C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\VITIS_SRCS\src\specs.h"/>
+  </source>
+  <testbench>
+    <originFiles name="EucSW.cpp" path="C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\VITIS_SRCS\src\EucSW.cpp"/>
+    <originFiles name="EucSW.h" path="C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\VITIS_SRCS\src\EucSW.h"/>
+    <originFiles name="EucTB.cpp" path="C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\VITIS_SRCS\src\EucTB.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

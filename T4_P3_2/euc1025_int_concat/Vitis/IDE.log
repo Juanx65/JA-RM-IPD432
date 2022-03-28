@@ -1,0 +1,235 @@
+12:39:36 INFO  : Platform repository initialization has completed.
+12:39:36 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\T4_P3_2\euc1025_int_concat\Vitis\temp_xsdb_launch_script.tcl
+12:39:36 INFO  : Registering command handlers for Vitis TCF services
+12:39:39 INFO  : XSCT server has started successfully.
+12:39:39 INFO  : Successfully done setting XSCT server connection channel  
+12:39:40 INFO  : plnx-install-location is set to ''
+12:39:40 INFO  : Successfully done setting workspace for the tool. 
+12:39:40 INFO  : Successfully done query RDI_DATADIR 
+12:41:18 INFO  : Result from executing command 'getProjects': design_1_wrapper
+12:41:18 INFO  : Result from executing command 'getPlatforms': 
+12:41:18 WARN  : An unexpected exception occurred in the module 'platform project logging'
+12:41:18 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+12:41:27 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+13:37:48 INFO  : Result from executing command 'getProjects': design_1_wrapper
+13:37:48 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+13:37:49 INFO  : Checking for BSP changes to sync application flags for project 'euc1024int_concat'...
+13:38:06 INFO  : Checking for BSP changes to sync application flags for project 'euc1024int_concat'...
+13:38:50 INFO  : Checking for BSP changes to sync application flags for project 'euc1024int_concat'...
+13:39:00 INFO  : Checking for BSP changes to sync application flags for project 'euc1024int_concat'...
+13:39:35 INFO  : Checking for BSP changes to sync application flags for project 'euc1024int_concat'...
+13:39:57 INFO  : Checking for BSP changes to sync application flags for project 'euc1024int_concat'...
+13:40:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:40:27 INFO  : Jtag cable 'Digilent Zybo 210279A427BAA' is selected.
+13:40:27 INFO  : 'jtag frequency' command is executed.
+13:40:27 INFO  : Context for 'APU' is selected.
+13:40:27 INFO  : System reset is completed.
+13:40:30 INFO  : 'after 3000' command is executed.
+13:40:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A427BAA" && level==0 && jtag_device_ctx=="jsn-Zybo-210279A427BAA-13722093-0"}' command is executed.
+13:40:31 INFO  : Device configured successfully with "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/bitstream/design_1_wrapper.bit"
+13:40:32 INFO  : Context for 'APU' is selected.
+13:40:32 INFO  : Hardware design and registers information is loaded from 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+13:40:32 INFO  : 'configparams force-mem-access 1' command is executed.
+13:40:32 INFO  : Context for 'APU' is selected.
+13:40:32 INFO  : Sourcing of 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/psinit/ps7_init.tcl' is done.
+13:40:32 INFO  : 'ps7_init' command is executed.
+13:40:32 INFO  : 'ps7_post_config' command is executed.
+13:40:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:40:33 INFO  : The application 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/Debug/euc1024int_concat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:40:33 INFO  : 'configparams force-mem-access 0' command is executed.
+13:40:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A427BAA" && level==0 && jtag_device_ctx=="jsn-Zybo-210279A427BAA-13722093-0"}
+fpga -file C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/Debug/euc1024int_concat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:40:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:40:33 INFO  : 'con' command is executed.
+13:40:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:40:33 INFO  : Launch script is exported to file 'C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\T4_P3_2\euc1025_int_concat\Vitis\euc1024int_concat_system\_ide\scripts\debugger_euc1024int_concat-default.tcl'
+13:44:30 INFO  : Checking for BSP changes to sync application flags for project 'euc1024int_concat'...
+13:44:41 INFO  : Disconnected from the channel tcfchan#2.
+13:44:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:44:42 INFO  : Jtag cable 'Digilent Zybo 210279A427BAA' is selected.
+13:44:42 INFO  : 'jtag frequency' command is executed.
+13:44:44 INFO  : Context for 'APU' is selected.
+13:44:44 INFO  : System reset is completed.
+13:44:47 INFO  : 'after 3000' command is executed.
+13:44:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A427BAA" && level==0 && jtag_device_ctx=="jsn-Zybo-210279A427BAA-13722093-0"}' command is executed.
+13:44:49 INFO  : Device configured successfully with "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/bitstream/design_1_wrapper.bit"
+13:44:49 INFO  : Context for 'APU' is selected.
+13:44:49 INFO  : Hardware design and registers information is loaded from 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+13:44:49 INFO  : 'configparams force-mem-access 1' command is executed.
+13:44:49 INFO  : Context for 'APU' is selected.
+13:44:49 INFO  : Sourcing of 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/psinit/ps7_init.tcl' is done.
+13:44:49 INFO  : 'ps7_init' command is executed.
+13:44:49 INFO  : 'ps7_post_config' command is executed.
+13:44:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:44:50 INFO  : The application 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/Debug/euc1024int_concat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:44:50 INFO  : 'configparams force-mem-access 0' command is executed.
+13:44:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A427BAA" && level==0 && jtag_device_ctx=="jsn-Zybo-210279A427BAA-13722093-0"}
+fpga -file C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/Debug/euc1024int_concat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:44:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:44:50 INFO  : 'con' command is executed.
+13:44:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:44:50 INFO  : Launch script is exported to file 'C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\T4_P3_2\euc1025_int_concat\Vitis\euc1024int_concat_system\_ide\scripts\debugger_euc1024int_concat-default.tcl'
+13:54:25 INFO  : Checking for BSP changes to sync application flags for project 'euc1024int_concat'...
+13:54:35 INFO  : Disconnected from the channel tcfchan#3.
+13:54:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:54:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+13:54:46 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+13:54:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:54:50 INFO  : Jtag cable 'Digilent Zybo 210279A427BAA' is selected.
+13:54:50 INFO  : 'jtag frequency' command is executed.
+13:54:50 INFO  : Context for 'APU' is selected.
+13:54:50 INFO  : System reset is completed.
+13:54:53 INFO  : 'after 3000' command is executed.
+13:54:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A427BAA" && level==0 && jtag_device_ctx=="jsn-Zybo-210279A427BAA-13722093-0"}' command is executed.
+13:54:55 INFO  : Device configured successfully with "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/bitstream/design_1_wrapper.bit"
+13:54:55 INFO  : Context for 'APU' is selected.
+13:54:55 INFO  : Hardware design and registers information is loaded from 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+13:54:55 INFO  : 'configparams force-mem-access 1' command is executed.
+13:54:55 INFO  : Context for 'APU' is selected.
+13:54:55 INFO  : Sourcing of 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/psinit/ps7_init.tcl' is done.
+13:54:55 INFO  : 'ps7_init' command is executed.
+13:54:55 INFO  : 'ps7_post_config' command is executed.
+13:54:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:54:56 INFO  : The application 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/Debug/euc1024int_concat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:54:56 INFO  : 'configparams force-mem-access 0' command is executed.
+13:54:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A427BAA" && level==0 && jtag_device_ctx=="jsn-Zybo-210279A427BAA-13722093-0"}
+fpga -file C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/Debug/euc1024int_concat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:54:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:54:56 INFO  : 'con' command is executed.
+13:54:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:54:56 INFO  : Launch script is exported to file 'C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\T4_P3_2\euc1025_int_concat\Vitis\euc1024int_concat_system\_ide\scripts\debugger_euc1024int_concat-default.tcl'
+14:43:00 INFO  : Disconnected from the channel tcfchan#4.
+14:43:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:43:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+14:43:10 ERROR : Could not find Jtag device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+14:43:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:43:18 INFO  : Jtag cable 'Digilent Zybo 210279A427BAA' is selected.
+14:43:18 INFO  : 'jtag frequency' command is executed.
+14:43:18 INFO  : Context for 'APU' is selected.
+14:43:18 INFO  : System reset is completed.
+14:43:21 INFO  : 'after 3000' command is executed.
+14:43:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A427BAA" && level==0 && jtag_device_ctx=="jsn-Zybo-210279A427BAA-13722093-0"}' command is executed.
+14:43:22 INFO  : Device configured successfully with "C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/bitstream/design_1_wrapper.bit"
+14:43:22 INFO  : Context for 'APU' is selected.
+14:43:22 INFO  : Hardware design and registers information is loaded from 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+14:43:22 INFO  : 'configparams force-mem-access 1' command is executed.
+14:43:22 INFO  : Context for 'APU' is selected.
+14:43:22 INFO  : Sourcing of 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/psinit/ps7_init.tcl' is done.
+14:43:23 INFO  : 'ps7_init' command is executed.
+14:43:23 INFO  : 'ps7_post_config' command is executed.
+14:43:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:43:23 INFO  : The application 'C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/Debug/euc1024int_concat.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:43:23 INFO  : 'configparams force-mem-access 0' command is executed.
+14:43:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A427BAA" && level==0 && jtag_device_ctx=="jsn-Zybo-210279A427BAA-13722093-0"}
+fpga -file C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/juan_/Documents/FPGA/JA-RM-IPD432/T4_P3_2/euc1025_int_concat/Vitis/euc1024int_concat/Debug/euc1024int_concat.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:43:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:43:23 INFO  : 'con' command is executed.
+14:43:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:43:23 INFO  : Launch script is exported to file 'C:\Users\juan_\Documents\FPGA\JA-RM-IPD432\T4_P3_2\euc1025_int_concat\Vitis\euc1024int_concat_system\_ide\scripts\debugger_euc1024int_concat-default.tcl'
+15:05:14 INFO  : Disconnected from the channel tcfchan#5.
